@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Silence / REPT" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="css3_accrodion/css/style.css" />
+
+
+<link href="http://allfont.ru/allfont.css?fonts=roboto-light" rel="stylesheet" type="text/css" />
+	<title>Магазин CallShef</title>
+    
+<link rel="stylesheet" href="b-rub_arial/stylesheet.css">
+
+<link rel="stylesheet" type="text/css" href="easydropdown/easydropdown.css"/>
+	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="easydropdown/jquery.easydropdown.js"></script>
+
+
+<link rel="stylesheet" href="bxslider/bxslider-4-4.2.12/dist/jquery.bxslider.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="bxslider/bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+<script>
+    jQuery(document).ready(function(){
+  jQuery('.slider').bxSlider({
+  auto: true,
+  pager:true,
+  mode: 'fade',
+  responsive:false,
+  controls:  true
+  });
+});</script>
+
+<script>
+    jQuery(document).ready(function(){
+  jQuery('.slider2').bxSlider({
+  slideWidth: 270,
+    mode: 'horizontal',
+    pager: false,
+    minSlides: 2,
+    touchEnabled:false,
+    maxSlides: 2,
+    moveSlides: 1,
+    controls:  true,
+    slideMargin: 30
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+   $('.show_more').click(function(){
+    var zn = $(this).attr('data');
+    if ($('#'+zn+'').is(":visible"))
+    {
+        $('#'+zn+'').fadeOut();
+        $(this).html('<i class="fa fa-angle-down" aria-hidden="true"></i>');
+        $(this).parent().parent().attr("class","");
+    }
+    else
+    {
+        $('#'+zn+'').fadeIn();
+        $(this).html('<i class="fa fa-angle-up" aria-hidden="true"></i>');
+        $(this).parent().parent().attr("class","open_grey");
+    }
+    
+  
+   }); 
+});
+
+</script>
+<script>
+$(document).ready(function(){
+    
+    $('.mob.button').click(function(){
+        if ($('#menu').is(":visible"))
+        {
+            $('#menu').fadeOut();
+        }   
+        else
+        {
+            $('#menu').fadeIn();
+        }  
+    });
+});
+</script>
+</head>
+
+<body>
+<div class="all">
+<header>
+<div class="my_header">
+    <div class="wrapper relative">
+    <a class="mob button"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    <a href="cart.html" class="mini_cart mob"><span class="count">2</span></a>
+        <div class="left_wrap" id="menu">
+            <ul>
+                <li><a href="set.html">Сеты от Шефа</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="call.html"  class="act">Позвони Шефу</a></li>
+            </ul>
+        </div>
+        
+        <div class="right_wrap">
+            <ul>
+                <li class="my_phone"><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+                <li class="my_lk"><a href="lk.html">Личный кабинет</a></li>
+            </ul>
+        </div>
+        <div class="my_logo">
+            <a href="index.html">
+                <img src="svg/logo.svg" alt=""/>
+            </a>
+        </div>
+        
+            
+        
+        <div style="clear: both;"></div>
+    </div>
+</div>
+
+</header>
+
+
+<main class="lk">
+
+    <div class="wrapper relative">
+        <a href="cart.html" class="mini_cart r desktop"><span class="count">2</span></a>
+        <div class="my_soz">
+            <a href="https://vk.com"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        <div class="breadcrumbs_set"><a href="index.html">Главная</a> <span class="orange"><i class="fa fa-angle-right" aria-hidden="true"></i></span> Личный кабинет</div>
+        <h1 class="ttl50">Личный кабинет</h1>
+        <div class="blk_lk">
+            <div class="my_lk_left">
+            <table>
+                <tr>
+                    <td>Ваше имя:</td>
+                    <td>Иванов Василий Александрович</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>vashemail@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Телефон:</td>
+                    <td>+7 (000) 000-00-00</td>
+                </tr>
+                <tr>
+                    <td>Адрес:</td>
+                    <td>г. Город, индекс, улица и тд</td>
+                </tr>
+            </table>
+            </div>
+            <div class="right_lk">
+                <a class="green_btn" href="#">Редактировать данные</a>
+                <a class="white_btn" href="#">Сменить пароль</a>
+                <a class="black_btn" href="#">Выход</a>
+            </div>
+            <div class="clb"></div>
+        </div>
+        <div class="blk_lk">
+            <div class="lk_ttl">Ваши заказы:</div>
+            <table class="lk_table">
+                <tr>
+                    <td><a class="show_more" data='id1' ><i class="fa fa-angle-down" aria-hidden="true"></i></a></td>
+                    <td>#123467890</td>
+                    <td>15.04.2019 10:00</td>
+                    <td><img src="image/cart/img1.jpg" alt="" class="lk_img"/></td>
+                    <td>1 позиция на сумму 4 800 <span class="ruble">Р</span></td>
+                    <td class="status1">Выполнен</td>
+                </tr>
+                <tr id="id1" class="notvisible">
+                    <td colspan="6">
+                        <div class="spis_cart">
+                        <ul>
+                            <li class="relative">
+                                
+                                <div class="img"><img src="image/cart/img1.jpg" alt=""></div>
+                                <div class="name"><a href="detail.html">Ассорти</a></div>
+                                <div class="gram">1 шт</div>
+                                <div class="spis_price">4 800 <span class="ruble">Р</span></div>
+                                <div class="clb"></div>
+                            </li>
+                            <li>
+                                <div class="green_txt">ОПЛАЧЕН</div>
+                                <div class="ord_sum">4 800 <span class="ruble">Р</span></div>
+                                <div class="ord_sum_itog">Итоговая сумма:</div>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="open_grey">
+                    <td><a class="show_more" data='id2'><i class="fa fa-angle-up" aria-hidden="true"></i></a></td>
+                    <td>#123467654</td>
+                    <td>16.10.2019 14:30</td>
+                    <td>
+                        <img src="image/cart/img1.jpg" class="lk_img" alt=""/>
+                        <img src="image/cart/img2.jpg" class="lk_img" alt=""/>
+                    </td>
+                    <td>2 позиции на сумму 8 000 <span class="ruble">Р</span></td>
+                    <td class="status2">В обработке</td>
+                </tr>
+                <tr id="id2" class="visible">
+                    <td colspan="6">
+                        <div class="spis_cart">
+                        <ul>
+                            <li class="relative">
+                                
+                                <div class="img"><img src="image/cart/img1.jpg" alt=""></div>
+                                <div class="name"><a href="detail.html">Ассорти</a></div>
+                                <div class="gram">1 шт</div>
+                                <div class="spis_price">4 800 <span class="ruble">Р</span></div>
+                                <div class="clb"></div>
+                            </li>
+                            <li class="relative">
+                                
+                                <div class="img"><img src="image/cart/img2.jpg" alt=""></div>
+                                <div class="name"><a href="detail.html">Идеальный завтрак</a></div>
+                                <div class="gram">1 шт</div>
+                                <div class="spis_price">3 200 <span class="ruble">Р</span></div>
+                                <div class="clb"></div>
+                            </li>
+                            <li>
+                                <div class="green_txt">ОПЛАЧЕН</div>
+                                <div class="ord_sum">8 000 <span class="ruble">Р</span></div>
+                                <div class="ord_sum_itog">Итоговая сумма:</div>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+    <div class="clb"></div>
+   
+</main>
+
+<footer class="marg_t0">
+    <div class="wrapper relative">
+        <a href="#" class="go_top m0"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+        <div class="fut_left">
+            <a href="index.html">
+                <img src="svg/logo.svg" alt=""/>
+            </a>
+        </div>
+        <div class="fut_right">
+            <div class="fut_tel">
+                <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+            </div>
+            <div class="my_soz">
+                <a href="https://vk.com"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="fut_center">Все права защищены «Call Cheff» 2019
+            <div class="politika"><a href="#">Политика конфиденциальности</a></div>
+            <div class="razrab">Разработано </div>
+        </div>
+    </div>
+    <div class="clb"></div>
+    <div class="bot_fut mob">
+        <a href="tel:+79100000000" class="icon_phone"></a>
+        <a href="lk.hnml" class="icon_lk"></a>
+        <a href="cart.html" class="icon_cart"></a>
+    </div>
+</footer>
+</div>
+
+</body>
+
+
+
+</html>

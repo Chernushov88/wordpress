@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Silence / REPT" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="css3_accrodion/css/style.css" />
+
+
+<link href="http://allfont.ru/allfont.css?fonts=roboto-light" rel="stylesheet" type="text/css" />
+	<title>Магазин CallShef</title>
+    
+<link rel="stylesheet" href="b-rub_arial/stylesheet.css">
+
+<link rel="stylesheet" type="text/css" href="easydropdown/easydropdown.css"/>
+	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="easydropdown/jquery.easydropdown.js"></script>
+
+
+<link rel="stylesheet" href="bxslider/bxslider-4-4.2.12/dist/jquery.bxslider.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="bxslider/bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+<script>
+    jQuery(document).ready(function(){
+  jQuery('.slider').bxSlider({
+  auto: true,
+  pager:true,
+  mode: 'fade',
+  responsive:false,
+  controls:  true
+  });
+});</script>
+
+<script>
+    jQuery(document).ready(function(){
+  jQuery('.slider2').bxSlider({
+  slideWidth: 270,
+    mode: 'horizontal',
+    pager: false,
+    minSlides: 2,
+    touchEnabled:false,
+    maxSlides: 2,
+    moveSlides: 1,
+    controls:  true,
+    slideMargin: 30
+  });
+});</script>
+<script>
+$(document).ready(function(){
+    
+    $('.mob.button').click(function(){
+        if ($('#menu').is(":visible"))
+        {
+            $('#menu').fadeOut();
+        }   
+        else
+        {
+            $('#menu').fadeIn();
+        }  
+    });
+});
+</script>
+</head>
+
+<body>
+<div class="all">
+<header>
+<div class="my_header">
+    <div class="wrapper relative">
+    <a class="mob button"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    <a href="cart.html" class="mini_cart mob"><span class="count">2</span></a>
+        <div class="left_wrap" id="menu">
+            <ul>
+                <li><a href="set.html" class="act">Сеты от Шефа</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="call.html">Позвони Шефу</a></li>
+            </ul>
+        </div>
+        
+        <div class="right_wrap">
+            <ul>
+                <li class="my_phone"><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+                <li class="my_lk"><a href="lk.html">Личный кабинет</a></li>
+            </ul>
+        </div>
+        <div class="my_logo">
+            <a href="index.html">
+                <img src="svg/logo.svg" alt=""/>
+            </a>
+        </div>
+        
+            
+        
+        <div style="clear: both;"></div>
+    </div>
+</div>
+
+</header>
+<div class="my_set_ban for_cart">
+    <div class="wrapper">
+        <div class="my_soz">
+            <a href="https://vk.com"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        <div class="breadcrumbs_set"><a href="index.html">Главная</a> <span class="orange"><i class="fa fa-angle-right" aria-hidden="true"></i></span>    Корзина</div>
+        <h1 class="ttl50">Корзина</h1>
+    </div>
+    <div class="blk_info">
+            <div class="wrapper">
+                <ul>
+                    <li>
+                        <div class="grey_txt">Мин. стоимость заказа в Москве:</div>
+                        5 000 <span class="ruble">Р</span>
+                    </li>
+                    <li>
+                        <div class="grey_txt">Мин. стоимость заказа в МО:</div>
+                        10 000 <span class="ruble">Р</span>
+                    </li>
+                    <li>
+                        <div class="grey_txt">Доставка:</div>
+                        от 0 <span class="ruble">Р</span>
+                    </li>
+                    <li>
+                        <div class="grey_txt">Принимаем заказы до 10 сетов:</div>
+                        За 24 часа
+                    </li>
+                    <li>
+                        <div class="grey_txt">Принимаем заказы от 10 сетов:</div>
+                        За 48 часов
+                    </li>
+                </ul>
+                <a href="cart.html" class="mini_cart desktop"><span class="count">2</span></a>
+            </div>
+        </div> 
+</div>
+<main>
+           
+        
+    <div class="wrapper">
+        <div class="spis_cart">
+        <ul>
+            <li class="relative">
+                <a class="close" href="#"></a>
+                <div class="img"><img src="image/cart/img1.jpg" alt=""/></div>
+                <div class="name"><a href="detail.html">Ассорти</a></div>
+                <div class="gram">2 340 г</div>
+                <div class="price_cnt">
+                <table>
+                <tbody>
+                    <tr>
+                        <td><a href="#" class="minus">-</a></td>
+                        <td><input type="text" class="cnt" value="1" size="1"></td>
+                        <td><a href="#" class="plus">+</a></td>
+                    </tr>
+                </tbody>
+                </table>
+                </div>
+                <div class="spis_price">2 500 <span class="ruble">Р</span></div>
+                <div class="clb"></div>
+            </li>
+            <li class="relative">
+                <a class="close" href="#"></a>
+                <div class="img"><img src="image/cart/img2.jpg" alt=""/></div>
+                <div class="name"><a href="detail.html">Идеальный завтрак</a></div>
+                <div class="gram">2 340 г</div>
+                <div class="price_cnt">
+                <table>
+                <tbody>
+                    <tr>
+                        <td><a href="#" class="minus">-</a></td>
+                        <td><input type="text" class="cnt" value="1" size="1"></td>
+                        <td><a href="#" class="plus">+</a></td>
+                    </tr>
+                </tbody>
+                </table>
+                </div><div class="spis_price">2 500 <span class="ruble">Р</span></div>
+                <div class="clb"></div>
+            </li>
+        </ul>
+        </div>
+        
+    </div>
+    <div class="add_zakaz">
+        <div class="wrapper">
+            <div class="add_ttl">Добавить в заказ:</div>
+            <div class="spis_cart">
+                <ul>
+                    <li class="relative">
+                        <div class="img"><img src="image/cart/img3.fw.png" alt=""/></div>
+                        <div class="name"><a href="detail.html">Платтер из Бургеров</a></div>
+                        <div class="gram">2 340 г</div>
+                        <div class="price_cnt">
+                        <table>
+                        <tbody>
+                            <tr>
+                                <td><a href="#" class="minus">-</a></td>
+                                <td><input type="text" class="cnt" value="1" size="1"></td>
+                                <td><a href="#" class="plus">+</a></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        <div class="spis_price">2 500 <span class="ruble">Р</span></div>
+                        <a class="add_z_cart" href="#"></a>
+                        <div class="clb"></div>
+                    </li>
+                </ul>
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="wrapper">
+            <div class="add_ttl">Добавить одноразовую посуду к заказу:</div>
+            <div class="spis_posuda">
+                <ul>
+                    <li>
+                        <div class="sp_img"><img src="svg/tarelka.svg"/></div>
+                        <div class="name">Тарелка</div>
+                        <div class="cnt">12</div>
+                        <a class="add_z_cart" href="#"></a>
+                        <div class="spis_price">300 <span class="ruble">Р</span></div>
+                        <div class="clb"></div>
+                    </li>
+                    <li>
+                        <div class="sp_img"><img src="svg/pribory.svg"/></div>
+                        <div class="name">Приборы</div>
+                        <div class="cnt">12</div>
+                        <a class="add_z_cart" href="#"></a>
+                        <div class="spis_price">300 <span class="ruble">Р</span></div>
+                        <div class="clb"></div>
+                    </li>
+                    <li>
+                        <div class="sp_img"><img src="svg/stakany.svg"/></div>
+                        <div class="name">Стакан</div>
+                        <div class="cnt">12</div>
+                        <a class="add_z_cart" href="#"></a>
+                        <div class="spis_price">300 <span class="ruble">Р</span></div>
+                        <div class="clb"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="green_line"></div>
+            <div class="left_sum">
+                <div class="red_ttl">Обратите внимание:</div>
+                <table>
+                    <tr>
+                        <td class="gr">Мин. сумма заказа для Москвы: </td>
+                        <td class="gr">Мин. сумма заказа для МО:</td>
+                    </tr>
+                    <tr>
+                        <td>5 000 <span class="ruble">Р</span></td>
+                        <td>10 000 <span class="ruble">Р</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right_sum">
+                <table>
+                    <tr>
+                        <td class="gr">Общий вес:</td>
+                        <td class="gr">4 680 г</td>
+                    </tr>
+                    <tr>
+                        <td class="itogo_txt">Итого:</td>
+                        <td class="sum">15 000 <span class="ruble">Р</span></td>
+                    </tr>
+                    <tr>
+                        <td class="white_btn"><a href="set.html">Вернуться в каталог</a></td>
+                        <td class="orange_btn"><a href="order.html">Оформить заказ</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="clb"></div>
+    </div>
+    
+</main>
+
+<footer>
+    <div class="wrapper relative">
+        <a href="#" class="go_top m0"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+        <div class="fut_left">
+            <a href="index.html">
+                <img src="svg/logo.svg" alt=""/>
+            </a>
+        </div>
+        <div class="fut_right">
+            <div class="fut_tel">
+                <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+            </div>
+            <div class="my_soz">
+                <a href="https://vk.com"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="fut_center">Все права защищены «Call Cheff» 2019
+            <div class="politika"><a href="#">Политика конфиденциальности</a></div>
+            <div class="razrab">Разработано </div>
+        </div>
+    </div>
+    <div class="clb"></div>
+    <div class="bot_fut mob">
+        <a href="tel:+79100000000" class="icon_phone"></a>
+        <a href="lk.hnml" class="icon_lk"></a>
+        <a href="cart.html" class="icon_cart"></a>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

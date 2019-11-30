@@ -1,0 +1,57 @@
+2019-11-29T08:22:29+00:00 CRITICAL Maximum execution time of 180 seconds exceeded в E:\OSPanel\domains\shef.ru\wp-includes\class-wp-list-util.php на строке 110
+
+2019-11-29T08:26:25+00:00 CRITICAL Uncaught Exception: Неверный товар. in E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php:163
+Stack trace:
+#0 E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\class-wc-data-store.php(159): WC_Product_Data_Store_CPT->read(Object(WC_Product_Variable))
+#1 E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\abstracts\abstract-wc-product.php(135): WC_Data_Store->read(Object(WC_Product_Variable))
+#2 E:\OSPanel\domains\shef.ru\wp-content\themes\shef\template-parts\page\content-front-page.php(165): WC_Product->__construct(59)
+#3 E:\OSPanel\domains\shef.ru\wp-includes\template.php(724): require('E:\\OSPanel\\doma...')
+#4 E:\OSPanel\domains\shef.ru\wp-includes\template.php(671): load_template('E:\\OSPanel\\doma...', false)
+#5 E:\OSPanel\domains\shef.ru\wp-includes\general-template.php(168): locate_template(Array, true, false)
+#6 E:\OSPanel\domains\shef.ru\wp-content\themes\shef\front-page.php(25): get_template_ в E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\data-stores\class-wc-product-data-store-cpt.php на строке 163
+
+2019-11-29T08:47:08+00:00 CRITICAL Uncaught Error: Call to undefined function the_thumbnail() in E:\OSPanel\domains\shef.ru\wp-content\themes\shef\template-parts\page\content-front-page.php:107
+Stack trace:
+#0 E:\OSPanel\domains\shef.ru\wp-includes\template.php(724): require()
+#1 E:\OSPanel\domains\shef.ru\wp-includes\template.php(671): load_template('E:\\OSPanel\\doma...', false)
+#2 E:\OSPanel\domains\shef.ru\wp-includes\general-template.php(168): locate_template(Array, true, false)
+#3 E:\OSPanel\domains\shef.ru\wp-content\themes\shef\front-page.php(25): get_template_part('template-parts/...', 'front-page')
+#4 E:\OSPanel\domains\shef.ru\wp-includes\template-loader.php(98): include('E:\\OSPanel\\doma...')
+#5 E:\OSPanel\domains\shef.ru\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#6 E:\OSPanel\domains\shef.ru\index.php(17): require('E:\\OSPanel\\doma...')
+#7 {main}
+  thrown в E:\OSPanel\domains\shef.ru\wp-content\themes\shef\template-parts\page\content-front-page.php на строке 107
+
+2019-11-29T08:47:28+00:00 CRITICAL Uncaught Error: Call to undefined function the_thumbnail() in E:\OSPanel\domains\shef.ru\wp-content\themes\shef\template-parts\page\content-front-page.php:107
+Stack trace:
+#0 E:\OSPanel\domains\shef.ru\wp-includes\template.php(724): require()
+#1 E:\OSPanel\domains\shef.ru\wp-includes\template.php(671): load_template('E:\\OSPanel\\doma...', false)
+#2 E:\OSPanel\domains\shef.ru\wp-includes\general-template.php(168): locate_template(Array, true, false)
+#3 E:\OSPanel\domains\shef.ru\wp-content\themes\shef\front-page.php(25): get_template_part('template-parts/...', 'front-page')
+#4 E:\OSPanel\domains\shef.ru\wp-includes\template-loader.php(98): include('E:\\OSPanel\\doma...')
+#5 E:\OSPanel\domains\shef.ru\wp-blog-header.php(19): require_once('E:\\OSPanel\\doma...')
+#6 E:\OSPanel\domains\shef.ru\index.php(17): require('E:\\OSPanel\\doma...')
+#7 {main}
+  thrown в E:\OSPanel\domains\shef.ru\wp-content\themes\shef\template-parts\page\content-front-page.php на строке 107
+
+2019-11-29T10:34:48+00:00 CRITICAL syntax error, unexpected '$dostavka' (T_VARIABLE) в E:\OSPanel\domains\shef.ru\wp-content\themes\shef\header.php на строке 98
+
+2019-11-29T10:35:51+00:00 CRITICAL syntax error, unexpected '$dostavka' (T_VARIABLE) в E:\OSPanel\domains\shef.ru\wp-content\themes\shef\header.php на строке 98
+
+2019-11-29T19:40:17+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_exerpt() in E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\wc-template-functions.php:1120
+Stack trace:
+#0 E:\OSPanel\domains\shef.ru\wp-includes\class-wp-hook.php(288): woocommerce_template_loop_product_title('')
+#1 E:\OSPanel\domains\shef.ru\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#2 E:\OSPanel\domains\shef.ru\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 E:\OSPanel\domains\shef.ru\wp-content\themes\shef\woocommerce\content-product.php(49): do_action('woocommerce_sho...')
+#4 E:\OSPanel\domains\shef.ru\wp-includes\template.php(724): require('E:\\OSPanel\\doma...')
+#5 E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\wc-core-functions.php(195): load_template('E:\\OSPanel\\doma...', false)
+#6 E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-products.php(653): wc_get_template_part('content', 'product')
+#7 E:\OSPanel\domains\shef.ru\wp-co в E:\OSPanel\domains\shef.ru\wp-content\plugins\woocommerce\includes\wc-template-functions.php на строке 1120
+
+2019-11-29T21:02:26+00:00 CRITICAL syntax error, unexpected end of file в E:\OSPanel\domains\shef.ru\wp-content\themes\shef\footer.php на строке 65
+
+2019-11-29T21:07:38+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) в E:\OSPanel\domains\shef.ru\wp-content\themes\shef\page.php на строке 83
+
+2019-11-29T21:08:40+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) в E:\OSPanel\domains\shef.ru\wp-content\themes\shef\page.php на строке 81
+
