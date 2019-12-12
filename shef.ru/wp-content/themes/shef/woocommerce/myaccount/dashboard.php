@@ -129,15 +129,15 @@ foreach ( $get_addresses as $name => $address_title ) : ?>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td><?=$current_user->user_email;?></td>
+                    <td><?=$current_user->billing_email;?></td>
                 </tr>
                 <tr>
                     <td>Телефон:</td>
-                    <td><?=$current_user->phone;?></td>
+                    <td><?=$current_user->billing_phone;?></td>
                 </tr>
                 <tr>
                     <td>Адрес:</td>
-                    <td></td>
+                    <td><?=$current_user->billing_address_1;?></td>
                 </tr>
             </tbody></table>
             </div>
@@ -165,73 +165,114 @@ $customer_orders = wc_get_orders( array(
 ) );
 
 
-// Loop through each customer WC_Order objects
-foreach($customer_orders as $order ){
-
-    // Order ID (added WooCommerce 3+ compatibility)
-    $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
-
-    // Iterating through current orders items
-    foreach($order->get_items() as $item_id => $item){
-
-        // var_dump($item);
-        echo method_exists( $item, 'get_meta' );
-        // The corresponding product ID (Added Compatibility with WC 3+) 
-        $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
-
-        // Order Item data (unprotected on Woocommerce 3)
-        if( method_exists( $item, 'get_data' ) ) {
-             $item_data = $item->get_data();
-             $subtotal = $item_data['subtotal'];
-        } else {
-             $subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
-        }
-
-        // TEST: Some output
-        echo '<p>Subtotal: '.$subtotal.'</p><br>';
-
-        // Get a specific meta data
-        $item_color = method_exists( $item, 'get_meta' ) ? $item->get_meta('pa_color') : wc_get_order_item_meta( $item_id, 'pa_color', true );
-
-        // TEST: Some output
-        echo '<p>Color: '.$item_color.'</p><br>';
-    }
-} 
-
 ?>
         <div class="blk_lk">
             <div class="lk_ttl">Ваши заказы:</div>
             <table class="lk_table">
-                <tbody><tr>
-                    <td><a class="show_more" data="id1"><i class="fa fa-angle-down" aria-hidden="true"></i></a></td>
-                    <td>#123467890</td>
-                    <td>15.04.2019 10:00</td>
-                    <td><img src="/wp-content/themes/shef/verstka/image/cart/img1.jpg" alt="" class="lk_img"></td>
-                    <td>1 позиция на сумму 4 800 <span class="ruble">Р</span></td>
-                    <td class="status1">Выполнен</td>
+                <tbody>
+				
+			<?
+			function true_wordform($num, $form_for_1, $form_for_2, $form_for_5){
+	$num = abs($num) % 100; // берем число по модулю и сбрасываем сотни (делим на 100, а остаток присваиваем переменной $num)
+	$num_x = $num % 10; // сбрасываем десятки и записываем в новую переменную
+	if ($num > 10 && $num < 20) // если число принадлежит отрезку [11;19]
+		return $form_for_5;
+	if ($num_x > 1 && $num_x < 5) // иначе если число оканчивается на 2,3,4
+		return $form_for_2;
+	if ($num_x == 1) // иначе если оканчивается на 1
+		return $form_for_1;
+	return $form_for_5;
+}
+			$p=1;
+			
+			foreach($customer_orders as $order )
+			{
+				
+				
+				
+				
+				$order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+$order = wc_get_order($order_id);
+$data = $order->get_data(); 
+$suma=number_format($data['total'], 0, ' ', ' ');
+$sta=$data['status'];
+
+if ($sta=='on-hold')
+{
+$sta1='На удержании';
+}
+elseif ($sta=='processing')
+{
+$sta1='Обработка';	
+}
+elseif ($sta=='completed')
+{
+$sta1='Выполнен';	
+}
+elseif ($sta=='cancelled')
+{
+$sta1='Отменен';	
+}
+				
+				$cop=count($order->get_items());
+				
+$max_product = $cop; 
+$cok=$max_product . ' ' . true_wordform($max_product, 'позиция', 'позиции', 'позиций'); 
+				
+			?>	
+				
+				<tr>
+                    <td><a class="show_more" data="id<?=$p?>"><i class="fa fa-angle-down" aria-hidden="true"></i></a></td>
+                    <td>#<?=$order_id?></td>
+                    <td><? echo $data['date_created']->date('Y-m-d H:i:s');?></td>
+                    <td></td>
+                    <td><?=$cok?> на сумму <?=$suma?> <span class="ruble">Р</span></td>
+                    <td class="status1"><?=$sta1?></td>
                 </tr>
-                <tr id="id1" class="notvisible">
+                <tr id="id<?=$p?>" class="notvisible">
                     <td colspan="6">
                         <div class="spis_cart">
                         <ul>
+	<?				
+	$order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+    foreach($order->get_items() as $item_id =>$order_item)
+	{
+		
+		$qu=$order_item->get_quantity();
+		$order_item->get_order_id();
+		$nama=$order_item->get_name();
+		$cen=$order_item->get_total(); 
+		$cena=number_format($cen, 0, ' ', ' ');
+		
+		?>
                             <li class="relative">
                                 
-                                <div class="img"><img src="/wp-content/themes/shef/verstka/image/cart/img1.jpg" alt=""></div>
-                                <div class="name"><a href="detail.html">Ассорти</a></div>
-                                <div class="gram">1 шт</div>
-                                <div class="spis_price">4 800 <span class="ruble">Р</span></div>
+                                <div class="img"></div>
+                                <div class="name"><a href="detail.html"><?=$nama?></a></div>
+                                <div class="gram"><?=$qu?> шт</div>
+                                <div class="spis_price"><?=$cena?> <span class="ruble">Р</span></div>
                                 <div class="clb"></div>
                             </li>
+						<?
+	}
+						?>	
+							
                             <li>
-                                <div class="green_txt">ОПЛАЧЕН</div>
-                                <div class="ord_sum">4 800 <span class="ruble">Р</span></div>
+                                <div class="green_txt"></div>
+                                <div class="ord_sum"><?=$suma?> <span class="ruble">Р</span></div>
                                 <div class="ord_sum_itog">Итоговая сумма:</div>
                             </li>
                         </ul>
                         </div>
                     </td>
                 </tr>
-                <tr class="open_grey">
+				
+			<?
+			$p++;
+			}
+			?>	
+				
+               <!-- <tr class="open_grey">
                     <td><a class="show_more" data="id2"><i class="fa fa-angle-up" aria-hidden="true"></i></a></td>
                     <td>#123467654</td>
                     <td>16.10.2019 14:30</td>
@@ -242,6 +283,8 @@ foreach($customer_orders as $order ){
                     <td>2 позиции на сумму 8 000 <span class="ruble">Р</span></td>
                     <td class="status2">В обработке</td>
                 </tr>
+				
+				
                 <tr id="id2" class="visible">
                     <td colspan="6">
                         <div class="spis_cart">
@@ -270,7 +313,7 @@ foreach($customer_orders as $order ){
                         </ul>
                         </div>
                     </td>
-                </tr>
+                </tr>-->
                 
             </tbody></table>
         </div>

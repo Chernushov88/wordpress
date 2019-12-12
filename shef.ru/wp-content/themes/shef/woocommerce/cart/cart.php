@@ -171,7 +171,7 @@ $product_weight = get_post_meta( $product_id , 'product_weight', true );
                 <tr>
                   <td><a href="#" class="minus">-</a></td>
                   <td><input type="text" class="cnt" value="1" size="1"></td>
-                  <td><a href="#" class="plus">+</a></td>
+                  <td><a href="javascript:void(0)" onclick="addToCart('<?=$post1->ID?>')" class="plus">+</a></td>
                 </tr>
               </tbody>
             </table>
@@ -188,30 +188,41 @@ $product_weight = get_post_meta( $product_id , 'product_weight', true );
   <div class="add_ttl">Добавить одноразовую посуду к заказу:</div>
   <div class="spis_posuda">
     <ul>
-      <li>
+	<?
+	global $post; // не обязательно
+
+$myposts = get_posts( array(
+	'category' => 33
+) );
+
+foreach( $myposts as $post ){
+print_r( $post );
+
+}
+
+$posts1 = get_posts( array(
+	'product_cat'    =>'stolovye-prinadlezhnosti',
+	'post_type'   => 'product',
+) );
+
+foreach( $posts1 as $post1 ){
+global $woocommerce;
+?>
+   <li>
         <div class="sp_img"><img src="/wp-content/themes/shef/verstka/svg/tarelka.svg"/></div>
-        <div class="name">Тарелка</div>
-        <div class="cnt">12</div>
-        <a class="add_z_cart" href="#"></a>
-        <div class="spis_price">300 <span class="ruble">Р</span></div>
+        <div class="name"><?=$post1->post_title?></div>
+        <div class="cnt"><input value="1" type="text"></div>
+        <a class="add_z_cart" onclick="addToCart('<?=$post1->ID?>')" href="javascript:void(0)<?php //echo $uu; ?>"></a>
+        <div class="spis_price"><? echo get_post_meta( $post1->ID, '_regular_price', true ); ?> <span class="ruble">Р</span></div>
         <div class="clb"></div>
       </li>
-      <li>
-        <div class="sp_img"><img src="/wp-content/themes/shef/verstka/svg/pribory.svg"/></div>
-        <div class="name">Приборы</div>
-        <div class="cnt">12</div>
-        <a class="add_z_cart" href="#"></a>
-        <div class="spis_price">300 <span class="ruble">Р</span></div>
-        <div class="clb"></div>
-      </li>
-      <li>
-        <div class="sp_img"><img src="/wp-content/themes/shef/verstka/svg/stakany.svg"/></div>
-        <div class="name">Стакан</div>
-        <div class="cnt">12</div>
-        <a class="add_z_cart" href="#"></a>
-        <div class="spis_price">300 <span class="ruble">Р</span></div>
-        <div class="clb"></div>
-      </li>
+<?
+}
+
+
+	?>
+   
+     
     </ul>
   </div>
   <div class="green_line"></div>
@@ -268,8 +279,28 @@ $product_weight = get_post_meta( $product_id , 'product_weight', true );
   <div class="clb"></div>
 </div>
 
+    <script>    
+ 
+       function addToCart(p_id) {
+          $.get('/korzina/?post_type=product&add-to-cart=' + p_id, function() 
+		  {
+          window.location.reload();
+          });
+       }
+    </script>
+
+
 <div class="cart-collaterals">
   <?php
+
+  if (!empty($_GET['add-to-cart']))
+  {
+  global $woocommerce;
+$woocommerce->cart->add_to_cart($_GET['add-to-cart']);
+  }
+
+
+  
     /**
      * Cart collaterals hook.
      *

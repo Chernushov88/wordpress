@@ -39,15 +39,15 @@ if (empty($pric[1])){
 ?>
 <script>
 	jQuery(document).ready(function(){
-	  $('.big_close').click(function(){
-	        $('.bg').fadeOut();
-	        $('.popup').fadeOut();
+	  $('.big_close22').click(function(){
+	        $('.bg22').fadeOut();
+	        $('.popup22').fadeOut();
 	  });
 	});
 </script>
 <div class="wrapper relative nopad">
 	
-<div class="bg"></div>
+<!--<div class="bg"></div>
 <div class="popup">
     <div class="wrp relative">
         <a class="big_close"></a>
@@ -71,7 +71,7 @@ if (empty($pric[1])){
         </div>
         <a class="green_btn" href="set.html">Хочу дополнить заказ</a>
     </div>
-</div>  
+</div>  -->
   	<a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="mini_cart desktop">
 		<span class="count"><?php echo sprintf($woocommerce->cart->cart_contents_count); ?></span>
   	</a>
@@ -104,15 +104,15 @@ if (empty($pric[1])){
                     <table>
                         <tr>
                             <td>Ваш заказ: </td>
-                            <td>15 000 <span class="ruble">Р</span></td>
+                            <td><? echo $sub_total=WC()->cart->cart_contents_total; ?> <span class="ruble">Р</span></td>
                         </tr>
                         <tr>
                             <td>Доставка:</td>
-                            <td>+500 <span class="ruble">Р</span></td>
+                            <td id="dosa">0 <span class="ruble">Р</span></td>
                         </tr>
                         <tr class="order_itog">
                             <td>ИТОГО к оплате: </td>
-                            <td> <?=$itop?> <span class="ruble">Р</span></td>
+                            <td id="itog"> <?=$itop?> <span class="ruble">Р</span></td>
                         </tr>
                     </table>
                 </div>
@@ -130,7 +130,7 @@ if (empty($pric[1])){
                         <td class="o_chel"><label>Количество человек:</label></td>
                         <td >
                         <div class="select">
-                            <select>
+                            <select id="kola">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -151,7 +151,7 @@ if (empty($pric[1])){
                         <td class="o_hour">Продолжительность мероприятия:</td>
                         <td >
                         <div class="select"> 
-                            <select>
+                            <select id="tim">
                                 <option>24 часа</option>
                                 <option>23 часа</option>
                                 <option>22 часа</option>
@@ -181,7 +181,7 @@ if (empty($pric[1])){
                         </td>
                     </tr>
                 </table>
-                <div class="warning_wrp mob">
+                <!--<div class="warning_wrp mob">
                     <div class="red_ttl">Обратите внимание:</div>
                     <div class="pop_subtitle">Рекомендуемый объем еды на человека для долгосрочного мероприятия 650 г</div>
                     <div class="grey_wrp">
@@ -201,20 +201,20 @@ if (empty($pric[1])){
                         </table>
                     </div>
                     <a class="green_btn" href="set.html">Хочу дополнить заказ</a>
-                </div>
+                </div>-->
             </div>
             <div class="order_step">
                 <div class="order_step_ttl"><span>Шаг 2.</span> Дата и время доставки</div>
                 <table class="order_step2">
                     <tr>
                         <td>Дата доставки:</td>
-                        <td><input placeholder="Выберите дату" type="date"/></td>
+                        <td><input id="datdos" placeholder="Выберите дату" type="date"/></td>
                     </tr>
                     <tr>
                         <td>Время доставки:</td>
                         <td>
                             <div class="select"> 
-                            <select>
+                            <select id="timedos">
                                 <option selected="true">Время</option>
                                 <option>23 : 00</option>
                                 <option>22 : 00</option>
@@ -243,23 +243,23 @@ if (empty($pric[1])){
                 <div class="order_step_ttl"><span>Шаг 3.</span> Адрес и личные данные</div>
                 <div class="one_inp place">
                     Адрес доставки: <span class="req">*</span>
-                    <input onblur="$('#billing_address_1').val($(this).val());$('#billing_city').val($(this).val());$('#billing_state').val($(this).val());$('#billing_postcode').val(246000);"  type="text" />
+                    <input id="adr" onblur="$('#billing_address_1').val($(this).val());"  type="text" />
                 </div>
                 <div class="one_inp">
                     Ваше имя: <span class="req">*</span>
-                    <input onblur="$('#billing_first_name').val($(this).val());" type="text" />
+                    <input id="nam" onblur="$('#billing_first_name').val($(this).val());" type="text" />
                 </div>
                 <div class="one_inp">
                     Телефон: <span class="req">*</span>
-                    <input onblur="$('#billing_phone').val($(this).val())" type="text" />
+                    <input id="pho" onblur="$('#billing_phone').val($(this).val())" type="text" />
                 </div>
                 <div class="one_inp">
                     Электронная почта: <span class="req">*</span>
-                    <input onblur="$('#billing_email').val($(this).val())" type="text" />
+                    <input id="ema" onblur="$('#billing_email').val($(this).val())" type="text" />
                 </div>
                 <div class="one_inp">
                     Комментарии: 
-                    <textarea></textarea>
+                    <textarea id="kom"></textarea>
                 </div>
             </div>
             <div class="order_step" style="padding-right: 20px;">
@@ -267,19 +267,20 @@ if (empty($pric[1])){
                 
                 <div class="spis_chek">
                     
-                        <ul class="radio">
+                        <ul class="radio">  
+						<li>
+                                <input onchange="$('#payment_method_cod').parent().find('label').click()" id="check3" name="opl" type="radio" checked="true" value="check3">
+                                <label for="check3">Наличными курьеру</label>
+                            </li>
                             <li>
-                                <input onchange="$('#payment_method_bacs').parent().find('label').click()" id="check1" name="opl" type="radio" checked="true" value="check1">
+                                <input onchange="$('#payment_method_bacs').parent().find('label').click()" id="check1" name="opl" type="radio" value="check1">
                                 <label for="check1">Оплата картой</label>
                             </li>
                             <li>
-                                <input id="check2" name="opl" type="radio" value="check2">
+                                <input onchange="$('#payment_method_cheque').parent().find('label').click()" id="check2" name="opl" type="radio" value="check2">
                                 <label for="check2">Выставить счет</label>
                             </li>
-                            <li>
-                                <input onchange="$('#payment_method_cod').parent().find('label').click()" id="check3" name="opl" type="radio" value="check3">
-                                <label for="check3">Наличными курьеру</label>
-                            </li>
+                          
                             
                             
                         </ul>
@@ -289,6 +290,129 @@ if (empty($pric[1])){
                 
                 <a href="#" class="green_btn">Оплатить картой</a>
                 </div>
+				
+				
+				
+				<div class="order_step_ttl"><span>Шаг 5.</span> Способ доставки</div>
+                
+                <div class="spis_chek">
+                    
+                        <ul class="radio">
+                            <li>
+                                <input onchange="$('#shipping_method_0_local_pickup1').parent().find('label').click();prov()" id="check11" name="dos" type="radio" checked="true" value="check1">
+                                <label for="check11">Самовывоз</label>
+                            </li>
+							
+							<?
+							$sum=$sub_total=WC()->cart->cart_contents_total;
+							if ($sum<5000)
+							{
+								
+								
+							}
+							else
+							{
+								if ($sum<10000)
+								{
+									?>
+							<li>
+                                <input 
+								
+								<?
+								if ($sum<7000)
+								{
+									?>	
+									onchange="$('#shipping_method_0_free_shipping8').parent().find('label').click();prov()"
+									<?
+								}
+								else
+								{
+									?>
+									onchange="$('#shipping_method_0_flat_rate7').parent().find('label').click();prov()"
+									<?
+								}
+								?>
+								
+								
+								id="check22" name="dos" type="radio" value="check22">
+                                <label for="check22">Доставка по Москве</label>
+                            </li>
+									<?
+								}
+								else
+								{
+								?>
+								<li>
+                                <input <?
+								if ($sum<7000)
+								{
+									?>	
+									onchange="$('#shipping_method_0_flat_rate7').parent().find('label').click();prov()"
+									<?
+								}
+								else
+								{
+									?>
+									onchange="$('#shipping_method_0_free_shipping8').parent().find('label').click();prov()"
+									<?
+								}
+								?> id="check22" name="dos" type="radio" value="check22">
+                                <label for="check22">Доставка по Москве</label>
+                            </li>
+								 <li>
+                                <input 
+								
+								<?
+								if ($sum<15000)
+								{
+									?>	
+									onchange="$('#shipping_method_0_flat_rate3').parent().find('label').click();prov()" 
+									<?
+								}
+								else
+								{
+									?>
+									onchange="$('#shipping_method_0_free_shipping9').parent().find('label').click();prov()"
+									<?
+								}
+								?>
+								
+								
+								
+								id="check33" name="dos" type="radio" value="check33">
+                                <label for="check33">Доставка по МО до 50км</label>
+                            </li>
+                            <li>
+                                <input onchange="$('#shipping_method_0_flat_rate6').parent().find('label').click();prov()" id="check4" name="dos" type="radio" value="check4">
+                                <label for="check4">Доставка по МО более 50км</label>
+                            </li>
+
+<?								
+									
+								}
+								
+							}
+							?>
+							
+                          
+                           
+                            
+                        </ul>
+                    
+                    <div style="clear: both;"></div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
                 <div class="order_inf"><div class="bold">Мы принимаем заказы за 24 часа.</div> 
                     Позвоните по телефону: 8 (800) 000-00-00. Мы постараемся сделать все возможное, чтобы реализовать ваш заказ.
                 </div>
@@ -298,7 +422,7 @@ if (empty($pric[1])){
         </div>
 
         <div class="clb"></div>
-        <button class="green_btn" type="button" onclick="$('#place_order').click()" href="javascript:void(0)">Оформить заказ</button>
+        <button class="green_btn" type="button" onclick="carta();$('#place_order').click()" href="javascript:void(0)">Оформить заказ</button>
 
 
 
@@ -337,4 +461,63 @@ if (empty($pric[1])){
 
 </form>
 </div>
+<script>
+jQuery( document ).ready(function()
+{
+
+$('#billing_phone').val('');
+$('#billing_first_name').val('');
+$('#billing_email').val('');
+$('#billing_new_fild11').val('');
+$('#billing_new_fild12').val('');
+$('#billing_new_fild13').val('');
+$('#billing_new_fild14').val('');
+$('#billing_new_fild15').val('');
+$('#billing_address_1').val('-');
+
+  $('#billing_city').val('-');
+  	setTimeout(function () {
+	$('#shipping_method_0_local_pickup1').click();
+	$('#payment_method_cod').click();
+	}, 2000);
+
+  
+  
+});
+
+
+function prov()
+{
+  setTimeout(function () 
+  {
+	var pr=$('.order-total').find('.amount').text().replace(/[^\d;]/g, '');
+	$('#itog').html('');
+	$('#itog').html(pr+'<span class="ruble">Р</span>');
+	var bylo='<?=$sum?>';
+	var stalo=Number(pr)-Number(bylo);
+	$('#dosa').html(stalo+'<span class="ruble">Р</span>');
+	}, 2000);
+
+	
+}
+function carta()
+{
+var kola=$("#kola option:selected").text();
+var tim=$("#tim option:selected").text();
+var timdo=$("#timedos option:selected").text();
+var datdos=$("#datdos option:selected").val();
+var kom=$("#kom").val();
+$('#billing_address_1').val($('#adr').val());
+$('#billing_phone').val($('#pho').val());
+$('#billing_first_name').val($('#nam').val());
+$('#billing_email').val($('#ema').val());
+$('#billing_new_fild11').val(datdos);
+$('#billing_new_fild12').val(timdo);
+$('#billing_new_fild13').val(kola);
+$('#billing_new_fild14').val(tim);
+$('#billing_new_fild15').val(kom);
+$('#terms').click();
+$('.checkout').submit();
+}
+</script>
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

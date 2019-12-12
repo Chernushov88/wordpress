@@ -43,23 +43,25 @@ else{
         </div>
         <div class="fut_right">
           <div class="fut_tel">
-            <a href="/wp-content/themes/shef/verstka/tel:+74950000000">+7 (495) 000-00-00</a>
+            <a href="/wp-content/themes/shef/verstka/tel:+74959919917">+7 (495) 991-991-7</a>
           </div>
           <div class="my_soz">
+<!--
             <a href="/wp-content/themes/shef/verstka/https://vk.com"><i class="fa fa-vk" aria-hidden="true"></i></a>
             <a href="/wp-content/themes/shef/verstka/https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="/wp-content/themes/shef/verstka/https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+-->
+            <a href="www.instagram.com/call.chef/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="fut_center">
           Все права защищены «Call Cheff» 2019
           <div class="politika"><a href="/wp-content/themes/shef/verstka/#">Политика конфиденциальности</a></div>
-          <div class="razrab">Разработано </div>
+          <div class="razrab"><a href="https://www.eleven-group.ru/">Разработано </div>
         </div>
       </div>
       <div class="clb"></div>
       <div class="bot_fut mob">
-        <a href="/wp-content/themes/shef/verstka/tel:+79100000000" class="icon_phone"></a>
+        <a href="/wp-content/themes/shef/verstka/tel:+74959919917" class="icon_phone"></a>
         <a href="/wp-content/themes/shef/verstka/lk.hnml" class="icon_lk"></a>
         <a href="/wp-content/themes/shef/verstka/cart.html" class="icon_cart"></a>
       </div>
