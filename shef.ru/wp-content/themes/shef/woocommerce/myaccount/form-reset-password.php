@@ -22,7 +22,7 @@ do_action( 'woocommerce_before_reset_password_form' );
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
 
-	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_html__( 'Enter a new password below.', 'woocommerce' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
+	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_html__( 'Enter a new password below.', 'woocommerce' ) ); ?></p><?php  @codingStandardsIgnoreLine ?>
 
 	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 		<label for="password_1"><?php esc_html_e( 'New password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
@@ -42,6 +42,7 @@ do_action( 'woocommerce_before_reset_password_form' );
 
 	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
+		<br><br>
 		<button type="submit" class="woocommerce-Button button" value="<?php esc_attr_e( 'Save', 'woocommerce' ); ?>"><?php esc_html_e( 'Save', 'woocommerce' ); ?></button>
 	</p>
 

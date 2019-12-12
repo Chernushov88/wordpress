@@ -21,10 +21,14 @@ get_header();
 $strServ = $_SERVER['REQUEST_URI'];
 $dostavka = 'dostavka';
 $lk = 'lichnyj-kabinet';
+$editeData = '/redaktirovat-dannye/';
 $pozvoniShefu = 'pozvoni-shefu';
 $catalog = 'sety-ot-shefa';
+$korzina = 'korzina';
+$oformlenieZakaza = 'oformlenie-zakaza';
+$productCategory = 'product-category';
 // my_set_ban for_delivery
-if( strstr($strServ, $lk) ){
+if( strstr($strServ, $lk) || strstr($strServ, $editeData) ){
   $mainClass = 'lk';
 }elseif( strstr($strServ, $pozvoniShefu) ){
     // $mainClass = 'my_set_ban for_delivery';
@@ -33,6 +37,10 @@ if( strstr($strServ, $lk) ){
 		$my_banClass = "my_set_ban for_set";
 	}elseif( strstr($strServ, $dostavka) ){
         $my_banClass = 'my_set_ban for_delivery';
+    }elseif( strstr($strServ, $korzina) ){
+        $my_banClass = 'my_set_ban for_cart';
+    }elseif( strstr($strServ, $oformlenieZakaza) ){
+        $my_banClass = 'my_set_ban for_cart for_order';
     }else{
 	    $my_banClass = "my_set_ban";
 	}?>
@@ -49,7 +57,7 @@ if( strstr($strServ, $lk) ){
         </div>
         <h1 class="ttl50"><?= the_title();?></h1>
     </div>
-    <?if( strstr($strServ, $catalog) ):?>
+    <?if( strstr($strServ, $catalog) || strstr($strServ, $korzina) || strstr($strServ, $productCategory) ):?>
     <div class="blk_info">
         <div class="wrapper">
             <ul>
@@ -81,6 +89,7 @@ if( strstr($strServ, $lk) ){
         </div>
     </div> 
     <?endif;?>
+
 </div>
 <?}
 

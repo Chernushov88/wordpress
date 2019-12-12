@@ -36,7 +36,7 @@
           $people_count = get_post_meta( $loop->post->ID, 'people_count', true ); 
         ?>
       <li>
-        <div class="hit_img">
+        <div class="hit_img hit_img-home">
           <a href="<?php echo get_permalink($loop->post->ID) ?>">
             <?php the_post_thumbnail(); ?>
           </a>

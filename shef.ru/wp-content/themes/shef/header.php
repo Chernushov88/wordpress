@@ -25,6 +25,8 @@
   <!-- <script src="/wp-content/themes/shef/verstka/https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
   <!-- <script src="/wp-content/themes/shef/verstka/easydropdown/jquery.easydropdown.js"></script> -->
+  
+  <link rel="shortcut icon" href="/wp-content/themes/shef/verstka/image/logo.fw.png" type="image/x-icon">
   <link rel="stylesheet" href="/wp-content/themes/shef/verstka/bxslider/bxslider-4-4.2.12/dist/jquery.bxslider.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" href="/wp-content/themes/shef/verstka/css/style.css" type="text/css" />
@@ -65,7 +67,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
   <div class="all">
-    <header>
+    <header class="header">
       <div class="my_header">
         <div class="wrapper relative">
           <a class="mob button"><i class="fa fa-bars" aria-hidden="true"></i></a>
@@ -78,7 +80,7 @@
                 
                 <?php dynamic_sidebar( 'sidebar-phone' ); ?>
               </li>
-              <li class="my_lk"><a href="/lichnyj-kabinet/">Личный кабинет</a></li>
+              <li class="my_lk"><a href="/lichnyj-kabinet/" class="act">Личный кабинет</a></li>
             </ul>
           </div>
           <div class="my_logo">
@@ -90,6 +92,8 @@
         </div>
       </div>
     </header>
+
+
 
 
 

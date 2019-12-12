@@ -20,12 +20,69 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $related_products ) : ?>
+<script>
+    jQuery(document).ready(function(){
+        if ($(document).width()>760)
+        {
+          jQuery('.slider3').bxSlider({
+          slideWidth: 400,
+            mode: 'horizontal',
+            pager: false,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 1,
+            controls:  true,
+            touchEnabled:false,
+            slideMargin: 30
+        });
+      }
+	});
+</script>
+		<div class="clb"></div>
+        <div class="zaint relative">
+            <div class="ttl">Вас могут заинтересовать:</div>
+            <!-- <div class="ttl"><?php esc_html_e( 'Related products', 'woocommerce' ); ?></div -->
+            <div class="hits my_sld3">
+                
+            <ul class="slider3">
+                <li>
+                    <div class="hit_img">
+                        <a href="detail.html"><img alt="" src="/wp-content/themes/shef/verstka/image/home/hit1.fw.png"/></a>
+                    </div>
+                    <div class="hit_text">
+                    <div class="one_hit_ttl"><a href="detail.html">Ассорти</a></div>
+                    <div class="hit_descr">— Круассан с ростбифом — 10 шт. по 35 г
+                        Ассорти мини-салатов — 15 шт.:...
+                    </div>
+                    <div class="blk_price">
+                        <div class="count_chel">12-15</div>
+                        <div class="my_price">
+                            <span class="old_price">8 290 <span class="ruble">Р</span> </span>
+                            <span class="new_red_price">6 290<span class="ruble">Р</span></span>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+				<?php foreach ( $related_products as $related_product ) : ?>
 
-	<section class="related products">
+				<?php
+				 	$post_object = get_post( $related_product->get_id() );
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+					setup_postdata( $GLOBALS['post'] =& $post_object );
 
-		<?php woocommerce_product_loop_start(); ?>
+					wc_get_template_part( 'content', 'product' ); ?>
+
+				<?php endforeach; ?>
+                
+                
+            </ul>
+            
+        
+            </div>
+        </div>
+
+
+		<?/*php woocommerce_product_loop_start(); ?>
 
 			<?php foreach ( $related_products as $related_product ) : ?>
 
@@ -38,9 +95,9 @@ if ( $related_products ) : ?>
 
 			<?php endforeach; ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+		<?php woocommerce_product_loop_end(); */?>
 
-	</section>
+
 
 <?php endif;
 

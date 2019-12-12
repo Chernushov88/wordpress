@@ -121,7 +121,8 @@
 		}
 
 		sidebarPos       = $sidebar.offset();
-		sidebarPosBottom = sidebarPos.top + ( $sidebar.height() + 28 );
+		// sidebarPosBottom = sidebarPos.top + ( $sidebar.height() + 28 );
+		sidebarPosBottom = sidebarPos + ( $sidebar.height() + 28 );
 
 		$entryContent.find( param ).each( function() {
 			var $element = $( this ),

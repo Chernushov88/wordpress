@@ -1086,7 +1086,7 @@ dd {
 9.0 Tables
 --------------------------------------------------------------*/
 
-table {
+/*table {
 	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
@@ -1119,7 +1119,6 @@ th:last-child,
 td:last-child {
 	padding-right: 0;
 }
-
 /*--------------------------------------------------------------
 10.0 Links
 --------------------------------------------------------------*/
@@ -1141,7 +1140,7 @@ a:active {
 
 /* Hover effects */
 
-.entry-content a,
+/*.entry-content a,
 .entry-summary a,
 .comment-content a,
 .site-footer .widget-area a,
@@ -1153,7 +1152,7 @@ a:active {
 	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
 	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
 	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
-}
+}*/
 
 .entry-title a,
 .entry-meta a,
@@ -1234,9 +1233,9 @@ a:hover .nav-title,
 .widget .widget-title a:hover,
 .widget ul li a:focus,
 .widget ul li a:hover {
-	color: #000;
+	/*color: #000;
 	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);*/
 }
 
 /* Fixes linked images */

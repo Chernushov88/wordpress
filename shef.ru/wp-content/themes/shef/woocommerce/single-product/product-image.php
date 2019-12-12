@@ -33,20 +33,76 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
-		<?php
-		if ( $product->get_image_id() ) {
+<script>
+$(function(){
+	  $('.carusel').bxSlider({
+	  	slideWidth: 150,
+	    mode: 'horizontal',
+	    pager: false,
+	    minSlides: 3,
+	    maxSlides: 3,
+	    moveSlides: 1,
+	    controls:  true,
+	    touchEnabled:false,
+	    slideMargin: 7
+	  });
+	  $('.to_big').click(function(e){
+	  	e.preventDefault();
+        var val = $(this).attr('href');
+        console.log(val);
+        let img = $('.big_img .wp-post-image').attr("src");
+        $('.big_img .wp-post-image').attr("srcset",val);
+        console.log(img);
+        // return false;
+      });
+	  $('.show_down').click(function(){
+        if ($('.text').height()==118)
+        {
+            $(this).html("Свернуть<i class='fa fa-angle-up' aria-hidden='true'></i>");
+            $('.text').attr('style','height:auto;');
+        }
+        else
+        {
+            $(this).html("Развернуть<i class='fa fa-angle-down' aria-hidden='true'></i>");
+            $('.text').removeAttr('style');
+        }
+     });
+});
+</script>
+<style>
+	.woocommerce-tabs.wc-tabs-wrapper{display: none;}
+</style>
+
+
+
+<div class="prod1">
+    <div class="blk_ostr">
+        <ul>
+            <li class="hit">- HIT</li>
+            <li class="sp">- SPICY</li>
+            <li class="vegan">- VEG</li>
+            <li class="al">- Аллергены</li>
+        </ul>
+        <div class="clb"></div>
+    </div>
+    <div class="big_img">
+    	<!-- <img src="/wp-content/themes/shef/verstka/image/set/big_img.fw.png"/> -->
+
+    	<?
+		
+    	if ( $product->get_image_id() ) {
 			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
-		} else {
-			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-			$html .= '</div>';
+		} else {			
+			$html .= sprintf( '<img src="%s" alt="%s"/>', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'image' ) );
 		}
+		// echo $html;
+		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
+    	?>
+    </div>            
+	<? do_action( 'woocommerce_product_thumbnails' ); ?>
+    <div class="info desktop">
+        Блюда доставляются в элегантных чёрных пластиковых контейнерах в холодном виде.<br /> 
+        <b>Горячие блюда под самостоятельный разогрев.</b>
+    </div>       
 
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
-		do_action( 'woocommerce_product_thumbnails' );
-		?>
-	</figure>
 </div>

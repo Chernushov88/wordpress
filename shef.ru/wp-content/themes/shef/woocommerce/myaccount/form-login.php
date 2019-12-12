@@ -21,9 +21,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 
+<br><br>
+<div class="my_set_ban my_set_ban-login">
+	<div class="wrapper">
+	    <div class="my_soz"><?php dynamic_sidebar( 'sidebar-social' ); ?></div>
+	    <!-- <div class="breadcrumbs_set">
+	        <a href="index.html">Главная</a> 
+	        <i class="fa fa-angle-right" aria-hidden="true"></i>
+	        <?php esc_html_e( 'Login', 'woocommerce' ); ?>
+	    </div>
+	    
+	    
+	    <h1 class="ttl50"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h1> -->
+	</div>     
+</div>
+<div class="wrapper relative nopad">
+
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-<div class="u-columns col2-set" id="customer_login">
+<div class="u-columns col2-setwrapper relative nopad" id="customer_login">
 
 	<div class="u-column1 col-1">
 
@@ -31,7 +47,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
-		<form class="woocommerce-form woocommerce-form-login login" method="post">
+		<form class="woocommerce-form woocommerce-form-login login one_inp " method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
@@ -46,16 +62,22 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<?php do_action( 'woocommerce_login_form' ); ?>
 
-			<p class="form-row">
-				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
-				</label>
+			<div class="form-row radio ">
+				<div class="displayFlex">
+					<div class="displayFlex-in">
+						<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> 
+						<label class="label" for="rememberme"><span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span></label>
+					</div>		
+					<p class="woocommerce-LostPassword lost_password">
+						<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+					</p>
+				</div>
+					
+				
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-				<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
-			</p>
-			<p class="woocommerce-LostPassword lost_password">
-				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
-			</p>
+				<button type="submit" class="green_btn woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+			</div>
+			
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
@@ -115,5 +137,14 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 </div>
 <?php endif; ?>
+</div>
 
+<br>
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
+
+
+
+
+
+
+

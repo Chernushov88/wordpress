@@ -23,28 +23,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 <div style="clear: both;"></div>
 <div class="load_more">
-            <a href="#" class="show_sets">Загрузить еще</a>
+            <!-- <a href="#" class="show_sets">Загрузить еще</a> -->
             <div class="inf_sets">
-                <!-- Показано 5 из 5 сетов -->
-<?if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+                Показано 5 из 5 сетов
+<?
+// echo wc_get_template( 'loop/result-count.php' );
 ?>
-<p class="woocommerce-result-count">
-	<?php
-	if ( 1 === $total ) {
-		_e( 'Showing the single result', 'woocommerce' );
-	} elseif ( $total <= $per_page || -1 === $per_page ) {
-		/* translators: %d: total results */
-		printf( _n( 'Showing all %d result', 'Showing all %d results', $total, 'woocommerce' ), $total );
-	} else {
-		$first = ( $per_page * $current ) - $per_page + 1;
-		$last  = min( $total, $per_page * $current );
-		/* translators: 1: first result 2: last result 3: total results */
-		printf( _nx( 'Showing %1$d&ndash;%2$d of %3$d result', 'Showing %1$d&ndash;%2$d of %3$d results', $total, 'with first and last result', 'woocommerce' ), $first, $last, $total );
-	}
-	?>
-</p>
+<script>
+	$(function(){
+		
+		function countFunc(e){
+			console.log('count');
+			let count =$('.woocommerce-result-count').text();
+			console.log(count);
+			$('.inf_sets').text(count);
+		}
+		countFunc()
+			
+	})
+		
+</script>
             </div>
         </div>
         </div>

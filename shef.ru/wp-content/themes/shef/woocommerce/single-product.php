@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-
+11111111111
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
@@ -36,7 +36,7 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
 		<?php endwhile; // end of the loop. ?>
-
+22222222222
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
@@ -45,7 +45,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
+3333333333
 	<?php
 		/**
 		 * woocommerce_sidebar hook.
@@ -54,7 +54,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
-
+4444444444
 <?php get_footer( 'shop' );
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

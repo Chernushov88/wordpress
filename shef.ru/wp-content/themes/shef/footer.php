@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * The template for displaying the footer
  *
@@ -65,6 +65,8 @@ else{
       </div>
     </footer>
   </div>
+  <script src="/wp-content/themes/shef/assets/js/common.js"></script>
+  <div id="scroll"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 <?php wp_footer(); ?>
 
 </body>
