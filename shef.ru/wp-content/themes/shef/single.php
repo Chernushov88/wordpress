@@ -35,10 +35,9 @@ get_header(); ?>
 </div>
 <main>
     <div class="wrapper relative mtop">
-        <? global $woocommerce; ?>
-      	<a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="mini_cart desktop">
-			<span class="count"><?php echo sprintf($woocommerce->cart->cart_contents_count); ?></span>
-      	</a>
+<?
+    // get_template_part( 'template-parts/header/header', 'cart' );
+?>
         
         
         

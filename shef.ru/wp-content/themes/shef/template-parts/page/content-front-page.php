@@ -8,10 +8,9 @@
    * @version 1.0
    */
   
+
   ?>
-<?php
-  the_content();
-  ?>
+
 <div class="wrapper">
   <div class="clb"></div>
   <div class="hit_ttl">Хиты продаж</div>
@@ -67,21 +66,12 @@
 </div>
 <div class="blk_shef">
   <div class="wrapper relative">
-    <img class="img_shef" src="/wp-content/themes/shef/verstka/image/gif/1.gif"/>
-    <div class="shef_left">
-      <div class="shef_ttl">Знакомьтесь с Шефом</div>
-      <div class="shef_citata">
-        <div class="citata_ttl">Здравствуйте!<br />Меня зовут Имя Фамилия!</div>
-        <div class="citata_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          <br /><br />
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </div>
-      </div>
-    </div>
+    <?php dynamic_sidebar( 'meet_the_shef' ); ?>  
   </div>
 </div>
 <div class="fish_shef">
   <div class="wrapper">
+
     <div class="my_articles">
       <div class="fish_ttl">Фишки от Шефа</div>
       <div class="desktop">
@@ -96,15 +86,22 @@
               );
               // echo '<pre>';
               //   print_r($args);
-              // echo '</pre>';
+              // echo '</pre>';              
                
+
               $loop = new WP_Query($args);          
-              while ($loop->have_posts()) : $loop->the_post(); ?>
-              <?=the_post_thumbnail();?>
-              <div class="art_text_white">
-                <div class="art_ttl"><?=the_title(); ?></div>
-                <div class="art_date"><?=the_date(); ?></div>
-              </div>              
+              while ($loop->have_posts()) : $loop->the_post(); 
+                $single_post = get_post_meta( get_the_ID(), 'single_post', true );
+                // $single_post;
+                if ($single_post == 1) {?>
+                  <?=the_post_thumbnail();?>
+                  <div class="art_text_white">
+                    <?/* get_the_ID();*/?>
+                    <div class="art_ttl"><a href="<?=get_permalink();?>"><?=the_title(); ?></a></div>
+                    <div class="art_date"><?=the_date(); ?></div>
+                  </div>   
+                <? } ?>
+                           
             <?php endwhile;?>
         </div>
         <div class="art_right">
@@ -120,43 +117,98 @@
               //   print_r($args);
               // echo '</pre>';
               $loop = new WP_Query($args);          
-              while ($loop->have_posts()) : $loop->the_post(); ?>
+              while ($loop->have_posts()) : $loop->the_post(); 
+                $single_post = get_post_meta( $loop->post->ID, 'single_post', true );
+                if ($single_post != 1) {?>
                 <div class="one_sld">
               <div class="one_sld_img"><?=the_post_thumbnail();?></div>
               <div class="art_text">
-                <div class="art_ttl_black"><?=the_title(); ?></div>
+                <div class="art_ttl_black"><a href="<?=get_permalink();?>"><?=the_title(); ?></a></div>
                 <div class="art_date_grey"><?= get_the_date(); ?></div>
               </div>
-            </div>     
-            <?php endwhile;?>          
+            </div>    
+            <? } 
+             endwhile;?>          
           </div>
         </div>
       </div>
       <div class="mob">
+	  
+	  <?
+	      $args = array(  
+                  'post_type' => 'post',  
+                  'posts_per_page' => 1,  
+                  'taxonomy'=>'home_article_single',
+                  'orderby' => 'rand'
+              );
+              // echo '<pre>';
+              //   print_r($args);
+              // echo '</pre>';              
+               
+
+              $loop = new WP_Query($args);          
+              while ($loop->have_posts()) : $loop->the_post(); 
+                $single_post = get_post_meta( get_the_ID(), 'single_post', true );
+                // $single_post;
+                if ($single_post == 1) {?>
+                
+				  
         <div class="fich relative">
-          <img src="/wp-content/themes/shef/verstka/image/mob/fm1.fw.png" alt=""/>
+          <?=the_post_thumbnail();?>
           <div class="art_text_white">
-            <div class="art_ttl">Заголовок статьи будет тут</div>
-            <div class="art_date">09.08.2019</div>
+            <div class="art_ttl"><a href="<?=get_permalink();?>"><?=the_title(); ?></a></div>
+            <div class="art_date"><?=the_date(); ?></div>
           </div>
         </div>
-        <div class="fich">
-          <img src="/wp-content/themes/shef/verstka/image/mob/fm2.fw.png" alt=""/>
+				  
+				  
+				  
+                <? } ?>
+                           
+            <?php endwhile;?>
+	  
+	  
+	  
+	  
+	   <?php
+              $args = array(  
+                  'post_type' => 'post',  
+                  'posts_per_page' => -1, 
+                  'taxonomy'=>'home_article_slider', 
+                  'orderby' => 'rand'                  
+              );
+              // echo '<pre>';
+              //   print_r($args);
+              // echo '</pre>';
+              $loop = new WP_Query($args);          
+              while ($loop->have_posts()) : $loop->the_post(); 
+                $single_post = get_post_meta( $loop->post->ID, 'single_post', true );
+                if ($single_post != 1) {?>
+              
+			
+			
+			   <div class="fich">
+        <?=the_post_thumbnail();?>
           <div class="art_text">
-            <div class="art_ttl_black">Заголовок статьи будет тут</div>
-            <div class="art_date_grey">09.08.2019</div>
+            <div class="art_ttl_black"><a href="<?=get_permalink();?>"><?=the_title(); ?></a></div>
+            <div class="art_date_grey"><?= get_the_date(); ?></div>
           </div>
         </div>
-        <div class="fich">
-          <img src="/wp-content/themes/shef/verstka/image/mob/fm3.fw.png" alt=""/>
-          <div class="art_text">
-            <div class="art_ttl_black">Заголовок статьи будет тут</div>
-            <div class="art_date_grey">09.08.2019</div>
-          </div>
-        </div>
+			
+			
+			
+            <? } 
+             endwhile;?>   
+	  
+	  
+     
+      
+	  
+	  
       </div>
       <div style="clear: both;"></div>
     </div>
+
   </div>
 </div>
 
@@ -164,32 +216,8 @@
 
 
 <div class="insta">
-  <div class="inst_blk">
-    <div class="flex1">
-      <img src="/wp-content/themes/shef/verstka/image/home/inst0.png" alt=""/>
-      <img src="/wp-content/themes/shef/verstka/image/home/inst1.fw.png" alt=""/>
-    </div>
-    <div class="flex1">
-      <img src="/wp-content/themes/shef/verstka/image/home/inst01.png" alt=""/>
-      <img src="/wp-content/themes/shef/verstka/image/home/inst4.fw.png" alt=""/>
-    </div>
-  </div>
-  <div class="inst_blk but">
-    <a href="https://www.instagram.com">
-      <div class="inst_ttl">Жми для перехода в наш Instagram</div>
-      <div class="inst_btn">INSTAGRAM</div>
-    </a>
-  </div>
-  <div class="inst_blk">
-    <div class="flex1">
-      <img src="/wp-content/themes/shef/verstka/image/home/inst2.fw.png" alt=""/>
-      <img src="/wp-content/themes/shef/verstka/image/home/inst3.fw.png" alt=""/>
-    </div>
-    <div class="flex1">
-      <img src="/wp-content/themes/shef/verstka/image/home/inst5.fw.png" alt=""/>
-      <img src="/wp-content/themes/shef/verstka/image/home/inst6.fw.png" alt=""/>
-    </div>
-  </div>
+  <?php dynamic_sidebar( 'instagram' ); ?>  
+
 </div>
 <div class="my_contacts relative">
   <div class="cont_right">
@@ -199,8 +227,8 @@
     <div class="wrp_cont">
       <div class="cont_ttl">Контакты</div>
       <div class="cont_blk">
-        <a class="map_tel" href="tel:+74950000000">+7 (495) 000-00-00</a>
-        <a class="map_email" href="mailto:vashemail@gmail.com">vashemail@gmail.com</a>
+        <a class="map_tel" style="text-align:center" href="tel:+84959919917">+8-495-991-991-7</a>
+        <a class="map_email" href="mailto:hello@call-the-chef.ru">hello@call-the-chef.ru</a>
         <div class="my_soz">
           <a href="https://vk.com"><i class="fa fa-vk" aria-hidden="true"></i></a>
           <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>

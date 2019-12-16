@@ -33,42 +33,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<script>
-$(function(){
-	  $('.carusel').bxSlider({
-	  	slideWidth: 150,
-	    mode: 'horizontal',
-	    pager: false,
-	    minSlides: 3,
-	    maxSlides: 3,
-	    moveSlides: 1,
-	    controls:  true,
-	    touchEnabled:false,
-	    slideMargin: 7
-	  });
-	  $('.to_big').click(function(e){
-	  	e.preventDefault();
-        var val = $(this).attr('href');
-        console.log(val);
-        let img = $('.big_img .wp-post-image').attr("src");
-        $('.big_img .wp-post-image').attr("srcset",val);
-        console.log(img);
-        // return false;
-      });
-	  $('.show_down').click(function(){
-        if ($('.text').height()==118)
-        {
-            $(this).html("Свернуть<i class='fa fa-angle-up' aria-hidden='true'></i>");
-            $('.text').attr('style','height:auto;');
-        }
-        else
-        {
-            $(this).html("Развернуть<i class='fa fa-angle-down' aria-hidden='true'></i>");
-            $('.text').removeAttr('style');
-        }
-     });
-});
-</script>
+
 <style>
 	.woocommerce-tabs.wc-tabs-wrapper{display: none;}
 </style>
@@ -98,6 +63,7 @@ $(function(){
 		// echo $html;
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
     	?>
+<a class="to_big fancy" href="http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-scaled.jpg"><img width="600" height="400" src="http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-600x400.jpg" class="" alt="" title="32вид сбоку Набор Ассорти фруктов" data-caption="" data-src="http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-scaled.jpg" data-large_image="http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-scaled.jpg" data-large_image_width="2560" data-large_image_height="1707" srcset="http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-600x400.jpg 600w, http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-300x200.jpg 300w, http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-1024x683.jpg 1024w, http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-768x512.jpg 768w, http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-1536x1024.jpg 1536w, http://shef.ru/wp-content/uploads/2019/12/32vid-sboku-nabor-assorti-fruktov-2048x1365.jpg 2048w" sizes="100vw"></a>
     </div>            
 	<? do_action( 'woocommerce_product_thumbnails' ); ?>
     <div class="info desktop">
@@ -106,3 +72,53 @@ $(function(){
     </div>       
 
 </div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+$(function(){
+      $('.carusel').bxSlider({
+        slideWidth: 150,
+        mode: 'horizontal',
+        pager: false,
+        minSlides: 3,
+        maxSlides: 3,
+        moveSlides: 1,
+        controls:  true,
+        touchEnabled:false,
+        slideMargin: 7
+      });
+      $('.carusel .to_big').click(function(e){
+        e.preventDefault();
+        var val = $(this).attr('href');
+        console.log(val);
+        let img = $('.big_img .wp-post-image').attr("src");
+        $('.big_img .wp-post-image').attr("srcset",val);
+        console.log(img);
+        // return false;
+      });
+      $('.show_down').click(function(){
+        if ($('.text').height()==115)
+        {
+            $(this).html("Свернуть<i class='fa fa-angle-up' aria-hidden='true'></i>");
+            $('.text').attr('style','height:auto;');
+        }
+        else
+        {
+            $(this).html("Развернуть<i class='fa fa-angle-down' aria-hidden='true'></i>");
+            $('.text').removeAttr('style');
+        }
+     });
+    $('.fancy').fancybox({
+        afterLoad : function(instance, current) {
+        var pixelRatio = window.devicePixelRatio || 1;
+
+        if ( pixelRatio > 1.5 ) {
+                current.width  = current.width  / pixelRatio;
+                current.height = current.height / pixelRatio;
+            }
+        }
+    });
+});
+</script>
+

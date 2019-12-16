@@ -137,7 +137,6 @@ function twentyseventeen_setup() {
 				'search',
 				'text_about',
 			),
-
 			// Add the core-defined business info widget to the footer 1 area.
 			'sidebar-2' => array(
 				'text_business_info',
@@ -152,6 +151,12 @@ function twentyseventeen_setup() {
 				'text_business_info',
 			),
 			'sidebar-social' => array(
+				'text_business_info',
+			),
+			'meet_the_shef' => array(
+				'text_business_info',
+			),
+			'instagram' => array(
 				'text_business_info',
 			),
 		),
@@ -390,6 +395,28 @@ function twentyseventeen_widgets_init() {
 			'name'          => __( 'sidebar-social', 'twentyseventeen' ),
 			'id'            => 'sidebar-social',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'meet_the_shef', 'twentyseventeen' ),
+			'id'            => 'meet_the_shef',
+			'description'   => __( 'Знакомьтесь с Шефом', 'twentyseventeen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'instagram', 'twentyseventeen' ),
+			'id'            => 'instagram',
+			'description'   => __( 'Знакомьтесь с Шефом', 'twentyseventeen' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

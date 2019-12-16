@@ -100,32 +100,9 @@ window.onload = function(){
 	<div class="prod2">
         <div class="ttl"><?= woocommerce_template_single_title();?></div>
         <div class="text relative">
-            <img src="/wp-content/themes/shef/verstka/image/set/hit.fw.png" alt="" class="r1"/>
-            <img src="/wp-content/themes/shef/verstka/image/set/spacy.fw.png" alt="" class="r2"/>     
-<b>Канапе:</b>
-<? the_excerpt(); ?>
-<div class="calories new">
-<table class="bgu">
-<tbody>
-<tr>
-<td>Калории</td>
-<td>Белки</td>
-<td>Жиры</td>
-<td>Углеводы</td>
-</tr>
-<tr>
-<td><?=$Calories; ?> кКал</td>
-<td><?=$Protein; ?>  г</td>
-<td><?=$Fats; ?>  г</td>
-<td><?=$Carbohydrates; ?>  г</td>
-</tr>
-</tbody>
-</table>     
-</div>  
-            <?php echo the_content(); ?>
-             
+			<? the_excerpt(); ?>
+            <?php echo the_content(); ?>             
         </div>
-        <br /> 
         <div class="show_down">Развернуть<i class="fa fa-angle-down" aria-hidden="true"></i></div>
         <div class="calories">
             <div class="oran_top">

@@ -207,7 +207,7 @@ ul
 .my_home_ban
 {
     width: 100%;
-    height: 1406px;
+    /*height: 1406px;*/
     background: url(../image/home/home_banner.png) no-repeat center center;
     margin-top:-177px;
     
@@ -496,6 +496,8 @@ ul
 }
 .hit_descr
 {
+    overflow: hidden;
+    height: 40px;
     font-family: proxima-light;
     color:#636363;
 }
@@ -1017,6 +1019,9 @@ footer
     padding-bottom: 30px;
     background: url(../image/futter.png);
 }
+.footer-home{
+    margin-top: 0;
+}
 .fut_left
 {
     float:left;
@@ -1068,7 +1073,20 @@ footer
     background: url(../svg/cart_plav.svg) no-repeat center center;
     right:0px;
     top:0;
-    margin-top:-10px;
+    /*margin-top:-10px;*/
+    position: fixed;
+    right: 5vw;
+    top: 40vh;
+    z-index: 999;
+}
+.mini_cart.fixed{
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    z-index: 999;
+}
+.mini_cart.device_hide{
+    display: none !important;
 }
 .mini_cart .count
 {
@@ -1196,10 +1214,19 @@ main
 }
 .prod2
 {
+    
     width:337px;
     float:left;
     margin-left:50px;
     padding-top:90px;
+}
+.text.relative{
+position: relative;
+} 
+.img_block{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .prod2 .ttl
 {
@@ -1211,7 +1238,8 @@ main
 .prod2 .text
 {
     padding-right: 37px;
-    height:118px;
+    height:115px;
+    margin-bottom: 10px;
     overflow: hidden;
     color:#393939;
     font-family: montserrat-light;
@@ -1226,13 +1254,23 @@ main
 {
     position: absolute;
     right:0;
-    top:30px;
+    top:0px;
 }
 .prod2 .r2
 {
     position: absolute;
     right:0;
-    top:70px;
+    top:30px;
+}
+.prod2 .r3{
+    position: absolute;
+    right:0;
+    top:60px;
+}
+.prod2 .r4{
+    position: absolute;
+    right:0;
+    top:90px;
 }
 .show_down
 {
@@ -1447,7 +1485,8 @@ div.woocommerce ul.product_list_widget li img{
 }
 input.cnt
 {
-    width: 30px;
+    width: 36px;
+    padding: 0;
     text-align: center;
     color:#000;
     font-family: montserrat;
@@ -1521,6 +1560,7 @@ div.woocommerce ul.cart_list li {
     font-size: 16px;
     color:#000;
     font-family: montserrat;
+    z-index: 1;
 }
 .price_cnt td div .fa-angle-up:before {
     content: "+";
@@ -1794,8 +1834,13 @@ footer.for_prod_cart
     font-family: montserrat-light;
     color:#000;
     float:left;
-    margin-left:20px;
     margin-top:18px;
+}
+.spis_posuda ul li .cnt input{
+    width: 50px;
+    padding: 0;
+    text-align: center;
+    border: 0px solid transparent;
 }
 .spis_posuda ul li .spis_price
 {
@@ -2007,6 +2052,9 @@ footer.for_prod_cart
     font-size: 14px;    
     border-radius: 5px;
     cursor: pointer;
+}
+.for_delivery + main .green_btn{
+    margin-top: 40px;
 }
 button.button{
     display: block;
@@ -2231,6 +2279,7 @@ a.email
 }
 .warning_wrp .green_btn
 {
+    margin-top: 40px;
     width: 220px;
 }
 a
@@ -2428,29 +2477,29 @@ input[type="date"], input[type="date"]:hover
 }
 .radio label,
 .radio label.label {
-	display: inline-block;
-	cursor: pointer;
-	position: relative;
-	padding-left: 30px;
-	margin-right: 15px;
-	font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 15px;
+    font-size: 16px;
     
 }
 
 .radio label:before,
 .radio label.label:before {
-	content: "";
-	display: inline-block;
+    content: "";
+    display: inline-block;
 
-	width: 22px;
-	height: 22px;
+    width: 22px;
+    height: 22px;
 
-	margin-right: 10px;
-	position: absolute;
-	left: 0;
-	bottom: 1px;
-	background: none;
-	border:1px solid #FF955F;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background: none;
+    border:1px solid #FF955F;
     border-radius: 10px;
 }
 .radio input[type=radio]:checked + label:before,
@@ -2459,21 +2508,21 @@ input[type="date"], input[type="date"]:hover
     left:2px;
     bottom:3px;
     width: 18px;
-	height: 18px;
+    height: 18px;
     background: #FF955F;
 }
 .radio input[type=radio]:checked + label:after,
 .radio input[type=checkbox]:checked + label:after {
-	content: "";
-	display: inline-block;
-	width: 22px;
-	height: 22px;
-	margin-right: 10px;
-	position: absolute;
-	left: 0;
-	bottom: 1px;
-	background: none;
-	border:1px solid #FF955F;
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background: none;
+    border:1px solid #FF955F;
     border-radius: 10px;
 }
 .radio li
@@ -2500,7 +2549,7 @@ input[type="date"], input[type="date"]:hover
 }
 .order_inf
 {
-    
+    min-height: 20px;
     font-size: 14px;
     font-family: montserrat;
     padding-left:30px;
@@ -2970,15 +3019,28 @@ main.lk .mini_cart.r
         left:15px;
         top:15px;
     }
-    .mob.mini_cart
+    .mini_cart
     {
-        position: absolute;
+        position: fixed;
         margin:0;
         right:20px;
         top:15px;
         background: url(../image/mob/cart.fw.png) no-repeat center center;
         width:39px;
         height:39px;
+        position: fixed;
+        /*right: 20px;
+        top:15;*/
+        z-index: 999;
+    }
+    .mini_cart.fixed{
+        position: fixed;
+        right:20px;
+        top:15px;
+        z-index: 999;
+    }
+    .mini_cart.device_hide{
+        display: block !important;
     }
     .my_header .wrapper
     {
@@ -3287,6 +3349,9 @@ main.lk .mini_cart.r
     .bot_fut a.icon_cart
     {
         background: #A8C53A url(../image/mob/ic3.png) no-repeat center center;
+    }
+    .bot_fut a[href="https://www.eleven-group.ru/"]{
+        display: none;        
     }
     .go_top, #scroll
     {
@@ -3951,3 +4016,4 @@ main.lk .mini_cart.r
     background: none;
     color: #000;
 }
+

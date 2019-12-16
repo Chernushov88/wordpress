@@ -62,9 +62,9 @@ $(document).ready(function(){
 </script>
 <div class="wrapper relative">
         <? global $woocommerce; ?>
-        <a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="mini_cart r desktop">
+        <!-- <a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="mini_cart r desktop">
             <span class="count"><?php echo sprintf($woocommerce->cart->cart_contents_count); ?></span>
-        </a>
+        </a> -->
         <div class="my_soz">
             <?php dynamic_sidebar( 'sidebar-social' ); ?>
         </div>

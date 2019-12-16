@@ -103,9 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $(window).scroll(function(){
     if ($(this).scrollTop() > 500) { 
+      $('.mini_cart').addClass('fixed');
     $('#scroll').fadeIn();
     } else {
-    $('#scroll').fadeOut();
+      $('#scroll').fadeOut();
+      $('.mini_cart').removeClass('fixed');
     }
   });
      

@@ -30,7 +30,7 @@ if ( $max_value && $min_value === $max_value ) {
 	<div class="blk_cnt">
 		<?php do_action( 'woocommerce_before_quantity_input_field' ); ?>
 	 <table>
-        <tr><td><div class="cnt_plus" onclick="cnt_plus(this);"><i class="fa fa-angle-up" aria-hidden="true"></i></div></td></tr>
+        <tr><td><div class="cnt_plus" onclick="cnt_plus(this);$('#update_cart').click();"><i class="fa fa-angle-up" aria-hidden="true"></i></div></td></tr>
         <tr><td>        	
         	
         	<input
@@ -47,7 +47,7 @@ if ( $max_value && $min_value === $max_value ) {
 			inputmode="<?php echo esc_attr( $inputmode ); ?>" />
 			
         </td></tr>
-        <tr><td><div class="cnt_minus" onclick="cnt_minus(this);"><i class="fa fa-angle-down" aria-hidden="true"></i></div></td></tr>
+        <tr><td><div class="cnt_minus" onclick="cnt_minus(this);$('#update_cart').click();"><i class="fa fa-angle-down" aria-hidden="true"></i></div></td></tr>
     </table>
     <?php do_action( 'woocommerce_after_quantity_input_field' ); ?>
     </div>

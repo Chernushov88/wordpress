@@ -23,7 +23,7 @@ $home = '/';
 $lk = 'lichnyj-kabinet';
 
 if( $strServ == $home ){
-  $footerClass = 'mob';
+  $footerClass = '-mob footer-home';
   
 }
 else{

@@ -72,31 +72,60 @@ if (empty($pric[1])){
         <a class="green_btn" href="set.html">Хочу дополнить заказ</a>
     </div>
 </div>  -->
-  	<a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="mini_cart desktop">
-		<span class="count"><?php echo sprintf($woocommerce->cart->cart_contents_count); ?></span>
-  	</a>
+<?
+    // get_template_part( 'template-parts/header/header', 'cart' );
+	
+$vvv=0;
+	 foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) 
+	 {
+          $_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+          $product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+ $product_weight = get_post_meta( $product_id , 'product_weight', true )*$cart_item['quantity'];
+$vvv+=$product_weight;
+	 }
+	
+	$nach=3;
+	$kol=12;
+	
+	
+	$ve1=450;
+	$ve2=650;
+	$ve3=850;
+	
+	$up=$ve2*$kol;
+    $va=$up-$vvv;
+	if ($va>0)
+	{
+	$nuz=$va;
+	}
+	else
+	{
+	$nuz=0;	
+	}
+?>
 
         <div class="right_blk">
             <div class="warning_wrp desktop">
                 <div class="red_ttl">Обратите внимание:</div>
-                <div class="pop_subtitle">Рекомендуемый объем еды на человека для долгосрочного мероприятия 650 г</div>
+                <div class="pop_subtitle">Рекомендуемый объем еды на человека для долгосрочного мероприятия <b class="rad"><?=$ve2?></b> г</div>
                 <div class="grey_wrp">
                     <table>
                         <tr>
                             <td>Рекомендуемый объем:</td>
-                            <td>7 800 г</td>
+                            <td><?=$up?> г</td>
                         </tr>
                         <tr>
                             <td>Общий вес заказа:</td>
-                            <td>4 680 г</td>
+                            <td><?=$vvv?> г</td>
                         </tr>
                         <tr>
                             <td>Не хватает до рекомендации:</td>
-                            <td>3 120 г</td>
+                            <td><?=$nuz?> г</td>
                         </tr>
                     </table>
                 </div>
-                <a class="green_btn" href="set.html">Хочу дополнить заказ</a>
+                <a class="green_btn" href="/sety-ot-shefa/">Хочу дополнить заказ</a>
             </div>
             <div class="order_sum">
                 <div class="order_ttl">Общая сумма заказа:</div>
@@ -130,7 +159,7 @@ if (empty($pric[1])){
                         <td class="o_chel"><label>Количество человек:</label></td>
                         <td >
                         <div class="select">
-                            <select id="kola">
+                            <select onchange="info()" id="kola">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -143,6 +172,18 @@ if (empty($pric[1])){
                                 <option>10</option>
                                 <option>11</option>
                                 <option selected="true">12</option>
+								<option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
                             </select>
                          </div>   
                         </td>
@@ -151,7 +192,7 @@ if (empty($pric[1])){
                         <td class="o_hour">Продолжительность мероприятия:</td>
                         <td >
                         <div class="select"> 
-                            <select id="tim">
+                            <select onchange="info()" id="tim">
                                 <option>24 часа</option>
                                 <option>23 часа</option>
                                 <option>22 часа</option>
@@ -172,8 +213,8 @@ if (empty($pric[1])){
                                 <option>7 часов</option>
                                 <option>6 часов</option>
                                 <option>5 часов</option>
-                                <option selected="true">4 часа</option>
-                                <option>3 часа</option>
+                                <option>4 часа</option>
+                                <option selected="true">3 часа</option>
                                 <option>2 часа</option>
                                 <option>1 час</option>
                             </select>
@@ -518,6 +559,37 @@ $('#billing_new_fild14').val(tim);
 $('#billing_new_fild15').val(kom);
 $('#terms').click();
 $('.checkout').submit();
+}
+
+function info()
+{
+var ves=Number(<?=$vvv?>);
+var nu=450;
+var kol=Number($("#kola option:selected").text());
+
+var ch=$("#tim option:selected").text().split(' ');
+
+var chas=Number(ch[0]);
+alert(chas);
+if (chas<3)
+{
+var nu=450;	
+	
+}
+else  
+{
+
+if (chas>2 && chas<5)
+{
+var nu=650;	
+}
+else
+{
+var nu=850;	
+}
+}
+
+alert(nu);
 }
 </script>
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

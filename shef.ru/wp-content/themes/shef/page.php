@@ -81,11 +81,11 @@ if( strstr($strServ, $lk) || strstr($strServ, $editeData) ){
                     <div class="grey_txt">Принимаем заказы от 10 сетов:</div>
                     За 48 часов
                 </li>
-            </ul>
-            <? global $woocommerce; ?>
-          	<a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="mini_cart desktop">
-				<span class="count"><?php echo sprintf($woocommerce->cart->cart_contents_count); ?></span>
-          	</a>
+            </ul>           
+<?
+    // get_template_part( 'template-parts/header/header', 'cart' );
+?>
+          	
         </div>
     </div> 
     <?endif;?>

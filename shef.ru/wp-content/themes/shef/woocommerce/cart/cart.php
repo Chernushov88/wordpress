@@ -64,12 +64,15 @@ window.onload = function(){
     <ul>
     <?php do_action( 'woocommerce_before_cart_contents' ); ?>
       <?php
+	  $ves=0;
+	  $pro=array();
         foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
           $_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
           $product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 
 $product_weight = get_post_meta( $product_id , 'product_weight', true );
-    
+$ves+=$product_weight*$cart_item['quantity'];
+    $pro[]=$product_id;
           if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
             $product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
             ?>
@@ -161,25 +164,42 @@ $product_weight = get_post_meta( $product_id , 'product_weight', true );
     <div class="add_ttl">Добавить в заказ:</div>
     <div class="spis_cart">
       <ul>
+<?
+
+global $post; // не обязательно
+$posts10 = get_posts( array(
+	'product_cat'    =>'rekomendovannye-blyuda',
+	'post_type'   => 'product',
+	'orderby' => 'rand',
+ 'posts_per_page' => 1,
+ 'post__not_in'=>$pro
+) );
+foreach( $posts10 as $post10 )
+{
+global $woocommerce;  
+?>
         <li class="relative">
-          <div class="img"><img src="/wp-content/themes/shef/verstka/image/cart/img3.fw.png" alt=""/></div>
-          <div class="name"><a href="detail.html">Платтер из Бургеров</a></div>
-          <div class="gram">2 340 г</div>
+          <div class="img"><? echo $thumbnail = get_the_post_thumbnail($post10->ID, 'thumbnail');?></div>
+          <div class="name"><a href="<? echo $url = get_permalink($post10->ID);?>"><?=$post10->post_title?></a></div>
+          <div class="gram"><? echo get_post_meta( $post10->ID, 'product_weight', true ); ?> г</div>
           <div class="price_cnt">
             <table>
               <tbody>
                 <tr>
-                  <td><a href="#" class="minus">-</a></td>
-                  <td><input type="text" class="cnt" value="1" size="1"></td>
-                  <td><a href="javascript:void(0)" onclick="addToCart('<?=$post1->ID?>')" class="plus">+</a></td>
+                  <td><a  href="javascript:void(0)" onclick="var tek=Number($(this).parent().parent().find('input').val());var tt=tek*1-1*1;if (Number(tt)>0) {$(this).parent().parent().find('input').val(tt)}" class="minus">-</a></td>
+                  <td><input type="text" class="cnt daba" value="1" size="1"></td>
+                  <td><a href="javascript:void(0)" onclick="var tek=Number($(this).parent().parent().find('input').val());var tt=tek*1+1*1;$(this).parent().parent().find('input').val(tt)" class="plus">+</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="spis_price">2 500 <span class="ruble">Р</span></div>
-          <a class="add_z_cart" href="#"></a>
+          <div class="spis_price"><? echo get_post_meta( $post10->ID, '_regular_price', true ); ?> <span class="ruble">Р</span></div>
+          <a class="add_z_cart" onclick="addToCart('<?= $post10->ID ?>',$(this).parent().find('.daba').val());" href="javascript:void(0)"></a>
           <div class="clb"></div>
-        </li>
+        </li>	
+<?
+}
+?>
       </ul>
     </div>
   </div>
@@ -191,14 +211,7 @@ $product_weight = get_post_meta( $product_id , 'product_weight', true );
 	<?
 	global $post; // не обязательно
 
-$myposts = get_posts( array(
-	'category' => 33
-) );
 
-foreach( $myposts as $post ){
-print_r( $post );
-
-}
 
 $posts1 = get_posts( array(
 	'product_cat'    =>'stolovye-prinadlezhnosti',
@@ -211,8 +224,12 @@ global $woocommerce;
    <li>
         <div class="sp_img"><img src="/wp-content/themes/shef/verstka/svg/tarelka.svg"/></div>
         <div class="name"><?=$post1->post_title?></div>
-        <div class="cnt"><input value="1" type="text"></div>
-        <a class="add_z_cart" onclick="addToCart('<?=$post1->ID?>')" href="javascript:void(0)<?php //echo $uu; ?>"></a>
+        <div class="cnt price_cnt">
+		<a href="javascript:void(0)" onclick="var tek=Number($(this).parent().find('input').val());var tt=tek*1-1*1;if (Number(tt)>0) {$(this).parent().find('input').val(tt)}" class="minus">-</a>
+		<input class="daba" value="1" type="text">
+		<a href="javascript:void(0)" onclick="var tek=Number($(this).parent().find('input').val());var tt=tek*1+1*1;$(this).parent().find('input').val(tt)"  class="plus">+</a>
+		</div>
+        <a class="add_z_cart" onclick="addToCart('<?= $post1->ID ?>',$(this).parent().find('.daba').val());" href="javascript:void(0)"></a>
         <div class="spis_price"><? echo get_post_meta( $post1->ID, '_regular_price', true ); ?> <span class="ruble">Р</span></div>
         <div class="clb"></div>
       </li>
@@ -243,7 +260,7 @@ global $woocommerce;
     <table>
       <tr>
         <td class="gr">Общий вес:</td>
-        <td class="gr"><span class="allWeightJs jsWeight"></span> г</td>
+        <td class="gr"><!--<span class="allWeightJs jsWeight"></span>--><?=$ves?> г</td>
       </tr>
       <tr>
         <td class="itogo_txt">Итого:</td>
@@ -267,7 +284,7 @@ global $woocommerce;
             <?php do_action( 'woocommerce_cart_coupon' ); ?>
           </div>
           <?php } ?>
-          <button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+          <button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>" id="update_cart" style="opacity: 0.0"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
           <?php do_action( 'woocommerce_cart_actions' ); ?>
           <?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
         </td>
@@ -279,15 +296,33 @@ global $woocommerce;
   <div class="clb"></div>
 </div>
 
-    <script>    
- 
-       function addToCart(p_id) {
-          $.get('/korzina/?post_type=product&add-to-cart=' + p_id, function() 
-		  {
-          window.location.reload();
-          });
-       }
-    </script>
+<script>    
+
+ function addToCart(p_id,qu) {
+  var qu;
+  var p_id;
+  
+
+  // setTimeout(function() {
+  //   $('.update_cart').click();
+  // }, 1);
+  $.get(
+    '/korzina/?qu='+qu+'&add-to-cart=' + p_id, 
+    {
+      param: "test",
+    },
+    onAjaxSuccess()
+  );
+ }
+ function onAjaxSuccess(data){
+ setTimeout(function() 
+ {
+  window.location.reload();
+}, 1500);
+  
+
+}
+</script>
 
 
 <div class="cart-collaterals">
@@ -296,7 +331,13 @@ global $woocommerce;
   if (!empty($_GET['add-to-cart']))
   {
   global $woocommerce;
-$woocommerce->cart->add_to_cart($_GET['add-to-cart']);
+  
+
+for ($x=1; $x<$_GET['qu']; $x++)
+{
+	$woocommerce->cart->add_to_cart($_GET['add-to-cart']);
+}
+
   }
 
 

@@ -20,7 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <style>
-    .woocommerce-result-count, .woocommerce-pagination{display: none;}
+    /*.woocommerce-pagination,*/
+    .woocommerce-result-count{display: none;}
 </style>
 <div class="wrapper">
 <?
