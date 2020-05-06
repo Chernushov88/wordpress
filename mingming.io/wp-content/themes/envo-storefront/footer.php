@@ -27,13 +27,18 @@
             jQuery('body').removeClass('slide_menu');
             jQuery('.modal-darken-menu').removeClass('active');
         });
+        jQuery('.darken').on('click', function(e){
+            console.log('e',e);
+            jQuery(".popup").removeClass('open');
+            jQuery('.darken').hide();
+        });
     });
     window.onload = function() {
        document.querySelector('body').classList.add('loader');
     }
 </script>
 <div id="popupTerms" class="popup ">
-  <div class="close" onclick="HidePopup('#popupTerms');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close.svg" alt="Close"></div>
+  <div class="close" onclick="HidePopup('#popupTerms');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
 
   <div class="modal-content " role="document">
     <div class="modal-header">
@@ -342,7 +347,7 @@
   </div>
 </div>
 <div id="popupPolicy" class="popup ">
-  <div class="close" onclick="HidePopup('#popupPolicy');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close.svg" alt="Close"></div>
+  <div class="close" onclick="HidePopup('#popupPolicy');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
 
   <div class="modal-content " role="document">
     <div class="modal-header">

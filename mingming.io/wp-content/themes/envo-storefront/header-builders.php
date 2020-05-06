@@ -5,25 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <?php wp_head(); ?>
-    <script>
 
-window.addEventListener("load", function() {
-
-  let w = innerWidth,
-h = innerHeight;
-//alert(w + 'x' + h)
-let h1 = document.querySelector('#testWidthHeight');
-console.log(h1);
-//h1.textContent = w + 'x' + h;
-//h1.innerHTML = w ;
-  console.log(w);
-  console.log(h);
-    console.log(h1);
-}, false);
-
-
-
-    </script>
   </head>
   <body id="blog" <?php body_class(); ?> >
     <div class="wp_loader">
@@ -94,4 +76,3 @@ console.log(h1);
     <div class="page-wrap">
     <?php get_template_part('template-parts/template-part', 'topnav'); ?>
     <?php get_template_part('template-parts/template-part', 'head'); ?>
-    <h1 id="testWidthHeight"></h1>

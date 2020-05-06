@@ -616,6 +616,8 @@ function my_user_contactmethods($user_contactmethods){
    $user_contactmethods['birthday'] = 'Birthday';
      $user_contactmethods['idtov'] = 'ID item';
 	     $user_contactmethods['phone'] = 'Phone actor';
+		 $user_contactmethods['balance'] = 'Balance';
+		 $user_contactmethods['proc'] = 'Procent';
   return $user_contactmethods;
 }
 
@@ -670,7 +672,7 @@ function woocommerce_thankyou_change_order_status( $order_id ){
 	 $order_meta = get_post_meta($order_id);
 
 /////////////
-    $po=array();$em=array();
+    $po=array();$em=array();$iduu=array();
 
             foreach($order->get_items() as $item_id => $item)
             {
@@ -688,6 +690,7 @@ function woocommerce_thankyou_change_order_status( $order_id ){
 foreach( $users as $user )
 {
 	$em[]=$user->user_email;
+	$iduu[]=$user->ID;
 }
 if (!empty($em))
 {
@@ -698,6 +701,29 @@ $headers .= "Content-type: text/html; utf-8\r\n";
 $headers .= "From: no-reply@mingming.io\r\n";
 $message='Hello! Someone made an order! Please check at your <a target="_blank" href="https://mingming.io/my-account-2/orders/">Mingming account!</a>';
 mail($ema, "New order from the MingMing.io!", $message,$headers, "-fwebmaster@mingming.io");
+
+
+
+$idus=$iduu[0];
+$idzak=$po[0];
+$baln=get_user_meta( $idus, 'balance', true);
+$proc=get_user_meta( $idus, 'proc', true);
+if (empty($proc))
+{
+$proc1=25;	
+}
+else
+{
+$proc1=$proc;	
+}
+$price = get_post_meta($idzak, '_regular_price', true );
+$proce=(($price/100))*($proc1);
+$cem=round($proce,1);
+$otog=$baln+$cem;
+update_user_meta( $idus, 'balance', $otog);
+
+
+
 
 }
 
@@ -715,6 +741,81 @@ mail($ema, "New order from the MingMing.io!", $message,$headers, "-fwebmaster@mi
 
 
 }
+
+
+
+/*
+add_action('woocommerce_order_status_payed', 'competedStatusOrder0');
+function competedStatusOrder0( $order_id ) 
+{
+
+
+    $order = wc_get_order( $order_id );
+
+
+	 $order_meta = get_post_meta($order_id);
+
+/////////////
+    $po=array();$em=array();$iduu=array();
+
+            foreach($order->get_items() as $item_id => $item)
+            {
+            $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
+            $po[]=$product_id;
+            }
+
+	if (!empty($po[0]))
+	{
+	 $users = get_users( array(
+	'meta_key'     => 'idtov',
+	'meta_value'   =>  $po[0]
+     ) );
+
+foreach( $users as $user )
+{
+	$em[]=$user->user_email;
+	$iduu[]=$user->ID;
+}
+if (!empty($em))
+{
+
+
+
+$idus=$iduu[0];
+$idzak=$po[0];
+$baln=get_user_meta( $idus, 'balance', true);
+$proc=get_user_meta( $idus, 'proc', true);
+if (empty($proc))
+{
+$proc1=25;	
+}
+else
+{
+$proc1=$proc;	
+}
+$price = get_post_meta($idzak, '_regular_price', true );
+$proce=(($price/100))*($proc1);
+$cem=round($proce,1);
+$otog=$baln+$cem;
+update_user_meta( $idus, 'balance', $otog);
+
+}
+
+
+	}
+
+////////////////////
+
+
+	
+
+
+}
+*/
+
+
+
+
 /**
  * Register the Product post type with a Dashicon.
  *

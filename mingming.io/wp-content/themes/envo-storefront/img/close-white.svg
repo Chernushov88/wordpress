@@ -1,6 +1,6 @@
-<svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style type="text/css">
-  .st0{fill:none;stroke:#000;stroke-width:2;stroke-miterlimit:10;}
+  .st0{fill:none;stroke:#fff;stroke-width:2;stroke-miterlimit:10;}
   </style>
   <path  class="st0" fill-rule="evenodd" clip-rule="evenodd"
         d="M10 9.41081L18.5775 0.833313L19.1667 1.42248L10.5892 9.99998L19.1667 18.5775L18.5775 19.1666L10 10.5891L1.42254 19.1666L0.833374 18.5775L9.41087 9.99998L0.833374 1.42248L1.42254 0.833313L10 9.41081Z"

@@ -48,10 +48,21 @@ do_action( 'woocommerce_before_account_navigation' );
 
 
 <?
+$sum=0; 
 $user = wp_get_current_user();
 if (is_user_role('actor', $user->ID)) {
+	
+$baln=get_user_meta( $user->ID, 'balance', true);
+ if (empty($baln))
+ {
+$sum=0; 
+ }
+ else
+ {
+$sum=$baln;  
+ }
  echo '<ul class="usel-lest-roles">
- <li><div class="name-price">My account: 147$</div></li>
+ <li><div class="name-price">My account: '.$sum.'$</div></li>
  <li><a href="javascript:void(0);" onclick="showPopup(\'#popupUserRole\');" class="btn btn-login">Get money</a></li>
  </ul>';
  };
@@ -84,16 +95,16 @@ if (is_user_role('actor', $user->ID)) {
     <div class="modal-body">
       <form id="spi" enctype="multipart/form-data"  class="form-horizontal col-md-12"  method="post" maxlength="12">
         <div class="form-group" style="text-align: left;">
-            <b>You have 147$</b>
+            <b>You have <?=$sum?>$</b>
         </div>
         <div class="form-group">
-          <input type="number" placeholder="how many you will get:">
+          <input type="number" id="man" onkeyup="return proverka(this);" onchange="return proverka(this);" value="<?=$sum?>" placeholder="how many you will get:">
         </div>
         <div class="form-group form-control">
             <div tabindex="-1" class="CardNumberField ">
-                  <input class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="card number" aria-invalid="false" value="">
-                  <input class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
-                  <input class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value="">
+                  <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="card number" aria-invalid="false" value="">
+                  <input id="ra2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
+                  <input id="ra3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value="">
               </div>
         </div>
 
@@ -101,7 +112,7 @@ if (is_user_role('actor', $user->ID)) {
           <input type="number" placeholder="how many you will get:">
         </div> -->
         <div class="form-group">
-          <button type="button" class="btn ms_btn btn" name="Submit">Submit</button>
+          <button type="button" onclick="send()" class="btn ms_btn btn" name="Submit">Submit</button>
           <div class="text-danger" id="response2"></div>
         </div>
       </form>
@@ -109,3 +120,56 @@ if (is_user_role('actor', $user->ID)) {
     <div class="modal-footer"></div>
   </div>
 </div>
+<script>
+function send() 
+{
+jQuery('#response2').html('');	
+	
+var ra1=jQuery('#ra1').val();
+var ra2=jQuery('#ra2').val();
+var ra3=jQuery('#ra3').val();
+var ra0=jQuery('#man').val();
+
+if ( (ra1.length>0) && (ra2.length>0)  && (ra3.length>0) )
+{
+jQuery.ajax({
+			type: "POST",
+			url: "/getmoney.php",
+			data: {
+			id:'<?=$user->ID?>',
+			man:ra0,
+            ra1:ra1,
+			ra2:ra2,
+			ra3:ra3,
+			},
+success: function(data)
+{
+jQuery('#response2').html('');
+jQuery('#response2').append('<p style="color:green">Success!</p>');
+console.log(data);
+}
+
+
+	});
+	
+	
+}
+else
+{
+jQuery('#response2').html('');
+jQuery('#response2').append('<p style="color:red">Empty fields!</p>');
+}
+}
+function proverka(input) 
+{
+	var sum=Number(<?=$sum?>);
+ if ( input.value>sum)
+ {
+input.value =sum;
+ }
+ else
+ {
+  input.value = input.value.replace(/[^\d]/g, '');		
+}
+}
+</script>

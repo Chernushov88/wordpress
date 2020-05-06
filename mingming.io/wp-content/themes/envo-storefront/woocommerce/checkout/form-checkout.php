@@ -377,7 +377,8 @@ $phon=get_user_meta( $current_user->ID, 'billing_phone', true);
                   <span class="tooltiptext tooltip-top">Tooltip text video</span>
                 </div>
               </label>
-              <div class="input-group" style="width:100%"><input type="text" name="phone" value="<?=$phon?>" maxlength="15" placeholder="(555) 555-5555" id="phone" class="form-control"></div>
+              <div class="input-group" style="width:100%">
+                <input type="text" name="phone" value="<?=$phon?>" maxlength="15" placeholder="(555) 555-5555" id="phone" class="form-control phone-js"></div>
             </div>
           </div>
           <div class="form-group-in">

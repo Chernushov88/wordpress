@@ -241,7 +241,7 @@
               }
               ?>
           </td>
-          <td class="buttons-block"><a href="#" onclick="ShowPopup('#popupLoadFile','<?=$order_id?>');" class="btn btn-login">Respond</a></td>
+          <td class="buttons-block"><a href="#" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');" class="btn btn-login">Respond</a></td>
         </tr>
         <?
           }
@@ -405,8 +405,10 @@
 
 
 
-    function ShowPopup(target, id){
+    function ShowPopup5(target, id){
         jQuery("#zak").val(id);
+		
+		
       // event.preventDefault();
       console.log(target);
       jQuery(".darken").fadeIn();
@@ -426,15 +428,7 @@
 console.log('id', <?=$idu;?>);
 console.log('img', jQuery('#addVideo')[0].files[0]);
 console.log('link', jQuery('#addVideoSpan').text());
-console.log('zak', jQuery('#zak').val());
-/*
-  data: {
-    id: <?=$idu;?>,
-    img: jQuery('#addVideo')[0].files[0],
-    link: jQuery('#addVideoSpan').text(),
-    zak: jQuery('#zak').val(),
-  },
-*/
+
       var formData = new FormData(jQuery('#spi')[0]);
       var fd = new FormData();
       fd.append('id', '<?=$idu;?>');
@@ -442,6 +436,9 @@ console.log('zak', jQuery('#zak').val());
       fd.append('link',jQuery('#addVideoSpan').text());
       fd.append('zak',jQuery('#zak').val());
       if (jQuery('#addVideo').val().length>0){
+		  
+		 console.log(fd);
+		  
         jQuery.ajax({
           type: "POST",
           url: "/updtovVideo.php",
@@ -450,16 +447,20 @@ console.log('zak', jQuery('#zak').val());
           contentType: false,
 		      dataType: "json",
           success: function(data){
-            // document.querySelector('body').classList.remove('loader');
+           console.log('zak008');
             window.location.reload();
             console.log('success - ', data);
           },
           error: function(data) {
-            // document.querySelector('body').classList.remove('loader');
+             console.log('zak');
             window.location.reload();
             console.log('error - ', data);
           }
         });
+		
+		console.log('zak8ззщщ');
+		
+		
       }else{
         jQuery('#response').text('fill in the field');
       }

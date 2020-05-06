@@ -242,7 +242,10 @@
         $datu=$pu1[2].'.'.$pu1[1].'.'.$pu1[0];
 
                //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
-          ?>
+         
+ if (!empty($link))
+		  {
+		 ?>
       <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 vid-col">
         <div class="video-wrapper">
           <div class="video-title">
@@ -253,22 +256,36 @@
             </div>
           </div>
           <div class="video-controls">
+		  
+	
+		  
             <video width="250" height="400" controls="controls" class="close" onclick="closeFullscreen();">
               <?
+			  
+			  
+			  
                 $httpStr = 'http';
                 if ( strstr($link,$httpStr) ) {?>
               <source src="<?=$link?>">
-              <?}else{?>
+              <?}else{
+				  
+				  
+				  ?>
               <source src="/wp-content/uploads/<?=$link?>">
               <?}
                 ?>
             </video>
+			
+		
             <!-- <div class="videoButton pauseVid" onclick="pauseVid(this);"></div> -->
             <div class="videoButton" onclick="playVid(this);"></div>
           </div>
         </div>
       </li>
+	  
       <?
+		  }
+	  
         }
         }
 
