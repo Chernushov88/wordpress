@@ -61,6 +61,11 @@
   align-items: center;
   padding: 10px 10px 10px 0px;
   color: #212121;
+  flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .video-title .share_btn{
+    min-width: 50px;
   }
   .video-title-img{
   display: -webkit-flex;
@@ -242,7 +247,7 @@
         $datu=$pu1[2].'.'.$pu1[1].'.'.$pu1[0];
 
                //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
-         
+
  if (!empty($link))
 		  {
 		 ?>
@@ -254,38 +259,39 @@
             <div class="video-title-in">
               <span>For: <?= $videofor; ?></span>
             </div>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
           </div>
           <div class="video-controls">
-		  
-	
-		  
+
+
+
             <video width="250" height="400" controls="controls" class="close" onclick="closeFullscreen();">
               <?
-			  
-			  
-			  
+
+
+
                 $httpStr = 'http';
                 if ( strstr($link,$httpStr) ) {?>
               <source src="<?=$link?>">
               <?}else{
-				  
-				  
+
+
 				  ?>
               <source src="/wp-content/uploads/<?=$link?>">
               <?}
                 ?>
             </video>
-			
-		
+
+
             <!-- <div class="videoButton pauseVid" onclick="pauseVid(this);"></div> -->
             <div class="videoButton" onclick="playVid(this);"></div>
           </div>
         </div>
       </li>
-	  
+
       <?
 		  }
-	  
+
         }
         }
 
@@ -403,3 +409,5 @@
   <?php do_action( 'woocommerce_product_after_tabs' ); ?>
 </div>
 <?php endif; ?>
+
+<?php get_template_part('template-parts/template-part', 'popupShare'); ?>

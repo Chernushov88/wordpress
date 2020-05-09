@@ -78,7 +78,7 @@
   right: 0px;
   z-index: 2;
   }
-  .popup{position:fixed;left:50%;top:-200%;transform:translate(-50%,-50%);z-index:999;background:#fff;box-shadow:0 2px 4px 3px rgba(0,0,0,.1);transition:1s ease-in-out all; width: 100%;max-width: 600px;}
+/*  .popup{position:fixed;left:50%;top:-200%;transform:translate(-50%,-50%);z-index:999;;box-shadow:0 2px 4px 3px rgba(0,0,0,.1);transition:1s ease-in-out all; width: 100%;max-width: 600px;}
   .popup.open{    top: 50%;
   margin: 10px;padding: 15px 15px 10px;}
   .popup .hidden_modal{display:block}
@@ -86,7 +86,7 @@
   .popup .close img{display:block}
   .popup .close:hover{opacity:.5}
   .darken{display:none;width:100%;height:100%;position:fixed;left: 0;top:0;background:rgba(0,0,0,.6);overflow:hidden;z-index:100;cursor:pointer}
-  .darken.open{display:block}
+  .darken.open{display:block}*/
   .woocommerce-notices-flex{
   display: -webkit-flex;
   display: -moz-flex;
@@ -111,6 +111,7 @@
   margin-top: 10px;
   }
   .table {
+    font-size: 12px;
   }
   .table thead th{
   background: rgba(0, 0, 0, 0.1);;
@@ -121,7 +122,7 @@
   border: 1px solid #dee2e6;
   }
   .table td.buttons-block{
-  padding: 0 0.35em;
+  padding: 0.15em 0.35em 0.5em;
   vertical-align: middle;
   }
   .table td.buttons-block .btn{
@@ -145,6 +146,9 @@
   display: block;
   max-width: 200px;
   margin: 20px auto 0;
+  }
+  .data-td{
+
   }
   @media only screen and (max-width: 550px){
   .woocommerce-notices-table{width: 100%;font-size: 14px;}
@@ -226,7 +230,7 @@
                   //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
               ?>
         <tr>
-          <th scope="row"><?=$datu?></th>
+          <td scope="row" class="data-td"><?=$datu?></td>
           <td><?=$type?></td>
           <td><?=$from?></td>
           <td><?=$to?></td>
@@ -241,7 +245,10 @@
               }
               ?>
           </td>
-          <td class="buttons-block"><a href="#" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');" class="btn btn-login">Respond</a></td>
+          <td class="buttons-block">
+            <a href="#" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');" class="btn btn-login">Respond</a>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
+          </td>
         </tr>
         <?
           }
@@ -336,7 +343,7 @@
 <?php endif; ?>
 <?php do_action( 'woocommerce_after_account_orders', $has_orders ); ?>
 <div id="popupLoadFile" class="popup">
-  <div class="close" onclick="HidePopup('#popupLoadFile');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close.svg" alt="Close"></div>
+  <div class="close" onclick="HidePopup('#popupLoadFile');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
   <div class="modal-content" role="document">
     <div class="modal-header">
       <h4 class="modal-title"><label >Add your video</label></h4>
@@ -359,6 +366,7 @@
     <div class="modal-footer"></div>
   </div>
 </div>
+<?php get_template_part('template-parts/template-part', 'popupShare'); ?>
 
 
 <script>
@@ -407,8 +415,8 @@
 
     function ShowPopup5(target, id){
         jQuery("#zak").val(id);
-		
-		
+
+
       // event.preventDefault();
       console.log(target);
       jQuery(".darken").fadeIn();
@@ -436,9 +444,9 @@ console.log('link', jQuery('#addVideoSpan').text());
       fd.append('link',jQuery('#addVideoSpan').text());
       fd.append('zak',jQuery('#zak').val());
       if (jQuery('#addVideo').val().length>0){
-		  
+
 		 console.log(fd);
-		  
+
         jQuery.ajax({
           type: "POST",
           url: "/updtovVideo.php",
@@ -457,10 +465,10 @@ console.log('link', jQuery('#addVideoSpan').text());
             console.log('error - ', data);
           }
         });
-		
+
 		console.log('zak8ззщщ');
-		
-		
+
+
       }else{
         jQuery('#response').text('fill in the field');
       }

@@ -710,11 +710,11 @@ $baln=get_user_meta( $idus, 'balance', true);
 $proc=get_user_meta( $idus, 'proc', true);
 if (empty($proc))
 {
-$proc1=25;	
+$proc1=25;
 }
 else
 {
-$proc1=$proc;	
+$proc1=$proc;
 }
 $price = get_post_meta($idzak, '_regular_price', true );
 $proce=(($price/100))*($proc1);
@@ -746,7 +746,7 @@ update_user_meta( $idus, 'balance', $otog);
 
 /*
 add_action('woocommerce_order_status_payed', 'competedStatusOrder0');
-function competedStatusOrder0( $order_id ) 
+function competedStatusOrder0( $order_id )
 {
 
 
@@ -787,11 +787,11 @@ $baln=get_user_meta( $idus, 'balance', true);
 $proc=get_user_meta( $idus, 'proc', true);
 if (empty($proc))
 {
-$proc1=25;	
+$proc1=25;
 }
 else
 {
-$proc1=$proc;	
+$proc1=$proc;
 }
 $price = get_post_meta($idzak, '_regular_price', true );
 $proce=(($price/100))*($proc1);
@@ -807,7 +807,7 @@ update_user_meta( $idus, 'balance', $otog);
 ////////////////////
 
 
-	
+
 
 
 }
@@ -843,3 +843,9 @@ function fix_svg() {
      return false;
     return in_array($role, (array) $user->roles);
 }
+
+/********** ********* *********
+количество товаров на странице интернет магазина WooCommerce
+********* ********* ********* */
+// add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 24;' ), 20 );
+

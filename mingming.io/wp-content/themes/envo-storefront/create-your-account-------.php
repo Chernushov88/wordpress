@@ -132,9 +132,12 @@ function sub(){
 			type: "POST",
 			url: "/reg1.php",
 			data: {
-            email:jQuery('#email').val(),
+			name:jQuery('#name').val(),
+      email:jQuery('#email').val(),
+			//username:jQuery('#username').val(),
 			password:jQuery('#password').val(),
       //dob:jQuery('#dob').val(),
+			inviteCode:jQuery('#inviteCode').val(),
 			},
       success: function(data){
         ShowPopup('#su1');

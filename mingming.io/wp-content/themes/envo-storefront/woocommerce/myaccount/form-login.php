@@ -156,10 +156,10 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	              <div class="form-group">
 	                <div class="input-group" style="width:100%">
 	                  <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>"
-	                  placeholder="Enter Your Email or Username" /><?php // @codingStandardsIgnoreLine ?>
-	                  <span class="form_icon">
+	                  placeholder="Enter Username" /><?php // @codingStandardsIgnoreLine ?>
+	                  <!-- <span class="form_icon">
 						<i class="fa_icon form-envelope" aria-hidden="true"></i>
-					  </span>
+					  </span> -->
 
 	                </div>
 	              </div>
