@@ -1024,7 +1024,7 @@ class Ysm_Search
 		if (!empty(self::$display_opts['display_view_all_link']) || !empty(self::$display_opts['view_all_link_text'])) {
 			$view_all_link = self::get_viewall_link_url();
 
-			$view_all_link = '<a class="smart-search-view-all" href="' . $view_all_link . '">' . __( self::$display_opts['view_all_link_text'] , 'smart_search') . '</a>';
+			$view_all_link = '<a class="smart-search-view-all" href="' . $view_all_link . '&post_type=product">' . __( self::$display_opts['view_all_link_text'] , 'smart_search') . '</a>';
 		}
 
 		$res = array(
