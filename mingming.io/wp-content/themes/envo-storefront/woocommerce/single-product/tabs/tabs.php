@@ -37,6 +37,7 @@
   }
   .vid-col{
   margin: 20px 0 10px;
+  padding: 0 5px;
   }
   @media screen and (max-width:767px ) {
   .vid-col{
@@ -57,15 +58,20 @@
   box-shadow: 0 2px 32px 0 rgba(0,0,0,.15)!important;
   }
   .video-title{
-  display: flex;
-  align-items: center;
-  padding: 10px 10px 10px 0px;
-  color: #212121;
-  flex-wrap: wrap;
-    justify-content: space-between;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 0px;
+    color: #212121;
+    flex-wrap: wrap;
   }
   .video-title .share_btn{
-    min-width: 50px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    min-width: 40px;
+    margin: 0;
+    padding: 0 5px;
   }
   .video-title-img{
   display: -webkit-flex;
@@ -85,11 +91,7 @@
   border-radius: 50%;
   }
   .custom-logo-link{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
+  display: block;
   background-clip: border-box;
   background-image: none;
   /*height: 36px;*/
@@ -97,6 +99,7 @@
   width: 36px;
   border-radius: 50%;
   overflow: hidden;
+  float: left;
   }
   .video-title-img span{
   font-weight: 700;
@@ -110,6 +113,10 @@
   flex-direction: column;
   line-height: 18px;
   padding-left: 10px;
+  float: left;
+  }
+  .body_safari .video-title-in{
+    padding-top: 8px;
   }
   .video-title-in span{
   display: block;
@@ -117,7 +124,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.3;
   color: #fff;
@@ -126,9 +133,18 @@
   font-size: 14px;
   font-weight: 500;
   }
+  .video-controls:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    clear: both;
+  }
   .video-controls{
   position: relative;
   overflow: hidden;
+  width: 100%;
+  clear: both;
   border-radius: 0px 24px 24px;
   border-color: #fff;
   }
@@ -265,19 +281,23 @@
 
 
 
-            <video width="250" height="400" controls="controls" class="close" onclick="closeFullscreen();">
+            <video muted playsinline width="250" height="400" controls="controls" class="close" onclick="closeFullscreen();" >
               <?
 
 
 
                 $httpStr = 'http';
                 if ( strstr($link,$httpStr) ) {?>
-              <source src="<?=$link?>">
+                  <source src="<?=$link?>" type="video/mp4">
+                  <source src="<?=$link?>" type="video/webm" />
+                  <source src="<?=$link?>" type="video/ogv" />
               <?}else{
 
 
 				  ?>
-              <source src="/wp-content/uploads/<?=$link?>">
+              <source src="/wp-content/uploads/<?=$link?>" type="video/mp4">
+              <source src="/wp-content/uploads/<?=$link?>" type="video/webm" />
+              <source src="/wp-content/uploads/<?=$link?>" type="video/ogv" />
               <?}
                 ?>
             </video>
@@ -411,3 +431,5 @@
 <?php endif; ?>
 
 <?php get_template_part('template-parts/template-part', 'popupShare'); ?>
+
+

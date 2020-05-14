@@ -20,7 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 do_action( 'woocommerce_before_customer_login_form' ); ?>
-
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
 <div class="u-columns col2-set" id="customer_login">
@@ -33,11 +32,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 .row-account .col-md-9{
     width: 100%;
 }
-.form-login h2{
-    margin-bottom: 10px;
-	color: #fff;
-}
-	form .required {
+
+form .required {
     color: red;
     font-weight: 700;
     border: 0!important;
@@ -64,32 +60,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-.form-login .forgotPassword{
 
-}
-.form-login .forgotPassword a{
-	font-size: 16px;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 1px;
-    position: relative;
-}
-.dont_have a{
-    background-color: #3bc8e7;
-    display: inline-block;
-    padding: 0px 15px;
-    border-radius: 20px;
-    height: 35px;
-    line-height: 35px;
-    text-transform: capitalize;
-    font-size: 14px;
-    border: 1px solid #3bc8e7;
-    text-decoration: none;
-    color: #fff;
-}
-#showPass{
-    cursor: pointer;
-}
+
 .single-content #comments {
     overflow-y: hidden;
     max-height: 500px;
@@ -97,13 +69,27 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
     background: transparent;
     flex: 2;
 }
+.foo_sharing {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0 0;
+}
+.btn.btn-block {
+    margin: 0;
+    height: 34px;
+    line-height: 1;
+}
+.woocommerce-notices-wrapper.test{
+    display: none;
+}
 </style>
 <script>
     jQuery(function(){
-        jQuery('#showPass').click(function(){
-            var type = jQuery('#password').attr('type') == "text" ? "password" : 'text';
-             jQuery('#password').prop('type', type);
-        });
+
     })
 </script>
 <?/*
@@ -148,11 +134,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	          <!-- <div class=""><span class="">OR</span></div> -->
 	          <form class="form-signin woocommerce-form woocommerce-form-login " method="post">
 	          	<?php do_action( 'woocommerce_login_form_start' ); ?>
-	            <div style="margin-bottom:5px;text-align:left">
-
-
-
-	              <!-- <label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label> -->
+	              <div class="form-group">
+                     <label for="email">Login or e-mail</label>
 	              <div class="form-group">
 	                <div class="input-group" style="width:100%">
 	                  <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>"
@@ -166,7 +149,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	              <!-- <label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label> -->
 	              <div class="form-group">
-	                <div class="input-group" style="width:100%">
+                    <label for="password">Password</label>
+	                <div class="input-group">
 	                  <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password"
 	                  placeholder="Enter Password" />
 	                  <span class="form_icon" id="showPass" >
@@ -177,10 +161,16 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	            </div>
 
-	            <div class="form-group">
+	            <div class="form-group foo_sharing">
 	            	<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 	            	<button type="submit" class="btn btn-login btn-block" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">Login Now</button>
+                    <ul class="social">
+                      <li><a href="#"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+                      <li><a href=""><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li>
+                    </ul>
 	            </div>
+
 	            <?php do_action( 'woocommerce_login_form_end' ); ?>
 	          </form>
 	          <div class="">

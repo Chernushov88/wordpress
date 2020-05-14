@@ -13,12 +13,12 @@
             $(".dropdown").focusin(
                     function () {
                         $(this).addClass('open')
-                    },
-                    );
+                    }
+            );
             $(".dropdown").focusout(
                     function () {
                         $(this).removeClass('open')
-                    },
+                    }
                     );
         } else {
             $(".dropdown").hover(
@@ -30,7 +30,7 @@
     }
     ;
     // initial state
-    onResizeMenuLayout();
+    //onResizeMenuLayout();
     // on resize
     $(window).on('resize', onResizeMenuLayout);
 
@@ -69,9 +69,25 @@
 
     var myDivMenu = document.querySelector('#my-menu');
     var logo = document.querySelector(".ms_logo");
-    myDivMenu.prepend(logo);
+    $(myDivMenu).prepend(logo);
 
     $(document).ready(function () {
+        /* navigator */
+        var ua = navigator.userAgent;
+        // с помощью регулярок проверяем наличие текста,
+        // соответствующие тому или иному браузеру
+        if (ua.search(/Safari/) > 0) $('body').addClass('body_safari');
+        if (ua.search(/Firefox/) > 0) $('body').addClass('body_firefox');
+        if (ua.search(/Opera/) > 0) $('body').addClass('body_opera');
+        if (ua.search(/MSIE/) > 0) $('body').addClass('body_ie');
+        setTimeout(function () {
+            if (ua.search(/Chrome/) > 0) $('body').removeClass('body_safari').addClass('body_chrome');
+        }, 10)
+      // showPass
+      jQuery('#showPass').click(function(){
+            var type = jQuery('#password').attr('type') == "text" ? "password" : 'text';
+             jQuery('#password').prop('type', type);
+        });
         $('#scroll').click(function(e){
             console.log(e);
             $("html, body").animate({ scrollTop: 0 }, 600);

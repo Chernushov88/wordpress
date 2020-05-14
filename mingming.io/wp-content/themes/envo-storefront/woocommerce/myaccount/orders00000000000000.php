@@ -157,13 +157,11 @@
   .data-td{
 
   }
-
-@media only screen and (max-width: 540px){
-    .row-account >.col-md-9{padding: 0;}
-    .woocommerce-notices-table{width: 100%;font-size: 14px;}
-    .woocommerce-notices-buttons{width: 100%;}
-    .table td.buttons-block .btn{width: 100%;margin: 0 0px 10px;}
-}
+  @media only screen and (max-width: 550px){
+  .woocommerce-notices-table{width: 100%;font-size: 14px;}
+  .woocommerce-notices-buttons{width: 100%;}
+  .table td.buttons-block .btn{width: 100%;margin: 0 0px 10px;}
+  }
 </style>
 <!-- <h3 style="margin: 0 0 20px;">Hello Michaell</h3>
   <h4>Orders</h4> -->
@@ -229,7 +227,6 @@
           $int=$order_meta['_billing_instructions'][0];
           $link=$order_meta['billing_link'][0];
 
-		  $int1=str_replace("'","\'",$int);
 
           $object = (array)$order->data['date_created'];
           $dat=$object['date'];
@@ -244,7 +241,7 @@
           <td><?=$type?></td>
           <td><?=$from?></td>
           <td><?=$to?></td>
-          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td><?=$int?></td>
           <td>
             <?
               if ($link)
@@ -258,11 +255,15 @@
           <td class="buttons-block">
             <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
             <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
-            <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','https://mingming.io/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>
+            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup('#popupVideoRecord')">videoRecord</a>
           </td>
         </tr>
         <?
           }
+
+
+
+
 
 
 
@@ -356,7 +357,7 @@
       <h4 class="modal-title"><label >Add your video</label></h4>
     </div>
     <div class="modal-body">
-      <form id="spi" enctype="multipart/form-data"  class="form-horizontal col-md-12-"  method="post" >
+      <form id="spi" enctype="multipart/form-data"  class="form-horizontal col-md-12"  method="post" >
         <div class="form-group">
           <div class="input-group input-addFile">
             <input type="file" name="file" id="addVideo" required value=""  class="inputfile">
@@ -377,8 +378,8 @@
 <div id="popupVideoRecord" class="popup">
     <div class="close" onclick="HidePopup('#popupVideoRecord');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
     <div class="iframe-doc">
-      <iframe src="https://mingming.io/2020/05/11/video/" id="fram" frameborder="0"></iframe>
-      <div id="texa" class="iframe-text"></div>
+      <iframe src="https://mingming.io/2020/05/11/video/" frameborder="0"></iframe>
+      <div class="iframe-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At voluptas tempore error quis recusandae perferendis aliquam dolore alias commodi natus labore dolorum obcaecati voluptatibus sunt rem atque iusto, odit facere!Lorem ipsum dolor sit amet, consectetur adipisicing elit. At voluptas tempore error quis recusandae perferendis aliquam dolore alias commodi natus labore dolorum obcaecati voluptatibus sunt rem atque iusto, odit facere!Lorem ipsum dolor sit amet, consectetur adipisicing elit. At voluptas tempore error quis recusandae perferendis aliquam dolore alias commodi natus labore dolorum obcaecati voluptatibus sunt rem atque iusto, odit facere!Lorem ipsum dolor sit amet, consectetur adipisicing elit. At voluptas tempore error quis recusandae perferendis aliquam dolore alias commodi natus labore dolorum obcaecati voluptatibus sunt rem atque iusto, odit facere!</div>
     </div>
 </div>
 <script>
@@ -486,7 +487,3 @@ console.log('link', jQuery('#addVideoSpan').text());
       }
     }
 </script>
-
-
-
-<!-- single-product  -->

@@ -36,6 +36,10 @@ do_action( 'woocommerce_before_account_navigation' );
     .single-entry-summary .woocommerce .account-details h2{
         color: #fff;
     }
+	.woocommerce-MyAccount-navigation-link--payment-methods
+	{
+		display:none;	
+	}
 </style>
 
 <nav class="woocommerce-MyAccount-navigation blue_backg">
@@ -48,18 +52,18 @@ do_action( 'woocommerce_before_account_navigation' );
 
 
 <?
-$sum=0; 
+$sum=0;
 $user = wp_get_current_user();
 if (is_user_role('actor', $user->ID)) {
-	
+
 $baln=get_user_meta( $user->ID, 'balance', true);
  if (empty($baln))
  {
-$sum=0; 
+$sum=0;
  }
  else
  {
-$sum=$baln;  
+$sum=$baln;
  }
  echo '<ul class="usel-lest-roles">
  <li><div class="name-price">My account: '.$sum.'$</div></li>
@@ -84,7 +88,7 @@ $sum=$baln;
 </script>
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>
 <div id="popupUserRole" class="popup">
-  <div class="close" onclick="HidePopup('#popupUserRole');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close.svg" alt="Close"></div>
+  <div class="close" onclick="HidePopup('#popupUserRole');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
   <div class="modal-content" role="document">
     <div class="modal-header">
       <div class="form-group">
@@ -93,7 +97,7 @@ $sum=$baln;
 
     </div>
     <div class="modal-body">
-      <form id="spi" enctype="multipart/form-data"  class="form-horizontal col-md-12"  method="post" maxlength="12">
+      <form id="spi" enctype="multipart/form-data"  class="form-horizontal col-md-12-"  method="post" maxlength="12">
         <div class="form-group" style="text-align: left;">
             <b>You have <?=$sum?>$</b>
         </div>
@@ -121,10 +125,10 @@ $sum=$baln;
   </div>
 </div>
 <script>
-function send() 
+function send()
 {
-jQuery('#response2').html('');	
-	
+jQuery('#response2').html('');
+
 var ra1=jQuery('#ra1').val();
 var ra2=jQuery('#ra2').val();
 var ra3=jQuery('#ra3').val();
@@ -151,8 +155,8 @@ console.log(data);
 
 
 	});
-	
-	
+
+
 }
 else
 {
@@ -160,7 +164,7 @@ jQuery('#response2').html('');
 jQuery('#response2').append('<p style="color:red">Empty fields!</p>');
 }
 }
-function proverka(input) 
+function proverka(input)
 {
 	var sum=Number(<?=$sum?>);
  if ( input.value>sum)
@@ -169,7 +173,7 @@ input.value =sum;
  }
  else
  {
-  input.value = input.value.replace(/[^\d]/g, '');		
+  input.value = input.value.replace(/[^\d]/g, '');
 }
 }
 </script>

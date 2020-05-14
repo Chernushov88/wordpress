@@ -2,7 +2,7 @@
 /**
  * The current version of the theme.
  */
-define('ENVO_STOREFRONT_VERSION', '1.0.3');
+define('ENVO_STOREFRONT_VERSION', '1.0.7');
 
 add_action('after_setup_theme', 'envo_storefront_setup');
 
@@ -666,9 +666,9 @@ function woocommerce_thankyou_change_order_status( $order_id ){
 
     $order = wc_get_order( $order_id );
 
-    if( $order->get_status() == 'processing' )
+    if ( ( $order->get_status() == 'processing' ) or ( $order->get_status() == 'completed' ) )
 	{
-	$order->update_status( 'payed' );
+	//$order->update_status( 'payed' );
 	 $order_meta = get_post_meta($order_id);
 
 /////////////
@@ -720,7 +720,7 @@ $price = get_post_meta($idzak, '_regular_price', true );
 $proce=(($price/100))*($proc1);
 $cem=round($proce,1);
 $otog=$baln+$cem;
-update_user_meta( $idus, 'balance', $otog);
+//update_user_meta( $idus, 'balance', $otog);
 
 
 
@@ -742,9 +742,15 @@ update_user_meta( $idus, 'balance', $otog);
 
 }
 
+add_action('woocommerce_order_status_completed', 'competedStatusOrder1');
+function competedStatusOrder1( $order_id )
+{
+	 $order = wc_get_order( $order_id );
+$order->update_status( 'payed' );
+
+}
 
 
-/*
 add_action('woocommerce_order_status_payed', 'competedStatusOrder0');
 function competedStatusOrder0( $order_id )
 {
@@ -811,7 +817,7 @@ update_user_meta( $idus, 'balance', $otog);
 
 
 }
-*/
+
 
 
 
@@ -848,4 +854,75 @@ function fix_svg() {
 количество товаров на странице интернет магазина WooCommerce
 ********* ********* ********* */
 // add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 24;' ), 20 );
+/********** ********* *********
+Регистрация нового типа записи
+https://wp-kama.ru/function/register_post_type
+********* ********* ********* */
+add_action('init', 'articlesvideo_init');
+function articlesvideo_init(){
+    register_post_type('articlesvideo', array(
+        'labels'             => array(
+            'name'               => 'VideoPost', // Основное название типа записи
+            'singular_name'      => 'VideoPost', // отдельное название записи типа articles_video
+            'add_new'            => 'Добавить новое видео',
+            'add_new_item'       => 'Добавить новую видео',
+            'edit_item'          => 'Редактировать видео',
+            'new_item'           => 'Новаое видео',
+            'view_item'          => 'Посмотреть видео',
+            'search_items'       => 'Найти видео',
+            'not_found'          =>  'Видео не найдено',
+            'not_found_in_trash' => 'В корзине видео не найдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'VideoPost'
 
+          ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+    ) );
+}
+add_filter( 'woocommerce_add_cart_item_data', 'woo_custom_add_to_cart' );
+
+function woo_custom_add_to_cart( $cart_item_data ) {
+
+    global $woocommerce;
+    $woocommerce->cart->empty_cart();
+
+    // Do nothing with the data and return
+    return $cart_item_data;
+}
+
+add_action( 'template_redirect', 'checkout_redirect_non_logged_to_login_access');
+function checkout_redirect_non_logged_to_login_access() {
+
+    // Here the conditions (woocommerce checkout page and unlogged user)
+    if( is_checkout() && !is_user_logged_in()){
+
+        // Redirecting to your custom login area
+        // wp_redirect( 'https://mingming.io/create-your-account/' );
+        wp_redirect( get_permalink( get_option('woocommerce_myaccount_page_id') ) );
+
+        // always use exit after wp_redirect() function.
+        exit;
+    }
+}
+add_action( 'woocommerce_before_cart', 'customer_redirected_displaying_message');
+function customer_redirected_displaying_message() {
+    if( !is_user_logged_in() ){
+        // HERE Type your displayed message and text button
+        $message = __('To access checkout, you need first to be logged in', 'woocommerce');
+        $button_text = __('Login area', 'woocommerce');
+
+        $cart_link = get_permalink( get_option('woocommerce_myaccount_page_id') );
+
+        wc_add_notice(  $message . '<a href="' . $cart_link . '" class="button wc-forward">' . $button_text . '</a>', 'notice' );
+    }
+}

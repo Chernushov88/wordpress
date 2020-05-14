@@ -85,6 +85,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	top: 0px;
 	right: 0px;
 	z-index: 2;
+  height: 100%;
 }
 button.btn.btn-danger.btn-block {
     font-size: 14px;
@@ -568,26 +569,26 @@ jQuery.ajax({
 
  jQuery('#fiy').html('');
  setTimeout(function () {
-	 
+
 	  jQuery('#fiy').append(up);
 	var src=jQuery(data).find('#fiy').find('img').attr('src');
-	
-	
-	
+
+
+
 
 	jQuery('#fiy').append('<img style="width:150px" src="'+src+'?'+Math.random()+'">');
 jQuery('#fiy').find('.attachment-thumbnail').hide();
-	
+
  }, 1500);
- 
+
   }
 });
 
-  
-  
-  
-  
-  
+
+
+
+
+
   },
   error: function(data) {
     console.log('error - ', data);

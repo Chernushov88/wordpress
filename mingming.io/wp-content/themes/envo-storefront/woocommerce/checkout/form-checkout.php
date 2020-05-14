@@ -29,6 +29,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 ?>
 <style>
+#comments
+{
+
+display:none;
+}
     .row-account .single-head.page-head.no-thumbnail {
         clear: both;
         margin-bottom: 10px;
@@ -111,6 +116,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
   .form-group-in label {
   margin-bottom: 0;
   }
+  .form-group-in .flex{-ms-align-items: center; align-items: center;}
+  .form-group-in .flex input{ margin: 0 5px 0 0;}
   /* Tooltip container */
   .tooltip {
   position: relative;
@@ -188,38 +195,29 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
   .InputElement.is-empty:last-child{
     margin-left: 0;
   }
-.popup{position:fixed;left:50%;top:-200%;transform:translate(-50%,-50%);z-index:99999;background:#fff;box-shadow:0 2px 4px 3px rgba(0,0,0,.1);transition:1s ease-in-out all; width: 100%;max-width: 600px;}
- .popup.open{top: 50%;
-    margin: 10px;padding: 15px 15px 10px;}
- .popup .hidden_modal{display:block}
- .popup .close{position:absolute;right:24px;top:24px;z-index:9;width:12px;height:12px}
- .popup .close img{display:block}
- .popup .close:hover{opacity:.5}
-
-
-  .darken{display:none;width:100%;height:100%;position:fixed;left: 0;top:0;background:rgba(0,0,0,.6);overflow:hidden;z-index:100;cursor:pointer}
- .darken.open{display:block}
-
-#dva
+#order_review_heading
  {
-	 display:none;
-
+	display:none;
  }
- #order-form
+ #customer_details
  {
-	 display:block;
-
+	display:none;
  }
- .woocommerce-notices-wrapper.test{
-  display: none;
+ #order_review .shop_table
+  {
+	display:none;
  }
- .modal-body{
-  margin-top: 20px;
+ #place_order
+   {
+	line-height: 0px;
  }
- .popup .ms_btn{
-      height: 40px;
-    font-size: 20px;
-    padding: 0 30px;
+#dva{}
+ #order-form{display:block;}
+ .woocommerce-notices-wrapper.test{display: none;}
+ .modal-body{ margin-top: 20px;}
+.woocommerce-form-coupon-toggle
+ {
+	display:none;
  }
 </style>
 
@@ -371,7 +369,7 @@ $phon=get_user_meta( $current_user->ID, 'billing_phone', true);
                 <input type="email" name="purchaserEmail" value="<?=$ema?>" maxlength="50" placeholder="chas@example.com" data-testid="my-email-input" id="purchaserEmail" class="form-control" required>
               </div>
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
               <label for="phone">
                 <div class="tooltip">Text video (Optional)<i class="fa-label fa fa-question-circle-o"></i>
                   <span class="tooltiptext tooltip-top">Tooltip text video</span>
@@ -379,61 +377,63 @@ $phon=get_user_meta( $current_user->ID, 'billing_phone', true);
               </label>
               <div class="input-group" style="width:100%">
                 <input type="text" name="phone" value="<?=$phon?>" maxlength="15" placeholder="(555) 555-5555" id="phone" class="form-control phone-js"></div>
-            </div>
+            </div> -->
           </div>
           <div class="form-group-in">
-            <div class="">
+            <div class="flex">
               <input type="checkbox" name="optInMarketingEmails" value="true" class="" id="optInMarketingEmails">
               <label for="optInMarketingEmails" class="">Email me exclusive offers and discounts</label>
             </div>
           </div>
           <div class="form-group-in">
-            <div class="">
+            <div class="flex">
               <input type="checkbox" name="bookedPrivately" value="" data-testid="booked-privately-checkbox" id="bookedPrivately" class="_25YQR28_rBVJNkL7Bmcwvh"
                 >
               <label for="bookedPrivately" class=""> Hide this video from <?=$nam?>'s profile</label>
             </div>
           </div>
-          <h4 class="_3gM5kX-w10viDIabocTpmE">Payment Information</h4>
-          <div id="cc-disclaimer" class="">
+          <h4 style="display:none" class="_3gM5kX-w10viDIabocTpmE">Payment Information</h4>
+          <div style="display:none" id="cc-disclaimer" class="">
             <p>Your card isn't charged until the video is complete.<i class="fa-label fa fa-question-circle-o"></i></p>
           </div>
-          <div class="form-group-in form-control" style="margin-bottom: 12px;padding: 0;">
-            <label style="width: 100%;">
-              <div class="StripeElement StripeElement--empty">
-                <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
+          <div style="display:none" class="-row">
+            <div class="-col-md-6">
+              <div class="form-group-in form-control" style="margin-bottom: 12px;padding: 0;">
+                <label style="width: 100%;">
+                  <div class="StripeElement StripeElement--empty">
+                    <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
 
-                  <!-- <form action="">
-                    <input placeholder="Card number" type="tel" name="number">
+                      <!-- <form action="">
+                        <input placeholder="Card number" type="tel" name="number">
 
-                    <input placeholder="MM/YY" type="tel" name="expiry">
-                    <input placeholder="CVC" type="number" name="cvc">
-                  </form> -->
+                        <input placeholder="MM/YY" type="tel" name="expiry">
+                        <input placeholder="CVC" type="number" name="cvc">
+                      </form> -->
 
-<!--                   <iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame5" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-9644e07c31a2896df020dd41f9592b8d.html#style[base][fontSize]=18px&amp;style[base][fontFamily]=spinnler&amp;fonts[0][family]=spinnler&amp;fonts[0][src]=url(https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fstarboard-media%2Fstatic%2Fassets%2FAauxNextCond-Md.otf)&amp;fonts[0][__resolveFontRelativeTo]=https%3A%2F%2Fwww.cameo.com%2Ftammie%2Fbook&amp;componentName=card&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;apiKey=pk_live_YR2G0JQsuTK4cw7mTUHl4TTW&amp;origin=https%3A%2F%2Fwww.cameo.com&amp;referrer=https%3A%2F%2Fwww.cameo.com%2Ftammie%2Fbook&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; height: 21.6px;"></iframe>
-                   -->
+                    <!--                   <iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame5" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-9644e07c31a2896df020dd41f9592b8d.html#style[base][fontSize]=18px&amp;style[base][fontFamily]=spinnler&amp;fonts[0][family]=spinnler&amp;fonts[0][src]=url(https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fstarboard-media%2Fstatic%2Fassets%2FAauxNextCond-Md.otf)&amp;fonts[0][__resolveFontRelativeTo]=https%3A%2F%2Fwww.cameo.com%2Ftammie%2Fbook&amp;componentName=card&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;apiKey=pk_live_YR2G0JQsuTK4cw7mTUHl4TTW&amp;origin=https%3A%2F%2Fwww.cameo.com&amp;referrer=https%3A%2F%2Fwww.cameo.com%2Ftammie%2Fbook&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; height: 21.6px;"></iframe>
+                                       -->
 
-          <div tabindex="-1" class="CardNumberField ">
-              <input id="card1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="card number" aria-invalid="false" value="">
-              <input id="card2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
-              <input id="card3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value="">
-          </div>
-
-
-<style>
-
-</style>
-
-
-                </div>
+                      <div style="display:none" tabindex="-1" class="CardNumberField ">
+                          <input id="card1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="card number" aria-invalid="false" value="">
+                          <input id="card2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
+                          <input id="card3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value="">
+                      </div>
+                    </div>
+                  </div>
+                </label>
               </div>
-            </label>
+            </div>
           </div>
-          <div class=""><a href="#" onclick="ShowPopup('#popupPromoCode');">Apply a promo code</a></div>
+          <div style="display:none" class=""><a href="#" onclick="ShowPopup('#popupPromoCode');">Apply a promo code</a></div>
           <div class="form-group-in">
-            <button onclick="send()" id="order-submit-button" type="button" style="margin-bottom:8px" class="btn btn-login">
+            <button onclick="send(1)" id="order-submit-button" type="button" style="margin-bottom:8px" class="btn btn-login">
               <span>
-                &nbsp;Book for<!-- --> <span><?=$ito?> USD</span>
+                &nbsp;Book for<!-- --> <span><?=$ito?> USD PayPal</span>
+              </span>
+            </button>
+			<button onclick="send(2)" id="order-submit-button1" type="button" style="margin-bottom:8px" class="btn btn-login">
+              <span>
+                &nbsp;Book for<!-- --> <span><?=$ito?> USD Stripe</span>
               </span>
             </button>
           </div>
@@ -451,20 +451,18 @@ $phon=get_user_meta( $current_user->ID, 'billing_phone', true);
 <br>
 <br>
 <div id="popupPromoCode" class="popup">
-  <div class="close" onclick="HidePopup('#popupPromoCode');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close.svg" alt="Close"></div>
+  <div class="close" onclick="HidePopup('#popupPromoCode');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
   <div class="modal-content" role="document">
     <div class="modal-header">
       <h4 class="modal-title">Enter your code</h4>
     </div>
     <div class="modal-body">
       <form class="form-horizontal col-md-12">
-        <div class="form-group">
           <div class="input-group"><input name="promo" placeholder="MingMing" type="text" id="promo" class="form-control" value="" required></div>
-        </div>
-        <div class="form-group">
+
           <button type="button" onclick="jQuery('#coupon_code').val(jQuery('#promo').val());jQuery('#coupon_code').parent().parent().find('button').click();HidePopup('#popupPromoCode');" class="btn ms_btn">Submit</button>
-          <div class="text-danger" style="padding-top: 8px;"></div>
-        </div>
+
+		  <div class="text-danger" style="padding-top: 8px;"></div>
       </form>
     </div>
     <div class="modal-footer"></div>
@@ -479,145 +477,163 @@ $phon=get_user_meta( $current_user->ID, 'billing_phone', true);
         });
     </script>
 <script>
-function send()
-{
+  function send(va)
+  {
+  var va;
+  	if (jQuery('#billing_videofor').val()=='Someone else')
+  	{
+  	jQuery('#billing_who').val(jQuery('#customerName1').val());
+  	jQuery('#billing_from').val(jQuery('#purchaserName').val());
+  	jQuery('#billing_instructions').val(jQuery('#someoneElse-textarea').val());
+  	}
+  	else if (jQuery('#billing_videofor').val()=='Myself')
+  	{
+      jQuery('#billing_who').val(jQuery('#customerName2').val());
+  	jQuery('#billing_from').val('');
+  	jQuery('#billing_instructions').val(jQuery('#purchaser-textarea').val());
+  	}
+  	else if (jQuery('#billing_videofor').val()=='A brand or business')
+  	{
+  	jQuery('#billing_who').val(jQuery('#customerName3').val());
+  	jQuery('#billing_from').val('');
+  	jQuery('#billing_instructions').val(jQuery('#brandBusiness-textarea').val());
+  	}
 
-	if (jQuery('#billing_videofor').val()=='Someone else')
-	{
-	jQuery('#billing_who').val(jQuery('#customerName1').val());
-	jQuery('#billing_from').val(jQuery('#purchaserName').val());
-	jQuery('#billing_instructions').val(jQuery('#someoneElse-textarea').val());
-	}
-	else if (jQuery('#billing_videofor').val()=='Myself')
-	{
-    jQuery('#billing_who').val(jQuery('#customerName2').val());
-	jQuery('#billing_from').val('');
-	jQuery('#billing_instructions').val(jQuery('#purchaser-textarea').val());
-	}
-	else if (jQuery('#billing_videofor').val()=='A brand or business')
-	{
-	jQuery('#billing_who').val(jQuery('#customerName3').val());
-	jQuery('#billing_from').val('');
-	jQuery('#billing_instructions').val(jQuery('#brandBusiness-textarea').val());
-	}
+  	var oca=jQuery("#oca option:selected").text();
+  	jQuery('#billing_occasion').val(oca);
 
-	var oca=jQuery("#oca option:selected").text();
-	jQuery('#billing_occasion').val(oca);
-
-	jQuery('#billing_email').val(jQuery('#purchaserEmail').val());
-	jQuery('#billing_phone').val(jQuery('#phone').val());
-
-
-
-     if (jQuery("#optInMarketingEmails").prop('checked'))
-	 {
-	jQuery('#billing_exclusive').val('Yes');
-	 }
-	 else
-	 {
-	jQuery('#billing_exclusive').val('No');
-	 }
-
-	 if (jQuery("#bookedPrivately").prop('checked'))
-	 {
-	jQuery('#billing_video').val('Yes');
-	 }
-	 else
-	 {
-	jQuery('#billing_video').val('No');
-	 }
-
-
-	jQuery('#billing_card1').val(jQuery('#card1').val());
-	jQuery('#billing_card2').val(jQuery('#card2').val());
-	jQuery('#billing_card3').val(jQuery('#card3').val());
-
-jQuery('#place_order').click();
+  	jQuery('#billing_email').val(jQuery('#purchaserEmail').val());
+  	jQuery('#billing_phone').val(jQuery('#phone').val());
 
 
 
-}
-  jQuery(function($){
+       if (jQuery("#optInMarketingEmails").prop('checked'))
+  	 {
+  	jQuery('#billing_exclusive').val('Yes');
+  	 }
+  	 else
+  	 {
+  	jQuery('#billing_exclusive').val('No');
+  	 }
 
- $('#billing_email').val($('#purchaserEmail').val());
- $('#billing_phone').val($('#phone').val());
-  $('#billing_videofor').val('Someone else');
-   $('#billing_instructions').val('');
-  $('#billing_from').val('');
-  $('#billing_who').val('');
-   $('#billing_card1').val('');
-   $('#billing_card2').val('');
-   $('#billing_card3').val('');
-   $('#billing_link').val('');
-    $('#billing_exclusive').val('');
-	 $('#billing_video').val('');
-
-
-
-    $('.radio').change(function(e){
-      let dataInput = $(this).attr('data-input');
-	  $('#billing_videofor').val($(this).attr('rel'));
-      $('.row-radio, .row-radio-textarea').removeClass('active');
-      if( $(this).prop("checked") ){
-        $('#' + dataInput).addClass('active');
-        $('#' + dataInput+'-textarea').addClass('active');
-      }
-      else {
-        $('#' + dataInput).removeClass('active');
-        $('#' + dataInput+'-textarea').removeClass('active');
-      }
+  	 if (jQuery("#bookedPrivately").prop('checked'))
+  	 {
+  	jQuery('#billing_video').val('Yes');
+  	 }
+  	 else
+  	 {
+  	jQuery('#billing_video').val('No');
+  	 }
 
 
+  	jQuery('#billing_card1').val(jQuery('#card1').val());
+  	jQuery('#billing_card2').val(jQuery('#card2').val());
+  	jQuery('#billing_card3').val(jQuery('#card3').val());
 
-    });
-    $(".darken").click(function(){
-      $(".darken").fadeOut(300);
-      $('.popup').removeClass('open');
-    });
-  })
-  function ShowPopup(target){
-    // event.preventDefault();
-    console.log(target);
-    jQuery(".darken").fadeIn();
-    jQuery(target).addClass('open');
+  	if (va==1)
+  	{
+  	jQuery('#payment_method_paypal').click();
+  	jQuery('.payment_method_stripe').hide();
+  	}
+  	else
+  	{
+  	jQuery('#payment_method_stripe').click();
+  	jQuery('.payment_method_stripe').show();
+  	}
+
+
+
+  jQuery('#place_order').click();
+
+
+
   }
-  function HidePopup(target){
-    jQuery(".darken").fadeOut(300);
-    jQuery(target).removeClass('open');
-  }
+    jQuery(function($){
+
+   $('#billing_email').val($('#purchaserEmail').val());
+   $('#billing_phone').val($('#phone').val());
+    $('#billing_videofor').val('Someone else');
+     $('#billing_instructions').val('');
+    $('#billing_from').val('');
+    $('#billing_who').val('');
+     $('#billing_card1').val('');
+     $('#billing_card2').val('');
+     $('#billing_card3').val('');
+     $('#billing_link').val('');
+      $('#billing_exclusive').val('');
+  	 $('#billing_video').val('');
+
+
+
+      $('.radio').change(function(e){
+        let dataInput = $(this).attr('data-input');
+  	  $('#billing_videofor').val($(this).attr('rel'));
+        $('.row-radio, .row-radio-textarea').removeClass('active');
+        if( $(this).prop("checked") ){
+          $('#' + dataInput).addClass('active');
+          $('#' + dataInput+'-textarea').addClass('active');
+        }
+        else {
+          $('#' + dataInput).removeClass('active');
+          $('#' + dataInput+'-textarea').removeClass('active');
+        }
+
+
+
+      });
+      $(".darken").click(function(){
+        $(".darken").fadeOut(300);
+        $('.popup').removeClass('open');
+      });
+    })
+    function ShowPopup(target){
+      // event.preventDefault();
+      console.log(target);
+      jQuery(".darken").fadeIn();
+      jQuery(target).addClass('open');
+    }
+    function HidePopup(target){
+      jQuery(".darken").fadeOut(300);
+      jQuery(target).removeClass('open');
+    }
 </script>
-<form name="checkout" id="dva" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<div class="row">
+  <div class="col-lg-8 -col-lg-offset-2 col-md-7">
+    <form name="checkout" id="dva" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
-	<?php if ( $checkout->get_checkout_fields() ) : ?>
+      <?php if ( $checkout->get_checkout_fields() ) : ?>
 
-		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+        <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-		<div class="col2-set" id="customer_details">
-			<div class="col-1">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-			</div>
+        <div class="col2-set" id="customer_details">
+          <div class="col-1">
+            <?php do_action( 'woocommerce_checkout_billing' ); ?>
+          </div>
 
-			<div class="col-2">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
-		</div>
+          <div class="col-2">
+            <?php do_action( 'woocommerce_checkout_shipping' ); ?>
+          </div>
+        </div>
 
-		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+        <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
-	<?php endif; ?>
+      <?php endif; ?>
 
-	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+      <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 
-	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+      <h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
 
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+      <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-	</div>
+      <div id="order_review" class="woocommerce-checkout-review-order">
+        <?php do_action( 'woocommerce_checkout_order_review' ); ?>
+      </div>
 
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+      <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
-</form>
+    </form>
+  </div>
+</div>
+
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
