@@ -157,12 +157,39 @@
   .data-td{
 
   }
-
+.woocommerce-message--info
+{
+	display:none;
+	
+}
+#comments
+{
+display:none;	
+}
 @media only screen and (max-width: 540px){
     .row-account >.col-md-9{padding: 0;}
     .woocommerce-notices-table{width: 100%;font-size: 14px;}
     .woocommerce-notices-buttons{width: 100%;}
     .table td.buttons-block .btn{width: 100%;margin: 0 0px 10px;}
+}
+#pipeStartRecording-custom-id
+{
+	color:#fff!important;	
+}
+#pipeRecordRTC-custom-id
+{
+width:100px!important;
+height:30px!important;border-radius: 20px!important;
+background: none!important;border: 1px solid #fff!important;color:#fff!important;	
+}
+.pipeRecordRTC span 
+{
+font-size:8px!important;color:#fff!important;	
+}
+.pipeRecordRTC span:hover
+{
+	font-size:8px!important;color:#fff!important;	
+	
 }
 </style>
 <!-- <h3 style="margin: 0 0 20px;">Hello Michaell</h3>
@@ -199,7 +226,30 @@ return 'Unknown';
   $current_user = wp_get_current_user();
   $idu=get_user_meta( $current_user->ID, 'idtov', true);
 
+  
+			
+$osa=get_os($_SERVER['HTTP_USER_AGENT']);
+	if ($osa=='Safari')	
+	{
+		?>
+<link rel="stylesheet" href="//cdn.addpipe.com/2.0/pipe.css">
+<script type="text/javascript" src="//cdn.addpipe.com/2.0/pipe.js"></script>
+		
+		
+		
+<?
+	}
+	else
+	{
+		
+		?>
+
+<?
+	}
   ?>
+  
+
+
 <div class="woocommerce-notices-flex">
   <div class="woocommerce-notices-table">
     <table class="table">
@@ -289,12 +339,26 @@ return 'Unknown';
 $osa=get_os($_SERVER['HTTP_USER_AGENT']);
 	if ($osa=='Safari')	
 	{
+		?>
+		<!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
+		-->
+		 <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();jQuery('#intip-<?=$order_id?>').show();">videoRecord</a>
+		<div class="intip-<?=$order_id?>" style="display:none" id="custom-id"></div>
+<script type="text/javascript">
+var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
+PipeSDK.insert("custom-id",pipeParams,function(recorderObject){});
+</script>
+		
+		
+		          <?
 	}
 	else
 	{
 		?>
-		  <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','https://mingming.io/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>
-          <?
+		
+	
+		
+		 <?
 	}		
 			
           
