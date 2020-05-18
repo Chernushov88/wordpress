@@ -62,7 +62,11 @@ p {
 .flex.dont_have{
     flex-wrap: wrap;
 }
-
+.flex.dont_have>div{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
 @media (max-width: 1400px) {
     #site-content + #content-footer-section,
     .main-container {
@@ -3648,7 +3652,11 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     z-index: 1;
     padding-bottom: 35px;
 }
-
+.body_safari .page-wrap{
+    /*min-height: 80vh;
+    height: 100vh;*/
+    min-height: 650px;
+}
 .ms_header {
     position: fixed;
     background-color: #1b2039;
@@ -4190,6 +4198,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 }
 
 .scroll {
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-x: hidden;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -4382,7 +4391,10 @@ div.elementor-accordion .elementor-accordion-item {
     padding: 0px 15px;
     background-color: #fff;
 }
-
+.woocommerce-account .woocommerce-MyAccount-content .input-group.input-addFile a{
+    height: 100%;
+    margin: 0;
+}
 .create-your-account label {
     margin: 10px 0 2px 0;
 }
@@ -4560,7 +4572,70 @@ div.elementor-accordion .elementor-accordion-item {
     text-decoration: none;
     background-color: transparent;
 }
+/* .nav-tabs.style-tabs */
+.nav-tabs.style-tabs{
 
+}
+.nav-tabs.style-tabs li{
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    margin: 0 4px 4px 0;
+    padding: 1px 20px;
+    border: 1px solid transparent;
+}
+.nav-tabs.style-tabs li.active{
+    background: #3bc8e7;
+    border-bottom-color: #3bc8e7;
+}
+.nav-tabs.style-tabs li a{
+
+}
+.nav-tabs.style-tabs li.active a{
+
+}
+/* .nav-tabs.style-btn-blue */
+.nav-tabs.style-btn-blue{
+
+}
+.nav-tabs.style-btn-blue li{
+    background: #3bc8e7;
+    border-color: #3bc8e7;
+    margin: 0 4px 4px 0;
+    padding: 1px 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+.nav-tabs.style-btn-blue li.active{
+    background-color: #fff;
+    border-color: #fff;
+}
+.nav-tabs.style-btn-blue li a{
+
+}
+.nav-tabs.style-btn-blue li.active a{
+
+}
+/* .nav-tabs.style-btn-default */
+.nav-tabs.style-btn-default{
+
+}
+.nav-tabs.style-btn-default li{
+    background: transparent;
+    margin: 0 4px 4px 0;
+    padding: 1px 15px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.nav-tabs.style-btn-default li.active{
+
+    border: 1px solid #3bc8e7;
+}
+.nav-tabs.style-btn-default li a{
+    color: #fff;
+}
+.nav-tabs.style-btn-default li.active a{
+color: #3bc7e7;
+}
 /*tab-content*/
 .tab-content {
 

@@ -105,6 +105,39 @@ $headers .= "From: no-reply@mingming.io\r\n";
 
 		////////////////
 		
+		
+		
+$fil=$lin;
+$fi=str_replace('https://mingming.io','',$fil);
+$post = [
+    'target' => 'MP4',
+    'file' => $fil,
+    'filelocation'   => 'online',
+	'type_converter'=>'video'
+];
+$ch = curl_init('https://www3.online-converting.ru/fconvert.php');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+$response = curl_exec($ch);
+$tt=json_decode($response );
+$ip=$tt->id;
+curl_close($ch);
+
+    $url = 'http://www3.online-converting.ru/upload/'.$ip.'/';
+    $path = $_SERVER['DOCUMENT_ROOT'] . $fi;
+    file_put_contents($path, file_get_contents($url));
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		}
 		
 	}
@@ -237,7 +270,10 @@ $ppp=$_GET['id'];
 		    canvas: {
 			width: 1280,
 			height: 960
-			}
+			},
+		 mimeType: "video/mpeg",
+
+			
                 };
 
                 // initiating the recorder

@@ -1,0 +1,36 @@
+2020-04-28T06:14:39+00:00 CRITICAL Uncaught Error: Call to undefined function post() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/content.php:19
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template.php(724): require()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template.php(671): load_template('/home/p/pozdr/p...', false)
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/search.php(43): get_template_part('content', '')
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template-loader.php(98): include('/home/p/pozdr/p...')
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-blog-header.php(19): require_once('/home/p/pozdr/p...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/index.php(17): require('/home/p/pozdr/p...')
+#7 {main}
+  thrown in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/content.php on line 19
+
+2020-04-28T10:13:35+00:00 CRITICAL Uncaught Error: Call to undefined function post() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/content.php:19
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template.php(724): require()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template.php(671): load_template('/home/p/pozdr/p...', false)
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/search.php(43): get_template_part('content', '')
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template-loader.php(98): include('/home/p/pozdr/p...')
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-blog-header.php(19): require_once('/home/p/pozdr/p...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/index.php(17): require('/home/p/pozdr/p...')
+#7 {main}
+  thrown in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/content.php on line 19
+
+2020-04-28T10:13:35+00:00 CRITICAL Uncaught Error: Call to undefined function post() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/content.php:19
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template.php(724): require()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template.php(671): load_template('/home/p/pozdr/p...', false)
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/search.php(43): get_template_part('content', '')
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/template-loader.php(98): include('/home/p/pozdr/p...')
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-blog-header.php(19): require_once('/home/p/pozdr/p...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/index.php(17): require('/home/p/pozdr/p...')
+#7 {main}
+  thrown in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/content.php on line 19
+

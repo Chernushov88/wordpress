@@ -12,7 +12,7 @@ echo 'zakaz - ' . $_POST['zak'];
 
 	   $ur=$uploads_dir.'wp-content/uploads/'.$_FILES['img']["name"];
        move_uploaded_file($_FILES['img']["tmp_name"], $ur);
-      $lin = 'http://mingming.io/wp-content/uploads/.'$_FILES['img']["name"];
+      $lin = 'https://mingming.io/wp-content/uploads/.'$_FILES['img']["name"];
 	  update_post_meta( trim($_POST['zak']), 'billing_link',  $lin );
 	  $op=$_POST['zak'];
 	   $order_meta = get_post_meta($_POST['zak']);
@@ -24,10 +24,10 @@ $headers .= "From: no-reply@mingming.io\r\n";
 
 
 
-       $message='Hello. Your order is ready. Please click at this <a target="_blank" href="http://mingming.io/my-account-2/view-order/'.$op.'/">link</a>!';
+       $message='Hello. Your order is ready. Please click at this <a target="_blank" href="https://mingming.io/my-account-2/view-order/'.$op.'/">link</a>!';
 	   mail($ema, "You order is ready! MingMing.io", $message,$headers, "-fwebmaster@mingming.io");
 
-	 // mail($ema, "Order finish", 'Hello. Your order is ready. Please click at this <a target="_blank" href="http://mingming.io/my-account-2/view-order/'. $op.'/">link</a>!');
+	 // mail($ema, "Order finish", 'Hello. Your order is ready. Please click at this <a target="_blank" href="https://mingming.io/my-account-2/view-order/'. $op.'/">link</a>!');
 	  /*
 
       $url     = 'http://pozdr.beget.tech/'.$_FILES['img']["name"];

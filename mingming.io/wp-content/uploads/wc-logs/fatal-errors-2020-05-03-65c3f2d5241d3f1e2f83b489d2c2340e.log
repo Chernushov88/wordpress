@@ -1,0 +1,62 @@
+2020-05-03T19:14:21+00:00 CRITICAL Uncaught Error: Call to undefined function is_user_role() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php:59
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3044): wc_get_template('myaccount/navig...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_navigation('')
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/my-account.php(27): do_action('woocommerce_acc...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php on line 59
+
+2020-05-03T19:14:46+00:00 CRITICAL Uncaught Error: Call to undefined function is_user_role() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php:59
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3044): wc_get_template('myaccount/navig...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_navigation('')
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/my-account.php(27): do_action('woocommerce_acc...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php on line 59
+
+2020-05-03T19:14:52+00:00 CRITICAL Uncaught Error: Call to undefined function is_user_role() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php:59
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3044): wc_get_template('myaccount/navig...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_navigation('')
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/my-account.php(27): do_action('woocommerce_acc...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php on line 59
+
+2020-05-03T19:15:03+00:00 CRITICAL Uncaught Error: Call to undefined function is_user_role() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php:59
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3044): wc_get_template('myaccount/navig...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_navigation('')
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/my-account.php(27): do_action('woocommerce_acc...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php on line 59
+
+2020-05-03T19:15:09+00:00 CRITICAL Uncaught Error: Call to undefined function is_user_role() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php:59
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3044): wc_get_template('myaccount/navig...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_navigation('')
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/my-account.php(27): do_action('woocommerce_acc...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php on line 59
+
+2020-05-03T19:16:15+00:00 CRITICAL Uncaught Error: Call to undefined function is_user_role() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php:58
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3044): wc_get_template('myaccount/navig...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_navigation('')
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/my-account.php(27): do_action('woocommerce_acc...')
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php on line 58
+
+2020-05-03T19:18:31+00:00 CRITICAL Cannot redeclare is_user_role() (previously declared in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/functions.php:739) in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/navigation.php on line 61
+

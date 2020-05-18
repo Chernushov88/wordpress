@@ -13,30 +13,6 @@
 		<?php do_action( 'envo_storefront_generate_footer' ); ?>
 	</div>
 </footer>
-</div><!-- end page-wrap -->
-<?php do_action( 'envo_storefront_after_footer' ); ?>
-<?php wp_footer(); ?>
-<script src="/wp-content/themes/envo-storefront/js/jquery.maskedinput/jquery.maskedinput.min.js"></script>
-<script>
-    jQuery(function($){
-        $(".phone-js").mask("+86 999 9999 999");
-        $('.dateBirth').mask('99/99/9999');
-        jQuery('.modal-darken-menu').on('click', function(e){
-            console.log('e',e);
-            jQuery(".ms_sidemenu_wrapper").removeClass('open_menu');
-            jQuery('body').removeClass('slide_menu');
-            jQuery('.modal-darken-menu').removeClass('active');
-        });
-        jQuery('.darken').on('click', function(e){
-            console.log('e',e);
-            jQuery(".popup").removeClass('open');
-            jQuery('.darken').hide();
-        });
-    });
-    window.onload = function() {
-       document.querySelector('body').classList.add('loader');
-    }
-</script>
 <div id="popupTerms" class="popup ">
   <div class="close" onclick="HidePopup('#popupTerms');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
 
@@ -601,6 +577,31 @@
     <div class="modal-footer"></div>
   </div>
 </div>
+</div><!-- end page-wrap -->
+<?php do_action( 'envo_storefront_after_footer' ); ?>
+<?php wp_footer(); ?>
+<script src="/wp-content/themes/envo-storefront/js/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+<script>
+    jQuery(function($){
+        $(".phone-js").mask("+86 999 9999 999");
+        $('.dateBirth').mask('99/99/9999');
+        jQuery('.modal-darken-menu').on('click', function(e){
+            console.log('e',e);
+            jQuery(".ms_sidemenu_wrapper").removeClass('open_menu');
+            jQuery('body').removeClass('slide_menu');
+            jQuery('.modal-darken-menu').removeClass('active');
+        });
+        jQuery('.darken').on('click', function(e){
+            console.log('e',e);
+            jQuery(".popup").removeClass('open');
+            jQuery('.darken').hide();
+        });
+    });
+    window.onload = function() {
+       document.querySelector('body').classList.add('loader');
+    }
+</script>
+
 
 <div id="scroll"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 <div class="modal-darken-menu"></div>

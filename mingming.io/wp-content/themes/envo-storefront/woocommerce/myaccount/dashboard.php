@@ -37,12 +37,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <p>
 	<?php
-	printf(
+	$nam=esc_html( $current_user->display_name );
+	
+	
+ $current_user = wp_get_current_user();
+  $idu=get_user_meta( $current_user->ID, 'idtov', true);
+  if (!empty($idu))
+  {
+	  
+	echo $text='Dear '.$nam.', we are glad to say that your account is ready for use! When someone will make an order we will send you a mail! Also you may change photo and description in your account details. Yours MingMing group!';
+	
+  }
+  else
+  {
+	  printf(
 		__( 'Welcome to the MingMing system. We are checking your information. It can take 1-2 days. When we will finish you will get notification! ', 'woocommerce' ),
 		esc_url( wc_get_endpoint_url( 'orders' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
 	);
+	  
+  }
+	
 	?>
 </p>
 

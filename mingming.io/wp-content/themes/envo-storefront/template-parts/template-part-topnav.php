@@ -94,7 +94,7 @@
     </div>
     <div class="ms_top_right">
                 <div class="ms_top_btn">
-<a href="javasctipt:void(0);"
+<a href="#"
    class="visible-xs-inline-block visible-search"
    onclick="document.querySelector('#mob_search').classList.toggle('active');"><i class="fa fa-search" aria-hidden="true"></i></a>
 <a href="/create-your-account/" class="ms_btn reg_btn"> <span>Sign up</span> <img src="/wp-content/themes/envo-storefront/img/icon/Signup_brighter.png" alt=""></a>

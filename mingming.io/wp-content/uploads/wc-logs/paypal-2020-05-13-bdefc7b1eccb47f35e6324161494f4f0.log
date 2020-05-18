@@ -1,0 +1,152 @@
+2020-05-13T05:23:03+00:00 INFO Generating payment form for order 482. Notify URL: https://mingming.io/wc-api/WC_Gateway_Paypal/
+2020-05-13T05:23:03+00:00 INFO PayPal Request Args for order 482: Array
+(
+    [cmd] => _cart
+    [business] => raketa@d2r2.com
+    [no_note] => 1
+    [currency_code] => USD
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => https://mingming.io/checkout-2/order-received/482/?key=wc_order_uwc3Y2D0O9HcA&utm_nooverride=1
+    [cancel_return] => https://mingming.io/cart-2/?cancel_order=true&order=wc_order_uwc3Y2D0O9HcA&order_id=482&redirect&_wpnonce=486a8dd726
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-482
+    [custom] => {"order_id":482,"order_key":"wc_order_uwc3Y2D0O9HcA"}
+    [notify_url] => https://mingming.io/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => Gao Heng
+    [quantity_1] => 1
+    [amount_1] => 70
+    [item_number_1] => 
+    [bn] => WooThemes_Cart
+)
+
+2020-05-13T05:54:10+00:00 INFO Generating payment form for order 483. Notify URL: https://mingming.io/wc-api/WC_Gateway_Paypal/
+2020-05-13T05:54:10+00:00 INFO PayPal Request Args for order 483: Array
+(
+    [cmd] => _cart
+    [business] => raketa@d2r2.com
+    [no_note] => 1
+    [currency_code] => USD
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => https://mingming.io/checkout-2/order-received/483/?key=wc_order_lG8Qf21VjGcx8&utm_nooverride=1
+    [cancel_return] => https://mingming.io/cart-2/?cancel_order=true&order=wc_order_lG8Qf21VjGcx8&order_id=483&redirect&_wpnonce=b44cfb478d
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-483
+    [custom] => {"order_id":483,"order_key":"wc_order_lG8Qf21VjGcx8"}
+    [notify_url] => https://mingming.io/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => Shi Tai
+    [quantity_1] => 1
+    [amount_1] => 33
+    [item_number_1] => 
+    [bn] => WooThemes_Cart
+)
+
+2020-05-13T07:20:53+00:00 INFO Generating payment form for order 483. Notify URL: https://mingming.io/wc-api/WC_Gateway_Paypal/
+2020-05-13T07:20:53+00:00 INFO PayPal Request Args for order 483: Array
+(
+    [cmd] => _cart
+    [business] => raketa@d2r2.com
+    [no_note] => 1
+    [currency_code] => USD
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => https://mingming.io/checkout-2/order-received/483/?key=wc_order_lG8Qf21VjGcx8&utm_nooverride=1
+    [cancel_return] => https://mingming.io/cart-2/?cancel_order=true&order=wc_order_lG8Qf21VjGcx8&order_id=483&redirect&_wpnonce=b44cfb478d
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-483
+    [custom] => {"order_id":483,"order_key":"wc_order_lG8Qf21VjGcx8"}
+    [notify_url] => https://mingming.io/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => Shi Tai
+    [quantity_1] => 1
+    [amount_1] => 33
+    [item_number_1] => 
+    [bn] => WooThemes_Cart
+)
+
+2020-05-13T09:16:10+00:00 INFO Generating payment form for order 484. Notify URL: https://mingming.io/wc-api/WC_Gateway_Paypal/
+2020-05-13T09:16:10+00:00 INFO PayPal Request Args for order 484: Array
+(
+    [cmd] => _cart
+    [business] => raketa@d2r2.com
+    [no_note] => 1
+    [currency_code] => USD
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => https://mingming.io/checkout-2/order-received/484/?key=wc_order_WwZn6YPBWdBc0&utm_nooverride=1
+    [cancel_return] => https://mingming.io/cart-2/?cancel_order=true&order=wc_order_WwZn6YPBWdBc0&order_id=484&redirect&_wpnonce=184e13a931
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-484
+    [custom] => {"order_id":484,"order_key":"wc_order_WwZn6YPBWdBc0"}
+    [notify_url] => https://mingming.io/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => Jiang Yong
+    [quantity_1] => 1
+    [amount_1] => 300
+    [item_number_1] => 
+    [bn] => WooThemes_Cart
+)
+

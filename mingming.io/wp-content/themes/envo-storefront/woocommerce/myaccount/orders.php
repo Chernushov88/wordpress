@@ -168,6 +168,31 @@
 <!-- <h3 style="margin: 0 0 20px;">Hello Michaell</h3>
   <h4>Orders</h4> -->
 <?
+function get_os($user_agent)
+{
+$os = array (
+'Windows' => 'Win',
+'Open BSD'=>'OpenBSD',
+'Sun OS'=>'SunOS',
+'Linux'=>'(Linux)|(X11)',
+'Mac OS'=>'(Mac_PowerPC)|(Macintosh)',
+'QNX'=>'QNX',
+'BeOS'=>'BeOS',
+'OS/2'=>'OS/2',
+'Safari' => '(Safari)',
+);
+
+foreach($os as $key=>$value)
+{
+if (preg_match('#'.$value.'#i', $user_agent))
+return $key;
+}
+
+return 'Unknown';
+}
+
+
+
   if( current_user_can('actor') )
   {
 
@@ -258,8 +283,24 @@
           <td class="buttons-block">
             <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
             <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
-            <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','https://mingming.io/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>
-          </td>
+			
+			<?
+			
+$osa=get_os($_SERVER['HTTP_USER_AGENT']);
+	if ($osa=='Safari')	
+	{
+	}
+	else
+	{
+		?>
+		  <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','https://mingming.io/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>
+          <?
+	}		
+			
+          
+		
+		  ?>
+		  </td>
         </tr>
         <?
           }

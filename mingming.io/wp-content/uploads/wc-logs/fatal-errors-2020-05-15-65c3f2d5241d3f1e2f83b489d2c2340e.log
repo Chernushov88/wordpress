@@ -1,0 +1,52 @@
+2020-05-15T00:36:36+00:00 CRITICAL Uncaught Error: Call to undefined function eregi() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php:196
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php(297): getOS('Mozilla/5.0 (Wi...')
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/home/p/pozdr/p...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3073): wc_get_template('myaccount/order...', Array)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_orders(1)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/pl in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php on line 196
+
+2020-05-15T00:36:50+00:00 CRITICAL Uncaught Error: Call to undefined function eregi() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php:196
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php(297): getOS('Mozilla/5.0 (Wi...')
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/home/p/pozdr/p...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3073): wc_get_template('myaccount/order...', Array)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_orders(1)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/pl in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php on line 196
+
+2020-05-15T00:37:14+00:00 CRITICAL Uncaught Error: Call to undefined function eregi() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php:196
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php(297): getOS('Mozilla/5.0 (Wi...')
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/home/p/pozdr/p...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3073): wc_get_template('myaccount/order...', Array)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_orders(1)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/pl in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php on line 196
+
+2020-05-15T00:38:44+00:00 CRITICAL Uncaught Error: Call to undefined function eregi() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php:196
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php(297): getOS('Mozilla/5.0 (Wi...')
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/home/p/pozdr/p...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3073): wc_get_template('myaccount/order...', Array)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_orders(1)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/pl in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php on line 196
+
+2020-05-15T00:38:48+00:00 CRITICAL Uncaught Error: Call to undefined function eregi() in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php:196
+Stack trace:
+#0 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php(297): getOS('Mozilla/5.0 (Wi...')
+#1 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/home/p/pozdr/p...')
+#2 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3073): wc_get_template('myaccount/order...', Array)
+#3 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(288): woocommerce_account_orders(1)
+#4 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#5 /home/p/pozdr/pozdr.beget.tech/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/pl in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php on line 196
+
+2020-05-15T00:45:54+00:00 CRITICAL syntax error, unexpected '<' in /home/p/pozdr/pozdr.beget.tech/public_html/wp-content/themes/envo-storefront/woocommerce/myaccount/orders.php on line 303
+

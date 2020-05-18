@@ -48,7 +48,7 @@
             <label for="networkType">Where can we find you?</label>
             <div id="myTabs ">
               <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
+              <ul class="nav nav-tabs style-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#tabs-social-1" aria-controls="tabs-social-1" role="tab" data-toggle="tab">Microblogs</a></li>
                 <li role="presentation"><a href="#tabs-social-2" aria-controls="tabs-social-2" role="tab" data-toggle="tab">Messaging</a></li>
                 <li role="presentation"><a href="#tabs-social-3" aria-controls="tabs-social-3" role="tab" data-toggle="tab">Video</a></li>

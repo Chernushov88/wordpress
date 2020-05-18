@@ -92,6 +92,9 @@ h4#comments {
     height: auto;
     min-height: 70vh;
 }
+.body_safari #your-video-id{
+    min-height: 480px;
+}
 @media (max-width: 540px){
     .iframe-text{top: 70px;}
     p{margin: 0;}

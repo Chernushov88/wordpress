@@ -150,7 +150,7 @@ $inv=get_user_meta( $current_user->ID, 'invite', true);
 
 
   <form id="acta" method="post">
-  <div id="su1" style="display:none">Success</div>
+  <!-- <div id="su1" style="display:none">Success</div> -->
   <!--<div class="form-group">
     <label for="name">Your name</label>
     <div class="input-group">
@@ -349,7 +349,7 @@ echo " active ";
   <div>
     <button class="btn btn-login" onclick="send2()" type="button">SUBMIT</button>
   </div>
-    <div id="su2" style="display:none">Success</div>
+    <!-- <div id="su2" style="display:none">Success</div> -->
   </form>
   <?
 }
@@ -360,7 +360,7 @@ else
 ?>
 
 <form id="buyer"  method="post">
-  <div id="su3" style="display:none">Success</div>
+<!--   <div id="su3" style="display:none">Success</div> -->
   <div class="form-group">
     <label for="name">Your name</label>
     <div class="input-group">
@@ -490,7 +490,7 @@ jQuery.ajax({
 			},
 success: function(data)
 {
-jQuery('#su3').show();
+ShowPopup('#su3');
 console.log(data);
 }
 
@@ -517,7 +517,7 @@ jQuery('#account_email').val(jQuery('#email').val());
 			},
 success: function(data)
 {
-jQuery('#su1').show();
+ShowPopup('#su1');
 console.log(data);
 }
 
@@ -640,7 +640,8 @@ fd.append('nam',jQuery('#name000').val());
 fd.append('price',jQuery('#pricePerOrder').val());
 fd.append('img', jQuery('#addPhoto')[0].files[0]);
 
- jQuery('#su2').show();
+ // jQuery('#su2').show();
+ ShowPopup('#su2');
 	jQuery.ajax({
   type: 'POST',
   url: '/updtov.php',
@@ -675,4 +676,37 @@ jQuery('#account_email').val(jQuery('#email').val());
   })
 
 </script>
+<div id="su3" class="popup blue_backg popup-su">
+    <div class="close" onclick="HidePopup('#su3');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
+    <div class="modal-content " role="document">
+    <div class="modal-header">
+      <h2 class="modal-title"></h2>
+    </div>
+    <div class="modal-body">
+      <div class="success">Success</div>
+    </div>
+  </div>
+</div>
+<div id="su2" class="popup blue_backg popup-su">
+    <div class="close" onclick="HidePopup('#su2');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
+    <div class="modal-content " role="document">
+    <div class="modal-header">
+      <h2 class="modal-title"></h2>
+    </div>
+    <div class="modal-body">
+      <div class="success">Success</div>
+    </div>
+  </div>
+</div>
+ <div id="su1" class="popup blue_backg popup-su">
+    <div class="close" onclick="HidePopup('#su1');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
+    <div class="modal-content " role="document">
+    <div class="modal-header">
+      <h2 class="modal-title"></h2>
+    </div>
+    <div class="modal-body">
+      <div class="success">Success</div>
+    </div>
+  </div>
+</div>
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>

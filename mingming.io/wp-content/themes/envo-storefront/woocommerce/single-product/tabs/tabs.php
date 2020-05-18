@@ -244,6 +244,7 @@
           }
           else
           {
+			  $order_id;
         $order99 = wc_get_order( $order_id );
         $order_meta = get_post_meta( $order_id);
 
@@ -288,15 +289,15 @@
 
                 $httpStr = 'http';
                 if ( strstr($link,$httpStr) ) {?>
-                  <source src="<?=$link?>" type="video/mp4">
-                  <source src="<?=$link?>" type="video/webm" />
+                  <source src="<?=$link?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  <source src="<?=$link?>" type="video/x-matroska" />
                   <source src="<?=$link?>" type="video/ogv" />
               <?}else{
 
 
 				  ?>
-              <source src="/wp-content/uploads/<?=$link?>" type="video/mp4">
-              <source src="/wp-content/uploads/<?=$link?>" type="video/webm" />
+              <source src="/wp-content/uploads/<?=$link?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+              <source src="/wp-content/uploads/<?=$link?>" type="video/x-matroska" />
               <source src="/wp-content/uploads/<?=$link?>" type="video/ogv" />
               <?}
                 ?>
