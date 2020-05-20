@@ -21,6 +21,9 @@
 
   do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 <style>
+.body_safari table tr{
+    position: relative;
+}
   .inputfile {
   width: .1px;
   height: .1px;
@@ -136,6 +139,46 @@
     padding: 0 !important;
     font-size: 14px;
   }
+  .table td .buttons-block-in{
+    //order: -1;
+    /*width: 100%;
+    margin-top: 10px;
+    clear: both;*/
+    /*display: flex;
+    justify-content: space-between;
+    justify-content: space-evenly;*/
+  }
+  .table td .buttons-block-in>div{
+    display: none;
+  }
+  .table td .buttons-block-in>div:first-child{
+    display: block;
+  }
+    .table td.buttons-block .pipeFileInput{
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    margin: 5px auto 0;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 400;
+  }
+  .table td.buttons-block input[type="file"]{
+    display: none;
+  }
   .woo-info{
   padding-top: 20px;
   border-top: 3px solid #1e85be;
@@ -144,6 +187,7 @@
   background: transparent;
   }
   .woocommerce-notices-table > .table >tbody .btn.btn-login{
+    margin-top: 5px !important;
   margin: 4px 2px 4px;
   padding: 0px 15px;
   height: 30px;
@@ -154,17 +198,25 @@
   max-width: 200px;
   margin: 20px auto 0;
   }
+  .woocommerce-notices-table .table tr td.buttons-block{
+    flex-wrap: wrap;
+  }
   .data-td{
 
   }
 .woocommerce-message--info
 {
 	display:none;
-	
+
 }
 #comments
 {
-display:none;	
+display:none;
+}
+.table td.buttons-block .pipeMobileRecorder {
+    text-align: center;
+    width: auto;
+    margin: 0;
 }
 @media only screen and (max-width: 540px){
     .row-account >.col-md-9{padding: 0;}
@@ -174,22 +226,22 @@ display:none;
 }
 #pipeStartRecording-custom-id
 {
-	color:#fff!important;	
+	color:#fff!important;
 }
 #pipeRecordRTC-custom-id
 {
 width:100px!important;
 height:30px!important;border-radius: 20px!important;
-background: none!important;border: 1px solid #fff!important;color:#fff!important;	
+background: none!important;border: 1px solid #fff!important;color:#fff!important;
 }
-.pipeRecordRTC span 
+.pipeRecordRTC span
 {
-font-size:8px!important;color:#fff!important;	
+font-size:8px!important;color:#fff!important;
 }
 .pipeRecordRTC span:hover
 {
-	font-size:8px!important;color:#fff!important;	
-	
+	font-size:8px!important;color:#fff!important;
+
 }
 </style>
 <!-- <h3 style="margin: 0 0 20px;">Hello Michaell</h3>
@@ -207,6 +259,7 @@ $os = array (
 'BeOS'=>'BeOS',
 'OS/2'=>'OS/2',
 'Safari' => '(Safari)',
+'iPad'    => '(iPad)',
 );
 
 foreach($os as $key=>$value)
@@ -226,28 +279,28 @@ return 'Unknown';
   $current_user = wp_get_current_user();
   $idu=get_user_meta( $current_user->ID, 'idtov', true);
 
-  
-			
+
+
 $osa=get_os($_SERVER['HTTP_USER_AGENT']);
-	if ($osa=='Safari')	
+	if ($osa=='Safari')
 	{
 		?>
 <link rel="stylesheet" href="//cdn.addpipe.com/2.0/pipe.css">
 <script type="text/javascript" src="//cdn.addpipe.com/2.0/pipe.js"></script>
-		
-		
-		
+
+<div style="display:none" id="eta"><div class="intip buttons-block-in" style="display:none" id="custom-id"></div></div>
+
 <?
 	}
 	else
 	{
-		
+
 		?>
 
 <?
 	}
   ?>
-  
+
 
 
 <div class="woocommerce-notices-flex">
@@ -331,38 +384,118 @@ $osa=get_os($_SERVER['HTTP_USER_AGENT']);
               ?>
           </td>
           <td class="buttons-block">
-            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
-			
-			<?
-			
+
+<?php
 $osa=get_os($_SERVER['HTTP_USER_AGENT']);
-	if ($osa=='Safari')	
+if ($osa=='Safari') {
+
+}else{?>
+<a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
+<? } ?>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
+
+			<?
+
+$osa=get_os($_SERVER['HTTP_USER_AGENT']);
+	if ($osa=='Safari')
 	{
 		?>
 		<!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
 		-->
-		 <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();jQuery('#intip-<?=$order_id?>').show();">videoRecord</a>
-		<div class="intip-<?=$order_id?>" style="display:none" id="custom-id"></div>
+         <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
+		 <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+		<div class="intip-<?=$order_id?> buttons-block-in" style="display:none" id="custom-id"></div>
 <script type="text/javascript">
 var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
-PipeSDK.insert("custom-id",pipeParams,function(recorderObject){});
+PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+	
+	recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+	var args = Array.prototype.slice.call(arguments);
+	console.log("onVideoUploadSuccess("+args.join(', ')+")");
+	var filename;
+jQuery('.pipeFileInput').each(function(){
+var yy=jQuery(this).parent().parent().attr('Class');
+if (yy!='intip buttons-block-in pipeMobileRecorder')
+{
+	var idi=yy.split(' ');
+	var idi1=idi[0].split('-');
+	var zak=idi1[1];
+	jQuery.ajax({
+			type: "POST",
+			url: "/linkos.php",
+			data: {
+			zak:zak,
+            link:filename
+			},
+			success: function(data)
+{
+window.location.reload();
+}
+});
+
+}
+});
+
+}
+	
+recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+	var args = Array.prototype.slice.call(arguments);
+	console.log("onSaveOk("+args.join(', ')+")");
+	var streamName;
+	
+	
+	jQuery('.pipeFileInput').each(function(){
+var yy=jQuery(this).parent().parent().attr('Class');
+if (yy!='intip buttons-block-in pipeMobileRecorder')
+{
+	var idi=yy.split(' ');
+	var idi1=idi[0].split('-');
+	var zak=idi1[1];
+	jQuery.ajax({
+			type: "POST",
+			url: "/linkos.php",
+			data: {
+			zak:zak,
+            link:streamName
+			},
+			success: function(data)
+{
+window.location.reload();
+}
+});
+
+}
+});
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+	
+});
 </script>
-		
-		
+
+
 		          <?
 	}
 	else
 	{
 		?>
+
 		
-	
-		
+				
+	<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>
+
 		 <?
-	}		
-			
-          
-		
+	}
+
+
+
 		  ?>
 		  </td>
         </tr>
@@ -518,6 +651,62 @@ PipeSDK.insert("custom-id",pipeParams,function(recorderObject){});
       });
     });
   })
+
+function moving(elem, id){
+var id;
+jQuery('#eta').find('#custom-id').attr('id','custom-id1');
+var custom = jQuery('#eta').find('.intip').html();
+
+
+
+console.log(custom);
+jQuery('.buttons-block').find('#custom-id').each(function(){
+jQuery(this).html('');
+});
+
+
+jQuery('.videoRecord').each(function(){
+jQuery(this).show();
+});
+jQuery('.intip-'+id).parent().find('.videoRecord').hide();
+jQuery('.intip-'+id).show();
+
+
+
+jQuery('.intip-'+id).html('');
+jQuery('.intip-'+id).append(custom);
+
+
+jQuery('.intip-'+id).find('#pipe-recording-form-custom-id').each(function(indx){
+	if (indx==1)
+	{
+
+	}
+	else
+	{
+	jQuery(this).remove();	
+	}
+
+});
+
+jQuery('.intip-'+id).find('#output-custom-id').each(function(indx){
+	if (indx==1)
+	{
+		
+	}
+	else
+	{
+	jQuery(this).remove();	
+	}
+
+});
+jQuery('.intip-'+id).find('#label-pipe-file-input-custom-id').eq(0).click();
+
+
+}
+
+
+
 
 
   var FLAG = true;

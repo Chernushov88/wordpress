@@ -38,7 +38,7 @@ do_action( 'woocommerce_before_account_navigation' );
     }
 	.woocommerce-MyAccount-navigation-link--payment-methods
 	{
-		display:none;	
+		display:none;
 	}
 </style>
 
@@ -74,7 +74,7 @@ $sum=$baln;
 
     </ul>
 
-
+<a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">Write to us</a>
 
 
 

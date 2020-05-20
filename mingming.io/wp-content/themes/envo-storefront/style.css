@@ -757,8 +757,24 @@ a:active {
 
 #site-navigation {
     min-height: 60px;
+    height: calc(100% - 50px);
 }
-
+#site-navigation + .writing_btn{
+    justify-content: center;
+    margin: auto;
+    max-width: 150px;
+}
+.ms_sidemenu_wrapper .writing_btn{
+    width: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.ms_sidemenu_wrapper.open_menu .writing_btn{
+    width: auto;
+    opacity: 1;
+    display: flex;
+}
 .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
@@ -1794,9 +1810,13 @@ span.comments-meta i {
 }
 
 .woocommerce-MyAccount-navigation ul {
-    padding: 30px 10px;
+    padding: 30px 10px 0;
 }
-
+.woocommerce-MyAccount-navigation .writing_btn{
+    display: block;
+    max-width: 150px;
+    margin: 10PX auto 20PX auto;
+}
 .woocommerce-MyAccount-navigation ul.usel-lest-roles {
     display: -webkit-flex;
     display: -moz-flex;
@@ -4132,12 +4152,39 @@ body.woocommerce-account .woocommerce-MyAccount-content {
     padding: 0;
     z-index: 999999;
 }
-
+#popupWriting{
+    max-width: 500px;
+}
 #popupLoadFile .form-group .ms_btn {
     max-width: 160px;
     padding: 0;
 }
-
+#popupWriting .wpcf7-form input[type="submit"]{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    margin: 20px auto 0px;
+    padding: 0px 30px;
+    line-height: 40px;
+    font-size: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+#popupWriting div.wpcf7 label,
+#popupWriting div.wpcf7 input[type="file"]{
+    width: 100%;
+}
+#popupWriting div.wpcf7  textarea{
+    height: 200px;
+}
 .inputfile + label {
     font-weight: 400;
     white-space: nowrap;
@@ -4479,7 +4526,7 @@ div.elementor-accordion .elementor-accordion-item {
 }
 
 .body_safari .foo_sharing ul li a {
-    display: inline-block;
+    //display: inline-block;
 }
 
 .foo_sharing ul li img {
@@ -5674,6 +5721,12 @@ color: #3bc7e7;
 
     .iframe-doc {
         padding-top: 100vh;
+    }
+    .body_safari .woocommerce-notices-table .table tr td.buttons-block{
+        justify-content: initial;
+    }
+    .body_safari .woocommerce-notices-table .table tr td.buttons-block .share_btn {
+        margin: 5px 5px 0 5px !important;
     }
 
 }

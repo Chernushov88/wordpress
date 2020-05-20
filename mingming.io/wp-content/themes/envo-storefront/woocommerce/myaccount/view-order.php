@@ -22,11 +22,21 @@ defined( 'ABSPATH' ) || exit;
 $notes = $order->get_customer_order_notes();
 ?>
 <style>
+
 .order-p{
   display: none;
 }
 h2{
 	margin: 0 0 20px;
+}
+.woocommerce table.shop_table.custom-fields a{
+	margin: 0;
+    padding: 0;
+	text-decoration: underline;
+    color: #3bc7e7;
+}
+.woocommerce table.shop_table.custom-fields a:hover{
+	text-decoration: none;
 }
 </style>
 <p class="order-p" >
