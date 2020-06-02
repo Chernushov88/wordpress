@@ -590,8 +590,11 @@
   </div>
 </div>
 </div><!-- end page-wrap -->
+
 <?php do_action( 'envo_storefront_after_footer' ); ?>
+<!-- test-0 -->
 <?php wp_footer(); ?>
+<!-- test-1 -->
 <script src="/wp-content/themes/envo-storefront/js/jquery.maskedinput/jquery.maskedinput.min.js"></script>
 <script>
     jQuery(function($){

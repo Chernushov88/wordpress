@@ -54,6 +54,7 @@ do_action( 'woocommerce_before_account_navigation' );
 <?
 $sum=0;
 $user = wp_get_current_user();
+
 if (is_user_role('actor', $user->ID)) {
 
 $baln=get_user_meta( $user->ID, 'balance', true);

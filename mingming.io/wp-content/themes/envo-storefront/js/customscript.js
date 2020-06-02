@@ -157,10 +157,27 @@
 
   function ShowPopup(target){
     // event.preventDefault();
-    console.log(target);
     jQuery(".darken").fadeIn();
     jQuery(target).addClass('open');
+
   }
+
+function ShowPopupVideo(target, link){
+    // event.preventDefault();
+    setTimeout( () =>{
+        console.log(link);
+        let newTarget = document.querySelector(target + ' .modal-body')
+        console.log(newTarget);
+        newTarget.innerHTML = link;
+    }, 100)
+
+
+
+    jQuery(".darken").fadeIn();
+    jQuery(target).addClass('open');
+
+
+}
   function HidePopup(target){
     jQuery(".darken").fadeOut(300);
     jQuery(target).removeClass('open');

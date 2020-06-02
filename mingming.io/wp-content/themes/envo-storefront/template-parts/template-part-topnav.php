@@ -1,4 +1,7 @@
-<?/*php if (is_active_sidebar('envo-storefront-top-bar-area')) { ?>
+<?
+require_once ABSPATH . 'wp-admin/includes/user.php';
+
+/*php if (is_active_sidebar('envo-storefront-top-bar-area')) { ?>
     <div class="top-bar-section container-fluid">
         <div class="<?php echo esc_attr(get_theme_mod('top_bar_content_width', 'container')); ?>">
             <div class="row">
@@ -93,15 +96,20 @@
         </div>
     </div>
     <div class="ms_top_right">
+        <?php echo do_shortcode('[gtranslate]'); ?>
                 <div class="ms_top_btn">
 <a href="#"
    class="visible-xs-inline-block visible-search"
    onclick="document.querySelector('#mob_search').classList.toggle('active');"><i class="fa fa-search" aria-hidden="true"></i></a>
 <a href="/create-your-account/" class="ms_btn reg_btn"> <span>Sign up</span> <img src="/wp-content/themes/envo-storefront/img/icon/Signup_brighter.png" alt=""></a>
-<a href="/enroll/" class="ms_btn reg_btn"><span>Enroll as Actor </span><img src="/wp-content/themes/envo-storefront/img/icon/Enroll_brighter.png" alt=""></a>
+<a href="/enroll/" class="ms_btn reg_btn"><span>Enroll as Celebrity</span><img src="/wp-content/themes/envo-storefront/img/icon/Enroll_brighter.png" alt=""></a>
 <?php
 if (is_user_logged_in()) {
-    $login = 'My profile';
+
+$current_user = wp_get_current_user();
+$login = $current_user->user_login;
+    $login;
+    $login = 'Logged as '.$login;
 }else{
     $login = 'login';
 }

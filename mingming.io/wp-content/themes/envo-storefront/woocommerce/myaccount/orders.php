@@ -378,13 +378,13 @@ $osa=get_os($_SERVER['HTTP_USER_AGENT']);
               if ($link)
               {
               ?>
-            <a target="_blank" href="<?=$link?>">This video</a>
+            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`)">This video</a>
             <?
               }
               ?>
           </td>
           <td class="buttons-block">
-
 <?php
 $osa=get_os($_SERVER['HTTP_USER_AGENT']);
 if ($osa=='Safari') {
@@ -408,7 +408,7 @@ $osa=get_os($_SERVER['HTTP_USER_AGENT']);
 <script type="text/javascript">
 var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
 PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
-	
+
 	recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
 	var args = Array.prototype.slice.call(arguments);
 	console.log("onVideoUploadSuccess("+args.join(', ')+")");
@@ -437,13 +437,13 @@ window.location.reload();
 });
 
 }
-	
+
 recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
 	var args = Array.prototype.slice.call(arguments);
 	console.log("onSaveOk("+args.join(', ')+")");
 	var streamName;
-	
-	
+
+
 	jQuery('.pipeFileInput').each(function(){
 var yy=jQuery(this).parent().parent().attr('Class');
 if (yy!='intip buttons-block-in pipeMobileRecorder')
@@ -466,17 +466,17 @@ window.location.reload();
 
 }
 });
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 }
-	
-	
+
+
 });
 </script>
 
@@ -487,8 +487,8 @@ window.location.reload();
 	{
 		?>
 
-		
-				
+
+
 	<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>
 
 		 <?
@@ -558,6 +558,7 @@ window.location.reload();
             }
           }
           ?>
+          <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
         <?php endif; ?>
       </td>
       <?php endforeach; ?>
@@ -611,7 +612,10 @@ window.location.reload();
     <div class="modal-footer"></div>
   </div>
 </div>
+<?php get_template_part('template-parts/template-part', 'popupShareVideo'); ?>
+
 <?php get_template_part('template-parts/template-part', 'popupShare'); ?>
+
 <div id="popupVideoRecord" class="popup">
     <div class="close" onclick="HidePopup('#popupVideoRecord');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
     <div class="iframe-doc">
@@ -619,6 +623,9 @@ window.location.reload();
       <div id="texa" class="iframe-text"></div>
     </div>
 </div>
+
+
+
 <script>
   window.addEventListener('load', function(){
     var inputs = document.querySelectorAll('.inputfile');
@@ -684,7 +691,7 @@ jQuery('.intip-'+id).find('#pipe-recording-form-custom-id').each(function(indx){
 	}
 	else
 	{
-	jQuery(this).remove();	
+	jQuery(this).remove();
 	}
 
 });
@@ -692,11 +699,11 @@ jQuery('.intip-'+id).find('#pipe-recording-form-custom-id').each(function(indx){
 jQuery('.intip-'+id).find('#output-custom-id').each(function(indx){
 	if (indx==1)
 	{
-		
+
 	}
 	else
 	{
-	jQuery(this).remove();	
+	jQuery(this).remove();
 	}
 
 });
