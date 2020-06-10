@@ -1,8 +1,23 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
-print_r($_POST);
+
+$em=array();
+$users = get_users( array( ) );
+foreach( $users as $user )
+{
+$em[]=$user->user_email;
+}
+
+if (in_array($_POST['email'], $em)) 
+{
+echo '0';   
+}
+else
+{
+	
 //$bir=explode('/',$_POST['dob']);
 //$bir1=$bir[2].'-'.$bir[1].'-'.$bir[0].' 00:00:00';
+
 $userdata = array(
 	'ID'              => 0,  
 	'user_pass'       => $_POST['password'], // обязательно
@@ -20,6 +35,7 @@ $userdata = array(
 	'role'            => 'buyer', // (строка) роль пользователя
 );
 
-$id=wp_insert_user( $userdata );
+echo $id=wp_insert_user( $userdata );
 
+}
 ?>

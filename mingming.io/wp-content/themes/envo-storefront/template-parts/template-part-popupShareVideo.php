@@ -6,7 +6,8 @@
     <div class="modal-content " role="document">
       <div class="modal-body">
 
-        <a href="javascript:void(0);" class="ms_btn btn" >Share</a>
+
       </div>
+      <a href="javascript:void(0);" class="ms_btn btn" >Share</a>
   </div>
 </div>

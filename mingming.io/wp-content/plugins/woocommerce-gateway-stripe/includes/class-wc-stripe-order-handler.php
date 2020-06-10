@@ -300,6 +300,9 @@ class WC_Stripe_Order_Handler extends WC_Stripe_Payment_Gateway {
 				if ( $is_stripe_captured ) {
 					/* translators: transaction id */
 					$order->add_order_note( sprintf( __( 'Stripe charge complete (Charge ID: %s)', 'woocommerce-gateway-stripe' ), $result->id ) );
+
+	
+					
 					WC_Stripe_Helper::is_wc_lt( '3.0' ) ? update_post_meta( $order_id, '_stripe_charge_captured', 'yes' ) : $order->update_meta_data( '_stripe_charge_captured', 'yes' );
 
 					// Store other data such as fees
@@ -307,6 +310,7 @@ class WC_Stripe_Order_Handler extends WC_Stripe_Payment_Gateway {
 
 					if ( is_callable( array( $order, 'save' ) ) ) {
 						$order->save();
+						
 					}
 
 					$this->update_fees( $order, $result->balance_transaction->id );

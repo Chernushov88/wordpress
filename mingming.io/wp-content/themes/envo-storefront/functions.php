@@ -619,6 +619,7 @@ function my_user_contactmethods($user_contactmethods){
 	     $user_contactmethods['phone'] = 'Phone actor';
 		 $user_contactmethods['balance'] = 'Balance';
 		 $user_contactmethods['proc'] = 'Procent';
+		  $user_contactmethods['charity'] = 'Charity';
   return $user_contactmethods;
 }
 
@@ -803,7 +804,45 @@ $proc1=$proc;
 $price = get_post_meta($idzak, '_regular_price', true );
 $proce=(($price/100))*($proc1);
 $cem=round($proce,1);
-$otog=$baln+$cem;
+
+$priceuser=$price-$cem;
+
+$cher=get_user_meta( $idus, 'charity', true);
+if ($cher>0)
+{
+
+
+if ($cher==10)
+	{
+	$nablog=($priceuser*10)/100;
+	$nablog1=round($nablog,1);
+	$priceuser1=$priceuser-$nablog1;
+	$otog=$baln+$priceuser1;
+	}
+    elseif ($cher==50)	
+	{
+	$nablog=($priceuser*50)/100;
+	$nablog1=round($nablog,1);
+	$priceuser1=$priceuser-$nablog1;
+	$otog=$baln+$priceuser1;
+	}
+	elseif ($cher==100)	
+	{
+	$otog=$baln;
+	}
+	
+
+
+}
+else
+{
+	$otog=$baln+$priceuser;
+}
+
+
+
+
+
 update_user_meta( $idus, 'balance', $otog);
 
 }

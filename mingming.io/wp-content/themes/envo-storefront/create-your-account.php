@@ -29,7 +29,7 @@
   .single-content {
   max-width: 500px;
   margin: 0 auto;
-  padding: 10px 5% 50px;
+  padding: 10px 5% 25px;
   border-radius: 10px;
   border-radius: 10px;
   background: #1b2039;
@@ -42,11 +42,11 @@
 </style>
 <div class="create-your-account">
   <header class="single-head page-head no-thumbnail">
-    <h1 class="single-title">Create Your Account</h1>
+    <!-- <h1 class="single-title" style="color:#fff;">Create Your Account</h1> -->
   </header>
   <div class="single-content">
       <form method="post" class="form  form-login">
-      <h2>Login</h2>
+      <h2>Create Your Account</h2>
       <!--   <div class="form-group">
         <label for="name">Full name</label>
         <div class="input-group">
@@ -99,7 +99,7 @@
           <span>By signing up, you agree to mingming's <a href="javascript:void(0);" onclick="ShowPopup('#popupTerms');">Terms of Service</a>
           and <a href="javascript:void(0);" onclick="ShowPopup('#popupPolicy');">Privacy Policy</a></span>
         </div>
-        <p><span>Have an account? </span><a href="/enroll/">Log in</a></p>
+        <p><span>Have an account? </span><a href="/my-account-2/">Log in</a></p>
       </div>
     </form>
 
@@ -112,7 +112,9 @@
         <h2 class="modal-title"></h2>
       </div>
       <div class="modal-body">
-        <div class="error">error</div>
+        <div class="error">Error</div>
+        <br>
+        <div style="color:#fff; font-weight: 400;">Such user or e-mail is already exists. Please choose another one.</div>
       </div>
     </div>
   </div>
@@ -146,12 +148,26 @@
         //dob:jQuery('#dob').val(),
         },
         success: function(data){
-          ShowPopup('#su1');
+			if (data==jQuery.trim('0'))
+			{
+				 ShowPopup('#su2');
+			}
+			else
+			{
+				ShowPopup('#su1');
+				setTimeout(function () {
+
+					window.location.reload();
+
+				}, 1000);
+
+			}
+
           console.log(data);
         },
         error: function(data){
           //jQuery('#su').show()
-          console.log(data);
+          console.log(data);  ShowPopup('#su2');
         }
       });
     }

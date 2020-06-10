@@ -276,7 +276,7 @@
             <div class="video-title-in">
               <span>For: <?= $videofor; ?></span>
             </div>
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
+            <!-- <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a> -->
           </div>
           <div class="video-controls">
 

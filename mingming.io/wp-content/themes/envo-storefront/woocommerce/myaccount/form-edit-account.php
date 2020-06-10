@@ -114,6 +114,10 @@
   margin: 2px 7px 0 0;
   float: left;
   }
+  .chooseCategory> .input-group>div .che1{
+  margin: 2px 7px 0 0;
+  float: left;
+  }
   .charity {
   padding: 20px 5px 0px 5px;
   }
@@ -123,16 +127,16 @@
 </style>
 <?
   $current_user = wp_get_current_user();
-
+$cher=0;
   $ema=$current_user->data->user_email;
   $phon=get_user_meta( $current_user->ID, 'phone', true);
-  $fio=get_user_meta( $current_user->ID, 'first_name', true);
+  $fio=get_user_meta( $current_user->ID, 'nickname', true);
   $han=get_user_meta( $current_user->ID, 'handle', true);
   $fow=get_user_meta( $current_user->ID, 'followers', true);
 
   $bir=get_user_meta( $current_user->ID, 'birthday', true);
   $inv=get_user_meta( $current_user->ID, 'invite', true);
-
+$cher=get_user_meta( $current_user->ID, 'charity', true);
   ?>
 <div class="account-details">
   <h2>Details:</h2>
@@ -143,12 +147,12 @@
     ?>
   <form id="acta" method="post">
     <!-- <div id="su1" style="display:none">Success</div> -->
-    <!--<div class="form-group">
+    <div style="display:none" class="form-group">
       <label for="name">Your name</label>
       <div class="input-group">
-        <input name="name" type="text" placeholder="Michael Jordan" id="name" class="form-control" value="<?=$fio?>" required>
+        <input name="name" type="text" placeholder="Michael Jordan" id="name" class="form-control" value="<?=$fio?>" >
       </div>
-      </div>-->
+      </div>
     <div class="form-group">
       <label for="email">Email</label>
       <div class="input-group">
@@ -158,7 +162,7 @@
     <div class="form-group">
       <label for="phone">Phone number (never shared)</label>
       <div class="input-group">
-        <input type="text" name="phone" value="<?=$phon?>" placeholder="+86 999 9999 999" id="phone" class="form-control phone-js" >
+        <input type="text" name="phone" value="<?=$phon?>" placeholder="+86 999 9999 999" id="phone" class="form-control -phone-js" >
       </div>
     </div>
     <div class="form-group">
@@ -203,10 +207,38 @@
       <div id="fiy" class="fiy">
         <?
           echo $thumb = get_the_post_thumbnail( $idu, 'thumbnail' );
+
+		  if ($cher>0)
+		  {
+
+	if ($cher==10)
+	{
+	?>
+	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt="">
+	<?
+	}
+    elseif ($cher==50)
+	{
+	?>
+	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt="">
+	<?
+	}
+	elseif ($cher==100)
+	{
+	?>
+	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt="">
+	<?
+	}
+
+
         ?>
-        <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt="">
-        <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt="">
-        <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt="">
+
+
+
+
+		<?
+		  }
+		?>
       </div>
       <br/>
       <label for="addPhoto">Add your photo</label>
@@ -222,12 +254,13 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="selfPrasentation">Self-prasentation</label>
+      <label for="selfPrasentation">Self-presentation</label>
       <div class="input-group">
         <textarea name="selfPrasentation" type="text" value='<?=$excerpt?>' placeholder="Actor Chicago fire" id="selfPrasentation" class="form-control " ></textarea>
       </div>
     </div>
-    <div class="form-group chooseTabs">
+
+    <div class="form-group chooseTabs" style="display:none;">
       <label for="">Choose tags</label>
       <div class="input-group">
         <a href="javascript:void(0)"  onclick="jQuery(this).toggleClass('active');" class="button <?
@@ -256,6 +289,7 @@
           ?>">Drama</a>
       </div>
     </div>
+
     <br/>
     <div class="input-group chooseCategory">
       <label for="">Choose category</label>
@@ -320,10 +354,70 @@
         <!-- <h3>Charity</h3> -->
         <label for="">Charity</label>
         <div class="input-group">
-          <div><input checked="checked" type="radio" name="radioCharity" class="che"><label>0% on charity</label></div>
-          <div><input type="radio" name="radioCharity" class="che"><label>10% on charity</label></div>
-          <div><input type="radio" name="radioCharity" class="che"><label>50% on charity</label></div>
-          <div><input type="radio" name="radioCharity" class="che"><label>100% on charity</label></div>
+          <div><input
+
+		  <?
+		  if ($cher==0)
+		  {
+?>
+checked="checked"
+<?
+		  }
+		  ?>
+		   type="radio" name="radioCharity" value="0" class="che"><label>0% on charity</label></div>
+          <div><input
+
+
+<?
+  if ($cher==10)
+		  {
+?>
+checked="checked"
+<?
+		  }
+		  ?>
+
+
+
+
+
+
+		  type="radio" name="radioCharity" value="10" class="che1"><label>10% on charity</label></div>
+          <div><input
+
+
+
+<?
+  if ($cher==50)
+		  {
+?>
+checked="checked"
+<?
+		  }
+		  ?>
+
+
+		  type="radio" name="radioCharity" value="50" class="che1"><label>50% on charity</label></div>
+          <div><input
+
+
+
+
+<?
+  if ($cher==100)
+		  {
+?>
+checked="checked"
+<?
+		  }
+		  ?>
+
+
+
+
+
+
+		  type="radio" name="radioCharity" value="100" class="che1"><label>100% on charity</label></div>
         </div>
       </div>
     <div>
@@ -378,8 +472,8 @@
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
   <?php do_action( 'woocommerce_edit_account_form_start' ); ?>
   <p style="display:none" class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-    <label for="account_first_name"><?php esc_html_e( 'First name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-    <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" autocomplete="given-name" value="<?php echo esc_attr( $user->first_name ); ?>" />
+
+    <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name"  value="<?=$fio?>" />
   </p>
   <p style="display:none" class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
     <label for="account_last_name"><?php esc_html_e( 'Last name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
@@ -532,14 +626,14 @@
     {
 
    var up=jQuery(data).find('#fiy').html();
-
+ 
    jQuery('#fiy').html('');
    setTimeout(function () {
 
       jQuery('#fiy').append(up);
-    var src=jQuery(data).find('#fiy').find('img').attr('src');
+    var src=jQuery(data).find('#fiy').find('.attachment-thumbnail').attr('data-src');
 
-
+console.log(src);
 
 
     jQuery('#fiy').append('<img style="width:150px" src="'+src+'?'+Math.random()+'">');
@@ -593,13 +687,14 @@
   });
   var cat = cat1.join();
 
-
+var cher=jQuery('input[name=radioCharity]:checked').val()
 
        var formData = new FormData(jQuery('#tova')[0]);
     var fd = new FormData();
   fd.append('id', '<?=$idu?>');
   fd.append('prez',jQuery('#selfPrasentation').val());
   fd.append('tag',tagy);
+  fd.append('cher',cher);
   fd.append('cat',cat);
   fd.append('des',jQuery('#descripOrder').val());
   fd.append('nam',jQuery('#name000').val());
@@ -607,7 +702,11 @@
   fd.append('img', jQuery('#addPhoto')[0].files[0]);
 
    // jQuery('#su2').show();
-   ShowPopup('#su2');
+   //ShowPopup('#su2');
+setTimeout( function(){
+    location.reload();
+}, 1000)
+
     jQuery.ajax({
     type: 'POST',
     url: '/updtov.php',
@@ -620,6 +719,7 @@
 
     console.log('success - ', data);
 
+
     },
     error: function(data) {
       console.log('error - ', data);
@@ -629,17 +729,23 @@
   }
 
 
-    jQuery(function($)
-    {
+
+    jQuery(document).ready(function(){
+
+		setTimeout(function () {
+
 
   jQuery('#account_first_name').val(jQuery('#name').val());
   jQuery('#account_email').val(jQuery('#email').val());
 
-
-
+		}, 2500);
 
 
     })
+
+
+
+
 
 </script>
 <div id="su3" class="popup blue_backg popup-su">

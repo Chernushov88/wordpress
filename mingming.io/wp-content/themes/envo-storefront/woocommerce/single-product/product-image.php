@@ -29,16 +29,87 @@ $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes   = apply_filters(
 	'woocommerce_single_product_image_gallery_classes',
 	array(
+		'fiy',
 		'woocommerce-product-gallery',
 		'woocommerce-product-gallery--' . ( $product->get_image_id() ? 'with-images' : 'without-images' ),
 		'woocommerce-product-gallery--columns-' . absint( $columns ),
 		'images',
 	)
 );
+
+
+$iduu=array();
+
+	 $users = get_users( array(
+	'meta_key'     => 'idtov',
+	'meta_value'   =>$product->get_id()
+     ) );
+
+foreach( $users as $user )
+{
+
+	$iduu[]=$user->ID;
+}
+
+
+if (!empty($iduu))
+{
+
+$cher=get_user_meta( $iduu[0], 'charity', true);
+
+}
+
+
+
+
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+
+	<?
+	 if ($cher>0)
+		  {
+
+	if ($cher==10)
+	{
+	?>
+	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt="">
+	<?
+	}
+    elseif ($cher==50)
+	{
+	?>
+	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt="">
+	<?
+	}
+	elseif ($cher==100)
+	{
+	?>
+	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt="">
+	<?
+	}
+
+
+
+		  }
+
+
+
+	?>
+
+
+
 	<figure class="woocommerce-product-gallery__wrapper">
-		<?php
+
+
+
+
+	<?
+
+
+
+
+
+
 		if ( $product->get_image_id() ) {
 			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		} else {

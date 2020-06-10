@@ -165,9 +165,13 @@ form .required {
 	            	<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 	            	<button type="submit" class="btn btn-login btn-block" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">Login Now</button>
                     <ul class="social">
-                      <li><a href="#"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-                      <li><a href=""><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li>
+                      <!-- <li><a href="javascript:void(0);"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
+                      <li><a href="javascript:void(0);"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+                      <li><a href="javascript:void(0);"><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li> -->
+                      <li><a href="javascript:void(0)"><i class="fa fa-clone" aria-hidden="true"></i></a></li>
+                      <li><a href="javascript:void(0)"><i class="fa fa-qrcode" aria-hidden="true"></i></a></li>
+                      <li><a href="javascript:void(0)"><i<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                      <li><a href="javascript:void(0)"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
                     </ul>
 	            </div>
 
@@ -182,7 +186,7 @@ form .required {
 	          <div class="flex dont_have">
 	          	<div>Don't have an account?</div>
 	          	<a href="/create-your-account/" class="btn btn-default"> Sign up </a>
-	          	<a href="/enroll/" class="btn btn-default"> Enroll as an Actor </a></div>
+	          	<a href="/enroll/" class="btn btn-default"> Enroll as an Celebrity </a></div>
 	        </div>
 
 

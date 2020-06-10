@@ -10,20 +10,20 @@
 <div class="container container-enroll">
   <div class="row">
     <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-12" style="margin-top: 20px;margin-bottom: 50px">
-      <h2 class="form-signin-heading">Apply to join as an actor</h2>
+      <h2 class="form-signin-heading">Apply to join as an Celebrity</h2>
       <div class="form-signin-wrapp blue_backg">
         <p>If you have fans and want to join Ming as talent, you can enroll here and we'll be in touch.</p>
         <form class="form-signin">
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="name">Your name</label>
             <div class="input-group" style="width:100%">
               <input type="text" name="name" value="" placeholder="Michael Jordan" id="name" class="form-control" required>
             </div>
-          </div>
+          </div> -->
           <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username">Celebraty username</label>
             <div class="input-group">
-              <input name="username" type="text" placeholder="myusername" id="username" class="form-control" value="" required>
+              <input name="username" type="text" placeholder="myUsername" id="username" class="form-control" value="" required>
             </div>
           </div>
           <div class="form-group">
@@ -277,10 +277,10 @@
           <div class="form-group">
             <label for="followerCount">How many followers do you have?</label>
             <select id="followerCount" name="followerCount" class="form-control">
-              <option selected="" value=""> < 100k</option>
-              <option value=""> 100k <  </option>
-              <option value="">300k < </option>
-              <option value="">1000k < </option>
+              <option selected="" value=""> 0 - 100k</option>
+              <option value=""> 100k - 300k </option>
+              <option value="">300k - 1000k </option>
+              <option value="">1000k+ </option>
             </select>
           </div>
           <button type="button" onclick="sub()" class="btn btn-block btn-login">
@@ -301,7 +301,9 @@
     </div>
     <div class="modal-body">
 
-      <div class="error">error</div>
+      <div class="error">Error</div>
+        <div style="color:#fff; font-weight: 400;">Such user or e-mail is already exists. Please choose another one.</div>
+
     </div>
   </div>
 </div>
@@ -314,6 +316,8 @@
     <div class="modal-body">
       <div class="success">Success</div>
     </div>
+    <br>
+    <a href="/my-account-2/" class="ms_btn login_btn" style="font-weight: 400;">Login and Enjoy! </a>
   </div>
 </div>
 
@@ -322,7 +326,7 @@
   function sub()
   {
 
-  if ( (jQuery('#password').val().length>0) && (jQuery('#username').val().length>0) )
+  if ( (jQuery('#password').val().length>0) && (jQuery('#email').val().length>0) &&  (jQuery('#username').val().length>0) )
   {
 
 
@@ -341,12 +345,27 @@
       followerCount:jQuery('#followerCount').val(),
       },
         success: function(data){
-        ShowPopup('#su1');
-        console.log(data);
+
+
+       if (data==jQuery.trim('0'))
+			{
+				 ShowPopup('#su2');
+			}
+			else
+			{
+				ShowPopup('#su1');
+				setTimeout(function () {
+
+					window.location.reload();
+
+				}, 1000);
+
+			}
+
       },
       error: function(data){
         //jQuery('#su').show()
-        console.log(data);
+        console.log(data);ShowPopup('#su2');
       }
 
 
@@ -361,18 +380,23 @@
     jQuery('#password').removeClass('ero');
   }
   else{
-    jQuery('#password').addClass('ero');ShowPopup('#su2');
+    jQuery('#password').addClass('ero');
   }
   if  (jQuery('#username').val().length>0){
     jQuery('#username').removeClass('ero');
   }
   else{
-    jQuery('#username').addClass('ero');ShowPopup('#su2');
+    jQuery('#username').addClass('ero');
+  }
+ if  (jQuery('#email').val().length>0){
+    jQuery('#email').removeClass('ero');
+  }
+  else{
+    jQuery('#email').addClass('ero');
   }
 
 
-
-
+ShowPopup('#su2');
 
   }
 

@@ -21,9 +21,9 @@
 
   do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 <style>
-.body_safari table tr{
-    position: relative;
-}
+  .body_safari table tr{
+  position: relative;
+  }
   .inputfile {
   width: .1px;
   height: .1px;
@@ -56,8 +56,8 @@
   display: flex;
   }
   .inputfile+label b{
-    font-weight: 400;
-    color: #ccc;
+  font-weight: 400;
+  color: #ccc;
   }
   .input-addFile{
   position: relative;
@@ -81,7 +81,7 @@
   right: 0px;
   z-index: 2;
   }
-/*  .popup{position:fixed;left:50%;top:-200%;transform:translate(-50%,-50%);z-index:999;;box-shadow:0 2px 4px 3px rgba(0,0,0,.1);transition:1s ease-in-out all; width: 100%;max-width: 600px;}
+  /*  .popup{position:fixed;left:50%;top:-200%;transform:translate(-50%,-50%);z-index:999;;box-shadow:0 2px 4px 3px rgba(0,0,0,.1);transition:1s ease-in-out all; width: 100%;max-width: 600px;}
   .popup.open{    top: 50%;
   margin: 10px;padding: 15px 15px 10px;}
   .popup .hidden_modal{display:block}
@@ -114,7 +114,7 @@
   margin-top: 10px;
   }
   .table {
-    font-size: 12px;
+  font-size: 12px;
   }
   .table thead th{
   background: rgba(0, 0, 0, 0.1);;
@@ -133,51 +133,51 @@
   padding: 4px 20px;
   }
   .table td.buttons-block a{
-    display: block;
-    width: auto;
-    max-width: 100px;
-    padding: 0 !important;
-    font-size: 14px;
+  display: block;
+  width: auto;
+  max-width: 100px;
+  padding: 0 !important;
+  font-size: 14px;
   }
   .table td .buttons-block-in{
-    //order: -1;
-    /*width: 100%;
-    margin-top: 10px;
-    clear: both;*/
-    /*display: flex;
-    justify-content: space-between;
-    justify-content: space-evenly;*/
+  //order: -1;
+  /*width: 100%;
+  margin-top: 10px;
+  clear: both;*/
+  /*display: flex;
+  justify-content: space-between;
+  justify-content: space-evenly;*/
   }
   .table td .buttons-block-in>div{
-    display: none;
+  display: none;
   }
   .table td .buttons-block-in>div:first-child{
-    display: block;
+  display: block;
   }
-    .table td.buttons-block .pipeFileInput{
-    display: inline-block;
-    width: auto;
-    height: 30px;
-    margin: 5px auto 0;
-    padding: 0 10px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 15px;
-    color: #fff;
-    border: 1px solid #fff;
-    background: transparent;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-weight: 400;
+  .table td.buttons-block .pipeFileInput{
+  display: inline-block;
+  width: auto;
+  height: 30px;
+  margin: 5px auto 0;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 400;
   }
   .table td.buttons-block input[type="file"]{
-    display: none;
+  display: none;
   }
   .woo-info{
   padding-top: 20px;
@@ -187,7 +187,7 @@
   background: transparent;
   }
   .woocommerce-notices-table > .table >tbody .btn.btn-login{
-    margin-top: 5px !important;
+  margin-top: 5px !important;
   margin: 4px 2px 4px;
   padding: 0px 15px;
   height: 30px;
@@ -199,110 +199,115 @@
   margin: 20px auto 0;
   }
   .woocommerce-notices-table .table tr td.buttons-block{
-    flex-wrap: wrap;
+  flex-wrap: wrap;
   }
   .data-td{
-
   }
-.woocommerce-message--info
-{
-	display:none;
-
-}
-#comments
-{
-display:none;
-}
-.table td.buttons-block .pipeMobileRecorder {
-    text-align: center;
-    width: auto;
-    margin: 0;
-}
-@media only screen and (max-width: 540px){
-    .row-account >.col-md-9{padding: 0;}
-    .woocommerce-notices-table{width: 100%;font-size: 14px;}
-    .woocommerce-notices-buttons{width: 100%;}
-    .table td.buttons-block .btn{width: 100%;margin: 0 0px 10px;}
-}
-#pipeStartRecording-custom-id
-{
-	color:#fff!important;
-}
-#pipeRecordRTC-custom-id
-{
-width:100px!important;
-height:30px!important;border-radius: 20px!important;
-background: none!important;border: 1px solid #fff!important;color:#fff!important;
-}
-.pipeRecordRTC span
-{
-font-size:8px!important;color:#fff!important;
-}
-.pipeRecordRTC span:hover
-{
-	font-size:8px!important;color:#fff!important;
-
-}
+  .woocommerce-message--info
+  {
+  display:none;
+  }
+  #comments
+  {
+  display:none;
+  }
+  .table td.buttons-block .pipeMobileRecorder {
+  text-align: center;
+  width: auto;
+  margin: 0;
+  }
+  @media only screen and (max-width: 540px){
+  .row-account >.col-md-9{padding: 0;}
+  .woocommerce-notices-table{width: 100%;font-size: 14px;}
+  .woocommerce-notices-buttons{width: 100%;}
+  .table td.buttons-block .btn{width: 100%;margin: 0 0px 10px;}
+  }
+  #pipeStartRecording-custom-id
+  {
+  color:#fff!important;
+  }
+  #pipeRecordRTC-custom-id
+  {
+  width:100px!important;
+  height:30px!important;border-radius: 20px!important;
+  background: none!important;border: 1px solid #fff!important;color:#fff!important;
+  }
+  .pipeRecordRTC span
+  {
+  font-size:8px!important;color:#fff!important;
+  }
+  .pipeRecordRTC span:hover
+  {
+  font-size:8px!important;color:#fff!important;
+  }
+  .woocommerce-notices-table .table tr td.buttons-block a{margin-top: 5px !important;}
 </style>
 <!-- <h3 style="margin: 0 0 20px;">Hello Michaell</h3>
   <h4>Orders</h4> -->
 <?
-function get_os($user_agent)
-{
-$os = array (
-'Windows' => 'Win',
-'Open BSD'=>'OpenBSD',
-'Sun OS'=>'SunOS',
-'Linux'=>'(Linux)|(X11)',
-'Mac OS'=>'(Mac_PowerPC)|(Macintosh)',
-'QNX'=>'QNX',
-'BeOS'=>'BeOS',
-'OS/2'=>'OS/2',
-'Safari' => '(Safari)',
-'iPad'    => '(iPad)',
-);
-
-foreach($os as $key=>$value)
-{
-if (preg_match('#'.$value.'#i', $user_agent))
-return $key;
-}
-
-return 'Unknown';
-}
-
-
-
-  if( current_user_can('actor') )
+  function get_os($user_agent)
   {
+  $os = array (
+  'Windows' => 'Win',
+  'Open BSD'=>'OpenBSD',
+  'Sun OS'=>'SunOS',
+  'Linux'=>'(Linux)|(X11)',
+  'Mac OS'=>'(Mac_PowerPC)|(Macintosh)',
+  'QNX'=>'QNX',
+  'BeOS'=>'BeOS',
+  'OS/2'=>'OS/2',
+  'Safari' => '(Safari)',
+  'iPad'    => '(iPad)',
+  );
 
-  $current_user = wp_get_current_user();
-  $idu=get_user_meta( $current_user->ID, 'idtov', true);
+  foreach($os as $key=>$value)
+  {
+  if (preg_match('#'.$value.'#i', $user_agent))
+  return $key;
+  }
+
+  return 'Unknown';
+  }
 
 
 
-$osa=get_os($_SERVER['HTTP_USER_AGENT']);
-	if ($osa=='Safari')
-	{
-		?>
+    if( current_user_can('actor') )
+    {
+
+    $current_user = wp_get_current_user();
+    $idu=get_user_meta( $current_user->ID, 'idtov', true);
+
+
+
+  $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+    if ($osa=='Safari')
+    {
+      ?>
 <link rel="stylesheet" href="//cdn.addpipe.com/2.0/pipe.css">
 <script type="text/javascript" src="//cdn.addpipe.com/2.0/pipe.js"></script>
-
-<div style="display:none" id="eta"><div class="intip buttons-block-in" style="display:none" id="custom-id"></div></div>
-
+<div style="display:none" id="eta">
+  <div class="intip buttons-block-in" style="display:none" id="custom-id"></div>
+</div>
 <?
-	}
-	else
-	{
+  }
+  else
+  {
 
-		?>
+    ?>
+<link rel="stylesheet" href="//cdn.addpipe.com/2.0/pipe.css">
+<script type="text/javascript" src="//cdn.addpipe.com/2.0/pipe.js"></script>
+<div style="display:none" id="eta">
 
+<img width="30px" height="30px" alt="Close" class="close" src="/wp-content/themes/envo-storefront/img/close-white.svg" onclick="HidePopup5('#eta');">
+<!--<div class="darken" style="display: block;"></div>-->
+
+
+  <div class="intip buttons-block-in popup popupVideoRecrd" style="display:none" id="custom-id" ></div>
+  <div class="darkenVideo"  onclick="HidePopup5('#eta');"></div>
+</div>
 <?
-	}
-  ?>
-
-
-
+  }
+   ?>
 <div class="woocommerce-notices-flex">
   <div class="woocommerce-notices-table">
     <table class="table">
@@ -357,7 +362,7 @@ $osa=get_os($_SERVER['HTTP_USER_AGENT']);
           $int=$order_meta['_billing_instructions'][0];
           $link=$order_meta['billing_link'][0];
 
-		  $int1=str_replace("'","\'",$int);
+          $int1=str_replace("'","\'",$int);
 
           $object = (array)$order->data['date_created'];
           $dat=$object['date'];
@@ -379,125 +384,192 @@ $osa=get_os($_SERVER['HTTP_USER_AGENT']);
               {
               ?>
             <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`)">This video</a>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
             <?
               }
               ?>
           </td>
           <td class="buttons-block">
-<?php
-$osa=get_os($_SERVER['HTTP_USER_AGENT']);
-if ($osa=='Safari') {
+            <?php
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+              if ($osa=='Safari') {
 
-}else{?>
-<a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
-<? } ?>
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
+              }else{?>
+            <!---->
+            <? } ?>
+            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
 
-			<?
+            <?
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+                if ($osa=='Safari')
+                {
+                  ?>
+            <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
+              -->
+            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
+            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
-$osa=get_os($_SERVER['HTTP_USER_AGENT']);
-	if ($osa=='Safari')
-	{
-		?>
-		<!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
-		-->
-         <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
-		 <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
-		<div class="intip-<?=$order_id?> buttons-block-in" style="display:none" id="custom-id"></div>
-<script type="text/javascript">
-var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
-PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+              jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
 
-	recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
-	var args = Array.prototype.slice.call(arguments);
-	console.log("onVideoUploadSuccess("+args.join(', ')+")");
-	var filename;
-jQuery('.pipeFileInput').each(function(){
-var yy=jQuery(this).parent().parent().attr('Class');
-if (yy!='intip buttons-block-in pipeMobileRecorder')
-{
-	var idi=yy.split(' ');
-	var idi1=idi[0].split('-');
-	var zak=idi1[1];
-	jQuery.ajax({
-			type: "POST",
-			url: "/linkos.php",
-			data: {
-			zak:zak,
-            link:filename
-			},
-			success: function(data)
-{
-window.location.reload();
-}
-});
+              }
+              });
 
-}
-});
+              }
 
-}
-
-recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
-	var args = Array.prototype.slice.call(arguments);
-	console.log("onSaveOk("+args.join(', ')+")");
-	var streamName;
-
-
-	jQuery('.pipeFileInput').each(function(){
-var yy=jQuery(this).parent().parent().attr('Class');
-if (yy!='intip buttons-block-in pipeMobileRecorder')
-{
-	var idi=yy.split(' ');
-	var idi1=idi[0].split('-');
-	var zak=idi1[1];
-	jQuery.ajax({
-			type: "POST",
-			url: "/linkos.php",
-			data: {
-			zak:zak,
-            link:streamName
-			},
-			success: function(data)
-{
-window.location.reload();
-}
-});
-
-}
-});
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
 
 
+                jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+              }
+              });
 
 
 
 
 
 
-}
 
 
-});
-</script>
+              }
 
 
-		          <?
-	}
-	else
-	{
-		?>
+              });
+            </script>
+            <?
+              }
+              else
+              {
+                ?>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
 
 
 
-	<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>
 
-		 <?
-	}
+              }
+
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
 
 
 
-		  ?>
-		  </td>
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+
+
+
+
+
+
+
+
+
+
+              }
+
+
+              });
+            </script>
+            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <?
+              }
+
+
+
+                  ?>
+          </td>
         </tr>
         <?
           }
@@ -529,6 +601,20 @@ window.location.reload();
       foreach ( $customer_orders->orders as $customer_order ) {
         $order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
         $item_count = $order->get_item_count() - $order->get_item_count_refunded();
+
+
+
+          $order_id = method_exists( $item_count, 'get_id' ) ? $item_count->get_id() : $item_count->id;
+          $order_meta = get_post_meta( $order_id);
+		  
+		 $order_id1 = $order->get_id(); //> 35
+		   $order_meta1 = get_post_meta( $order_id1);
+          $order_meta = get_post_meta( $order_id);
+		  $link=$order_meta1['billing_link'][0];
+          //echo $customer_order;
+          //echo $order;
+          // echo $order_id;
+          // echo $order_meta;
         ?>
     <tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-<?php echo esc_attr( $order->get_status() ); ?> order">
       <?php foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) : ?>
@@ -557,9 +643,16 @@ window.location.reload();
               echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button btn btn-login ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
             }
           }
+		  if ($link)
+		  {
           ?>
-          <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a>
-        <?php endif; ?>
+		  
+        <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+        <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link;?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+        <?php 
+		  }
+		
+		endif; ?>
       </td>
       <?php endforeach; ?>
     </tr>
@@ -613,18 +706,121 @@ window.location.reload();
   </div>
 </div>
 <?php get_template_part('template-parts/template-part', 'popupShareVideo'); ?>
-
 <?php get_template_part('template-parts/template-part', 'popupShare'); ?>
-
 <div id="popupVideoRecord" class="popup">
-    <div class="close" onclick="HidePopup('#popupVideoRecord');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
-    <div class="iframe-doc">
-      <iframe src="https://mingming.io/2020/05/11/video/" id="fram" frameborder="0"></iframe>
-      <div id="texa" class="iframe-text"></div>
-    </div>
+  <div class="close" onclick="HidePopup('#popupVideoRecord');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
+  <div class="iframe-doc">
+    <iframe src="https://mingming.io/2020/05/11/video/" id="fram" frameborder="0"></iframe>
+    <div id="texa" class="iframe-text"></div>
+  </div>
 </div>
+<?
+   if ($osa=='Safari')
+   {
+	 ?>
+<script>
+  function moving(elem, id){
+  var id;
+  jQuery('#eta').find('#custom-id').attr('id','custom-id1');
+  var custom = jQuery('#eta').find('.intip').html();
 
 
+
+  console.log(custom);
+  jQuery('.buttons-block').find('#custom-id').each(function(){
+  jQuery(this).html('');
+  });
+
+
+
+  jQuery('.videoRecord').each(function(){
+    jQuery(this).show();
+  });
+  jQuery('.intip-'+id).parent().find('.videoRecord').hide();
+  jQuery('.intip-'+id).show();
+
+
+
+  jQuery('.intip-'+id).html('');
+  jQuery('.intip-'+id).append(custom);
+
+
+  jQuery('.intip-'+id).find('#pipe-recording-form-custom-id').each(function(indx){
+  if (indx==1)
+  {
+
+  }
+  else
+  {
+  jQuery(this).remove();
+  }
+
+  });
+
+  jQuery('.intip-'+id).find('#output-custom-id').each(function(indx){
+  if (indx==1)
+  {
+
+  }
+  else
+  {
+  jQuery(this).remove();
+  }
+
+  });
+  jQuery('.intip-'+id).find('#label-pipe-file-input-custom-id').eq(0).click();
+
+
+  }
+</script>
+<?
+
+   }
+
+   else
+   {
+	  ?>
+<script>
+  function moving(elem, id){
+  var id;
+
+  var custom = jQuery('#eta').find('.intip').html();
+
+
+
+  console.log(custom);
+  jQuery('.buttons-block').find('#custom-id').each(function(){
+  jQuery(this).html('');
+  });
+
+
+  jQuery('.videoRecord').each(function(){
+  jQuery(this).show();
+  });
+  jQuery('.darken').each(function(){
+    jQuery(this).show();
+  });
+  jQuery('.intip-'+id).parent().find('.videoRecord').hide();
+  jQuery('.intip-'+id).show();
+
+
+
+
+  jQuery('#eta').find('#label-pipe-file-input-custom-id').click();
+  jQuery('#eta').find('#pipeStartRecording-custom-id').click();
+jQuery('#eta').show();
+  jQuery('#eta').find('.intip').show();
+  jQuery('#eta').find('.intip').attr('rel',id);
+
+ jQuery('.popupVideoRecrd').css('background','none');
+
+  }
+</script>
+<?
+
+   }
+
+?>
 
 <script>
   window.addEventListener('load', function(){
@@ -657,60 +853,14 @@ window.location.reload();
 
       });
     });
+
+    document.querySelector('.darken').addEventListener('click', ()=>{
+        console.log('darken', this);
+        document.querySelector('#eta').style.display = 'none';
+    });
   })
 
-function moving(elem, id){
-var id;
-jQuery('#eta').find('#custom-id').attr('id','custom-id1');
-var custom = jQuery('#eta').find('.intip').html();
 
-
-
-console.log(custom);
-jQuery('.buttons-block').find('#custom-id').each(function(){
-jQuery(this).html('');
-});
-
-
-jQuery('.videoRecord').each(function(){
-jQuery(this).show();
-});
-jQuery('.intip-'+id).parent().find('.videoRecord').hide();
-jQuery('.intip-'+id).show();
-
-
-
-jQuery('.intip-'+id).html('');
-jQuery('.intip-'+id).append(custom);
-
-
-jQuery('.intip-'+id).find('#pipe-recording-form-custom-id').each(function(indx){
-	if (indx==1)
-	{
-
-	}
-	else
-	{
-	jQuery(this).remove();
-	}
-
-});
-
-jQuery('.intip-'+id).find('#output-custom-id').each(function(indx){
-	if (indx==1)
-	{
-
-	}
-	else
-	{
-	jQuery(this).remove();
-	}
-
-});
-jQuery('.intip-'+id).find('#label-pipe-file-input-custom-id').eq(0).click();
-
-
-}
 
 
 
@@ -722,6 +872,106 @@ jQuery('.intip-'+id).find('#label-pipe-file-input-custom-id').eq(0).click();
   }
 
 
+function copyToClipboard(textToCopy) {
+  var textArea;
+
+  function isOS() {
+    //can use a better detection logic here
+    return navigator.userAgent.match(/ipad|iphone/i);
+  }
+
+  function createTextArea(text) {
+    textArea = document.createElement('textArea');
+    textArea.readOnly = true;
+    textArea.contentEditable = true;
+    textArea.value = text;
+    document.body.appendChild(textArea);
+  }
+
+  function selectText() {
+    var range, selection;
+
+    if (isOS()) {
+      range = document.createRange();
+      range.selectNodeContents(textArea);
+      selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      textArea.setSelectionRange(0, 999999);
+    } else {
+      textArea.select();
+    }
+  }
+
+  function copyTo() {
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  }
+
+  createTextArea(textToCopy);
+  selectText();
+  copyTo();
+}
+function quar(link)
+{
+	var link;
+	
+	var kod='https://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=200x200&chl='+link;
+	jQuery('#quar').attr('href',kod);
+	
+}
+
+function sha(link)
+{
+	HidePopup('#popupShareVideo');
+	var link;
+	ShowPopupShare('#popupShare',link);
+}
+function tweet(link)
+{
+	var link;
+	
+	var kod='http://twitter.com/share?text='+link;
+	jQuery('#twe').attr('href',kod);
+	
+}
+function face(link)
+{
+	var link;
+	
+	var kod='https://www.facebook.com/sharer/sharer.php?u='+link+'&title=Video&quote=Video+from+mingming.io&description=Video+from+mingming.io';
+	jQuery('#fac').attr('href',kod);
+
+}
+    function ShowPopupShare(target, link){
+       var link;
+	   jQuery('.social a').eq(0).attr('id','cop');
+	   jQuery('#cop').attr('onclick','copyToClipboard("'+link+'")');
+      jQuery('#cop').attr('href','javascript:void(0)');
+	  
+	    jQuery('.social a').eq(1).attr('id','quar');
+		jQuery('#quar').attr('onclick','quar("'+link+'")');
+		jQuery('#quar').attr('target','_blank');
+	   jQuery('#quar').attr('href','javascript:void(0)');
+	  
+	  
+	   jQuery('.social a').eq(2).attr('id','twe');
+		jQuery('#twe').attr('onclick','tweet("'+link+'")');
+		jQuery('#twe').attr('target','_blank');
+	   jQuery('#twe').attr('href','javascript:void(0)');
+	  
+	 
+	  jQuery('.social a').eq(3).attr('id','fac');
+		jQuery('#fac').attr('onclick','face("'+link+'")');
+		jQuery('#fac').attr('target','_blank');
+	   jQuery('#fac').attr('href','javascript:void(0)');
+	  
+	  
+      // event.preventDefault();
+      console.log(target);
+      jQuery(".darken").fadeIn();
+      jQuery(target).addClass('open');
+    }
 
 
 
@@ -735,20 +985,27 @@ jQuery('.intip-'+id).find('#label-pipe-file-input-custom-id').eq(0).click();
       jQuery(".darken").fadeIn();
       jQuery(target).addClass('open');
     }
-    function HidePopup(target){
+    function HidePopup5(target){
+      jQuery(".darken").fadeOut(300);
+      jQuery('#eta').hide();jQuery(target).removeClass('open');
+	  var ids=jQuery('#eta').find('.intip').attr('rel');
+	  jQuery('#na-'+ids).show();
+
+
+    }
+
+function HidePopup(target){
       jQuery(".darken").fadeOut(300);
       jQuery(target).removeClass('open');
     }
-
-
 
     function sen(){
   console.log('loaderloaderloaderloader');
   document.querySelector('body').classList.remove('loader');
       jQuery('#response').text();
-console.log('id', <?=$idu;?>);
-console.log('img', jQuery('#addVideo')[0].files[0]);
-console.log('link', jQuery('#addVideoSpan').text());
+  console.log('id', <?=$idu;?>);
+  console.log('img', jQuery('#addVideo')[0].files[0]);
+  console.log('link', jQuery('#addVideoSpan').text());
 
       var formData = new FormData(jQuery('#spi')[0]);
       var fd = new FormData();
@@ -758,15 +1015,15 @@ console.log('link', jQuery('#addVideoSpan').text());
       fd.append('zak',jQuery('#zak').val());
       if (jQuery('#addVideo').val().length>0){
 
-		 console.log(fd);
+   console.log(fd);
 
         jQuery.ajax({
           type: "POST",
           url: "/updtovVideo.php",
           processData: false,
-		      data: fd,
+        data: fd,
           contentType: false,
-		      dataType: "json",
+        dataType: "json",
           success: function(data){
            console.log('zak008');
             window.location.reload();
@@ -779,7 +1036,7 @@ console.log('link', jQuery('#addVideoSpan').text());
           }
         });
 
-		console.log('zak8ззщщ');
+  console.log('zak8ззщщ');
 
 
       }else{
@@ -787,7 +1044,4 @@ console.log('link', jQuery('#addVideoSpan').text());
       }
     }
 </script>
-
-
-
 <!-- single-product  -->

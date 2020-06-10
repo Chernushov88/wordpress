@@ -101,8 +101,8 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
 <a href="#"
    class="visible-xs-inline-block visible-search"
    onclick="document.querySelector('#mob_search').classList.toggle('active');"><i class="fa fa-search" aria-hidden="true"></i></a>
-<a href="/create-your-account/" class="ms_btn reg_btn"> <span>Sign up</span> <img src="/wp-content/themes/envo-storefront/img/icon/Signup_brighter.png" alt=""></a>
-<a href="/enroll/" class="ms_btn reg_btn"><span>Enroll as Celebrity</span><img src="/wp-content/themes/envo-storefront/img/icon/Enroll_brighter.png" alt=""></a>
+<a href="/create-your-account/" class="ms_btn reg_btn"> <span>Sign up</span> <img src="/wp-content/themes/envo-storefront/img/icon/Signup_brighter.png" alt=""><i style="color: transparent; width: 1px;">SignUp</i></a>
+<a href="/enroll/" class="ms_btn reg_btn"><span>Enroll as Celebrity</span><img src="/wp-content/themes/envo-storefront/img/icon/Enroll_brighter.png" alt=""><i>register</i></a>
 <?php
 if (is_user_logged_in()) {
 
@@ -115,7 +115,7 @@ $login = $current_user->user_login;
 }
 
  ?>
-<a href="/my-account-2/" class="ms_btn login_btn"><span><?=$login;?></span><img src="/wp-content/themes/envo-storefront/img/icon/login_brighter.png" alt=""></a>
+<a href="/my-account-2/" class="ms_btn login_btn"><span><?=$login;?></span><img src="/wp-content/themes/envo-storefront/img/icon/login_brighter.png" alt=""><i>login</i></a>
                     </div>
             </div>
 </div>

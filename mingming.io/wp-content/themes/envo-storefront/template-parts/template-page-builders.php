@@ -17,6 +17,14 @@ get_header('builders');
         <?php else : ?>
             <?php get_template_part('content', 'none'); ?>
         <?php endif; ?>
-        <!-- end content container -->
+<?php get_template_part('template-parts/template-part', 'responsivegrid'); ?>
+
+
+<!-- <h1><a href="https://mingming.io/galery-castom-test/">https://mingming.io/galery-castom-test/</a></h1> -->
+
+
+
+
+
         <?php
         get_footer();

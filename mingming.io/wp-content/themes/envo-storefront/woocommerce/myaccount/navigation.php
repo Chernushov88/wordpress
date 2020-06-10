@@ -54,6 +54,8 @@ do_action( 'woocommerce_before_account_navigation' );
 <?
 $sum=0;
 $user = wp_get_current_user();
+$cher=get_user_meta( $user->ID, 'charity', true);
+
 
 if (is_user_role('actor', $user->ID)) {
 
@@ -65,9 +67,13 @@ $sum=0;
  else
  {
 $sum=$baln;
+$cherSum = $sum * $cher / 100;
+$result = $sum - $cherSum;
  }
  echo '<ul class="usel-lest-roles">
- <li><div class="name-price">My account: '.$sum.'$</div></li>
+ <li><div class="name-price">Total (USD): '.$sum.'</div></li>
+ <li><div class="name-price">Charity (USD): '.$cherSum.'</div></li>
+ <li><div class="name-price">Available (USD): '.$result.'</div></li>
  <li><a href="javascript:void(0);" onclick="showPopup(\'#popupUserRole\');" class="btn btn-login">Get money</a></li>
  </ul>';
  };
@@ -92,24 +98,47 @@ $sum=$baln;
   <div class="close" onclick="HidePopup('#popupUserRole');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
   <div class="modal-content" role="document">
     <div class="modal-header">
-      <div class="form-group">
+      <div class="form-group" style=" margin: 0 0 10px;">
         <h3 class="modal-title"><label >Get money</label></h3>
       </div>
 
     </div>
     <div class="modal-body">
       <form id="spi" enctype="multipart/form-data"  class="form-horizontal col-md-12-"  method="post" maxlength="12">
-        <div class="form-group" style="text-align: left;">
-            <b>You have <?=$sum?>$</b>
+        <div class="form-group" style=" margin: 0 0 5px;">
+          <b>You have (USD): <?=$result?></b>
+        </div>
+        <div class="form-group" style=" margin: 0 0 5px;">
+          <ul>
+            <li style="margin-right: auto;"><h4  style="margin: 0;">Send at:</h4></li>
+            <li></li>
+
+          </ul>
+
+
         </div>
         <div class="form-group">
-          <input type="number" id="man" onkeyup="return proverka(this);" onchange="return proverka(this);" value="<?=$sum?>" placeholder="how many you will get:">
+          <ul>
+            <li>
+              <label for="">
+                <input type="radio" name="radio" value="Striples"><span> Striples</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="radio" value="Paypal"><span> Paypal</span>
+              </label>
+              </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <input type="number" id="man" onkeyup="return proverka(this);" onchange="return proverka(this);" value="<?=$result?>" placeholder="how many you will get:">
         </div>
         <div class="form-group form-control">
             <div tabindex="-1" class="CardNumberField ">
-                  <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" placeholder="card number" aria-invalid="false" value="">
-                  <input id="ra2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
-                  <input id="ra3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value="">
+                  <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" aria-invalid="false" value="" placeholder="Input payment requirement here">
+                  <!-- <input id="ra2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
+                  <input id="ra3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value=""> -->
               </div>
         </div>
 
@@ -120,6 +149,8 @@ $sum=$baln;
           <button type="button" onclick="send()" class="btn ms_btn btn" name="Submit">Submit</button>
           <div class="text-danger" id="response2"></div>
         </div>
+        <div class="small">You can use Stripe or Paypal to withdraw money. Withdrawal requests are processed within 1 to 5 days. The minimum withdrawal amount is 100 USD.
+(we will add more withdrawal options in the near future, including wechat pay and alipay) </div>
       </form>
     </div>
     <div class="modal-footer"></div>
@@ -167,7 +198,7 @@ jQuery('#response2').append('<p style="color:red">Empty fields!</p>');
 }
 function proverka(input)
 {
-	var sum=Number(<?=$sum?>);
+	var sum=Number(<?=$result; ?>);
  if ( input.value>sum)
  {
 input.value =sum;

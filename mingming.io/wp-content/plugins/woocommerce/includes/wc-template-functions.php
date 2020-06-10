@@ -902,7 +902,8 @@ function wc_privacy_policy_text( $type = 'checkout' ) {
 function wc_replace_policy_page_link_placeholders( $text ) {
 	$privacy_page_id = wc_privacy_policy_page_id();
 	$terms_page_id   = wc_terms_and_conditions_page_id();
-	$privacy_link    = $privacy_page_id ? '<a href="' . esc_url( get_permalink( $privacy_page_id ) ) . '" class="woocommerce-privacy-policy-link" target="_blank">' . __( 'privacy policy', 'woocommerce' ) . '</a>' : __( 'privacy policy', 'woocommerce' );
+	$privacy_link    = '<a id="privacy-policy-link" >privacy policy</a>';
+	// $privacy_link    = $privacy_page_id ? '<a href="' . esc_url( get_permalink( $privacy_page_id ) ) . '" class="woocommerce-privacy-policy-link еуыепвап" target="_blank">' . __( 'privacy policy', 'woocommerce' ) . '</a>' : __( 'privacy policy', 'woocommerce' );
 	$terms_link      = $terms_page_id ? '<a href="' . esc_url( get_permalink( $terms_page_id ) ) . '" class="woocommerce-terms-and-conditions-link" target="_blank">' . __( 'terms and conditions', 'woocommerce' ) . '</a>' : __( 'terms and conditions', 'woocommerce' );
 
 	$find_replace = array(
@@ -1276,7 +1277,66 @@ if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
 	 * Get the product thumbnail for the loop.
 	 */
 	function woocommerce_template_loop_product_thumbnail() {
-        echo '<div class="thumbnail-product">'.woocommerce_get_product_thumbnail().'</div>'; // WPCS: XSS ok.
+
+		global $product;
+
+
+
+		$iduu=array();
+
+	 $users = get_users( array(
+	'meta_key'     => 'idtov',
+	'meta_value'   =>$product->get_id()
+     ) );
+
+foreach( $users as $user )
+{
+
+	$iduu[]=$user->ID;
+}
+
+
+if (!empty($iduu))
+{
+
+$cher=get_user_meta( $iduu[0], 'charity', true);
+
+}
+		$imgi='';
+
+	if ($cher>0)
+		  {
+
+	if ($cher==10)
+	{
+
+	$imgi='<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt="">';
+
+	}
+    elseif ($cher==50)
+	{
+
+	$imgi='<img  class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt="">';
+
+	}
+	elseif ($cher==100)
+	{
+
+	$imgi='<img  class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt="">';
+
+	}
+
+
+
+		  }
+
+
+
+
+
+
+
+        echo $imgi.'<div class="thumbnail-product fiy">'.woocommerce_get_product_thumbnail().'</div>'; // WPCS: XSS ok.
 	}
 }
 if ( ! function_exists( 'woocommerce_template_loop_price' ) ) {

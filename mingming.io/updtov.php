@@ -106,6 +106,26 @@ wp_set_object_terms($_POST['id'],  $cat_ids, 'product_cat');
 
 }  
    
-   
+//////////////////////////
+$iduu=array();
+
+	 $users = get_users( array(
+	'meta_key'     => 'idtov',
+	'meta_value'   =>  $_POST['id']
+     ) );
+
+foreach( $users as $user )
+{
+	
+	$iduu[]=$user->ID;
+}
+
+
+if (!empty($iduu))
+{
+update_user_meta( $iduu[0], 'charity', $_POST['cher']);
+	
+}
+/////////////////
    
 ?>

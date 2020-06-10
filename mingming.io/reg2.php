@@ -1,6 +1,19 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
-print_r($_POST);
+$em=array();
+$users = get_users( array( ) );
+foreach( $users as $user )
+{
+$em[]=$user->user_email;
+}
+
+if (in_array($_POST['email'], $em)) 
+{
+echo '0';   
+}
+else
+{
+
 
 $userdata = array(
 	'ID'              => 0,  
@@ -26,4 +39,7 @@ $userdata = array(
 
 echo $id=wp_insert_user( $userdata );
 echo $user_id->get_error_message();
+
+}
+
 ?>

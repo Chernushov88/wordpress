@@ -416,8 +416,18 @@ class THWCFD_Checkout {
 						$value = THWCFD_Utils::get_option_text($field, $value);
 						
 						if(is_account_page()){
+							
 							if(apply_filters( 'thwcfd_view_order_customer_details_table_view', true )){
-								$fields_html .= '<tr><th>'. $label .':</th><td>'. $value .'</td></tr>';
+								
+								if ($label=='Link')
+								{
+									$fields_html .= '<tr><th>'. $label .':</th><td><a target="_blank" href="'. $value .'">Click here!</a></td></tr>';
+								}
+								else
+								{
+									$fields_html .= '<tr><th>'. $label .':</th><td>'. $value .'</td></tr>';
+								}
+								
 							}else{
 								$fields_html .= '<br/><dt>'. $label .':</dt><dd>'. $value .'</dd>';
 							}

@@ -19,7 +19,7 @@
     <div class="modal-header">
       <h2 class="modal-title">Write us a message</h2>
     </div>
-    <div class="modal-body scroll">
+    <div class="modal-body -scroll">
       <?= do_shortcode('[contact-form-7 id="569" title="Contact form 1"]'); ?>
     </div>
   </div>
@@ -610,11 +610,29 @@
             console.log('e',e);
             jQuery(".popup").removeClass('open');
             jQuery('.darken').hide();
+
+            //jQuery('#eta').hide();
         });
+        // $('#privacy-policy-link').on('click', function(event){
+        //   console.log('event',event)
+        //   // ShowPopup('#popupPolicy');
+        // });
     });
     window.onload = function() {
        document.querySelector('body').classList.add('loader');
+       let privacy = document.getElementById('privacy-policy-link')
+       if(privacy != null){
+        console.log('privacy', privacy)
+        privacy.addEventListener('click',  function(){
+            console.log('event', this)
+            ShowPopup('#popupPolicy');
+        })
+       }
+
     }
+
+
+
 </script>
 
 

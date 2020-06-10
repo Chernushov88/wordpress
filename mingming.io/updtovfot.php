@@ -8,21 +8,29 @@ if (!empty($_FILES['img']["tmp_name"]))
 
 
 
-$url     = 'http://pozdr.beget.tech/'.$_FILES['img']["name"];
+$url     = 'https://mingming.io/'.$_FILES['img']["name"];
 $post_id = $_POST['id'];
 
 
 $id = $_POST['id'];
 $attachment_image = get_children( array(
-	'numberposts' => 1,
+	'numberposts' => -1,
 	'post_mime_type' => 'image',
 	'post_parent' => $id,
 	'post_type' => 'attachment'
 ) );
+
+$thumb = get_the_post_thumbnail( $id, 'thumbnail' );
+$ppp0=explode('src=',$thumb);
+$ppp1=explode('"',$ppp0[1]);
+
+
 $attachment_image = array_shift($attachment_image);
-$img =wp_get_attachment_url($attachment_image->ID);
+//$img =wp_get_attachment_url($attachment_image->ID);
+$img=$ppp1[1];
 if (strlen($img)>3)
 {
+$img=str_replace('-150x150','',$img);
 	
 
 $ppp=explode('/uploads/',$img );

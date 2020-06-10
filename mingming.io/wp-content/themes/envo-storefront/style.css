@@ -38,8 +38,22 @@ html[lang="en-US"] .ms_top_right .notranslate:nth-child(2),
 html[lang="auto"] .ms_top_right .notranslate:nth-child(2){
     display: none;
 }
+
+
+
+html[lang="zh-CN"] .text-en{
+    display: none;
+}
+html[lang="en-US"] .text-chine,
+html[lang="auto"] .text-chine{
+    display: none;
+}
 #wpadminbar {
     display: none !important;
+}
+.woocommerce-account .woocommerce-MyAccount-content .text-en a{
+    margin: 0;
+    padding: 0;
 }
 
 .woocommerce-ordering,
@@ -1849,12 +1863,17 @@ span.comments-meta i {
 }
 
 .woocommerce-MyAccount-navigation ul.usel-lest-roles li {
+    width: 100%;
     padding: 5px 5px;
 }
-
+#privacy-policy-link{
+    display: inline-block;
+    cursor: pointer;
+}
 .woocommerce-MyAccount-navigation ul.usel-lest-roles .btn {
-    font-size: 14px;
-    padding: 0px 14px;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
 }
 
 .woocommerce-MyAccount-navigation li.is-active {
@@ -2044,6 +2063,9 @@ ul.site-header-cart {
 .single-product {
     /*background: #14182a url(img/page-bg.jpg) no-repeat center 60px;*/
     /*background-size: contain;*/
+}
+.single.single-product .main-container .page-area {
+    padding-top: 64px;
 }
 
 .single-product div.product form.cart .plus,
@@ -2255,10 +2277,10 @@ button.btn.btn-danger {
 .btn.btn-login {
     display: inline-block;
     width: auto;
-    height: 40px;
+    height: 33px;
     margin: 10px auto 0;
     padding: 0px 30px;
-    line-height: 40px;
+    line-height: 30px;
     font-size: 15px;
     color: #fff;
     border: 1px solid #fff;
@@ -2350,7 +2372,14 @@ span.form_icon {
 .woocommerce ul.products li.product > a.woocommerce-LoopProduct-link.woocommerce-loop-product__link .woocommerce-loop-product__title {
     margin: 1em 0 0;
 }
-
+div.swiper-wrapper{
+    height: auto;
+}
+div.elementor-widget-image-carousel .swiper-container {
+    position: relative;
+    height: auto;
+    max-height: 460px;
+}
 /* thumbnail-product */
 .thumbnail-product {
     overflow: hidden;
@@ -2366,7 +2395,9 @@ span.form_icon {
     top: 0;
     left: 0;
 }
-
+.woocommerce ul.products li.product .thumbnail-product{
+    position: relative;
+}
 .woocommerce ul.products li.product > a img {
     /*height: 100%;*/
     border-radius: 10px;
@@ -2381,7 +2412,25 @@ span.form_icon {
     left: 0;
     margin: 0px;
 }
-
+.woocommerce ul.products li.product .thumbnail-product:hover:before,
+.woocommerce-page ul.products li.product .thumbnail-product:hover:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: -moz-linear-gradient(90deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgba(32, 167, 196, 0) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgba(32, 167, 196, 0) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgba(32, 167, 196, 0) 100%);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
 .woocommerce span.onsale {
     min-height: 30px;
     min-width: 60px;
@@ -2544,6 +2593,7 @@ a.button.add_to_cart_button:hover, .ms_add_cart_link a:hover {
     float: left;
     margin-left: 0px;
     width: 50px;
+    height: 50px;
     margin-right: 15px;
     border-radius: 100%;
 }
@@ -2729,7 +2779,9 @@ h2.woocommerce-loop-product__title {
 .woocommerce div.product div.images .woocommerce-product-gallery__trigger {
     display: none;
 }
-
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper .zoomImg{
+    display: none !important;
+}
 .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
     margin-top: 0px;
 }
@@ -3561,13 +3613,54 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
 
 .home .elementor-widget-tabs .elementor-tab-content {
     padding: 10px 10px 0;
+    border: 0 !important;
 }
 
 .elementor-widget-tabs .elementor-tab-content {
     padding-bottom: 0;
     margin-bottom: 0;
 }
+.home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title {
+    background-color: transparent !important;
+    z-index: 0;
+    border-radius: 0;
+    margin: 0 0px;
+    padding: 0px 10px;
+    border: 0 solid transparent !important;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    line-height: 1.2;
+    color: #3bc8e7 !important;
+}
+.home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title a{
+    color: #3bc8e7 !important;
+}
+.home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title.elementor-active a:after {
+    display: block;
+    width: 100px;
+    height: 5px;
+    content: "";
+    position: absolute !important;
+    bottom: 0;
+    left: -15px;
+    z-index: 0;
+    background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+    background: -moz-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+    background: -ms-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+    background: -o-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+}
 
+.home .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title{
+    border-width: 0;
+}
+.elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title:before,
+.elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title:after {
+    display: none;}
+.home .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tabs-content-wrapper{
+    border: 0;}
 .elementor-40 .elementor-element.elementor-element-a1a6a22 .elementor-tab-title {
     display: inline-block;
 }
@@ -3759,6 +3852,9 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
+}
+.ms_btn i{
+    display: none;
 }
 
 .ms_btn img {
@@ -3981,7 +4077,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 
 #scroll {
     position: fixed;
-    right: 25px;
+    right: 15px;
     bottom: 21px;
     z-index: 9999;
     display: -webkit-flex;
@@ -3992,8 +4088,9 @@ body.woocommerce-account .woocommerce-MyAccount-content {
     justify-content: center;
     -ms-align-items: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    padding-bottom: 5px;
     text-align: center;
     font-size: 30px;
     color: #fff;
@@ -4012,8 +4109,11 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 #scroll:hover {
     transform: scale(1.1);
 }
-.intercom-namespace .intercom-1gj2ivk,
+.intercom-namespace .intercom-launcher-frame,
 .intercom-lightweight-app-launcher{
+    right: 85px !important;
+}
+.intercom-launcher-badge-frame{
     right: 85px !important;
 }
 .CardNumberField {
@@ -4096,9 +4196,27 @@ body.woocommerce-account .woocommerce-MyAccount-content {
     z-index: 100;
     cursor: pointer
 }
-
+.darkenVideo{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    z-index: 101;
+    cursor: pointer
+}
 .darken.open {
     display: block
+}
+#eta .close{
+    display: block;
+    position: fixed;
+    z-index: 102;
+    left: calc(50% + 320px);
+    top: calc(50% - 290px);
+    cursor: pointer;
 }
 
 .popup#popupTerms,
@@ -4112,7 +4230,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 
 .body_safari .popup#popupTerms,
 .body_safari .popup#popupPolicy {
-    left: 20%;
+    //left: 20%;
 }
 
 .popup#popupTerms.open,
@@ -4125,7 +4243,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 }
 
 #popupUserRole {
-    max-width: 500px;
+    max-width: 400px;
 }
 
 #popupUserRole .form-group {
@@ -4159,7 +4277,18 @@ body.woocommerce-account .woocommerce-MyAccount-content {
     font-size: 18px;
     padding: 0px 25px;
 }
-
+#popupUserRole ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#popupUserRole ul li{
+    padding-right: 20px;
+}
+#popupUserRole .small{
+    line-height: 1.2;
+}
 .popup h2 {
     margin-bottom: 20px;
 }
@@ -4251,12 +4380,24 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 }
 #popupShareVideo .videoLink{
     width: 100%;
+    max-height: 90vh;
 }
 #popupShareVideo .btn{
     position: absolute;
     left: 10px;
     top: 10px;
 }
+.popup.popupVideoRecrd{
+    width: auto;
+    max-width: 100%;
+    top: 50%;
+    padding: 15px;
+}
+.popup.popupVideoRecrd .pipeNormal{
+    max-width: 100%;
+}
+
+
 .inputfile + label {
     font-weight: 400;
     white-space: nowrap;
@@ -4432,7 +4573,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
     padding: 0px 15px;
     border-radius: 20px;
     height: 35px;
-    line-height: 35px;
+    line-height: 32px;
     text-transform: capitalize;
     font-size: 14px;
     border: 1px solid #3bc8e7;
@@ -4529,7 +4670,8 @@ div.elementor-accordion .elementor-accordion-item {
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 2px 30px 3px rgba(255, 255, 255, 0.2);
+    padding-bottom: 35px;
+    //box-shadow: 0 2px 30px 3px rgba(255, 255, 255, 0.2);
 }
 
 .create-your-account .form {
@@ -4622,8 +4764,9 @@ div.elementor-accordion .elementor-accordion-item {
     color: #f00;
 }
 
-.elementor-section.elementor-element-841bcea {
+.home .elementor-section.elementor-element-841bcea {
     padding-bottom: 20px;
+    height: 0;
 }
 
 /******************************
@@ -4666,11 +4809,15 @@ div.elementor-accordion .elementor-accordion-item {
 .fiy{
     position: relative;
 }
+img.fiy-status,
 div.fiy img.fiy-status{
+    display: block !important;
     position: absolute;
     left: 0;
     top: 0;
-    max-width: 50px;
+    z-index: 9;
+    max-width: 50px !important;
+    border-radius: 0 !important;
 }
 .form-group {
     margin: 0;
@@ -4707,7 +4854,13 @@ div.fiy img.fiy-status{
     border-radius: 0;
     padding: 5px 5px 0;
 }
-
+.nav-tabs.style-tabs > li:hover, .nav-tabs.style-tabs  > li:focus{
+    background: #3bc8e7;
+    border-bottom-color: #3bc8e7;
+}
+.nav-tabs.style-tabs > li:hover a{
+    color: #fff;
+}
 .nav > li > a:hover, .nav > li > a:focus {
     color: #fff;
     text-decoration: none;
@@ -5473,12 +5626,19 @@ div.fiy img.fiy-status{
     }
 
 }
-
+div.swiper-slide{
+    max-height: 70vh;
+}
 @media (max-width: 767px) {
     .home #site-navigation {min-height: 0;}
+    .home .page-wrap {
+        padding-top: 70px;
+        /*padding-top: 20px;*/
+    }
     #site-navigation + .writing_btn{
         display: none;}
-    .elementor-section.elementor-element-841bcea {
+    .home .elementor-section.elementor-element-841bcea {
+        height: auto;
         padding-bottom: 0;
     }
     article {
@@ -5553,7 +5713,36 @@ div.fiy img.fiy-status{
     #mob_search.active .smart-search-results {
         width: 100% !important;
     }
-
+    .home .elementor-widget-tabs .elementor-tab-content{
+        display: block;
+        padding: 0;
+    }
+    .home .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title{
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .home .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title:after {
+        display: block !important;
+        content: '';
+        width: 100px;
+        height: 5px;
+        content: "";
+        position: absolute !important;
+        bottom: 0;
+        left: -15px;
+        z-index: 0;
+        background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+        background: -moz-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+        background: -ms-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+        background: -o-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+    }
+    div.swiper-slide{
+        height: 200px;
+        /*height: auto;*/
+    }
+    .elementor-tab-content .woocommerce ul.products[class*=columns-] li.product{
+        margin-bottom: 1em;
+    }
     .open-panel {
         position: fixed;
         top: 25px;
@@ -5573,6 +5762,9 @@ div.fiy img.fiy-status{
     .ms_btn span {
         display: none;
     }
+    .ms_btn i{
+        display: block;
+    }
 
     .ms_btn img {
         display: block;
@@ -5586,6 +5778,21 @@ div.fiy img.fiy-status{
     .main-content-page.single-content .single-entry-summary .woocommerce {
         flex-direction: column;
         padding: 0;
+    }
+
+    .home .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title.elementor-active a:after {
+        display: block;
+        width: 100px;
+        height: 5px;
+        content: "";
+        position: absolute !important;
+        bottom: 0;
+        left: -15px;
+        z-index: 0;
+        background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+        background: -moz-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+        background: -ms-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
+        background: -o-radial-gradient(50% 50%, ellipse closest-side, #3bc8e7, rgba(255, 42, 112, 0) 60%);
     }
 
     .woocommerce-notices-table .table td,
@@ -5865,7 +6072,7 @@ div.fiy img.fiy-status{
 @media (max-width: 420px) {
     .elementor-section {
         position: relative;
-        float: left;
+        /*float: left;*/
         overflow: hidden;
         width: 100%;
     }
@@ -5879,11 +6086,13 @@ div.fiy img.fiy-status{
     }
 
     .open-panel {
-        top: 19px;
+        top: 15px;
     }
+    .ms_top_right a.glink img{
+        margin-top: -5px;}
 
     .ms_header {
-        padding: 10px 10px 10px 5px;
+        padding: 10px 10px 0px 5px;
         left: 0;
     }
     .elementor-widget-image-carousel .swiper-slide img{display: block !important;}
