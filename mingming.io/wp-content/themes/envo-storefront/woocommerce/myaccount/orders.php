@@ -275,7 +275,7 @@
     {
 
     $current_user = wp_get_current_user();
-    $idu=get_user_meta( $current_user->ID, 'idtov', true);
+  $idu=get_user_meta( $current_user->ID, 'idtov', true);
 
 
 
@@ -297,11 +297,8 @@
 <link rel="stylesheet" href="//cdn.addpipe.com/2.0/pipe.css">
 <script type="text/javascript" src="//cdn.addpipe.com/2.0/pipe.js"></script>
 <div style="display:none" id="eta">
-
-<img width="30px" height="30px" alt="Close" class="close" src="/wp-content/themes/envo-storefront/img/close-white.svg" onclick="HidePopup5('#eta');">
-<!--<div class="darken" style="display: block;"></div>-->
-
-
+  <img width="30px" height="30px" alt="Close" class="close" src="/wp-content/themes/envo-storefront/img/close-white.svg" onclick="HidePopup5('#eta');">
+  <!--<div class="darken" style="display: block;"></div>-->
   <div class="intip buttons-block-in popup popupVideoRecrd" style="display:none" id="custom-id" ></div>
   <div class="darkenVideo"  onclick="HidePopup5('#eta');"></div>
 </div>
@@ -336,14 +333,14 @@
           foreach($customer_orders5 as $order ){
 
               // Order ID (added WooCommerce 3+ compatibility)
-             $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+            $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
 
 
           $p=0;
               // Iterating through current orders items
               foreach($order->get_items() as $item_id => $item)
             {
-           $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
+          $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
               if ($product_id==$idu)
               {
           $p=1;
@@ -354,12 +351,11 @@
             {
             $order99 = wc_get_order( $order_id );
           $order_meta = get_post_meta( $order_id);
-
-
-          $type=$order_meta['_billing_occasion'][0];
-          $from=$order_meta['_billing_from'][0];
-          $to=$order_meta['_billing_who'][0];
-          $int=$order_meta['_billing_instructions'][0];
+		
+          $type=$order_meta['billing_occasion'][0];
+          $from=$order_meta['billing_from'][0];
+          $to=$order_meta['billing_who'][0];
+          $int=$order_meta['billing_instructions'][0];
           $link=$order_meta['billing_link'][0];
 
           $int1=str_replace("'","\'",$int);
@@ -399,7 +395,6 @@
             <? } ?>
             <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
             <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
-
             <?
               $osa=get_os($_SERVER['HTTP_USER_AGENT']);
                 if ($osa=='Safari')
@@ -606,11 +601,11 @@
 
           $order_id = method_exists( $item_count, 'get_id' ) ? $item_count->get_id() : $item_count->id;
           $order_meta = get_post_meta( $order_id);
-		  
-		 $order_id1 = $order->get_id(); //> 35
-		   $order_meta1 = get_post_meta( $order_id1);
+
+      $order_id1 = $order->get_id(); //> 35
+      $order_meta1 = get_post_meta( $order_id1);
           $order_meta = get_post_meta( $order_id);
-		  $link=$order_meta1['billing_link'][0];
+      $link=$order_meta1['billing_link'][0];
           //echo $customer_order;
           //echo $order;
           // echo $order_id;
@@ -643,16 +638,15 @@
               echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button btn btn-login ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
             }
           }
-		  if ($link)
-		  {
+          if ($link)
+          {
           ?>
-		  
         <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
         <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link;?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
-        <?php 
-		  }
-		
-		endif; ?>
+        <?php
+          }
+
+          endif; ?>
       </td>
       <?php endforeach; ?>
     </tr>
@@ -715,9 +709,9 @@
   </div>
 </div>
 <?
-   if ($osa=='Safari')
-   {
-	 ?>
+  if ($osa=='Safari')
+  {
+  ?>
 <script>
   function moving(elem, id){
   var id;
@@ -774,12 +768,11 @@
   }
 </script>
 <?
+  }
 
-   }
-
-   else
-   {
-	  ?>
+  else
+  {
+  ?>
 <script>
   function moving(elem, id){
   var id;
@@ -808,20 +801,18 @@
 
   jQuery('#eta').find('#label-pipe-file-input-custom-id').click();
   jQuery('#eta').find('#pipeStartRecording-custom-id').click();
-jQuery('#eta').show();
+  jQuery('#eta').show();
   jQuery('#eta').find('.intip').show();
   jQuery('#eta').find('.intip').attr('rel',id);
 
- jQuery('.popupVideoRecrd').css('background','none');
+  jQuery('.popupVideoRecrd').css('background','none');
 
   }
 </script>
 <?
+  }
 
-   }
-
-?>
-
+  ?>
 <script>
   window.addEventListener('load', function(){
     var inputs = document.querySelectorAll('.inputfile');
@@ -872,7 +863,7 @@ jQuery('#eta').show();
   }
 
 
-function copyToClipboard(textToCopy) {
+  function copyToClipboard(textToCopy) {
   var textArea;
 
   function isOS() {
@@ -911,62 +902,62 @@ function copyToClipboard(textToCopy) {
   createTextArea(textToCopy);
   selectText();
   copyTo();
-}
-function quar(link)
-{
-	var link;
-	
-	var kod='https://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=200x200&chl='+link;
-	jQuery('#quar').attr('href',kod);
-	
-}
+  }
+  function quar(link)
+  {
+  var link;
 
-function sha(link)
-{
-	HidePopup('#popupShareVideo');
-	var link;
-	ShowPopupShare('#popupShare',link);
-}
-function tweet(link)
-{
-	var link;
-	
-	var kod='http://twitter.com/share?text='+link;
-	jQuery('#twe').attr('href',kod);
-	
-}
-function face(link)
-{
-	var link;
-	
-	var kod='https://www.facebook.com/sharer/sharer.php?u='+link+'&title=Video&quote=Video+from+mingming.io&description=Video+from+mingming.io';
-	jQuery('#fac').attr('href',kod);
+  var kod='https://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=200x200&chl='+link;
+  jQuery('#quar').attr('href',kod);
 
-}
+  }
+
+  function sha(link)
+  {
+  HidePopup('#popupShareVideo');
+  var link;
+  ShowPopupShare('#popupShare',link);
+  }
+  function tweet(link)
+  {
+  var link;
+
+  var kod='http://twitter.com/share?text='+link;
+  jQuery('#twe').attr('href',kod);
+
+  }
+  function face(link)
+  {
+  var link;
+
+  var kod='https://www.facebook.com/sharer/sharer.php?u='+link+'&title=Video&quote=Video+from+mingming.io&description=Video+from+mingming.io';
+  jQuery('#fac').attr('href',kod);
+
+  }
     function ShowPopupShare(target, link){
        var link;
-	   jQuery('.social a').eq(0).attr('id','cop');
-	   jQuery('#cop').attr('onclick','copyToClipboard("'+link+'")');
+    jQuery('.social a').eq(0).attr('id','cop');
+    jQuery('#cop').attr('onclick','copyToClipboard("'+link+'")');
       jQuery('#cop').attr('href','javascript:void(0)');
-	  
-	    jQuery('.social a').eq(1).attr('id','quar');
-		jQuery('#quar').attr('onclick','quar("'+link+'")');
-		jQuery('#quar').attr('target','_blank');
-	   jQuery('#quar').attr('href','javascript:void(0)');
-	  
-	  
-	   jQuery('.social a').eq(2).attr('id','twe');
-		jQuery('#twe').attr('onclick','tweet("'+link+'")');
-		jQuery('#twe').attr('target','_blank');
-	   jQuery('#twe').attr('href','javascript:void(0)');
-	  
-	 
-	  jQuery('.social a').eq(3).attr('id','fac');
-		jQuery('#fac').attr('onclick','face("'+link+'")');
-		jQuery('#fac').attr('target','_blank');
-	   jQuery('#fac').attr('href','javascript:void(0)');
-	  
-	  
+
+     jQuery('.social a').eq(1).attr('id','quar');
+  jQuery('#quar').attr('onclick','quar("'+link+'")');
+  jQuery('#quar').attr('target','_blank');
+    jQuery('#quar').attr('href','javascript:void(0)');
+
+
+    jQuery('.social a').eq(2).attr('id','twe');
+  jQuery('#twe').attr('onclick','tweet("'+link+'")');
+  jQuery('#twe').attr('target','_blank');
+    jQuery('#twe').attr('href','javascript:void(0)');
+
+
+   jQuery('.social a').eq(3).attr('id','fac');
+  jQuery('#fac').attr('onclick','face("'+link+'")');
+  jQuery('#fac').attr('target','_blank');
+    jQuery('#fac').attr('href','javascript:void(0)');
+
+
       // event.preventDefault();
       console.log(target);
       jQuery(".darken").fadeIn();
@@ -988,13 +979,13 @@ function face(link)
     function HidePopup5(target){
       jQuery(".darken").fadeOut(300);
       jQuery('#eta').hide();jQuery(target).removeClass('open');
-	  var ids=jQuery('#eta').find('.intip').attr('rel');
-	  jQuery('#na-'+ids).show();
+   var ids=jQuery('#eta').find('.intip').attr('rel');
+   jQuery('#na-'+ids).show();
 
 
     }
 
-function HidePopup(target){
+  function HidePopup(target){
       jQuery(".darken").fadeOut(300);
       jQuery(target).removeClass('open');
     }

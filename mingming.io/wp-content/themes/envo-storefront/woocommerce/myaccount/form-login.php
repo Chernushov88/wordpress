@@ -86,6 +86,12 @@ form .required {
 .woocommerce-notices-wrapper.test{
     display: none;
 }
+.form-login .foo_sharing {
+    justify-content: center;
+}
+.form-login .foo_sharing .social{
+    margin-left: 20px;
+}
 </style>
 <script>
     jQuery(function(){
@@ -168,11 +174,24 @@ form .required {
                       <!-- <li><a href="javascript:void(0);"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
                       <li><a href="javascript:void(0);"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
                       <li><a href="javascript:void(0);"><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li> -->
-                      <li><a href="javascript:void(0)"><i class="fa fa-clone" aria-hidden="true"></i></a></li>
+                      <!-- <li><a href="javascript:void(0)"><i class="fa fa-clone" aria-hidden="true"></i></a></li>
                       <li><a href="javascript:void(0)"><i class="fa fa-qrcode" aria-hidden="true"></i></a></li>
-                      <li><a href="javascript:void(0)"><i<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                      <li><a href="javascript:void(0)"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                      <li><a href="javascript:void(0)"><i<i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+                      <li><a href="javascript:void(0)"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
+                      <li><a onclick="jQuery('#fab').find('.fbl-button').click()" href="javascript:void(0)"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                      <li>
+                          <div id="fab">
+                                <i class="fa fa-facebook-official" aria-hidden="true">
+                                <?
+
+                                do_action('facebook_login_button');
+                                ?>
+                                </i>
+                            </div>
+                      </li>
+
                     </ul>
+
 	            </div>
 
 	            <?php do_action( 'woocommerce_login_form_end' ); ?>
@@ -186,7 +205,7 @@ form .required {
 	          <div class="flex dont_have">
 	          	<div>Don't have an account?</div>
 	          	<a href="/create-your-account/" class="btn btn-default"> Sign up </a>
-	          	<a href="/enroll/" class="btn btn-default"> Enroll as an Celebrity </a></div>
+	          	<a href="/enroll-as-celebrity-new/" class="btn btn-default"> Enroll as an Celebrity </a></div>
 	        </div>
 
 

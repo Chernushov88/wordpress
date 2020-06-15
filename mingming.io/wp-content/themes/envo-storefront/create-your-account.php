@@ -39,6 +39,9 @@
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   }
+  .popup h2 {
+    height: auto;
+  }
 </style>
 <div class="create-your-account">
   <header class="single-head page-head no-thumbnail">
@@ -121,9 +124,6 @@
   <div id="su1" class="popup blue_backg popup-su">
     <div class="close" onclick="HidePopup('#su1');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
     <div class="modal-content " role="document">
-      <div class="modal-header">
-        <h2 class="modal-title"></h2>
-      </div>
       <div class="modal-body">
         <div class="success">Success</div>
       </div>

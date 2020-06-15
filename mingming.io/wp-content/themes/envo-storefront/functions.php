@@ -620,6 +620,12 @@ function my_user_contactmethods($user_contactmethods){
 		 $user_contactmethods['balance'] = 'Balance';
 		 $user_contactmethods['proc'] = 'Procent';
 		  $user_contactmethods['charity'] = 'Charity';
+		  
+		  $user_contactmethods['self'] = 'Self-presentation';
+		  $user_contactmethods['who'] = 'Who are you';
+		$user_contactmethods['userimg'] = 'Link foto';
+		  $user_contactmethods['uservideo1'] = 'Represent yourself';
+		   $user_contactmethods['uservideo2'] = 'Specially for MingMing';
   return $user_contactmethods;
 }
 

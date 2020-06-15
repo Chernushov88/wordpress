@@ -982,7 +982,14 @@ h1.single-title {
 .single-content.row {
     margin-bottom: 60px;
 }
-
+.single-content .fbl-button {
+    /*margin: 0;*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*overflow: hidden;*/
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+}
 .tagcloud a {
     font-size: 15px !important;
     padding: 0px 6px;
@@ -4724,10 +4731,11 @@ div.elementor-accordion .elementor-accordion-item {
 }
 
 .foo_sharing ul li {
+    position: relative;
     display: inline-block;
     margin-right: 5px;
 }
-
+.foo_sharing ul li #fab,
 .foo_sharing ul li a {
     width: 30px;
     height: 30px;
@@ -4743,15 +4751,26 @@ div.elementor-accordion .elementor-accordion-item {
     background-image: -webkit-linear-gradient(90deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgb(32, 167, 196) 100%);
     background-image: -ms-linear-gradient(90deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgb(32, 167, 196) 100%);
 }
-
+.foo_sharing ul li #fab,
 .foo_sharing ul li a:hover {
     box-shadow: 0 0 18px 0 #3bc8e7;
 }
-
+.foo_sharing ul li #fab .fbl-button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
 .body_safari .foo_sharing ul li a {
 / / display: inline-block;
 }
-
+.fb_iframe_widget>span{
+    overflow: hidden;
+    opacity: 0;
+    width: 30px !important;
+    height: 30px !important;
+}
 .foo_sharing ul li img {
     max-width: 18px;
 }
