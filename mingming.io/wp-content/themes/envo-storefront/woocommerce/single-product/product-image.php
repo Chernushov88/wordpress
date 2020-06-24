@@ -56,7 +56,7 @@ if (!empty($iduu))
 {
 
 $cher=get_user_meta( $iduu[0], 'charity', true);
-
+$vip=get_user_meta( $iduu[0], 'vip', true);
 }
 
 
@@ -64,7 +64,7 @@ $cher=get_user_meta( $iduu[0], 'charity', true);
 
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-
+	<div class="flex">
 	<?
 	 if ($cher>0)
 		  {
@@ -72,19 +72,56 @@ $cher=get_user_meta( $iduu[0], 'charity', true);
 	if ($cher==10)
 	{
 	?>
-	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt="">
+	<!-- <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt=""> -->
+	<div class="charity-ico charity-copper"></div>
 	<?
 	}
     elseif ($cher==50)
 	{
 	?>
-	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt="">
+	<!-- <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt=""> -->
+	<div class="charity-ico charity-sliver"></div>
 	<?
 	}
 	elseif ($cher==100)
 	{
 	?>
-	<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt="">
+	<!-- <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt=""> -->
+	<div class="charity-ico charity-gold"></div>
+
+	<?
+	}
+
+
+
+		  }
+
+
+	////////////////////////
+
+
+	if ($vip>0)
+		  {
+
+	if ($vip==1)
+	{
+	?>
+
+	<div class="vip-ico vip-copper"></div>
+	<?
+	}
+    elseif ($vip==2)
+	{
+	?>
+
+	<div class="vip-ico vip-sliver"></div>
+	<?
+	}
+	elseif ($vip==3)
+	{
+	?>
+
+	<div class="vip-ico vip-gold"></div>
 	<?
 	}
 
@@ -94,11 +131,15 @@ $cher=get_user_meta( $iduu[0], 'charity', true);
 
 
 
+
+
+
+
 	?>
 
 
 
-	<figure class="woocommerce-product-gallery__wrapper">
+	</div><figure class="woocommerce-product-gallery__wrapper">
 
 
 

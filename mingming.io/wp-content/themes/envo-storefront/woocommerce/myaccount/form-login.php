@@ -178,7 +178,7 @@ form .required {
                       <li><a href="javascript:void(0)"><i class="fa fa-qrcode" aria-hidden="true"></i></a></li>
                       <li><a href="javascript:void(0)"><i<i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
                       <li><a href="javascript:void(0)"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-                      <li><a onclick="jQuery('#fab').find('.fbl-button').click()" href="javascript:void(0)"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                      <!-- <li><a onclick="jQuery('#fab').find('.fbl-button').click()" href="javascript:void(0)"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li> -->
                       <li>
                           <div id="fab">
                                 <i class="fa fa-facebook-official" aria-hidden="true">

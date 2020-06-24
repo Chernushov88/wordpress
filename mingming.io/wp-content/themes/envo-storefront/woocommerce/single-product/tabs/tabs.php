@@ -276,7 +276,7 @@
             <div class="video-title-in">
               <span>For: <?= $videofor; ?></span>
             </div>
-            <!-- <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopup('#popupShare')">Share</a> -->
+         <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
           </div>
           <div class="video-controls">
 
@@ -340,6 +340,111 @@
   }
 </style>
 <script>
+function copyToClipboard(textToCopy) {
+  var textArea;
+
+  function isOS() {
+    //can use a better detection logic here
+    return navigator.userAgent.match(/ipad|iphone/i);
+  }
+
+  function createTextArea(text) {
+    textArea = document.createElement('textArea');
+    textArea.readOnly = true;
+    textArea.contentEditable = true;
+    textArea.value = text;
+    document.body.appendChild(textArea);
+  }
+
+  function selectText() {
+    var range, selection;
+
+    if (isOS()) {
+      range = document.createRange();
+      range.selectNodeContents(textArea);
+      selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      textArea.setSelectionRange(0, 999999);
+    } else {
+      textArea.select();
+    }
+  }
+
+  function copyTo() {
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  }
+
+  createTextArea(textToCopy);
+  selectText();
+  copyTo();
+  }
+  function quar(link)
+  {
+  var link;
+
+  var kod='https://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=200x200&chl='+link;
+  jQuery('#quar').attr('href',kod);
+
+  }
+
+  function sha(link)
+  {
+  HidePopup('#popupShareVideo');
+  var link;
+  ShowPopupShare('#popupShare',link);
+  }
+  function tweet(link)
+  {
+  var link;
+
+  var kod='http://twitter.com/share?text='+link;
+  jQuery('#twe').attr('href',kod);
+
+  }
+  function face(link)
+  {
+  var link;
+
+  var kod='https://www.facebook.com/sharer/sharer.php?u='+link+'&title=Video&quote=Video+from+mingming.io&description=Video+from+mingming.io';
+  jQuery('#fac').attr('href',kod);
+
+  }
+function ShowPopupShare(target, link){
+       var link;
+    jQuery('.social a').eq(0).attr('id','cop');
+    jQuery('#cop').attr('onclick','copyToClipboard("'+link+'")');
+      jQuery('#cop').attr('href','javascript:void(0)');
+
+     jQuery('.social a').eq(1).attr('id','quar');
+  jQuery('#quar').attr('onclick','quar("'+link+'")');
+  jQuery('#quar').attr('target','_blank');
+    jQuery('#quar').attr('href','javascript:void(0)');
+
+
+    jQuery('.social a').eq(2).attr('id','twe');
+  jQuery('#twe').attr('onclick','tweet("'+link+'")');
+  jQuery('#twe').attr('target','_blank');
+    jQuery('#twe').attr('href','javascript:void(0)');
+
+
+   jQuery('.social a').eq(3).attr('id','fac');
+  jQuery('#fac').attr('onclick','face("'+link+'")');
+  jQuery('#fac').attr('target','_blank');
+    jQuery('#fac').attr('href','javascript:void(0)');
+
+
+      // event.preventDefault();
+      console.log(target);
+      jQuery(".darken").fadeIn();
+      jQuery(target).addClass('open');
+    }
+
+
+
+
+
   var vid = document.getElementById("myVideo");
 
   function playVid(elem) {

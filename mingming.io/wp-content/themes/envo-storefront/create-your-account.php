@@ -95,6 +95,16 @@
           <li><a href="#"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
           <li><a href=""><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li>
+          <li>
+              <div id="fab">
+                    <i class="fa fa-facebook-official" aria-hidden="true">
+                    <?
+
+                    do_action('facebook_login_button');
+                    ?>
+                    </i>
+                </div>
+          </li>
         </ul>
       </div>
       <div class="text-center">

@@ -2405,6 +2405,43 @@ div.elementor-widget-image-carousel .swiper-container {
 .woocommerce ul.products li.product .thumbnail-product{
     position: relative;
 }
+.woocommerce ul.products li.product .flex,
+.woocommerce div.product div.images.woocommerce-product-gallery .flex,
+.fiy .flex{
+     display: flex;
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     flex-direction: row-reverse;
+ }
+.vip-ico,
+.charity-ico{
+    width: 50px;
+    height: 50px;
+    margin-left: -10px;
+    background-size: contain !important;
+    z-index: 1;
+    background-repeat: no-repeat !important;
+}
+.charity-copper{
+    background: url(/wp-content/themes/envo-storefront/img/Charity_Copper.png);
+}
+.charity-sliver{
+    background: url(/wp-content/themes/envo-storefront/img/Charity_Sliver.png);
+}
+.charity-gold{
+    background: url(/wp-content/themes/envo-storefront/img/Charity_Gold.png);
+}
+.vip-gold{
+    background: url(/wp-content/themes/envo-storefront/img/Vip_Gold.png);
+}
+.vip-copper{
+    background: url(/wp-content/themes/envo-storefront/img/Vip_Copper.png);
+}
+.vip-sliver{
+    background: url(/wp-content/themes/envo-storefront/img/Vip_Sliver.png);
+}
+
 .woocommerce ul.products li.product > a img {
     /*height: 100%;*/
     border-radius: 10px;
@@ -4825,7 +4862,11 @@ div.elementor-accordion .elementor-accordion-item {
 .account-details .btn.btn-block{
     display: inline-block;
 }
+.woocommerce ul.products li.product > a .fiy{
+    display: block;
+}
 .fiy{
+    display: inline-block;
     position: relative;
 }
 img.fiy-status,

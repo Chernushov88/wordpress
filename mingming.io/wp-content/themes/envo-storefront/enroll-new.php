@@ -515,10 +515,9 @@ $z=0;
               <li>1) represent yourself</li>
               <li>2) say "Special for Mingming"</li>
             </ul>
-            <div class="defalt-state-video">
+            <!-- <div class="defalt-state-video">
               <img src="/wp-content/themes/envo-storefront/img/player.png" alt="">
-            </div>
-            <br>
+            </div> -->
             <div class="text-en">
               Please record a video to briefly introduce yourself, share the news of joining MingMing, and tell your fans that you would be happy to make a video for them, for example, congratulating them on their birthday, simply saying hi to their family and friends, or fulfilling any other request you would like to. Be creative and make a video in your own style.
             </div>

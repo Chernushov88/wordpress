@@ -626,6 +626,7 @@ function my_user_contactmethods($user_contactmethods){
 		$user_contactmethods['userimg'] = 'Link foto';
 		  $user_contactmethods['uservideo1'] = 'Represent yourself';
 		   $user_contactmethods['uservideo2'] = 'Specially for MingMing';
+		    $user_contactmethods['vip'] = 'Vip status';
   return $user_contactmethods;
 }
 
@@ -946,6 +947,7 @@ function woo_custom_add_to_cart( $cart_item_data ) {
     return $cart_item_data;
 }
 
+/*
 add_action( 'template_redirect', 'checkout_redirect_non_logged_to_login_access');
 function checkout_redirect_non_logged_to_login_access() {
 
@@ -972,3 +974,60 @@ function customer_redirected_displaying_message() {
         wc_add_notice(  $message . '<a href="' . $cart_link . '" class="button wc-forward">' . $button_text . '</a>', 'notice' );
     }
 }
+*/
+function add_user_to_mailchimp($order_id) {
+
+
+$order_meta = get_post_meta( $order_id);
+$emop=$order_meta['_billing_email'][0];
+if ( is_user_logged_in() ) 
+{
+
+}
+else 
+{
+//////////////////////////////////////
+$em11=array();
+$users11 = get_users( array( ) );
+foreach( $users11 as $user )
+{
+$em11[]=$user->user_email;
+}
+if (in_array($emop, $em11)) 
+{
+echo '0';   
+}
+else
+{
+$userdata1 = array(
+	'ID'              => 0,  
+	'user_pass'       => $emop, 
+	'user_login'      => $emop, 
+	'user_nicename'   => $emop,
+	'user_url'        => '',
+	'user_email'      => $emop,
+	'display_name'    => $emop,
+	'nickname'        => '',
+	'first_name'      => $emop,
+	'last_name'       => '',
+	'description'     => '',
+	'rich_editing'    => 'true', // false - выключить визуальный редактор
+	'user_registered' => date('Y-m-d H:i:s'), 
+	'role'            => 'buyer'
+);
+$id=wp_insert_user( $userdata1 );
+$args = array(
+    'customer_id'   => $id,
+    'order_id'      => $order_id,
+);
+$order1=wc_create_order($args);
+
+}
+	
+}	
+	////////////////////////////////////////
+
+
+}
+add_action( 'woocommerce_checkout_update_order_meta', 'add_user_to_mailchimp', 1, 1 );
+
