@@ -1,0 +1,189 @@
+.title-block {
+	display: flex;
+	background: #333333;
+}
+
+.title-block .date-post {
+	color: #ffcc00;
+	font-family: Gilroy, sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	padding-left: 40px;
+}
+
+.rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+    padding: 0 20px 20px 20px; 
+   
+}
+
+.name-post {
+	width: 600px;
+	margin: 40px 0;
+	color: #333333;
+	font-family: Gilroy, sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.text-post p {
+	color: #333333;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.under-post {
+	margin-top: 50px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.under-post .b-icon_user {
+	width: 40px;
+	height: 40px;
+}
+
+.under-post .b-icon_user:hover {
+	background: #ffbc34;
+}
+
+.post-button-bid {
+	background-color: #ffcc00;
+    border-radius: 5px;
+}
+
+.post-button-bid:hover {
+	background: #ffbc34;
+}
+
+.post-button-bid .spanButton {
+	padding: 10px 55px;
+}
+
+.under-post a p {
+	color: #333333;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+}
+.under-post a p:hover {
+	text-decoration: underline;
+	color: #ffbc34;
+}
+
+.comment-options {
+	display: flex;
+	align-items: center;
+}
+
+.comment-button-bid {
+	background-color: #ffcc00;
+    border-radius: 5px;
+}
+
+.comment-button-bid:hover {
+	background: #ffbc34;
+}
+
+.comment-button-bid .spanButton {
+	padding: 10px 30px;
+}
+
+.reaction {
+	margin-left: 30px;
+}
+
+.reaction a {
+	font-size: 24px;
+	margin-right: 10px;
+	font-family: Gilroy, sans-serif;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.user_comment {
+	padding: 40px 80px 15px 60px;
+	background: #fff;
+}
+
+.user_comment h3{
+	color: #333333;
+	font-family: Gilroy, sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	padding-bottom: 20px;
+}
+
+.user_comment h3 .date-post {
+	color: #ffcc00;
+}
+
+.user_comment hr {
+	margin-top: 45px;
+}
+
+.user_comment p {
+	color: #333333;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	padding-bottom: 20px;
+}
+
+.post-mailing {
+	margin: 40px 0 40px 0;
+	height: 200px;
+	width: 1180px;
+	background: url('large-bg-mailing.jpg')/*tpa=http://cn26923.tmweb.ru/img/large-bg-mailing.jpg*/ no-repeat;
+}
+
+.post-mailing input[type="checkbox"] {
+	font-family: Gilroy, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+
+.post-mailing input[type="email"] {
+	width: 335px;
+	height: 40px;
+	float: left;
+	border-radius: 5px;
+	border-width: 0;
+	font-family: Gilroy, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	padding-left: 20px;
+}
+
+.post-mailing input[type="submit"] {
+	line-height: 5px;
+	height: 40px;
+	border-radius: 5px;
+	border-width: 0;
+	background-color: #ffcc00;
+	color: #333333;
+	font-family: Gilroy, sans-serif;
+	font-size: 14px;
+	font-weight: 800;
+	padding: 14px 45px;
+	margin-left: 30px;
+}
+
+
+.mailing-container h2 {
+	color: #333333;
+	font-family: Gilroy, sans-serif;
+	font-size: 24px;
+	font-weight: 800;
+	
+}
+
+
+.allcomments {
+	margin-top: 25px
+}

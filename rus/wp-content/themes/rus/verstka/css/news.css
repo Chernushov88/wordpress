@@ -1,0 +1,277 @@
+.dir {
+	color: #333333;
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.calendar {
+	float: left;
+	width: 278px;
+	width: 24%;
+	height: auto;
+	background: #ebebeb;
+	box-sizing: border-box;
+}
+.calendar>table{
+	width: 100%;
+}
+/*#wp-calendar thead ,*/
+.calendar .date {
+	display: grid;
+	grid-template-columns: repeat(7, minmax(30px, 1fr));
+	grid-gap: 1px;
+	box-sizing: border-box;
+}
+#wp-calendar thead tr th,
+.calendar .date .day {
+	padding: 10px;
+	background: #333333;
+	color: #fff;
+	font-family: Gilroy, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+}
+#wp-calendar tbody tr td,
+.calendar .date .number {
+	height: 48px;
+	text-align: center;
+	/*padding: 10px;*/
+	background: #fff;
+	color: #333333;
+	font-family: Lato;
+	font-size: 15px;
+	font-weight: 700;
+}
+#wp-calendar tbody tr td a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 3.2;
+	color: #333;
+}
+#wp-calendar tbody tr td:hover ,
+.calendar .date .number a:hover {
+	color: #000;
+}
+#wp-calendar tbody tr td:hover ,
+.calendar .date .number:hover {
+	background: #ffcc00!important;
+}
+#wp-calendar tbody tr td.current ,
+.current-day {
+	background: #ffcc00!important;
+}
+#wp-calendar caption{
+	height: 38px;
+	background: #ffcc00;
+	line-height: 2;
+    font-size: 20px;
+}
+.select-month {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*#wp-calendar tfoot tr td,*/
+.select-month button {
+	border-width: 0;
+	font-family: Gilroy, sans-serif;
+	font-size: 21px;
+	font-weight: 600;
+	cursor: pointer;
+	background: #ffcc00;
+	padding: 10px 20px;
+}
+/*#wp-calendar tfoot tr td:hover,*/
+.select-month button:hover {
+	background-color: #fccc55;
+}
+/*#wp-calendar tfoot tr,*/
+.select-month .month {
+	font-family: Gilroy, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	background: #ffcc00;
+	padding: 13px 47px;
+}
+
+.main-slider {
+	height: 277px!important;
+	margin-top: 0;
+	background: 0;
+}
+
+.main-slider .text-slide {
+	padding-top: 30px;
+    padding-left: 42px;
+    color: #333333;
+}
+
+.slide {
+    position: relative;
+    height: 277px!important;
+    background: url(../img/min-slide01.jpg)/*tpa=http://cn26923.tmweb.ru/img/min-slide01.jpg*/ no-repeat center!important;
+}
+
+.dir {
+	padding: 10px 0;
+}
+
+.title-block {
+	display: flex;
+	justify-content: space-between;
+	background: #000;
+}
+
+.partition {
+	display: flex;
+	justify-content: space-between;
+}
+
+.partition p {
+	padding-right: 35px;
+	padding-left: 50px;
+	color: #ffffff;
+	font-family: Lato, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.list-parts-services {
+	display: none;
+	background: #fff;
+	padding: 20px 20px 20px 30px;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	z-index: 10;
+	width: 200px;
+}
+
+.partition .fa-file-text {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.partition .fa-file-text:hover {
+	color: #ffcc00;
+}
+
+.partition .fa-angle-down {
+	color: #000;
+}
+
+.list-parts-services a {
+	color: #333333;
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.list-parts-services a:hover {
+	color: #ffcc00;
+}
+
+.partition-choise {
+	display: flex;
+	border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.partition-link {
+	display: inline-block;
+    color: #666666;
+    padding: 5px 0 5px 5px;
+    font-size: 14px;
+    font-family: Lato, sans-serif;
+}
+
+.partition-arrow {
+	height: 6px;
+    width: 12px;
+    margin-top: 2px;
+    padding-left: 15px;
+    padding-right: 16px;
+}
+
+.calendar-news-start {
+	background: #fff;
+	border: 1px solid grey;
+	display: none;
+	padding: 5px;
+	position: absolute;
+	top: 25px;
+	cursor: pointer;
+	z-index: 15;
+}
+
+.calendar-news-end {
+	background: #fff;
+	border: 1px solid grey;
+	display: none;
+	padding: 5px;
+	position: absolute;
+	top: 25px;
+	z-index: 17;
+	cursor: pointer;
+}
+
+.date-range {
+	display: flex;
+	align-items: center;
+	padding-right: 20px;
+}
+
+.date-start {
+	display: flex;
+	align-items: center;
+}
+
+.date-end {
+	display: flex;
+	align-items: center;
+}
+
+.date-range .fa-calendar {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.date-range .fa-angle-down {
+	color: #333333;
+}
+
+.date-range .fa-calendar:hover {
+	color: #ffcc00!important;
+}
+
+.icon-cal-end {
+	position: relative;
+}
+
+.icon-cal-start {
+	position: relative;
+}
+
+.date-range p {
+	padding-right: 5px;
+	padding-left: 10px;
+	color: #ffffff;
+	font-family: Lato, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.date-range .month {
+	color: #333333!important;
+}

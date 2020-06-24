@@ -1,0 +1,170 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item {
+    background: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.service-item hr {
+
+    width: 800px;
+    margin: 0 auto;
+}
+
+.service-name {
+	font-family: Gilroy, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.description {
+    padding-top: 30px;
+    color: #333333;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.service-name .note {
+	color: #999999;
+}
+
+.wrapper-service {
+    float: right;
+    width: 880px;
+    height: 100%;
+}
+
+.pay {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.pay-count {
+    color: #ffcc00;
+}
+
+.slide-services {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    float: right;
+    width: 820px;
+    height: 360px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: #fff;
+}
+
+
+.text-questions h2 {
+    padding-bottom: 5px;
+    font-family: Gilroy, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+.about-question-form {
+    padding-top: 20px;
+    width: 660px;
+}
+
+.about-question-form form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.about-question-form input[type=text] {
+    margin-left: 10px; 
+    height: 30px;
+    border-radius: 5px;
+    border-width: 0;
+    font-family: Gilroy, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+
+.about-question-form input[type=email] {
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 0;
+    font-family: Gilroy, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.about-question-form input[type=phone] {
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 0;
+    font-family: Gilroy, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.about-resume-form div {
+    position: relative;
+    z-index: 10;
+}
+
+.question-submit-form {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#accept-form {
+    padding-left: 10px;
+    padding-bottom: 4px;
+}
+
+.about-question-form input[type=submit] {
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 225px;
+    width: 174px;
+    height: 40px;
+    background-color: #ffcc00;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.question-submit-form p {
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+.question-block {
+    padding: 54px 50px 45px 79px;
+    background: #333333;
+}

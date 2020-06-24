@@ -1,0 +1,122 @@
+.mob-visible{display: none;}
+@media only screen and (max-width: 1220px){
+	.container {max-width: calc(100% - 30px);}
+	.container  #wp-calendar thead tr th, .container  .calendar .date .day,
+	.container  #wp-calendar tbody tr td, .container  .calendar .date .number {padding: 0;height: 40px;}
+
+	div.control-panel .info-account {padding: 20px 5px;}
+}
+@media only screen and (max-width: 1024px){
+	.banner{flex-wrap: wrap;}
+	.text-slide {padding-top: 45px;padding-left: 20px;padding-bottom: 20px;}
+	.main-slider{height: auto;margin-top: 10px;}
+	div.control-panel .info-account a{width: 100%;margin-left: 0;margin-right: 0;}
+	div.control-panel .info-account p{
+		width: 100%;}
+}
+@media only screen and (max-width: 992px){
+	.main-slider{width: 100%;}
+	.article-news {width: 48%;}
+	.services-block {width: 240px;position: absolute;z-index: 9;
+		overflow: hidden;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: 1s ease-in-out all;
+	}
+	.services-block.active{
+		visibility: visible;
+		overflow: visible;
+		height: auto;
+		opacity: 1;
+	}
+	.our-services {display: flex;justify-content: end; padding: 7px 0px;
+		background-color: transparent;}
+	.our-services .fa{cursor: pointer;}
+	.our-services .fa.active:before{content: "\f00d";}
+	.our-services .fa{font-size: 34px;}
+	.calendar{display: none;}
+	.info-text p {margin: 14px 10px;}
+	.contacts {width: calc(42% - 10px);padding: 10px 0 0 10px;}
+	.footer-services-list ul {margin-right: 0px;}
+
+	.flex-column.left-info .services-block + .textwidget.custom-html-widget {margin-top: 0px;}
+	div.resume-block {padding: 25px 15px;background: #333333;	}
+
+	.news .title-block {flex-wrap: wrap; padding-bottom: 10px;}
+	div.partition p {padding: 0 5px;}
+
+	div.content-act .date,
+	div.content-act .text{padding: 20px 5px;}
+	.text h2, .text p{
+		width: 100% !important;}
+}
+@media only screen and (max-width: 767px){
+	.mob-visible{display: block;}
+	.flex{flex-wrap: wrap;}
+
+	.banner {justify-content: center;padding: 10px 0;}
+	.touch_menu {display: block;position: absolute;right: 0;}
+	.main_menu {display: block;position: absolute;left: 0;top: -1200%;z-index: 999;width: 100%;margin: 0 0 0 -0px;padding: 0;background: #333;transition: 1s ease-in-out all;}
+	.footer-our-services, #footer_menu{top: -9999%;width: calc(100% - 15px);padding-left: 15px;}
+	.main_menu.active {top: 48px;}
+	.nav-menu ul {flex-direction: column;}
+	.services-block{width: 100%;margin-left: -15px;}
+
+	.slide-p {width: 100%;padding: 10px 0;}
+	.slide-btn {display: block;text-align: center;padding: 15px 0px;}
+	.left-info{display: none !important;}
+	.right-info{width: 100%;}
+	.our-services{width: 240px;}
+	.contacts, .contacts-map {width: 100% !important;}
+	.about-text{flex-wrap: wrap;}
+	.container .about-main-slider .owl-carousel .text-slide {padding: 0 0 0px 10px;	min-height: 290px;}
+	.about-main-slider{
+		background-color: transparent !important;}
+
+	.footer-blocks{flex-wrap: wrap;}
+	.footer-block-title{display: none;}
+	.footer-socialmedia {max-width: 210px;}
+	.info-site{width: 100%;order: 2;}
+
+	/*.footer-our-services {display: none;width: 100%;position: static;margin-bottom: 20px;	}*/
+	.footer-our-services.active{display: block;width: calc(100% - 20px);padding-left: 20px;background: #333333;}
+	.footer-services-list ul li {width: 100%;}
+	.footer-menu {margin: 10px 0 20px;align-items: flex-start;width: 100%;height: auto;}
+
+	#footer_menu.active {top: 40px;padding-bottom: 20px;}
+	.mailing {height: 260px;}
+	.mailing-container {margin: 10px 0 0;text-align: center;}
+	.mailing input[type="email"] {
+		width: calc(100% - 30px);
+		margin: 10px 0 10px 10px;padding-left: 10px;
+	}
+	.mailing input[type="checkbox"]{margin-bottom: 10px;}
+
+	.about-resume-form input {width: calc(100% - 20px);margin-right: 0px;}
+
+	.container .rightimg {margin: 0;padding: 0;	}
+	.container .title-block {flex-wrap: wrap;}
+	.container .title-block .date-post {padding: 0 20px;}
+	.container .name-post {width: 100% ;}
+	.container .under-post {flex-wrap: wrap;}
+	.container .post-button-bid {width: 100%;text-align: center;margin-bottom: 10px;}
+
+	.container .user_comment {padding: 15px;}
+	div.content-act {flex-direction: column;text-align: center;}
+	div.content-act .status {justify-content: center;margin-bottom: 20px;}
+	div.operations{flex-wrap: wrap;height: auto;padding: 20px 0;}
+	div.operations a{width: calc(100% - 20px);margin: 10px 0;border:0;padding-left: 20px;justify-content: left;}
+	div.operations a br{
+		display: none;}
+
+}
+@media only screen and (max-width: 480px){
+	.article-news {width: 100%;}
+	.date-range{flex-wrap: wrap;}
+	.container .about-main-slider .owl-carousel .text-slide,
+	.container .main-slider .text-slide {padding: 10px;}
+
+
+
+}
