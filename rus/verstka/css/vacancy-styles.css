@@ -1,0 +1,186 @@
+
+.wrap-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.vacancy {
+	float: right;
+	width: 880px;
+	height: 100%;
+}
+
+.position-vacancy {
+	background-color: #fff;
+	margin-top: 20px;
+	padding: 35px 65px 35px 39px;
+}
+
+.topic-vacancy {
+	font-family: Gilroy, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #333333;
+}
+
+.topic-vacancy .company {
+	color: #999999;
+}
+
+.description {
+	padding-top: 30px;
+	color: #333333;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.pay {
+	padding-top: 25px;
+	font-family: Gilroy;
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 24px;
+}
+
+.pay-count {
+	color: #ffcc00;
+}
+
+.flex-column {
+	display: flex;
+    flex-direction: column;
+}
+
+.resume-block {
+	margin-top: 15px;
+	background: url('resume.jpg')/*tpa=http://cn26923.tmweb.ru/img/resume.jpg*/; 
+}
+
+.resume-form {
+	
+}
+
+.resume-form label {
+	font-family: Gilroy, sans-serif;
+	font-size: 14px;
+	color: #ffcc00;
+	font-weight: 800;
+	padding: 10px 35px;
+	width: 50px;
+	height: 30px;
+	border: 2px solid #ffcc00;
+	border-radius: 6px;
+}
+
+.resume-form label:hover {
+	cursor: pointer;
+    text-decoration: underline;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.resume-form div {
+	position: relative;
+	z-index: 10;
+}
+
+.resume-form input[type=file] {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	position: absolute;
+	z-index: -10;
+}
+
+.resume-form input[type=text] {
+	height: 40px;
+	border-radius: 5px;
+    border-width: 0;
+    font-family: Gilroy, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.resume-form input[type=email] {
+	height: 40px;
+	border-radius: 5px;
+    border-width: 0;
+    font-family: Gilroy, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.resume-form input[type=phone] {
+	height: 40px;
+	border-radius: 5px;
+    border-width: 0;
+    font-family: Gilroy, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.resume-form input[type=checkbox] {
+	margin-right: 0;
+	margin-top: 0;
+}
+
+.resume-form input[type=submit] {
+	margin-right: 0;
+	margin-top: 0;
+	margin-left: 50px;
+	width: 174px;
+	height: 40px;
+	background-color: #ffcc00;
+	border-width: 0;
+	border-radius: 5px;
+}
+
+.resume-form input{
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.resume-submit-form {
+	display: flex;
+	margin-top: 20px;
+	align-items: center;
+}
+
+.resume-submit-form p {
+	color: #ffffff;
+	font-family: Lato;
+	font-size: 12px;
+	font-weight: 200;
+}
+
+.resume-block {
+	padding: 54px 340px 45px 79px;
+}
+
+.text-resume h2 {
+	padding-bottom: 5px;
+	font-family: Gilroy, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+.text-resume p {
+	color: #ffffff;
+	font-family: Lato, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#accept-form {
+	padding-left: 10px;
+	padding-bottom: 4px;
+}
+

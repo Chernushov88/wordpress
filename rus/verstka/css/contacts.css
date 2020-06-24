@@ -1,0 +1,42 @@
+.contacts-info {
+	display: flex!important;
+}
+
+.contacts {
+	color: #fff;
+	margin-top: 20px!important;
+	width: 30%!important;
+	background-color: #333333;
+	padding: 50px;
+}
+
+
+.contacts-map {
+	margin-top: 20px;
+	height: 316px;
+	width: 60%!important;
+	background-color: #fff;
+}
+
+.map {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: url('map-block.jpg')/*tpa=http://cn26923.tmweb.ru/img/map-block.jpg*/ no-repeat;
+	background-size: 100% 100%;
+}
+
+.map img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.contact-info .phone {
+	color: #fff!important;
+}
+
+.maintext-contacts { 
+	color: #fff!important;
+}
