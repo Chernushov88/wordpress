@@ -1,0 +1,49 @@
+2020-08-21T09:31:56+00:00 CRITICAL Uncaught Error: Call to undefined function register_block_type_from_metadata() in /home/aromabox/public_html/wp-includes/blocks/index.php:62
+Stack trace:
+#0 /home/aromabox/public_html/wp-includes/class-wp-hook.php(287): register_core_block_types_from_metadata('')
+#1 /home/aromabox/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/aromabox/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/aromabox/public_html/wp-settings.php(546): do_action('init')
+#4 /home/aromabox/public_html/wp-config.php(92): require_once('/home/aromabox/...')
+#5 /home/aromabox/public_html/wp-load.php(37): require_once('/home/aromabox/...')
+#6 /home/aromabox/public_html/wp-cron.php(44): require_once('/home/aromabox/...')
+#7 {main}
+  thrown в /home/aromabox/public_html/wp-includes/blocks/index.php на строке 62
+
+2020-08-21T09:31:56+00:00 CRITICAL Uncaught Error: Call to undefined function register_block_type_from_metadata() in /home/aromabox/public_html/wp-includes/blocks/index.php:62
+Stack trace:
+#0 /home/aromabox/public_html/wp-includes/class-wp-hook.php(287): register_core_block_types_from_metadata('')
+#1 /home/aromabox/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/aromabox/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/aromabox/public_html/wp-settings.php(546): do_action('init')
+#4 /home/aromabox/public_html/wp-config.php(92): require_once('/home/aromabox/...')
+#5 /home/aromabox/public_html/wp-load.php(37): require_once('/home/aromabox/...')
+#6 /home/aromabox/public_html/wp-admin/admin.php(34): require_once('/home/aromabox/...')
+#7 /home/aromabox/public_html/wp-admin/themes.php(10): require_once('/home/aromabox/...')
+#8 {main}
+  thrown в /home/aromabox/public_html/wp-includes/blocks/index.php на строке 62
+
+2020-08-21T09:33:11+00:00 CRITICAL Uncaught Error: Call to undefined function register_block_type_from_metadata() in /home/aromabox/public_html/wp-includes/blocks/index.php:62
+Stack trace:
+#0 /home/aromabox/public_html/wp-includes/class-wp-hook.php(287): register_core_block_types_from_metadata('')
+#1 /home/aromabox/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/aromabox/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/aromabox/public_html/wp-settings.php(546): do_action('init')
+#4 /home/aromabox/public_html/wp-config.php(92): require_once('/home/aromabox/...')
+#5 /home/aromabox/public_html/wp-load.php(37): require_once('/home/aromabox/...')
+#6 /home/aromabox/public_html/wp-cron.php(44): require_once('/home/aromabox/...')
+#7 {main}
+  thrown в /home/aromabox/public_html/wp-includes/blocks/index.php на строке 62
+
+2020-08-21T09:33:11+00:00 CRITICAL Uncaught Error: Call to undefined function register_block_type_from_metadata() in /home/aromabox/public_html/wp-includes/blocks/index.php:62
+Stack trace:
+#0 /home/aromabox/public_html/wp-includes/class-wp-hook.php(287): register_core_block_types_from_metadata('')
+#1 /home/aromabox/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/aromabox/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/aromabox/public_html/wp-settings.php(546): do_action('init')
+#4 /home/aromabox/public_html/wp-config.php(92): require_once('/home/aromabox/...')
+#5 /home/aromabox/public_html/wp-load.php(37): require_once('/home/aromabox/...')
+#6 /home/aromabox/public_html/wp-admin/admin-ajax.php(22): require_once('/home/aromabox/...')
+#7 {main}
+  thrown в /home/aromabox/public_html/wp-includes/blocks/index.php на строке 62
+
