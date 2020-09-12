@@ -1,0 +1,1456 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-11 17:50+0545\n"
+"PO-Revision-Date: 2018-10-11 17:50+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Eazy Po 0.9.5.3\n"
+
+#: product-slider-for-woocommerce.php:96
+msgid "WC Ajax for Variable Products Settings"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:96
+msgid ""
+"The following options are used to configure WC Ajax for Variable Products"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:100
+msgid "Add Selection option to Category Page"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:101
+msgid ""
+"This will automatically insert variable selection options on product "
+"Category Archive Page"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:105
+msgid "Enable Varition select option on Category Archive page"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:117
+msgid "WC Ajax for Variable Products"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:174
+msgid "Shortcodes"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:175 inc/admin/settings/psfw-usages.php:9
+msgid "Template Include"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:186
+#: product-slider-for-woocommerce.php:197
+msgid "Shortcode copied to your clipboard."
+msgstr ""
+
+#: product-slider-for-woocommerce.php:207
+msgid ""
+"You need to activate WooCommerce in order to activate \"Product Slider For "
+"WooCommerce\". Please make sure that you have WooCommerce installed and "
+"activated."
+msgstr ""
+
+#: product-slider-for-woocommerce.php:232
+msgid "Product Slider For WooCommerce Banner/Ribbon Settings"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:242
+msgid "Product Slider For WooCommerce Settings"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:414
+msgid "Product Slider Usage"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:423 inc/admin/psfw-about-page.php:12
+#: inc/admin/psfw-about-page.php:59 inc/admin/visual-composer.php:49
+msgid "Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:437
+msgctxt "post type general name"
+msgid "Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:438
+msgctxt "post type singular name"
+msgid "Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:439
+msgctxt "admin menu"
+msgid "Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:440
+msgctxt "add new on admin bar"
+msgid "Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:441
+msgctxt "Product Slider For WooCommerce"
+msgid "Add New"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:442
+msgid "Add New Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:443
+msgid "New Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:444
+msgid "Edit Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:445
+msgid "View Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:446
+msgid "All Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:447
+msgid "Search Product Slider For WooCommerce"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:448
+msgid "Parent Product Slider For WooCommerce:"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:449
+msgid "No Product Slider For WooCommerce found."
+msgstr ""
+
+#: product-slider-for-woocommerce.php:450
+msgid "No Product Slider For WooCommerce found in Trash."
+msgstr ""
+
+#: product-slider-for-woocommerce.php:455
+msgid "Description."
+msgstr ""
+
+#: product-slider-for-woocommerce.php:473 inc/admin/psfw-about-page.php:30
+msgid "About Us"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:543
+msgid "Add to wishlist"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:548
+#: product-slider-for-woocommerce.php:552
+msgid "Browse Wishlist"
+msgstr ""
+
+#: product-slider-for-woocommerce.php:579
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:19
+msgid "Follow us for new updates"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:32
+msgid ""
+"AccessPress Themes is a venture of Access Keys - who has developed hundreds "
+"of Custom WordPress themes and plugins for its clients over the years. "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid ""
+"Product Slider for WooCommerce is <strong>an advanced WooCommerce extension</"
+"strong> that lets you showcase your online products in the most appealing "
+"style. This WooCommerce extension supports "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid "slider and carousel layout"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid " and features "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid "lots of customization options."
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid "It is a ready-to-go plugin packed with"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid " 25+ beautiful pre-designed templates."
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid " It has integrated with beautiful <strong>lightbox effect"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:34
+msgid " to showcase the product details."
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:36
+msgid "Product Slider for WooCommerce comes with"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:36
+msgid "8 different ribbon templates "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:36
+msgid " and "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:36
+msgid "6 different ribbon position "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:36
+msgid ""
+" to easily mark your featured products, latest products, best selling "
+"products and so on. Also, it automatically assign ribbon to the products "
+"that are out of stock. The extension offers product filter feature (can be "
+"filtered on the basis of taxonomies, category, custom fields, keyword etc.) "
+"and product sorting option - which makes your eCommerce site more "
+"convincing. It is simple and easy-to-use plugin that allows you to add "
+"unlimited product carousel/slider anywhere in your website via shortcode. "
+"This WooCommerce extension works flawlessly with all the WordPress themes "
+"and is well tested across wide range of devices available."
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:39
+msgid "Please visit our product page for more details here:"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:44
+msgid "Please visit our demo page here:"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:50
+msgid "Plugin documentation can be found here:"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:57
+msgid "Themes Compatible with the Plugin : "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:59
+msgid ""
+"works best with every WordPress WooCommerce compatible theme. It's even more "
+"remarkable when used with popular themes like VMagazine and AccessPress "
+"Parallax. "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:61
+msgid ""
+"AND IF THIS PLUGIN HAS IMPRESSED YOU, THEN YOU WOULD ENJOY OUR OTHER "
+"PROJECTS TOO. DO CHECK THESE OUT : "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:63
+msgid "WPAll Club "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:63
+msgid ""
+"-  A complete WordPress resources club. WordPress tutorials, blogs, curated "
+"free and premium themes and plugins, WordPress deals, offers, hosting info "
+"and more. "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:65
+msgid "Premium WordPress Theme "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:65
+msgid ""
+"-   6 premium WordPress themes well suited for all sort of websites. "
+"Professional, well coded and highly configurable themes for you. "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:67
+msgid "Premium WordPress Plugins "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:67
+msgid ""
+" - 45+ premium WordPress plugins of many different types. High user ratings, "
+"great quality and best sellers in CodeCanyon marketplace.  "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:69
+msgid "AccessPress Themes "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:69
+msgid ""
+" - AccessPress Themes has 50+ beautiful and elegant, fully responsive, "
+"multipurpose themes to meet your need for free and commercial basis. "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:71
+msgid "8Degree Themes "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:71
+msgid ""
+"- 8Degree Themes offers 15+ free WordPress themes and 16+ premium WordPress "
+"themes carefully crafted with creativity. "
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:80
+msgid "AccessPress Social Icons"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:110
+msgid "Get in touch"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:111
+msgid "If you have any question/feedback, please get in touch:"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:123
+msgid "Get social"
+msgstr ""
+
+#: inc/admin/psfw-about-page.php:124
+msgid ""
+"Get connected with us on social media. Facebook is the best place to find "
+"updates on our themes/plugins: "
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:12
+msgid "General Settings"
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:16
+msgid "Layout Settings"
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:20
+msgid "Product Settings"
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:24
+msgid "Post Settings"
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:28
+msgid "Customization Settings"
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:33
+msgid "Ribbon/Banner Settings"
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:37
+msgid "Social Share Settings"
+msgstr ""
+
+#: inc/admin/psfw-blog-meta.php:41
+msgid "Lightbox Settings"
+msgstr ""
+
+#: inc/admin/psfw-plugin-settings.php:13
+msgid "Settings saved successfully"
+msgstr ""
+
+#: inc/admin/psfw-plugin-settings.php:18
+msgid "Settings restored to default"
+msgstr ""
+
+#: inc/admin/psfw-plugin-settings.php:30
+msgid ""
+"Disable bxSLider (Please disable bxSlider only if you have already loaded "
+"those font icons from other source.)"
+msgstr ""
+
+#: inc/admin/psfw-plugin-settings.php:33
+msgid "bxSlider"
+msgstr ""
+
+#: inc/admin/psfw-plugin-settings.php:46
+msgid "Save Options"
+msgstr ""
+
+#: inc/admin/psfw-plugin-settings.php:50
+msgid "Are you sure you want to restore default settings?"
+msgstr ""
+
+#: inc/admin/psfw-plugin-settings.php:50
+msgid "Restore Default"
+msgstr ""
+
+#: inc/admin/psfw-widget.php:7
+msgid "Product Slider For WooCommerce Widget"
+msgstr ""
+
+#: inc/admin/psfw-widget.php:44
+msgid "Title:"
+msgstr ""
+
+#: inc/admin/psfw-widget.php:48
+msgid "Select Product Slider For WooCommerce:"
+msgstr ""
+
+#: inc/admin/visual-composer.php:31
+msgid "No Tab Data found."
+msgstr ""
+
+#: inc/admin/visual-composer.php:37
+msgid "Advanced Slider For WooCommerce Products"
+msgstr ""
+
+#: inc/admin/visual-composer.php:43 inc/admin/settings/psfw-post.php:40
+msgid "Title"
+msgstr ""
+
+#: inc/admin/visual-composer.php:54
+msgid "Select any tab post type to add it to your post or page."
+msgstr ""
+
+#: inc/admin/fields/button-settings.php:8
+msgid "Call To Action Button One Link"
+msgstr ""
+
+#: inc/admin/fields/button-settings.php:18
+msgid ""
+"This is used to show the individual custom link for call to action button one"
+msgstr ""
+
+#: inc/admin/fields/button-settings.php:22
+msgid "Call To Action Button Two Link"
+msgstr ""
+
+#: inc/admin/fields/button-settings.php:32
+msgid ""
+"This is used to show the individual custom link for call to action button two"
+msgstr ""
+
+#: inc/admin/fields/button-settings.php:37
+msgid "Upload Swap on Hover Image"
+msgstr ""
+
+#: inc/admin/fields/button-settings.php:44
+msgid "Upload Image"
+msgstr ""
+
+#: inc/admin/fields/button-settings.php:55
+msgid "This is used to show the swap image for Swap On Hover animation type."
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:13
+msgid "Ribbon Position "
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:19
+msgid "Default"
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:30 inc/admin/filter/psfw-custom.php:74
+#: inc/admin/forms/psfw-blog-detail.php:26 inc/admin/settings/psfw-post.php:37
+#: inc/ajax/add-meta.php:22
+msgid "None"
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:50 inc/admin/settings/psfw-banner.php:99
+#: inc/admin/settings/psfw-layout.php:45
+#: inc/admin/settings/psfw-layout.php:121
+#: inc/admin/settings/psfw-lightbox.php:68
+#: inc/admin/settings/psfw-out-of-stock.php:70
+msgid "Template"
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:50 inc/admin/settings/psfw-banner.php:99
+#: inc/admin/settings/psfw-layout.php:45
+#: inc/admin/settings/psfw-layout.php:121
+#: inc/admin/settings/psfw-lightbox.php:68
+#: inc/admin/settings/psfw-out-of-stock.php:32
+#: inc/admin/settings/psfw-out-of-stock.php:70
+msgid "Preview"
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:71 inc/admin/settings/psfw-banner.php:33
+msgid "Ribbon Type"
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:79 inc/admin/settings/psfw-banner.php:40
+msgid "Text"
+msgstr ""
+
+#: inc/admin/fields/psfw-banner.php:84 inc/admin/settings/psfw-banner.php:45
+msgid "Icon"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:6
+msgid "Filter Custom Field Post"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:19
+msgid "Enable to show posts associated with a certain custom field."
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:26
+msgid "Custom Field Query Types"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:32
+msgid ""
+"Single Custom Field Handling: Display post where the meta key is 'price' and "
+"the meta value that is LESS THAN OR EQUAL TO 22"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:35
+msgid ""
+"Multiple Custom Field Handling: Display posts that have meta key 'color' NOT "
+"LIKE value 'blue' OR meta key 'price' with values BETWEEN 20 and 100"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:42
+msgid "Single Custom Field Handling"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:43
+msgid "Multiple Custom Field Handling"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:49 inc/admin/forms/psfw-blog-detail.php:8
+#: inc/ajax/add-meta.php:12
+msgid "Meta Keys"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:55 inc/admin/forms/psfw-blog-detail.php:14
+#: inc/ajax/add-meta.php:14
+msgid "Pre Available Meta Keys"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:60 inc/admin/forms/psfw-blog-detail.php:19
+#: inc/ajax/add-meta.php:15
+msgid "Other Meta Keys"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:62
+msgid "Enter meta key"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:88
+msgid "Meta Value Type"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:91
+msgid "String"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:92
+msgid "Number"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:98
+msgid "Enter Meta Value"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:105
+msgid "Please leave empty if don't need to filter from meta value"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:111
+msgid "Meta Value Number"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:118
+msgid "Please leave empty if don't need to filter from meta value number"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:123
+#: inc/admin/forms/psfw-blog-detail.php:61 inc/ajax/add-meta.php:44
+msgid "Compare"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:126
+#: inc/admin/forms/psfw-blog-detail.php:64 inc/ajax/add-meta.php:47
+msgid "Equal To"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:127
+#: inc/admin/forms/psfw-blog-detail.php:65 inc/ajax/add-meta.php:48
+msgid "Not Equal To"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:128
+#: inc/admin/forms/psfw-blog-detail.php:66 inc/ajax/add-meta.php:49
+msgid "Greater Than"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:129
+#: inc/admin/forms/psfw-blog-detail.php:67 inc/ajax/add-meta.php:50
+msgid "Greater Than Equal To"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:130
+#: inc/admin/forms/psfw-blog-detail.php:68 inc/ajax/add-meta.php:51
+msgid "Smaller Than"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:131
+#: inc/admin/forms/psfw-blog-detail.php:69 inc/ajax/add-meta.php:52
+msgid "Smaller Than Equal To"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:132
+#: inc/admin/forms/psfw-blog-detail.php:70 inc/ajax/add-meta.php:53
+msgid "Like"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:133
+#: inc/admin/forms/psfw-blog-detail.php:71 inc/ajax/add-meta.php:54
+msgid "Not Like"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:134
+#: inc/admin/forms/psfw-blog-detail.php:72 inc/ajax/add-meta.php:55
+msgid "In"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:135
+#: inc/admin/forms/psfw-blog-detail.php:73 inc/ajax/add-meta.php:56
+msgid "Not In"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:136
+#: inc/admin/forms/psfw-blog-detail.php:74 inc/ajax/add-meta.php:57
+msgid "Between"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:137
+#: inc/admin/forms/psfw-blog-detail.php:75 inc/ajax/add-meta.php:58
+msgid "Not Between"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:138
+#: inc/admin/forms/psfw-blog-detail.php:76 inc/ajax/add-meta.php:59
+msgid "Exists"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:139
+#: inc/admin/forms/psfw-blog-detail.php:77 inc/ajax/add-meta.php:60
+msgid "Not Exists"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:146 inc/admin/filter/psfw-custom.php:164
+#: inc/admin/filter/psfw-taxonomy.php:113
+msgid "Relation"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:159
+msgid "Enable to show relation between meta queries"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:167 inc/admin/filter/psfw-taxonomy.php:116
+#: inc/admin/forms/term-list.php:64 inc/ajax/add-taxonomy.php:53
+msgid "AND"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:168 inc/admin/filter/psfw-taxonomy.php:117
+msgid "OR"
+msgstr ""
+
+#: inc/admin/filter/psfw-custom.php:188
+msgid "Add New Meta Condition"
+msgstr ""
+
+#: inc/admin/filter/psfw-popular.php:4
+msgid "Filter Popular Post"
+msgstr ""
+
+#: inc/admin/filter/psfw-popular.php:17
+msgid "Enable to show popular posts."
+msgstr ""
+
+#: inc/admin/filter/psfw-popular.php:24
+msgid "Choose Popular Posts By"
+msgstr ""
+
+#: inc/admin/filter/psfw-popular.php:27
+msgid "View"
+msgstr ""
+
+#: inc/admin/filter/psfw-popular.php:28
+msgid "Comment"
+msgstr ""
+
+#: inc/admin/filter/psfw-search.php:4
+msgid "Filter Keyword Search"
+msgstr ""
+
+#: inc/admin/filter/psfw-search.php:17
+msgid "Enable to show posts based on a keyword search."
+msgstr ""
+
+#: inc/admin/filter/psfw-search.php:24
+msgid "Enter the keyword"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:4
+msgid "Filter Taxonomies/Categories Post"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:17
+msgid "Enable to show posts associated with certain taxonomy/category."
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:25
+msgid "Taxonomy/Category Queries Type"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:28
+msgid ""
+"Choose Simple Taxonomy/Category Query to display post from a single taxonomy "
+"or category with single term.For example display posts tagged with bob, "
+"under people custom taxonomy.Choose Multiple Taxonomy/Category Handling to "
+"display posts from several custom taxonomies or categories."
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:33
+msgid "Simple Taxonomy/Category Query"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:34
+msgid "Multiple Taxonomy/Category Handling"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:40 inc/admin/forms/term-list.php:11
+#: inc/ajax/add-taxonomy.php:13
+msgid "Taxonomy/Category"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:43 inc/admin/forms/term-list.php:14
+#: inc/ajax/add-taxonomy.php:16
+msgid "Choose Taxonomy"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:57 inc/admin/forms/term-list.php:27
+#: inc/ajax/add-taxonomy.php:28
+msgid "Please select the product type first"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:65
+msgid "Term"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:68 inc/admin/filter/psfw-taxonomy.php:95
+msgid ""
+"Terms refers to the items in a taxonomy.\n"
+"For example, a website has categories books, politics, and blogging in it. "
+"While category itself is a taxonomy the items inside it are called terms."
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:74 inc/ajax/fetch-terms.php:28
+msgid "Choose Term"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:81
+#: inc/admin/filter/psfw-taxonomy.php:108
+msgid "Please select taxonomy first."
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:91 inc/admin/forms/term-list.php:31
+#: inc/ajax/add-taxonomy.php:32
+msgid "Terms"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:101 inc/ajax/fetch-terms.php:10
+#: inc/ajax/fetch-terms.php:15 inc/ajax/fetch-terms.php:23
+msgid "Choose Terms"
+msgstr ""
+
+#: inc/admin/filter/psfw-taxonomy.php:136
+msgid "Add New Taxonomy Condition"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:50 inc/ajax/add-meta.php:38
+msgid "Meta Value"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:84 inc/ajax/add-meta.php:67
+msgid "Type"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:97 inc/ajax/add-meta.php:74
+msgid "Enable to filter logo by custom field type"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:100 inc/ajax/add-meta.php:77
+msgid "Numeric"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:101 inc/ajax/add-meta.php:78
+msgid "Binary"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:102 inc/ajax/add-meta.php:79
+msgid "Char"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:103 inc/ajax/add-meta.php:80
+msgid "Date Time"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:104 inc/ajax/add-meta.php:81
+msgid "Decimal"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:105 inc/ajax/add-meta.php:82
+msgid "Signed"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:106 inc/ajax/add-meta.php:83
+msgid "Time"
+msgstr ""
+
+#: inc/admin/forms/psfw-blog-detail.php:107 inc/ajax/add-meta.php:84
+msgid "Unsigned"
+msgstr ""
+
+#: inc/admin/forms/term-list.php:46 inc/ajax/add-taxonomy.php:41
+msgid "Operator"
+msgstr ""
+
+#: inc/admin/forms/term-list.php:59 inc/ajax/add-taxonomy.php:48
+msgid "Enable operator to test and filter the post"
+msgstr ""
+
+#: inc/admin/forms/term-list.php:62 inc/ajax/add-taxonomy.php:51
+msgid "IN"
+msgstr ""
+
+#: inc/admin/forms/term-list.php:63 inc/ajax/add-taxonomy.php:52
+msgid "NOT IN"
+msgstr ""
+
+#: inc/admin/forms/term-list.php:65 inc/ajax/add-taxonomy.php:54
+msgid "EXISTS"
+msgstr ""
+
+#: inc/admin/forms/term-list.php:66 inc/ajax/add-taxonomy.php:55
+msgid "NOT EXISTS"
+msgstr ""
+
+#: inc/admin/settings/psfw-banner.php:4
+msgid "Note: Slide layout does not take the ribbons."
+msgstr ""
+
+#: inc/admin/settings/psfw-banner.php:11
+#: inc/admin/settings/psfw-out-of-stock.php:4
+msgid "Enable Ribbon Position "
+msgstr ""
+
+#: inc/admin/settings/psfw-banner.php:26
+msgid "Enable to show ribbon/banner position "
+msgstr ""
+
+#: inc/admin/settings/psfw-banner.php:72
+msgid "Ribbon Template"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:4
+msgid "Slide Orientation"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:7
+msgid "Horizontal"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:8
+msgid "Vertical"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:13
+msgid "Controls"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:16
+#: inc/admin/settings/psfw-customization.php:25
+#: inc/admin/settings/psfw-customization.php:61
+#: inc/admin/settings/psfw-customization.php:71
+msgid "True"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:17
+#: inc/admin/settings/psfw-customization.php:26
+#: inc/admin/settings/psfw-customization.php:62
+#: inc/admin/settings/psfw-customization.php:72
+msgid "False"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:22
+msgid "Auto"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:31
+msgid "Auto Play Timeout"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:44
+msgid "Number of Post"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:53
+msgid "Enter the excerpt length for post content"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:58
+msgid "Pager"
+msgstr ""
+
+#: inc/admin/settings/psfw-customization.php:68
+msgid "Pause Slider On Hover"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:5
+msgid "Display Product Title"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:18
+msgid "Enable to show title"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:23
+msgid "Display Product Excerpt"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:36
+msgid "Enable to show content"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:59
+msgid "Enter the length of post content"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:66
+msgid "Display Post Category/Taxonomy"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:79
+msgid "Enable to show category"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:84
+msgid "Display Product Link in Title"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:97
+msgid "Enable to show product link in title"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:102
+msgid "Display Product Link in Image"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:115
+msgid "Enable to show product link in image"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:119
+msgid "Image Size"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:122
+msgid "Original"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:123
+msgid "Large"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:124
+msgid "Medium"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:125
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:130
+msgid "Image Type"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:133
+msgid "Normal"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:134
+msgid "Swap"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:135
+msgid "Scroll"
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:137
+msgid "Note: This field is not applicable for slider layouts."
+msgstr ""
+
+#: inc/admin/settings/psfw-general.php:142
+msgid ""
+"If swap has been selected then please upload swap on hover image in required "
+"post.If scroll has been selected then please upload image of larger height."
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:4
+msgid "Layout"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:7
+msgid "Carousel"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:8
+msgid "Slider"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:14
+msgid "Slider Template"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:55
+msgid "Container Width"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:63
+msgid "Enter the width of the container in px"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:74
+msgid "Content Wrap Align"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:78
+msgid "Left"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:82
+msgid "Right"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:84
+msgid "Select the alignment for the content wrap of the slider"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:90
+msgid "Carousel Template"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:131
+msgid "Slide Column"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:143
+msgid "Slide Width"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:156
+msgid "Label Out Of Stock Products"
+msgstr ""
+
+#: inc/admin/settings/psfw-layout.php:169
+msgid "Enable to auto add ribbon labeled \"Out Of Stock\""
+msgstr ""
+
+#: inc/admin/settings/psfw-lightbox.php:4
+msgid "Display Lightbox"
+msgstr ""
+
+#: inc/admin/settings/psfw-lightbox.php:17
+msgid "Enable to show full content of product in lightbox"
+msgstr ""
+
+#: inc/admin/settings/psfw-lightbox.php:23
+msgid "Lightbox Label"
+msgstr ""
+
+#: inc/admin/settings/psfw-lightbox.php:31
+msgid "This is used as label to show lightbox quick view"
+msgstr ""
+
+#: inc/admin/settings/psfw-lightbox.php:36
+msgid "Lightbox Template"
+msgstr ""
+
+#: inc/admin/settings/psfw-out-of-stock.php:32
+msgid "Position"
+msgstr ""
+
+#: inc/admin/settings/psfw-out-of-stock.php:38
+msgid "Select a position for Ribbon"
+msgstr ""
+
+#: inc/admin/settings/psfw-out-of-stock.php:42
+msgid "Out Of Stock Template"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:7
+msgid "Taxonomies/Categories"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:10
+msgid "Custom Field"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:13
+msgid "Search Keyword"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:16
+msgid "Popular Post"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:34
+msgid "OrderBy"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:38
+msgid "ID"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:39
+msgid "Author"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:41
+msgid "Post Name"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:42
+msgid "Post Type"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:43
+msgid "Date"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:44
+msgid "Last Modified Date"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:45
+msgid "Parent ID"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:46
+msgid "Random"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:47
+msgid "Comment Count"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:48
+msgid "Menu Order"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:49
+msgid "Alphabetical Meta Value"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:50
+msgid "Numeric Meta Value"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:56
+msgid "Meta Key"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:67
+msgid "Order"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:70
+msgid "Ascending"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:71
+msgid "Descending"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:76
+msgid "Post Status"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:79
+msgid "Publish"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:80
+msgid "Pending"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:81
+msgid "Draft"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:82
+msgid "Auto Draft"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:83
+msgid "Future"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:84
+msgid "Private"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:85
+msgid "Inherit"
+msgstr ""
+
+#: inc/admin/settings/psfw-post.php:86
+msgid "Trash"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:5
+msgid "Display Price"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:18
+msgid "Enable to show price"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:31
+msgid "Price Type"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:37
+msgid "Actual Price"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:42
+msgid "Sale Price"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:49
+msgid "Display Wishlist Button"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:62
+msgid "Enable to show wishlist button"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:75
+msgid "Display Review"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:88
+msgid "Enable to show review"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:95
+msgid "Call To Action Button One"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:108
+msgid "Enable to show button one, for example Buy link"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:121
+#: inc/admin/settings/psfw-product.php:198
+msgid "Button Link Type"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:124
+#: inc/admin/settings/psfw-product.php:201
+msgid "Product Detail Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:125
+#: inc/admin/settings/psfw-product.php:137
+#: inc/admin/settings/psfw-product.php:202
+#: inc/admin/settings/psfw-product.php:214
+msgid "Common Custom Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:126
+#: inc/admin/settings/psfw-product.php:203
+msgid "Individual Custom link"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:129
+#: inc/admin/settings/psfw-product.php:206
+msgid "Add to Cart"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:147
+#: inc/admin/settings/psfw-product.php:224
+msgid ""
+"This link can be useful if you have any third party order processing systems."
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:150
+#: inc/admin/settings/psfw-product.php:227
+msgid ""
+"Please use #product_id, #product_slug or #product_title in the link to "
+"replace it with corresponding values in the provided link. For example: "
+"http://example.com/order?product_id=#product_id"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:156
+#: inc/admin/settings/psfw-product.php:233
+msgid "Button Text"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:171
+msgid "Call To Action Button Two"
+msgstr ""
+
+#: inc/admin/settings/psfw-product.php:184
+msgid "Enable to show button two"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:5
+msgid "Social Share"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:18
+msgid "Enable to show social share link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:33
+msgid "Facebook Share Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:46
+msgid "Enable to show facebook share link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:51
+msgid "Twitter Share Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:64
+msgid "Enable to show twitter share link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:68
+msgid "Google Plus Share Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:80
+msgid "Enable to show google plus share link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:84
+msgid "Linkedin Share Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:96
+msgid "Enable to show linkedin share link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:100
+msgid "Share Via Email"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:112
+msgid "Enable to show share via email"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:116
+msgid "Pinterest Share Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:128
+msgid "Enable to show pinterest share link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:132
+msgid "VK Share Link"
+msgstr ""
+
+#: inc/admin/settings/psfw-social.php:144
+msgid "Enable to show VK share link"
+msgstr ""
+
+#: inc/admin/settings/psfw-usages.php:6
+msgid "Shortcode"
+msgstr ""
+
+#: inc/admin/settings/psfw-usages.php:13
+msgid "Copy and paste the shortcode directly into any WordPress post or page."
+msgstr ""
+
+#: inc/admin/settings/psfw-usages.php:20
+msgid ""
+"Copy and paste this code into a template file to include the WP Product "
+"Gallery within your theme."
+msgstr ""
+
+#: inc/ajax/add-taxonomy.php:35
+msgid "Select Taxonomy First"
+msgstr ""
+
+#: inc/ajax/hierarchy-terms.php:6
+msgid "Please Select Taxonomy"
+msgstr ""
+
+#: inc/frontend/psfw-template.php:23
+#: inc/frontend/data/lightbox/ajax-content.php:23
+#: inc/frontend/template/slider/scroll-wrap-slider-template-14.php:49
+msgid "No post found"
+msgstr ""
+
+#: inc/frontend/data/lightbox-content.php:47
+msgid "Share this product"
+msgstr ""
+
+#: inc/frontend/data/lightbox-content.php:91
+msgid "Category: "
+msgstr ""
+
+#: inc/frontend/data/lightbox-content.php:98
+msgid "SHARE THIS PRODUCT"
+msgstr ""
+
+#: inc/frontend/data/lightbox-content.php:150
+#: inc/frontend/data/lightbox-content.php:204
+msgid "SHARE"
+msgstr ""
+
+#: inc/frontend/data/lightbox-content.php:197
+msgid "Categories"
+msgstr ""
+
+#: inc/frontend/data/lightbox/variable-content.php:21
+msgid "There are no any product variations"
+msgstr ""
+
+#: inc/frontend/data/ribbon/out-of-stock-ribbon.php:11
+msgid "Out Of Stock"
+msgstr ""
+
+#: inc/frontend/template/slider/template-10.php:51
+#: inc/frontend/template/slider/template-11.php:10
+msgid "Category"
+msgstr ""

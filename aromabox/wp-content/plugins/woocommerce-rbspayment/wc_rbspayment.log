@@ -1,0 +1,214 @@
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-07-07 14:14:37
+Wordpress version 5.4.2; Woocommerce version: 4.2.2
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 300000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=81134&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.4.2 + woocommerce version: 4.2.2","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 81134_1594131276
+)
+Response: {"orderId":"238402ea-0886-71d1-960f-efec5e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=238402ea-0886-71d1-960f-efec5e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-07-07 14:51:54
+Wordpress version 5.4.2; Woocommerce version: 4.2.2
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 300000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=81134&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.4.2 + woocommerce version: 4.2.2","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 81134_1594133513
+)
+Response: {"orderId":"e160bd32-660e-7a30-9481-57f65e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=e160bd32-660e-7a30-9481-57f65e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-04 13:24:20
+Wordpress version 5.4.2; Woocommerce version: 4.3.1
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 600000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82077&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.4.2 + woocommerce version: 4.3.1","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 82077_1596547459
+)
+Response: {"orderId":"860e4ad8-0299-7850-8859-654f5e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=860e4ad8-0299-7850-8859-654f5e2e14fc"}
+
+Request: https://3dsec.sberbank.ru/payment/rest/getOrderStatusExtended.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [orderId] => 860e4ad8-0299-7850-8859-654f5e2e14fc
+)
+Response: {"errorCode":"0","errorMessage":"Успешно","orderNumber":"82077_1596547459","orderStatus":6,"actionCode":-2007,"actionCodeDescription":"Истек срок ожидания ввода данных.","amount":600000,"currency":"643","date":1596547516693,"orderDescription":"","merchantOrderParams":[{"name":"phone","value":"89154790785"},{"name":"Module-Version: ","value":"3.3.1"},{"name":"CMS:","value":"Wordpress 5.4.2 + woocommerce version: 4.3.1"},{"name":"email","value":"akhmatova.o@gmail.com"}],"transactionAttributes":[],"attributes":[{"name":"mdOrder","value":"860e4ad8-0299-7850-8859-654f5e2e14fc"}],"terminalId":"123456","paymentAmountInfo":{"paymentState":"DECLINED","approvedAmount":0,"depositedAmount":0,"refundedAmount":0},"bankInfo":{"bankCountryCode":"UNKNOWN","bankCountryName":"<Неизвестно>"}}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-05 15:26:47
+Wordpress version 5.4.2; Woocommerce version: 4.3.1
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 150000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82150&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.4.2 + woocommerce version: 4.3.1","Module-Version: ":"3.3.1","email":"aromabox.ru@yandex.ru","phone":"+79852316061"}
+    [orderNumber] => 82150_1596641206
+)
+Response: {"orderId":"5e71f67f-63da-76a7-9771-c6aa5e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=5e71f67f-63da-76a7-9771-c6aa5e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-17 12:10:48
+Wordpress version 5.4.2; Woocommerce version: 4.3.1
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 180000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82154&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.4.2 + woocommerce version: 4.3.1","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 82154_1597666247
+)
+Response: {"orderId":"909f3ad9-587d-7817-89ca-95605e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=909f3ad9-587d-7817-89ca-95605e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-20 13:06:46
+Wordpress version 5.5; Woocommerce version: 4.4.0
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 150000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82156&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.5 + woocommerce version: 4.4.0","Module-Version: ":"3.3.1","email":"papernoket@gmail.co","phone":"+79855316061"}
+    [orderNumber] => 82156_1597928805
+)
+Response: {"orderId":"f2220c9a-bdd0-74e1-8e3a-56c85e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=f2220c9a-bdd0-74e1-8e3a-56c85e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-20 13:11:38
+Wordpress version 5.5; Woocommerce version: 4.4.0
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 260000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82157&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.5 + woocommerce version: 4.4.0","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 82157_1597929097
+)
+Response: {"orderId":"5b9b20e7-71e2-704e-a985-07685e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=5b9b20e7-71e2-704e-a985-07685e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-20 13:14:06
+Wordpress version 5.5; Woocommerce version: 4.4.0
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 150000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82158&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.5 + woocommerce version: 4.4.0","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 82158_1597929245
+)
+Response: {"orderId":"8e49fd8f-b0e9-72af-a298-322f5e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=8e49fd8f-b0e9-72af-a298-322f5e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-20 13:56:48
+Wordpress version 5.5; Woocommerce version: 4.4.0
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 150000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82159&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.5 + woocommerce version: 4.4.0","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 82159_1597931807
+)
+Response: {"orderId":"227fda14-49e5-77c2-b14e-36c25e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=227fda14-49e5-77c2-b14e-36c25e2e14fc"}
+
+Request: https://3dsec.sberbank.ru/payment/rest/getOrderStatusExtended.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [orderId] => 227fda14-49e5-77c2-b14e-36c25e2e14fc
+)
+Response: {"errorCode":"0","errorMessage":"Успешно","orderNumber":"82159_1597931807","orderStatus":2,"actionCode":0,"actionCodeDescription":"","amount":150000,"currency":"643","date":1597931804794,"orderDescription":"","ip":"37.18.25.120","merchantOrderParams":[{"name":"phone","value":"89154790785"},{"name":"sber_safe_email","value":"akhmatova.o@gmail.com"},{"name":"new_card_payment","value":"true"},{"name":"sber_safe_phone","value":"9154790785"},{"name":"Module-Version: ","value":"3.3.1"},{"name":"CMS:","value":"Wordpress 5.5 + woocommerce version: 4.4.0"},{"name":"email","value":"akhmatova.o@gmail.com"}],"transactionAttributes":[],"attributes":[{"name":"mdOrder","value":"227fda14-49e5-77c2-b14e-36c25e2e14fc"}],"cardAuthInfo":{"maskedPan":"411111**1111","expiration":"202412","cardholderName":"CARDHOLDER NAME","approvalCode":"123456","pan":"411111**1111"},"authDateTime":1597931845152,"terminalId":"123456","authRefNum":"264031834832","paymentAmountInfo":{"paymentState":"DEPOSITED","approvedAmount":150000,"depositedAmount":150000,"refundedAmount":0},"bankInfo":{"bankName":"TEST CARD","bankCountryCode":"RU","bankCountryName":"Россия"}}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-20 13:58:42
+Wordpress version 5.5; Woocommerce version: 4.4.0
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 150000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82156&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.5 + woocommerce version: 4.4.0","Module-Version: ":"3.3.1","email":"papernoket@gmail.co","phone":"+79855316061"}
+    [orderNumber] => 82156_1597931922
+)
+Response: {"orderId":"dc72f55c-62dc-771d-abd7-6c3b5e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=dc72f55c-62dc-771d-abd7-6c3b5e2e14fc"}
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Date: 2020-08-20 14:02:46
+Wordpress version 5.5; Woocommerce version: 4.4.0
+Request: https://3dsec.sberbank.ru/payment/rest/register.do: Array
+(
+    [userName] => aromabox-api
+    [password] => aromabox
+    [amount] => 50000
+    [language] => ru
+    [returnUrl] => http://aromabox.siteindev.ru?wc-api=WC_RBSPAYMENT&rbspayment=result&order_id=82160&wc-callb=callback_function
+    [currency] => 643
+    [jsonParams] => {"CMS:":"Wordpress 5.5 + woocommerce version: 4.4.0","Module-Version: ":"3.3.1","email":"akhmatova.o@gmail.com","phone":"89154790785"}
+    [orderNumber] => 82160_1597932165
+)
+Response: {"orderId":"284a0990-0667-7699-9bca-b94a5e2e14fc","formUrl":"https://3dsec.sberbank.ru/payment/merchants/sbersafe/payment_ru.html?mdOrder=284a0990-0667-7699-9bca-b94a5e2e14fc"}
+
