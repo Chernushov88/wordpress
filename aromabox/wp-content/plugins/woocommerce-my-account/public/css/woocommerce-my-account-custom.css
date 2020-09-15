@@ -1,0 +1,33 @@
+
+			.woocommerce-MyAccount-navigation-link, .woocommerce-MyAccount-navigation-link a {
+				color: #000000 !important;
+				background-color: transparent !important;
+			}
+
+			.woocommerce-MyAccount-navigation-link:hover, .woocommerce-MyAccount-navigation-link:hover a {
+				color: #000000 !important;
+				background-color: transparent !important;
+			}
+
+			.woocommerce-MyAccount-navigation-link.is-active, .woocommerce-MyAccount-navigation-link.is-active a {
+				color: #9ad3c6 !important;
+				background-color: transparent !important;
+			}
+		
+				.woocommerce-MyAccount-navigation, .woocommerce-MyAccount-content {
+					float: none !important;
+					width: 100% !important;
+					margin: 0 !important;
+				}
+
+
+				.woocommerce-MyAccount-navigation ul li {
+					display: inline-block;
+				}
+
+				.woocommerce-MyAccount-navigation ul li a::before {
+					float: left !important;
+					margin-left: 0 !important;
+					margin-right: 5px !important;
+				}
+			

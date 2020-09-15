@@ -1,0 +1,319 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce My Account\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-04 12:50+0000\n"
+"PO-Revision-Date: 2019-11-04 12:55+0000\n"
+"Last-Translator: WeLaunch <support@dev.welaunch.io>\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.2.4"
+
+#: admin/options-init.php:322
+msgid ". Tab"
+msgstr ""
+
+#: admin/options-init.php:91
+msgid "<p>Need support? Please use the comment function on codecanyon.</p>"
+msgstr ""
+
+#: admin/options-init.php:270 admin/options-init.php:290
+#: admin/options-init.php:310
+msgid "Add a background color to the tabs."
+msgstr "Füge den Registerkarten eine Hintergrundfarbe hinzu."
+
+#: admin/options-init.php:260 admin/options-init.php:280
+#: admin/options-init.php:300
+msgid "Add a text color to the tabs."
+msgstr ""
+"Füge den Registerkarten eine Textfarbe hinzu.\n"
+
+#: admin/options-init.php:446
+msgid "Amount of products"
+msgstr "Anzahl der Produkte"
+
+#: admin/options-init.php:155
+msgid "Amount of Tabs"
+msgstr "Anzahl der Tabs"
+
+#: admin/options-init.php:373
+msgid "Callback"
+msgstr ""
+
+#: admin/options-init.php:457
+msgid "Columns"
+msgstr "Spalten"
+
+#: admin/options-init.php:458
+msgid ""
+"Configure how many columns will be shown on e.g. related products callback."
+msgstr ""
+"Konfigurieren Sie, wie viele Spalten z.B. bei verwandten Produkten angezeigt "
+"werden.\n"
+
+#: admin/options-init.php:358
+msgid "Contact 7 Form"
+msgstr ""
+
+#: admin/options-init.php:400
+msgid "Contact 7 Forms"
+msgstr ""
+
+#: admin/options-init.php:380
+msgid "Content Editor"
+msgstr ""
+
+#: admin/options-init.php:356
+msgid "Editor"
+msgstr ""
+
+#: admin/options-init.php:148 admin/options-init.php:330
+msgid "Enable"
+msgstr ""
+
+#: admin/options-init.php:149
+msgid "Enable my account customizer."
+msgstr ""
+
+#: admin/options-init.php:176
+msgid "Enable Tab Rename"
+msgstr "Umbenennen der Tabs aktivieren"
+
+#: admin/options-init.php:240
+msgid "Enable Tab Styles"
+msgstr ""
+
+#: admin/options-init.php:331
+msgid "Enable this tab."
+msgstr ""
+
+#: admin/options-init.php:348
+msgid "Endpoint URL"
+msgstr ""
+
+#: admin/options-init.php:250
+msgid "Full Width"
+msgstr ""
+
+#: admin/options-init.php:359
+msgid "Function"
+msgstr ""
+
+#: admin/options-init.php:407
+msgid "Function Name"
+msgstr ""
+
+#: admin/options-init.php:140
+msgid "General"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://welaunch.io"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://welaunch.io/plugins/woocommerce-my-account/"
+msgstr ""
+
+#: admin/options-init.php:90
+msgid "Information"
+msgstr ""
+
+#: admin/options-init.php:248
+msgid "Left Sidebar"
+msgstr ""
+
+#: admin/options-init.php:447
+msgid ""
+"Limit the number of products to be shown on e.g. related products callback."
+msgstr ""
+
+#: admin/options-init.php:156
+msgid "Limit the number of tabs to decrease load time."
+msgstr ""
+
+#: admin/options-init.php:357
+msgid "Link"
+msgstr ""
+
+#: admin/options-init.php:389
+msgid "Link URL"
+msgstr ""
+
+#: admin/options-init.php:408
+msgid ""
+"Make sure a function with the name above is created in your child theme."
+msgstr ""
+
+#: admin/options-init.php:342
+msgid "Menu Title"
+msgstr ""
+
+#: admin/options-init.php:133
+msgid "My Account"
+msgstr ""
+
+#: admin/options-init.php:246
+msgid ""
+"Need a customized layout? Contact us at <a href=\"mailto:support@welaunch."
+"io\">support@welaunch.io</a>."
+msgstr ""
+
+#: admin/options-init.php:135
+msgid "Need support? Please use the comment function on codecanyon."
+msgstr ""
+
+#: admin/options-init.php:216
+msgid "Rename Account Tab"
+msgstr "Tab Konto umbenennen"
+
+#: admin/options-init.php:202
+msgid "Rename Addresses Tab"
+msgstr "Tab Adressen umbenennen"
+
+#: admin/options-init.php:181
+msgid "Rename Dashboard Tab"
+msgstr "Tab Dashboard umbenennen"
+
+#: admin/options-init.php:195
+msgid "Rename Downloads Tab"
+msgstr "Tab Downloads umbenennen"
+
+#: admin/options-init.php:223
+msgid "Rename Logout Tab"
+msgstr "Tab Abmeldung umbenennen"
+
+#: admin/options-init.php:188
+msgid "Rename Orders Tab"
+msgstr "Tab Aufträge umbenennen"
+
+#: admin/options-init.php:209
+msgid "Rename Payment Tab"
+msgstr "Tab Zahlung umbenennen"
+
+#: admin/options-init.php:249
+msgid "Right Sidebar"
+msgstr "Rechte Sidebar"
+
+#: admin/options-init.php:430
+msgid "Select the category from where the products should be shown."
+msgstr ""
+
+#: admin/options-init.php:401
+msgid "Select the form you want to show."
+msgstr ""
+
+#: admin/options-init.php:440
+msgid "Select the products you want to show."
+msgstr ""
+
+#: admin/options-init.php:369
+msgid "Show Best Selling Products"
+msgstr ""
+
+#: admin/options-init.php:363
+msgid "Show Cart"
+msgstr ""
+
+#: admin/options-init.php:439
+msgid "Show Categories"
+msgstr ""
+
+#: admin/options-init.php:367
+msgid "Show Featured Products"
+msgstr ""
+
+#: admin/options-init.php:365
+msgid "Show My Account"
+msgstr ""
+
+#: admin/options-init.php:364
+msgid "Show Order Tracking"
+msgstr ""
+
+#: admin/options-init.php:362
+msgid "Show Product Categories"
+msgstr ""
+
+#: admin/options-init.php:361 admin/options-init.php:429
+msgid "Show Products by category"
+msgstr ""
+
+#: admin/options-init.php:366
+msgid "Show Recent Products"
+msgstr ""
+
+#: admin/options-init.php:371
+msgid "Show Related Products"
+msgstr ""
+
+#: admin/options-init.php:368
+msgid "Show Sale Products"
+msgstr ""
+
+#: admin/options-init.php:370
+msgid "Show Top Rated Products"
+msgstr ""
+
+#: admin/options-init.php:232
+msgid "Style"
+msgstr ""
+
+#: admin/options-init.php:309
+msgid "Tab Active Background Color"
+msgstr ""
+
+#: admin/options-init.php:299
+msgid "Tab Active Text Color"
+msgstr ""
+
+#: admin/options-init.php:269
+msgid "Tab Background Color"
+msgstr ""
+
+#: admin/options-init.php:289
+msgid "Tab Hover Background Color"
+msgstr ""
+
+#: admin/options-init.php:279
+msgid "Tab Hover Text Color"
+msgstr ""
+
+#: admin/options-init.php:245
+msgid "Tab Layout"
+msgstr ""
+
+#: admin/options-init.php:259
+msgid "Tab Text Color"
+msgstr ""
+
+#. Description of the plugin
+msgid "The ultimate WooCommerce My Account Customizer Plugin"
+msgstr ""
+
+#: admin/options-init.php:349
+msgid "This should not contain spaces or special characters."
+msgstr ""
+
+#: admin/options-init.php:336
+msgid "Title"
+msgstr ""
+
+#. Author of the plugin
+msgid "WeLaunch"
+msgstr ""
+
+#. Name of the plugin
+msgid "WooCommerce My Account"
+msgstr ""
+
+#: woocommerce-my-account.php:88
+msgid ""
+"WooCommerce My Account requires the WooCommerce and Redux Framework plugin. "
+"Please install or activate them before!"
+msgstr ""
