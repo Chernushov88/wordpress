@@ -11,10 +11,10 @@ if (!empty($_POST['idu']))
 	{
 	update_user_meta( $idus, 'who', $_POST['cat']);	
 	}
-	if (!empty($_POST['desc']))
-	{
-	update_user_meta( $idus, 'description', $_POST['desc']);	
-	}
+	//if (!empty($_POST['desc']))
+	//{
+	//update_user_meta( $idus, 'description', $_POST['desc']);	
+	//}
 	$uploads_dir = $_SERVER['DOCUMENT_ROOT'].'/';
 if (!empty($_FILES['img']["tmp_name"]))
 { 

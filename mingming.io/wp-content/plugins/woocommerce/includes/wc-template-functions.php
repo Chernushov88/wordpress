@@ -1300,7 +1300,7 @@ if (!empty($iduu))
 {
 
 $cher=get_user_meta( $iduu[0], 'charity', true);
-
+$vip=get_user_meta( $iduu[0], 'vip', true);
 }
 		$imgi='';
 
@@ -1311,19 +1311,49 @@ $cher=get_user_meta( $iduu[0], 'charity', true);
 	{
 
 	$imgi='<img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt="">';
-
+	$charityIco = '<div class="charity-ico charity-copper"></div>';
+	//$vip = '<div class="vip-ico vip-copper"></div>';
 	}
     elseif ($cher==50)
 	{
 
 	$imgi='<img  class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt="">';
-
+	$charityIco = '<div class="charity-ico charity-sliver"></div>';
+	//$vip = '<div class="vip-ico vip-sliver"></div>';
 	}
 	elseif ($cher==100)
 	{
 
 	$imgi='<img  class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt="">';
+	$charityIco = '<div class="charity-ico charity-gold"></div>';
+	//$vip = '<div class="vip-ico vip-gold"></div>';
+	}
 
+
+
+		  }
+
+////////////////////
+
+if ($vip>0)
+		  {
+
+	if ($vip==1)
+	{
+
+	$vip = '<div class="vip-ico vip-copper"></div>';
+	}
+    elseif ($vip==2)
+	{
+
+
+	$vip = '<div class="vip-ico vip-sliver"></div>';
+	}
+	elseif ($vip==3)
+	{
+
+
+	$vip = '<div class="vip-ico vip-gold"></div>';
 	}
 
 
@@ -1332,11 +1362,7 @@ $cher=get_user_meta( $iduu[0], 'charity', true);
 
 
 
-
-
-
-
-        echo $imgi.'<div class="thumbnail-product fiy">'.woocommerce_get_product_thumbnail().'</div>'; // WPCS: XSS ok.
+        echo '<div class="thumbnail-product fiy">'.woocommerce_get_product_thumbnail().'<div class="flex">'.$charityIco.$vip.'</div></div>'; // WPCS: XSS ok.
 	}
 }
 if ( ! function_exists( 'woocommerce_template_loop_price' ) ) {

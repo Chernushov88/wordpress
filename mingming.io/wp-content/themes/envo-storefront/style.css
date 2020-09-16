@@ -5726,12 +5726,15 @@ div.swiper-slide{
 
     .ms_top_right {
         justify-content: flex-start;
+        flex-direction: row-reverse;
+        padding-right: 40px;
     }
 
     .ms_top_right .visible-xs-inline-block {
+        width: 32px;
         color: #fff;
-        margin: -2px 0 0px 10px;
-        padding: 0 10px;
+        margin: -4px 4px 0px 4px;
+        padding: 0 0px;
         float: left;
     }
 
@@ -5816,6 +5819,8 @@ div.swiper-slide{
     }
 
     .ms_top_right .ms_btn {
+        height: auto;
+        padding: 0px 2px;
         background: transparent;
     }
 
@@ -5828,7 +5833,11 @@ div.swiper-slide{
 
     .ms_btn img {
         display: block;
-        width: 20px;
+        width: 32px;
+    }
+    .ms_top_right a.glink img {
+        width: 34px;
+        height: 32px;
     }
 
     .container-enroll .col-sm-12 {
@@ -6024,6 +6033,31 @@ div.swiper-slide{
     #popupWriting div.wpcf7 textarea {
         height: 100px;
     }
+    .ms_top_left{
+        float: left;
+    }
+    .ms_top_left .logo{
+        width: 40px;}
+    .ms_top_right .ms_top_btn {
+        padding: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .ms_top_right a.glink img{
+        opacity: 0;
+    }
+    .ms_top_right a.glink:first-child{
+        background: url(/wp-content/themes/envo-storefront/img/icons-v2/CHINA.png) no-repeat center;
+        background-size: contain;
+    }
+    .ms_top_right a.glink:nth-child(2){
+        background: url(/wp-content/themes/envo-storefront/img/icons-v2/uk.png) no-repeat center;
+        background-size: contain;
+    }
+    .ms_top_right a.glink {
+        margin: 0 0 0 3px;
+    }
 }
 
 
@@ -6149,10 +6183,10 @@ div.swiper-slide{
         top: 15px;
     }
     .ms_top_right a.glink img{
-        margin-top: -5px;}
+        margin-top: -0px;}
 
     .ms_header {
-        padding: 10px 10px 0px 5px;
+        padding: 7px 10px 7px 10px;
         left: 0;
     }
     .elementor-widget-image-carousel .swiper-slide img{display: block !important;}

@@ -91,7 +91,7 @@
         </div> -->
       <div class="login-social foo_sharing blue_backg">
         <button class="btn btn-block btn-login" name="submit" onclick="sub()" type="button">Sign Up</button>
-        <ul class="social">
+        <ul class="social" style="display:none;">
           <li><a href="#"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
           <li><a href=""><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li>

@@ -1,0 +1,361 @@
+# Translation of Themes - Envo Storefront in Japanese
+# This file is distributed under the same license as the Themes - Envo Storefront package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-03-10 10:01:31+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Themes - Envo Storefront\n"
+
+#. Description of the theme
+msgid "Envo Storefront is a fast, clean and modern-looking responsive free WooCommerce theme for WordPress. This theme supports popular page builders like Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer, etc. The theme is responsive, super fast, SEO friendly, WPML and RTL ready. Documentation: https://envothemes.com/docs/docs/envo-storefront/ Theme demo ready to import: https://envothemes.com/envo-storefront/"
+msgstr "Envo Storefront は、WordPress 用の高速でクリーンでモダンなレスポンシブな無料の WooCommerce テーマです。このテーマは、Elementor、KingComposer、Beaver Builder、SiteOrigin、Thrive Architect、Divi、Brizy、Visual Composerなどの一般的なページビルダーをサポートしています。テーマは、超高速、SEO フレンドリー、WPML および RTL に対応しています。ドキュメンテーション：https://envothemes.com/docs/docs/envo-storefront/ インポート可能なテーマデモ：https://envothemes.com/envo-storefront/"
+
+#. Theme Name of the theme
+msgid "Envo Storefront"
+msgstr "Envo Storefront"
+
+#: lib/customizer/info.php:147
+msgid "View PRO version"
+msgstr "有料版を見る"
+
+#: lib/customizer/info.php:145
+msgid "PRO version"
+msgstr "有料版"
+
+#. translators: %s: "documentation" string
+#: lib/customizer/info.php:30
+msgid "For step-by-step videos and text tutorials, see %1$s"
+msgstr "各手順ごとの動画とチュートリアルは%1$sを参照してください"
+
+#. translators: %s: "demos here" string
+#: lib/customizer/info.php:26
+msgid "demos"
+msgstr "デモサイト"
+
+#. translators: %s: "demos here" string
+#: lib/customizer/info.php:26
+msgid "You can use this theme to create a website like these %1$s"
+msgstr "このテーマを使用して、こちらの%1$sのようなウェブサイトを作成できます"
+
+#: lib/customizer/info.php:11
+msgid "Video Documentation & Demo"
+msgstr "ビデオドキュメントとデモ"
+
+#: lib/wp_bootstrap_navwalker.php:362
+msgid "Add a menu"
+msgstr "メニューを追加"
+
+#: lib/woocommerce.php:61
+msgid "My Account"
+msgstr "私のアカウント"
+
+#: lib/woocommerce.php:7
+msgid "View your shopping cart"
+msgstr "ショッピングカートを表示"
+
+#. translators: %1$s "documentation" string and link
+#. translators: %s: "documentation" string
+#. translators: %s: "Click here" string
+#: lib/dashboard.php:466 lib/customizer/info.php:30 lib/customizer/demo.php:27
+msgid "documentation"
+msgstr "ドキュメント"
+
+#. translators: %1$s "documentation" string and link
+#. translators: %s: "Click here" string
+#: lib/dashboard.php:466 lib/customizer/demo.php:27
+msgid "You can import the demo content with just one click. For step-by-step video tutorial, see %1$s"
+msgstr "1クリックでデモコンテンツをインポートできます。手順ごとのチュートリアルビデオを参照するには、%1$sをご覧ください。"
+
+#: lib/dashboard.php:448
+msgid "Hooray! There are no required actions for you right now."
+msgstr "現在、必要な操作はありません。"
+
+#: lib/dashboard.php:439
+msgid "Recommended plugins"
+msgstr "おすすめプラグイン"
+
+#: lib/dashboard.php:414
+msgid "Contact us"
+msgstr "お問い合わせ"
+
+#: lib/dashboard.php:412
+msgid "Having trouble? Need support?"
+msgstr "サポートが必要ですか ?"
+
+#. translators: %s theme name
+#: lib/dashboard.php:406
+msgid "%s Documentation"
+msgstr "%s ドキュメント"
+
+#. translators: %s theme name
+#: lib/dashboard.php:399
+msgid "Need help in setting up and configuring %s? Please take a look at our documentation page."
+msgstr "%s の設定でお困りですか ? ドキュメントを参照してください。"
+
+#: lib/dashboard.php:395
+msgid "Theme documentation"
+msgstr "テーマドキュメント"
+
+#: lib/dashboard.php:391
+msgid "Start customizing"
+msgstr "カスタマイズの開始"
+
+#. translators: %s theme name
+#: lib/dashboard.php:387
+msgid "%s supports the Theme Customizer for all theme settings. Click \"Customize\" to personalize your site."
+msgstr "%s はテーマカスタマイザーにてテーマのすべての設定ができます。「カスタマイズの開始」をクリックしてカスタマイザーを起動し、サイトをカスタマイズしましょう。"
+
+#: lib/dashboard.php:383
+msgid "Theme Customizer"
+msgstr "テーマカスタマイザー"
+
+#: lib/dashboard.php:321 lib/dashboard.php:323 lib/customizer/demo.php:15
+msgid "One Click Demo Import"
+msgstr "1クリックデモインポート"
+
+#: lib/dashboard.php:302
+msgid "Recommended Actions"
+msgstr "おすすめ設定"
+
+#: lib/dashboard.php:255
+msgid "Details"
+msgstr "詳細"
+
+#: lib/dashboard.php:234
+msgid "Activate"
+msgstr "有効化"
+
+#: lib/dashboard.php:215
+msgid "Install Now"
+msgstr "今すぐインストール"
+
+#: lib/dashboard.php:172 lib/dashboard.php:176 lib/dashboard.php:457
+#: lib/customizer/demo.php:42 lib/customizer/demo.php:44
+msgid "Import demo data"
+msgstr "デモデータをインポート"
+
+#. translators: %s theme name
+#: lib/dashboard.php:162
+msgid "Get started with %s"
+msgstr "%s を利用開始"
+
+#. translators: %1$s: theme name, %2$s link
+#: lib/dashboard.php:154
+msgid "Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer please make sure you visit our <a href=\"%2$s\">Welcome page</a>"
+msgstr "%1$s をインストールいただきありがとうございます。<a href=\"%2$s\">テーマの設定ページ</a>を開き、機能を最大限にご活用ください"
+
+#. translators: %1$s: theme name, %2$s theme version
+#. translators: %1$s theme name, %2$s theme version
+#: lib/dashboard.php:147 lib/dashboard.php:366
+msgid "Welcome to %1$s - Version %2$s"
+msgstr "%1$s へようこそ - バーション %2$s"
+
+#: lib/dashboard.php:126
+msgid "Envo Storefront dashboard"
+msgstr "Envo Storefront ダッシュボード"
+
+#: lib/dashboard.php:123
+msgid "Envo Storefront theme"
+msgstr "Envo Storefront テーマ"
+
+#. translators: %s: replaced with number (counter)
+#: lib/dashboard.php:121
+msgid "Envo Storefront theme %s"
+msgstr "Envo Storefront テーマ %s"
+
+#. translators: %1$s: replaced with number (counter)
+#: lib/dashboard.php:118
+msgid "%1$s action required"
+msgid_plural "%1$s actions required"
+msgstr[0] "%1$s アクションが必要です"
+
+#: comments.php:46
+msgid "Comments are closed."
+msgstr "コメントは受け付けていません。"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:22
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; への %1$s 件のフィードバック"
+
+#. translators: %s: post title
+#: comments.php:19
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "「%s」への1件のフィードバック"
+
+#: content-none.php:19
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "こちらには何もありません。検索をお試しください。"
+
+#: content-none.php:14
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "検索キーワードに一致するものが見つかりませんでした。 別のキーワードで試してみてください。"
+
+#. translators: %1$s: link to admin area
+#: content-none.php:8
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "最初の投稿を公開する準備はできましたか？<a href=\"%1$s\">ここから始めましょう</a>。"
+
+#: content-none.php:2
+msgid "Nothing Found"
+msgstr "見つかりませんでした"
+
+#: template-parts/template-part-topnav.php:79
+msgid "Menu"
+msgstr "メニュー"
+
+#: template-parts/template-part-topnav.php:41
+msgid "All Categories"
+msgstr "全てのカテゴリー"
+
+#: template-parts/template-part-topnav.php:39
+msgid "Search products..."
+msgstr "商品を検索・・・"
+
+#: template-parts/template-part-postauthor.php:4
+msgid "About The Author"
+msgstr "投稿者について"
+
+#. Template Name of the theme
+msgid "Page Builders"
+msgstr "Page Builders"
+
+#: 404.php:10
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "こちらには何もありません。検索をお試しください。"
+
+#: 404.php:8
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "ページが見つかりません。"
+
+#. translators: %s: search result string
+#: search.php:13
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#: functions.php:559
+msgid "Skip to the content"
+msgstr "コンテンツにスキップ"
+
+#: functions.php:527
+msgid "By"
+msgstr "投稿者:"
+
+#: functions.php:512
+msgid "Next"
+msgstr "次ヘ"
+
+#: functions.php:512
+msgid "Next Post"
+msgstr "次の投稿"
+
+#: functions.php:511
+msgid "Previous"
+msgstr "前へ"
+
+#: functions.php:511
+msgid "Previous Post"
+msgstr "過去の投稿"
+
+#: functions.php:441
+msgid "Comment on "
+msgstr "投稿にコメントがあるは"
+
+#: functions.php:438
+msgid "Off"
+msgstr "オフ"
+
+#. translators: %1$s: Envo Storefront theme name (do not translate) with
+#. envothemes.com URL
+#: functions.php:404
+msgctxt "Theme name, do not translate"
+msgid "Envo Storefront"
+msgstr "Envo Storefront"
+
+#. translators: %1$s: Envo Storefront theme name (do not translate) with
+#. envothemes.com URL
+#: functions.php:404
+msgid "Theme: %1$s"
+msgstr "テーマ: %1$s"
+
+#. translators: %s: WordPress name with wordpress.org URL
+#: functions.php:399
+msgid "WordPress"
+msgstr "WordPress"
+
+#. translators: %s: WordPress name with wordpress.org URL
+#: functions.php:399
+msgid "https://wordpress.org/"
+msgstr "https://ja.wordpress.org/"
+
+#. translators: %s: WordPress name with wordpress.org URL
+#: functions.php:399
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#: functions.php:375
+msgid "Tags"
+msgstr "タグ"
+
+#: functions.php:371
+msgid "Category"
+msgstr "カテゴリー"
+
+#: functions.php:327
+msgid "Footer Section"
+msgstr "フッターセクション"
+
+#: functions.php:317
+msgid "Header Section"
+msgstr "ヘッダーセクション"
+
+#: functions.php:307
+msgid "Top Bar Section"
+msgstr "上部バー"
+
+#: functions.php:297
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: functions.php:194
+msgctxt "Open Sans Condensed font: on or off"
+msgid "on"
+msgstr "off"
+
+#. translators: %s plugin name string
+#: functions.php:95
+msgid "The most advanced frontend drag & drop page builder."
+msgstr "最も先進的なフロントエンドのドラッグアンドドロップページビルダー。"
+
+#. translators: %s plugin name string
+#: functions.php:89
+msgid "To enable shop features, please install and activate the %s plugin."
+msgstr "ショップの機能を有効にするには、%sプラグインをインストールして有効にしてください。"
+
+#: functions.php:83 lib/dashboard.php:169
+msgid "Save time by importing our demo data: your website will be set up and ready to be customized in minutes."
+msgstr "デモデータをインポートして、時間を節約しましょう。1分で Web サイトをセットアップし、カスタマイズを始められます。"
+
+#: functions.php:25
+msgid "Main Menu"
+msgstr "メインメニュー"
+
+#. Author URI of the theme
+msgid "https://envothemes.com/"
+msgstr "https://envothemes.com/"
+
+#. Author of the theme
+msgid "EnvoThemes"
+msgstr "EnvoThemes"
+
+#. Theme URI of the theme
+msgid "https://envothemes.com/free-envo-storefront/"
+msgstr "https://envothemes.com/free-envo-storefront/"

@@ -170,7 +170,7 @@ form .required {
 	            <div class="form-group foo_sharing">
 	            	<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 	            	<button type="submit" class="btn btn-login btn-block" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">Login Now</button>
-                    <ul class="social">
+                    <ul class="social" style="display:none;">
                       <!-- <li><a href="javascript:void(0);"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
                       <li><a href="javascript:void(0);"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
                       <li><a href="javascript:void(0);"><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li> -->

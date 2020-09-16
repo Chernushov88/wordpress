@@ -60,14 +60,26 @@ $cher=get_user_meta( $user->ID, 'charity', true);
 if (is_user_role('actor', $user->ID)) {
 
 $baln=get_user_meta( $user->ID, 'balance', true);
- if (empty($baln)){
+$baln = $baln * 1;
+if($baln < 0){
+    $baln2 = 0;
+    echo '<div class="hide"> baln2 -'.$baln2.'</div>';
+}
+if($baln > 0){
+    $baln2 = $baln;
+    echo '<div class="hide"> baln - '.$baln.'</div>';
+}
+
+
+ if (empty($baln2)){
   $sum=0;
  } else{
-  $sum=$baln;
+  $sum = $baln2;
   $cherSum = $sum * $cher / 100;
   $result = $sum - $cherSum;
  }
- echo $baln;
+
+
  echo '<ul class="usel-lest-roles">
  <li><div class="name-price">Total (USD): '.$sum.'</div></li>
  <li><div class="name-price">Charity (USD): '.$cherSum.'</div></li>

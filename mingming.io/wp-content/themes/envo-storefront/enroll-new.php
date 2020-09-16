@@ -480,17 +480,25 @@ $z=0;
                 <?
 				$z++;
                   }
-
+				  else
+				  { 
+			  ?>
+				<input checked="checked" style="display:none" type="checkbox" value="<?=$cat->name?>" rel="<?=$cat->term_id?>" name="che" class="che">
+									  
+				  
+ <?
                   }
+				  
+					 }
                   ?>
               </div>
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
               <label for="descripOrder">Description</label>
               <div class="input-group">
                 <textarea name="descripOrder" id="descripOrder" cols="30" rows="10" class="form-control " placeholder="subtitle"></textarea>
               </div>
-            </div>
+            </div>-->
             <button type="button" onclick="cheketCheckbox();" class="btn btn-block btn-login">Submit</button>
           </div>
           <div class="step step-4 hidden">
@@ -515,9 +523,13 @@ $z=0;
               <li>1) represent yourself</li>
               <li>2) say "Special for Mingming"</li>
             </ul>
-            <!-- <div class="defalt-state-video">
-              <img src="/wp-content/themes/envo-storefront/img/player.png" alt="">
-            </div> -->
+            
+			<div class="defalt-state-video">
+              <a id="idp1" target="_blank" href="javascript:void()"><img src="/wp-content/themes/envo-storefront/img/player.png" alt=""></a>
+              <!--<a id="idp2" target="_blank" href="javascript:void()"><img src="/wp-content/themes/envo-storefront/img/player.png" alt=""></a>
+			-->
+			</div> 
+			
             <div class="text-en">
               Please record a video to briefly introduce yourself, share the news of joining MingMing, and tell your fans that you would be happy to make a video for them, for example, congratulating them on their birthday, simply saying hi to their family and friends, or fulfilling any other request you would like to. Be creative and make a video in your own style.
             </div>
@@ -637,7 +649,7 @@ $z=0;
 
   }
 
-
+ 
   function seno()
   {
 
@@ -832,7 +844,7 @@ $z=0;
           },
           error: function(data){
             //jQuery('#su').show()
-            console.log(data);ShowPopup('#su2');
+            console.log(data);ShowPopup('#su22');
           }
 
 
@@ -852,7 +864,7 @@ $z=0;
 
 
 
-      ShowPopup('#su2');
+      ShowPopup('#su22');
 
 
       }
@@ -865,16 +877,22 @@ $z=0;
        {
 
 
+   var cat1 = [];
+      jQuery("input.che:checked").each(function(indx){
+      var pushed = cat1.push(jQuery(this).val());
+      });
+      var cat = cat1.join();
+   
+   
+	 if ( ( (jQuery('#addPhoto').val().length>0) ) && (cat.length>0) )
+	 {
+   
 
        var formData = new FormData(jQuery('#tova')[0]);
         var fd = new FormData();
       var idu=jQuery('#idu').text();
 
-      var cat1 = [];
-      jQuery("input.che:checked").each(function(indx){
-      var pushed = cat1.push(jQuery(this).val());
-      });
-      var cat = cat1.join();
+      
 
 
       var cat10 = [];
@@ -889,7 +907,7 @@ $z=0;
       fd.append('cat',cat);
       fd.append('cat0',cat0);
       fd.append('img', jQuery('#addPhoto')[0].files[0]);
-      fd.append('desc',jQuery('#descripOrder').val());
+    
 
 
         jQuery.ajax({
@@ -910,7 +928,7 @@ $z=0;
           jQuery(nextElem).removeClass('hidden');
         }, 500)
 
-
+		
 
 
         },
@@ -919,7 +937,49 @@ $z=0;
         }
       });
 
+	   }
+	   
+	   
+	 else
+      {
 
+
+
+      if  (jQuery('#addPhoto').val().length>0){
+        jQuery('#addPhoto').parent().find('label').removeClass('ero');
+      }
+      else{
+        jQuery('#addPhoto').parent().find('label').addClass('ero');
+      }
+
+
+	  if (cat.length>0) 
+	  {
+		  
+	 jQuery('.chooseCategory').find('label').css('color','#fff');
+		  
+		  
+	  }
+	  else
+	  {
+		  
+	  jQuery('.chooseCategory').find('label').css('color','#ff0000');
+		  
+	  }
+	  
+	  
+	  
+	  
+
+    
+
+      }
+	   
+	   
+	   
+	   
+	   
+	   
 
 
        }
@@ -931,6 +991,37 @@ $z=0;
         });
         setTimeout(function(){
           jQuery(nextElem).removeClass('hidden');
+		  
+		  
+		  
+		    var id=jQuery('#idu').text();
+  
+
+   jQuery.ajax({
+    type: "POST",
+    url: "/ters.php",
+    data: {
+    idu:jQuery('#idu').text(),
+    },
+      success: function(data)
+   {
+   var tf=jQuery.trim(data).split('+++');
+   jQuery('#idp1').attr('href',tf[0]);
+
+   },
+    error: function(data)
+	{
+    }
+
+
+  });
+		  
+		  
+		  
+		  
+		  
+		  
+		  
         }, 500)
 
        }
@@ -1128,6 +1219,23 @@ $z=0;
     </div>
   </div>
 </div>
+
+
+<div id="su22" class="popup blue_backg popup-su">
+  <div class="close" onclick="HidePopup('#su22');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
+  <div class="modal-content " role="document">
+    <div class="modal-header">
+      <h2 class="modal-title"></h2>
+    </div>
+    <div class="modal-body">
+      <div class="error">Error</div>
+      <div style="color:#fff; font-weight: 400;">Please, select one and type in your account</div>
+    </div>
+  </div>
+</div>
+
+
+
 <div id="su1" class="popup blue_backg popup-su">
   <div class="close" onclick="HidePopup('#su1');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
   </br>
