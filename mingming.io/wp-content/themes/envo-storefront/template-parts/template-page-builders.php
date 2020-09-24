@@ -5,8 +5,10 @@
  *
  */
 get_header('builders');
-?>
+/*
 <div id="site-content" class="page-builders" role="main">
+*/?>
+<div class="page-builders" role="main">
     <div class="page-builders-content-area">
         <!-- start content container -->
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -17,7 +19,7 @@ get_header('builders');
         <?php else : ?>
             <?php get_template_part('content', 'none'); ?>
         <?php endif; ?>
-<?/*php get_template_part('template-parts/template-part', 'responsivegrid'); */?>
+<?php get_template_part('template-parts/template-part', 'responsivegrid'); ?>
 
 
 <!-- <h1><a href="https://mingming.io/galery-castom-test/">https://mingming.io/galery-castom-test/</a></h1> -->

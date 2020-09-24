@@ -24,84 +24,104 @@ do_action( 'woocommerce_before_account_navigation' );
 ?>
 <style>
 
-    .single-entry-summary .woocommerce{
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        justify-content: space-between;
-        padding: 25px;
-    }
-    .single-entry-summary .woocommerce .account-details h2{
-        color: #fff;
-    }
-	.woocommerce-MyAccount-navigation-link--payment-methods
-	{
-		display:none;
-	}
+  .page-wrap{
+    padding-bottom: 0;
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  #sidebar {
+    display: none;
+  }
+  .col-md-9 {
+    width: 100%;
+    padding: 0;
+  }
+  .single-head {
+    display: none;
+  }
+  #site-content{
+    min-height: calc(100vh - 85px);
+    padding: 0;
+  }
+  .page-area {
+    padding-top: 0px;
+  }
+  .single-entry-summary,
+  .row.row-account,
+  article{
+    margin: 0;
+  }
 </style>
 
-<nav class="woocommerce-MyAccount-navigation blue_backg">
-	<ul>
-		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
-			<li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
-				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php echo esc_html( $label ); ?></a>
-			</li>
-		<?php endforeach; ?>
+<nav class="woocommerce-MyAccount-navigation">
+  <div class="h3">我的帐户</div>
+  <ul>
+    <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
+    <li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
+      <a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>">
+        <span class="icon"></span>
+        <?php echo esc_html( $label ); ?>
+      </a>
+    </li>
+    <?php endforeach; ?>
 
 
-<?
+    <?
 $sum=0;
 $user = wp_get_current_user();
 $cher=get_user_meta( $user->ID, 'charity', true);
 
 
-if (is_user_role('actor', $user->ID)) {
+    if (is_user_role('actor', $user->ID)) {
 
-$baln=get_user_meta( $user->ID, 'balance', true);
-$baln = $baln * 1;
-if($baln < 0){
+    $baln=get_user_meta( $user->ID, 'balance', true);
+    $baln = $baln * 1;
+    if($baln < 0){
     $baln2 = 0;
     echo '<div class="hide"> baln2 -'.$baln2.'</div>';
-}
-if($baln > 0){
+    }
+    if($baln > 0){
     $baln2 = $baln;
     echo '<div class="hide"> baln - '.$baln.'</div>';
-}
+    }
 
 
- if (empty($baln2)){
-  $sum=0;
- } else{
-  $sum = $baln2;
-  $cherSum = $sum * $cher / 100;
-  $result = $sum - $cherSum;
- }
+    if (empty($baln2)){
+    $sum=0;
+    } else{
+    $sum = $baln2;
+    $cherSum = $sum * $cher / 100;
+    $result = $sum - $cherSum;
+    }
 
 
- echo '<ul class="usel-lest-roles">
- <li><div class="name-price">Total (USD): '.$sum.'</div></li>
- <li><div class="name-price">Charity (USD): '.$cherSum.'</div></li>
- <li><div class="name-price">Available (USD): '.$result.'</div></li>
- <li><a href="javascript:void(0);" onclick="showPopup(\'#popupUserRole\');" class="btn btn-login">Get money</a></li>
- </ul>';
- };
-?>
+    echo '<ul class="usel-lest-roles">
+    <li><div class="name-price">Total (USD): '.$sum.'</div></li>
+    <li><div class="name-price">Charity (USD): '.$cherSum.'</div></li>
+    <li><div class="name-price">Available (USD): '.$result.'</div></li>
+    <li><a href="javascript:void(0);" onclick="showPopup(\'#popupUserRole\');" class="btn btn-login">Get money</a></li>
+  </ul>';
+    };
+    ?>
 
-    </ul>
+  </ul>
 
-<a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">Write to us</a>
+  <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">
+    <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/writing-active.png" alt="">
+    <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/writing.png" alt="">联络我们</a>
 
 
 
 
 </nav>
 <script>
-    function showPopup(target){
-      jQuery(".darken").fadeIn();
-      jQuery(target).addClass('open');
-    }
+  function showPopup(target){
+    jQuery(".darken").fadeIn();
+    jQuery(target).addClass('open');
+  }
 </script>
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>
 <div id="popupUserRole" class="popup">
@@ -138,18 +158,18 @@ if($baln > 0){
               <label>
                 <input type="radio" name="radio" value="Paypal"><span> Paypal</span>
               </label>
-              </li>
+            </li>
           </ul>
         </div>
         <div class="form-group">
           <input type="number" id="man" onkeyup="return proverka(this);" onchange="return proverka(this);" value="<?=$result?>" placeholder="how many you will get:">
         </div>
         <div class="form-group form-control">
-            <div tabindex="-1" class="CardNumberField ">
-                  <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" aria-invalid="false" value="" placeholder="Input payment requirement here">
-                  <!-- <input id="ra2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
-                  <input id="ra3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value=""> -->
-              </div>
+          <div tabindex="-1" class="CardNumberField ">
+            <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" aria-invalid="false" value="" placeholder="Input payment requirement here">
+            <!-- <input id="ra2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
+            <input id="ra3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value=""> -->
+          </div>
         </div>
 
         <!-- <div class="form-group">
@@ -160,62 +180,90 @@ if($baln > 0){
           <div class="text-danger" id="response2"></div>
         </div>
         <div class="small">You can use Stripe or Paypal to withdraw money. Withdrawal requests are processed within 1 to 5 days. The minimum withdrawal amount is 100 USD.
-(we will add more withdrawal options in the near future, including wechat pay and alipay) </div>
+          (we will add more withdrawal options in the near future, including wechat pay and alipay) </div>
       </form>
     </div>
     <div class="modal-footer"></div>
   </div>
 </div>
 <script>
-function send()
-{
-jQuery('#response2').html('');
+  function send()
+  {
+    jQuery('#response2').html('');
 
-var ra1=jQuery('#ra1').val();
-var ra2=jQuery('#ra2').val();
-var ra3=jQuery('#ra3').val();
-var ra0=jQuery('#man').val();
+    var ra1=jQuery('#ra1').val();
+    var ra2=jQuery('#ra2').val();
+    var ra3=jQuery('#ra3').val();
+    var ra0=jQuery('#man').val();
 
-if ( (ra1.length>0) && (ra2.length>0)  && (ra3.length>0) )
-{
-jQuery.ajax({
-			type: "POST",
-			url: "/getmoney.php",
-			data: {
-			id:'<?=$user->ID?>',
-			man:ra0,
-            ra1:ra1,
-			ra2:ra2,
-			ra3:ra3,
-			},
-success: function(data)
-{
-jQuery('#response2').html('');
-jQuery('#response2').append('<p style="color:green">Success!</p>');
-console.log(data);
-}
-
-
-	});
+    if ( (ra1.length>0) && (ra2.length>0)  && (ra3.length>0) )
+    {
+      jQuery.ajax({
+        type: "POST",
+        url: "/getmoney.php",
+        data: {
+          id:'<?=$user->ID?>',
+          man:ra0,
+          ra1:ra1,
+          ra2:ra2,
+          ra3:ra3,
+        },
+        success: function(data)
+        {
+          jQuery('#response2').html('');
+          jQuery('#response2').append('<p style="color:green">Success!</p>');
+          console.log(data);
+        }
 
 
-}
-else
-{
-jQuery('#response2').html('');
-jQuery('#response2').append('<p style="color:red">Empty fields!</p>');
-}
-}
-function proverka(input)
-{
-	var sum=Number(<?=$result; ?>);
- if ( input.value>sum)
- {
-input.value =sum;
- }
- else
- {
-  input.value = input.value.replace(/[^\d]/g, '');
-}
-}
+      });
+
+
+    }
+    else
+    {
+      jQuery('#response2').html('');
+      jQuery('#response2').append('<p style="color:red">Empty fields!</p>');
+    }
+  }
+  function proverka(input)
+  {
+    var sum=Number(<?=$result; ?>);
+    if ( input.value>sum)
+    {
+      input.value =sum;
+    }
+    else
+    {
+      input.value = input.value.replace(/[^\d]/g, '');
+    }
+  }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?
+/*
+
+UPDATE wp_options SET option_value = REPLACE (option_value, 'https://mingming.local', 'https://ming2.beget.tech') WHERE option_name = 'home' OR option_name = 'siteurl';
+
+UPDATE wp_posts SET guid = REPLACE (guid, 'https://mingming.local', 'https://ming2.beget.tech');
+
+UPDATE wp_posts SET post_content = REPLACE (post_content, 'https://mingming.local','https://ming2.beget.tech');
+
+*/
+?>
+

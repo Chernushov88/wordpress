@@ -41,9 +41,10 @@ defined( 'ABSPATH' ) || exit;
     .row-account #sidebar{display: none;}
     .woocommerce-MyAccount-navigation-link--dashboard,
     .woocommerce-MyAccount-navigation-link--downloads,
+    .woocommerce-MyAccount-navigation-link--payment-methods,
     .woocommerce-MyAccount-navigation-link--edit-address{display: none;}
 </style>
-<div class="woocommerce-MyAccount-content blue_backg">
+<div class="woocommerce-MyAccount-content purple_backg">
 	<?php
 		/**
 		 * My Account content.

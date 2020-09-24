@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'NotoSansCJKsc-Thin-Alphabetic';
+    src: url('NotoSansCJKsc-Thin-Alphabetic.eot');
+    src: url('NotoSansCJKsc-Thin-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Thin-Alphabetic.woff2') format('woff2'),
+        url('NotoSansCJKsc-Thin-Alphabetic.woff') format('woff'),
+        url('NotoSansCJKsc-Thin-Alphabetic.ttf') format('truetype'),
+        url('NotoSansCJKsc-Thin-Alphabetic.svg#NotoSansCJKsc-Thin-Alphabetic') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Medium-Alphabetic';
+    src: url('NotoSansCJKsc-Medium-Alphabetic.eot');
+    src: url('NotoSansCJKsc-Medium-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Medium-Alphabetic.woff2') format('woff2'),
+        url('NotoSansCJKsc-Medium-Alphabetic.woff') format('woff'),
+        url('NotoSansCJKsc-Medium-Alphabetic.ttf') format('truetype'),
+        url('NotoSansCJKsc-Medium-Alphabetic.svg#NotoSansCJKsc-Medium-Alphabetic') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Bold-Alphabetic';
+    src: url('NotoSansCJKsc-Bold-Alphabetic.eot');
+    src: url('NotoSansCJKsc-Bold-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Bold-Alphabetic.woff2') format('woff2'),
+        url('NotoSansCJKsc-Bold-Alphabetic.woff') format('woff'),
+        url('NotoSansCJKsc-Bold-Alphabetic.ttf') format('truetype'),
+        url('NotoSansCJKsc-Bold-Alphabetic.svg#NotoSansCJKsc-Bold-Alphabetic') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Light-Alphabetic';
+    src: url('NotoSansCJKsc-Light-Alphabetic.eot');
+    src: url('NotoSansCJKsc-Light-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Light-Alphabetic.woff2') format('woff2'),
+        url('NotoSansCJKsc-Light-Alphabetic.woff') format('woff'),
+        url('NotoSansCJKsc-Light-Alphabetic.ttf') format('truetype'),
+        url('NotoSansCJKsc-Light-Alphabetic.svg#NotoSansCJKsc-Light-Alphabetic') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Regular-Alphabetic';
+    src: url('NotoSansCJKsc-Regular-Alphabetic.eot');
+    src: url('NotoSansCJKsc-Regular-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Regular-Alphabetic.woff2') format('woff2'),
+        url('NotoSansCJKsc-Regular-Alphabetic.woff') format('woff'),
+        url('NotoSansCJKsc-Regular-Alphabetic.ttf') format('truetype'),
+        url('NotoSansCJKsc-Regular-Alphabetic.svg#NotoSansCJKsc-Regular-Alphabetic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Black-Alphabetic';
+    src: url('NotoSansCJKsc-Black-Alphabetic.eot');
+    src: url('NotoSansCJKsc-Black-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Black-Alphabetic.woff2') format('woff2'),
+        url('NotoSansCJKsc-Black-Alphabetic.woff') format('woff'),
+        url('NotoSansCJKsc-Black-Alphabetic.ttf') format('truetype'),
+        url('NotoSansCJKsc-Black-Alphabetic.svg#NotoSansCJKsc-Black-Alphabetic') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-DemiLight-Alphabetic';
+    src: url('NotoSansCJKsc-DemiLight-Alphabetic.eot');
+    src: url('NotoSansCJKsc-DemiLight-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic.woff2') format('woff2'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic.woff') format('woff'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic.ttf') format('truetype'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic.svg#NotoSansCJKsc-DemiLight-Alphabetic') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Black-Alphabetic';
+    src: url('NotoSansCJKsc-Black-Alphabetic_1.eot');
+    src: url('NotoSansCJKsc-Black-Alphabetic_1.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Black-Alphabetic_1.woff2') format('woff2'),
+        url('NotoSansCJKsc-Black-Alphabetic_1.woff') format('woff'),
+        url('NotoSansCJKsc-Black-Alphabetic_1.ttf') format('truetype'),
+        url('NotoSansCJKsc-Black-Alphabetic_1.svg#NotoSansCJKsc-Black-Alphabetic') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Bold-Alphabetic';
+    src: url('NotoSansCJKsc-Bold-Alphabetic_1.eot');
+    src: url('NotoSansCJKsc-Bold-Alphabetic_1.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Bold-Alphabetic_1.woff2') format('woff2'),
+        url('NotoSansCJKsc-Bold-Alphabetic_1.woff') format('woff'),
+        url('NotoSansCJKsc-Bold-Alphabetic_1.ttf') format('truetype'),
+        url('NotoSansCJKsc-Bold-Alphabetic_1.svg#NotoSansCJKsc-Bold-Alphabetic') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Thin-Alphabetic';
+    src: url('NotoSansCJKsc-Thin-Alphabetic_1.eot');
+    src: url('NotoSansCJKsc-Thin-Alphabetic_1.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Thin-Alphabetic_1.woff2') format('woff2'),
+        url('NotoSansCJKsc-Thin-Alphabetic_1.woff') format('woff'),
+        url('NotoSansCJKsc-Thin-Alphabetic_1.ttf') format('truetype'),
+        url('NotoSansCJKsc-Thin-Alphabetic_1.svg#NotoSansCJKsc-Thin-Alphabetic') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Light-Alphabetic';
+    src: url('NotoSansCJKsc-Light-Alphabetic_1.eot');
+    src: url('NotoSansCJKsc-Light-Alphabetic_1.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Light-Alphabetic_1.woff2') format('woff2'),
+        url('NotoSansCJKsc-Light-Alphabetic_1.woff') format('woff'),
+        url('NotoSansCJKsc-Light-Alphabetic_1.ttf') format('truetype'),
+        url('NotoSansCJKsc-Light-Alphabetic_1.svg#NotoSansCJKsc-Light-Alphabetic') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Medium-Alphabetic';
+    src: url('NotoSansCJKsc-Medium-Alphabetic_1.eot');
+    src: url('NotoSansCJKsc-Medium-Alphabetic_1.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Medium-Alphabetic_1.woff2') format('woff2'),
+        url('NotoSansCJKsc-Medium-Alphabetic_1.woff') format('woff'),
+        url('NotoSansCJKsc-Medium-Alphabetic_1.ttf') format('truetype'),
+        url('NotoSansCJKsc-Medium-Alphabetic_1.svg#NotoSansCJKsc-Medium-Alphabetic') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-DemiLight-Alphabetic';
+    src: url('NotoSansCJKsc-DemiLight-Alphabetic_1.eot');
+    src: url('NotoSansCJKsc-DemiLight-Alphabetic_1.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic_1.woff2') format('woff2'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic_1.woff') format('woff'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic_1.ttf') format('truetype'),
+        url('NotoSansCJKsc-DemiLight-Alphabetic_1.svg#NotoSansCJKsc-DemiLight-Alphabetic') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc-Regular-Alphabetic';
+    src: url('NotoSansCJKsc-Regular-Alphabetic_1.eot');
+    src: url('NotoSansCJKsc-Regular-Alphabetic_1.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansCJKsc-Regular-Alphabetic_1.woff2') format('woff2'),
+        url('NotoSansCJKsc-Regular-Alphabetic_1.woff') format('woff'),
+        url('NotoSansCJKsc-Regular-Alphabetic_1.ttf') format('truetype'),
+        url('NotoSansCJKsc-Regular-Alphabetic_1.svg#NotoSansCJKsc-Regular-Alphabetic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+

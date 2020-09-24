@@ -88,16 +88,16 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
         </div>
     <div class="ms_top_trend">
             <span>
-            <a href="/product/yun-fat-chow/" class="ms_color">
-              Trending Actor Yun-Fat Chow           </a></span>
+            <a href="/product/yun-fat-chow/" class="ms_color"></a></span>
             <span class="top_marquee">
-                <a href="http://pozdr2.beget.tech/trending/">
-                  Thank you so much! I cannot wait to give this to my brother on his birthday!!             </a>
+                <a href="http://pozdr2.beget.tech/trending/">立即下载并获取您的视频！</a>
             </span>
         </div>
     </div>
     <div class="ms_top_right">
-        <?php echo do_shortcode('[gtranslate]'); ?>
+      <span>Languages</span>
+      <a class="glink">CN</a>
+        <?php  do_shortcode('[gtranslate]'); ?>
                 <div class="ms_top_btn">
 <a href="#"
    class="visible-xs-inline-block visible-search"
@@ -105,12 +105,13 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
    <img src="/wp-content/themes/envo-storefront/img/icons-v2/search.png" alt="">
    </a>
 <a href="/create-your-account/" class="ms_btn reg_btn">
-    <span>Sign up</span>
+    <!--<span>Sign up</span>-->
+    <span>加入我們</span>
     <img src="/wp-content/themes/envo-storefront/img/icons-v2/Signup.png" alt="">
     <!--<i style="color: transparent; width: 1px;">SignUp</i>-->
 </a>
 <a href="/mingming.io/enroll-as-celebrity-new/" class="ms_btn reg_btn">
-    <span>Enroll as Celebrity</span>
+    <span>注冊</span>
     <img src="/wp-content/themes/envo-storefront/img/icons-v2/Enroll.png" alt="">
 </a>
 <?php
@@ -121,11 +122,12 @@ $login = $current_user->user_login;
     $login;
     $login = 'Logged as '.$login;
 }else{
-    $login = 'login';
+    $login = '登入';
 }
 
  ?>
-<a href="/my-account-2/" class="ms_btn login_btn"><span><?=$login;?></span>
+<?/*<a href="/my-account-2/" class="ms_btn login_btn"><span>=$login;</span>*/?>
+<a href="/my-account-2/" class="ms_btn login_btn"><span>登入</span>
 <img src="/wp-content/themes/envo-storefront/img/icons-v2/Login.png" alt="">
 <!--<i>login</i>-->
 </a>

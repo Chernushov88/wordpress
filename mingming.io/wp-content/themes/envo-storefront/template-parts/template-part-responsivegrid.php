@@ -1,9 +1,9 @@
 <div class="grid-wrapp">
   <div class="grid">
 <?php
-  $loop = new WP_Query( array(
+  /*$loop = new WP_Query( array(
    'post_type' => 'product',  // указываем, что выводить нужно именно товары
-   'posts_per_page' => 11, // количество товаров для отображения
+   'posts_per_page' => 6, // количество товаров для отображения
    'orderby' => 'rand', // тип сортировки (в данном случае по дате)
    'order' => '',
    ));
@@ -19,15 +19,39 @@ $i = 1;
 
     ?>
 
-    <div class="grid-item" data-colspan="<?=$i;?>" data-rowspan="2" style="background: url(<?= $thumb_url[0];?>);">
+    <div class="grid-item" data-colspan="<?=$i;?>" data-rowspan="<?=$i;?>" style="background: url(<?= $thumb_url[0];?>);">
     <a href="<?php echo get_permalink(); ?>" ></a>
   </div>
-<?php $i++; endwhile; ?>
+<?php $i++; endwhile; */?>
+    <div class="grid-item" data-colspan="2" data-rowspan="2" >
+      <a href="" ></a>
+    </div>
+    <div class="grid-item" data-colspan="1" data-rowspan="1" >
+      <a href="" ></a>
+    </div>
+    <div class="grid-item" data-colspan="2" data-rowspan="1" >
+      <a href="" ></a>
+    </div>
+    <div class="grid-item" data-colspan="1" data-rowspan="2" >
+      <a href="" ></a>
+    </div>
+
+
+    <div class="grid-item" data-colspan="2" data-rowspan="1" >
+      <a href="" ></a>
+    </div>
+    <div class="grid-item" data-colspan="1" data-rowspan="1" >
+      <a href="" ></a>
+    </div>
 </div>
 </div>
 <style>
+.grid-wrapp{
+
+padding: 0 10px;
+}
   .grid{
-  margin-bottom: 145px;
+  margin: 145px 0;
   }
   .grid-item {
   position: relative;
@@ -49,6 +73,8 @@ $i = 1;
     -moz-transition: 1s ease-in-out all;
     -o-transition: 1s ease-in-out all;
     transition: 1s ease-in-out all;
+    background: #000;
+    border-radius: 5px;
   }
   .loader .grid-item {
     opacity: 1;
@@ -79,25 +105,34 @@ $i = 1;
   jQuery('.grid').responsivegrid({
           'breakpoints': {
               'desktop' : {
-                  'range' : '1200-2600',
+                  'range' : '1900-8000',
                   'options' : {
-                      'column' : 7,
-                      'gutter' : '10px',
-                      'itemHeight' : '80%',
+                      'column' : 6,
+                      'gutter' : '85px',
+                      'itemHeight' : '100%',
                       'resizeDelay' : '2000',
                       'resizeTimeout' : '5000',
                   }
               },
               'tablet-landscape' : {
-                  'range' : '1000-1200',
+                  'range' : '1366-1900',
                   'options' : {
-                      'column' : 4,
+                      'column' : 6,
+                      'gutter' : '35px',
                   }
               },
               'tablet-portrate' : {
-                  'range' : '767-1000',
+                  'range' : '1024-1366',
+                  'options' : {
+                      'column' : 6,
+                      'gutter' : '20px',
+                  }
+              },
+              'tablet-portrate' : {
+                  'range' : '767-1024',
                   'options' : {
                       'column' : 3,
+                      'gutter' : '10px',
                   }
               },
               'mobile' : {

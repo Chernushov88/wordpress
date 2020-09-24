@@ -581,8 +581,9 @@ function wc_price( $price, $args = array() ) {
 		$price = wc_trim_zeros( $price );
 	}
 
-	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol">' . get_woocommerce_currency_symbol( $args['currency'] ) . '</span>', $price );
-	$return          = '<span class="woocommerce-Price-amount amount">' . $formatted_price . '</span>';
+	//$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol leebel">' . get_woocommerce_currency_symbol( $args['currency'] ) . '</span>', $price );
+	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol leebel"><img src="/wp-content/themes/envo-storefront/img/s.png" alt=""></span>', $price );
+	$return          = '<span class="woocommerce-Price-amount amount ">' . $formatted_price . '</span>';
 
 	if ( $args['ex_tax_label'] && wc_tax_enabled() ) {
 		$return .= ' <small class="woocommerce-Price-taxLabel tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';

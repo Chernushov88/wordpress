@@ -28,71 +28,101 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php endif; ?>
 
+
+
+
+
+
+
 <style>
-.row-account .col-md-9{
-    width: 100%;
-}
-
-form .required {
-    color: red;
-    font-weight: 700;
-    border: 0!important;
-    text-decoration: none;
-}
-.flex{
-    display: flex;
-	justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-.flex>*{margin-left: 15px;}
-.row-account #sidebar{display: none;}
-.single-content {
-	max-width: 500px;
-    margin: 0 auto;
-    padding: 10px 5% 50px ;
-    border-radius: 10px;
-    border-radius: 10px;
-    background: #1b2039;
-    -moz-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-
-.single-content #comments {
-    overflow-y: hidden;
-    max-height: 500px;
+  .page-wrap{
+    padding-bottom: 0;
+  }
+  .page_modal {
+      margin: 50px auto 30px;
+  }
+  ul{
     padding: 0;
-    background: transparent;
-    flex: 2;
-}
-.foo_sharing {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 30px 0 0;
-}
-.btn.btn-block {
     margin: 0;
-    height: 34px;
-    line-height: 1;
-}
-.woocommerce-notices-wrapper.test{
+    list-style-type: none;
+  }
+  #sidebar {
     display: none;
-}
-.form-login .foo_sharing {
+  }
+  .col-md-9 {
+    width: 100%;
+    padding: 0;
+  }
+  .page_modal-left form .h2 {
+    margin: 0 0 15px 0;
+  }
+  .single-head {
+    display: none;
+  }
+  .page_modal-left{
+      padding: 100px 0;
+    }
+  .page_modal-left form button.btn{
+    margin: 45px auto;
+  }
+  .list-autorization{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -15px;
+  }
+  .list-autorization li{
+
+  }
+  .list-autorization li img{
+    margin-right: 10px;
+  }
+  .list-autorization li a{
+    font-size: 14px;
+    color: #e40073;
+  }
+  .registration-now{
+    display: flex;
     justify-content: center;
-}
-.form-login .foo_sharing .social{
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .registration-now span{
+    color: #e40073;
+  }
+  .registration-now a{
+    color: #bf56fb;
     margin-left: 20px;
-}
+  }
+  .social{
+    justify-content: center;
+  }
+  .social li{
+    margin: 5px;
+  }
+  .login-partner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .login-partner span{
+    width: 46px;
+    height: 2px;
+    background: #231815;
+  }
+  .login-partner a{
+    margin: 0 10px;
+    color: #231815;
+  }
 </style>
+
+
+
+
+
+
+
+
 <script>
     jQuery(function(){
 
@@ -133,136 +163,166 @@ form .required {
 
 
 
-	        <div class="form-login">
-	        	<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
-	          <!-- <a target="_blank" rel="noopener noreferrer" href="https://api.instagram.com/oauth/authorize/?client_id=45f9fdf3922446adbd562d2093868427&amp;response_type=code&amp;redirect_uri=http://pozdr.beget.tech/api/auth/instagram/callbackweb" class="btn btn-block btn-ig" style="margin: 25px 0px;">Continue with Instagram</a> -->
-	          <!-- <div class=""><span class="">OR</span></div> -->
-	          <form class="form-signin woocommerce-form woocommerce-form-login " method="post">
-	          	<?php do_action( 'woocommerce_login_form_start' ); ?>
-	              <div class="form-group">
-                     <label for="email">Login or e-mail</label>
-	              <div class="form-group">
-	                <div class="input-group" style="width:100%">
-	                  <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>"
-	                  placeholder="Enter Username" /><?php // @codingStandardsIgnoreLine ?>
-	                  <!-- <span class="form_icon">
-						<i class="fa_icon form-envelope" aria-hidden="true"></i>
-					  </span> -->
 
-	                </div>
-	              </div>
 
-	              <!-- <label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label> -->
-	              <div class="form-group">
-                    <label for="password">Password</label>
-	                <div class="input-group">
-	                  <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password"
-	                  placeholder="Enter Password" />
-	                  <span class="form_icon" id="showPass" >
-	                      <i class="fa_icon form-lock" aria-hidden="true"></i>
+
+
+
+
+
+
+
+<div class="page_modal">
+  <a href="#" class="close"><img src="/wp-content/themes/envo-storefront/img/close.png"></a>
+  <div class="page page_modal-in">
+    <div class="page_modal-left">
+      <form class=" " method="post">
+        <div class="h2">你好</div>
+        <div class="h3">登入到你的帳戶</div>
+        <div class="input-group">
+          <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username"
+                 autocomplete="username"
+                 value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>"
+                 placeholder="電子郵件"/><?php // @codingStandardsIgnoreLine ?>
+        </div>
+        <div class="input-group">
+          <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password"
+                 id="password" autocomplete="current-password"
+                 placeholder="密碼"/>
+          <span class="eye" id="showPass">
+	                      <img src="/wp-content/themes/envo-storefront/img/eye.png" alt="">
 	                   </span>
-	                </div>
-	              </div>
-
-	            </div>
-
-	            <div class="form-group foo_sharing">
-	            	<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-	            	<button type="submit" class="btn btn-login btn-block" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">Login Now</button>
-                    <ul class="social" style="display:none;">
-                      <!-- <li><a href="javascript:void(0);"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-                      <li><a href="javascript:void(0);"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-                      <li><a href="javascript:void(0);"><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li> -->
-                      <!-- <li><a href="javascript:void(0)"><i class="fa fa-clone" aria-hidden="true"></i></a></li>
-                      <li><a href="javascript:void(0)"><i class="fa fa-qrcode" aria-hidden="true"></i></a></li>
-                      <li><a href="javascript:void(0)"><i<i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
-                      <li><a href="javascript:void(0)"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-                      <!-- <li><a onclick="jQuery('#fab').find('.fbl-button').click()" href="javascript:void(0)"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li> -->
-                      <li>
-                          <div id="fab">
-                                <i class="fa fa-facebook-official" aria-hidden="true">
-                                <?
+        </div>
+        <ul class="flex list-autorization">
+          <li>
+            <a href="#">
+              <img src="/wp-content/themes/envo-storefront/img/icon-remember-me.png" alt="">
+              <span>記住我</span>
+            </a>
+          </li>
+          <li><a href="/my-account-2/lost-password/"><span>忘記密碼？</span></a></li>
+          <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/icon-phone.png" alt=""><span>手機登入</span></a>
+          </li>
+        </ul>
+        <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+        <button type="submit" class="btn gradient-horizontal" name="login"
+                value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">登入
+        </button>
+        <ul class="social" style="display:none;">
+          <!-- <li><a href="javascript:void(0);"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
+          <li><a href="javascript:void(0);"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+          <li><a href="javascript:void(0);"><img src="/wp-content/themes/envo-storefront/img/bd_logo3.png" alt=""></a></li> -->
+          <!-- <li><a href="javascript:void(0)"><i class="fa fa-clone" aria-hidden="true"></i></a></li>
+          <li><a href="javascript:void(0)"><i class="fa fa-qrcode" aria-hidden="true"></i></a></li>
+          <li><a href="javascript:void(0)"><i<i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+          <li><a href="javascript:void(0)"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
+          <!-- <li><a onclick="jQuery('#fab').find('.fbl-button').click()" href="javascript:void(0)"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li> -->
+          <li>
+            <div id="fab">
+              <i class="fa fa-facebook-official" aria-hidden="true">
+                <?
 
                                 do_action('facebook_login_button');
                                 ?>
-                                </i>
-                            </div>
-                      </li>
+              </i>
+            </div>
+          </li>
 
-                    </ul>
+        </ul>
+        <div class="registration-now">
+          <span>還未有帳戶？ </span>
+          <a href="/create-your-account/">立即注冊</a>
+        </div>
+        <div class="login-partner">
+          <span></span>
+          <a href="#">用合作網站帳號登入</a>
+          <span></span>
+        </div>
 
-	            </div>
+        <ul class="flex social">
+          <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/social/1.png" alt=""></a></li>
+          <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/social/2.png" alt=""></a></li>
+        </ul>
 
-	            <?php do_action( 'woocommerce_login_form_end' ); ?>
-	          </form>
-	          <div class="">
-	            <span>By signing up, you agree to mingming's <a href="javascript:void(0);" onclick="ShowPopup('#popupTerms');">Terms of Service</a>
-        and <a href="javascript:void(0);" onclick="ShowPopup('#popupPolicy');">Privacy Policy</a></span>
-	          </div>
-	          <div class="flex forgotPassword"><a href="/my-account-2/lost-password/">Forgot your password?</a></div>
+        <?php do_action( 'woocommerce_login_form_end' ); ?>
+      </form>
 
-	          <div class="flex dont_have">
-	          	<div>Don't have an account?</div>
-	          	<a href="/create-your-account/" class="btn btn-default"> Sign up </a>
-	          	<a href="/enroll-as-celebrity-new/" class="btn btn-default"> Enroll as an Celebrity </a></div>
-	        </div>
+      <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
+    </div>
 
+    <div class="u-column2 col-2">
 
-<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
+      <h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
-	</div>
+      <form method="post" class="woocommerce-form woocommerce-form-register register"
+      <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
-	<div class="u-column2 col-2">
+      <?php do_action( 'woocommerce_register_form_start' ); ?>
 
-		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
+      <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
 
-		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
+      <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+        <label for="reg_username"><?php esc_html_e( 'Username', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username"
+               id="reg_username" autocomplete="username"
+               value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>"/><?php // @codingStandardsIgnoreLine ?>
+      </p>
 
-			<?php do_action( 'woocommerce_register_form_start' ); ?>
+      <?php endif; ?>
 
-			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
+      <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+        <label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span
+            class="required">*</span></label>
+        <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email"
+               autocomplete="email"
+               value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>"/><?php // @codingStandardsIgnoreLine ?>
+      </p>
 
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="reg_username"><?php esc_html_e( 'Username', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-				</p>
+      <?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 
-			<?php endif; ?>
+      <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+        <label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+        <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password"
+               id="reg_password" autocomplete="new-password"/>
+      </p>
 
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-				<label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-				<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-			</p>
+      <?php else : ?>
 
-			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
+      <p><?php esc_html_e( 'A password will be sent to your email address.', 'woocommerce' ); ?></p>
 
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
-				</p>
+      <?php endif; ?>
 
-			<?php else : ?>
+      <?php do_action( 'woocommerce_register_form' ); ?>
 
-				<p><?php esc_html_e( 'A password will be sent to your email address.', 'woocommerce' ); ?></p>
+      <p class="woocommerce-FormRow form-row">
+        <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
+        <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit"
+                name="register"
+                value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
+      </p>
 
-			<?php endif; ?>
+      <?php do_action( 'woocommerce_register_form_end' ); ?>
 
-			<?php do_action( 'woocommerce_register_form' ); ?>
+      </form>
 
-			<p class="woocommerce-FormRow form-row">
-				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
-			</p>
+    </div>
 
-			<?php do_action( 'woocommerce_register_form_end' ); ?>
+  </div>
+  <?php endif; ?>
 
-		</form>
-
-	</div>
-
+  <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
 </div>
-<?php endif; ?>
-
-<?php do_action( 'woocommerce_after_customer_login_form' ); ?>
+<div class="page_modal-right gradient-vertical">
+  <div class="h1">应用程式 <br>现己登陆</div>
+  <ul class="flex">
+    <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/google-play.png" alt=""></a></li>
+    <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/app-store.png" alt=""></a></li>
+  </ul>
+  <div class="grcode">
+    <a href="#"><img src="/wp-content/themes/envo-storefront/img/grcode.jpg" alt=""></a>
+  </div>
+</div>
+</div>
+</div>
