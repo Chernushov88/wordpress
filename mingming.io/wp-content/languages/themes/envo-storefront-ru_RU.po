@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the Themes - Envo Storefront package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-06 10:13:18+0000\n"
+"PO-Revision-Date: 2020-05-19 18:08:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
 "Language: ru\n"
 "Project-Id-Version: Themes - Envo Storefront\n"
-
-#. Description of the theme
-msgid "Envo Storefront is a fast, clean and modern-looking responsive free WooCommerce theme for WordPress. This theme supports popular page builders like Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer, etc. The theme is responsive, super fast, SEO friendly, WPML and RTL ready. Documentation: https://envothemes.com/docs/docs/envo-storefront/ Theme demo ready to import: https://envothemes.com/envo-storefront/"
-msgstr "Envo Storefront — это быстрая, чистая и современно выглядящая бесплатная тема WooCommerce для WordPress. Эта тема поддерживает популярные конструкторы страниц, как Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer и т.д.. Тема супер быстрая, SEO-дружественая, готова к WPML и RTL . Документация: https://envothemes.com/docs/docs/envo-storefront/ Демонстрация темы готова к импорту: https://envothemes.com/envo-storefront/."
 
 #. Theme Name of the theme
 msgid "Envo Storefront"
 msgstr "Envo Storefront"
+
+#. Description of the theme
+msgid "Envo Storefront is a fast, clean and modern-looking responsive free WooCommerce theme for WordPress. This theme supports popular page builders like Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer, etc. The theme is responsive, super fast, SEO friendly, WPML and RTL ready. Documentation: https://envothemes.com/docs/docs/envo-storefront/ Theme demo ready to import: https://envothemes.com/envo-storefront/"
+msgstr "Envo Storefront — это быстрая, чистая и современно выглядящая бесплатная тема WooCommerce для WordPress. Эта тема поддерживает популярные конструкторы страниц, как Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer и т.д.. Тема супер быстрая, SEO-дружественая, готова к WPML и RTL . Документация: https://envothemes.com/docs/docs/envo-storefront/ Демонстрация темы готова к импорту: https://envothemes.com/envo-storefront/."
 
 #: lib/customizer/info.php:147
 msgid "View PRO version"
@@ -155,39 +155,9 @@ msgstr "Добро пожаловать! Спасибо за выбор %1$s! Ч
 msgid "Welcome to %1$s - Version %2$s"
 msgstr "Добро пожаловать в %1$s - Версия %2$s"
 
-#: lib/dashboard.php:126
-msgid "Envo Storefront dashboard"
-msgstr "Панель управления Envo Storefront"
-
-#: lib/dashboard.php:123
-msgid "Envo Storefront theme"
-msgstr "Тема Envo Storefront"
-
-#. translators: %s: replaced with number (counter)
-#: lib/dashboard.php:121
-msgid "Envo Storefront theme %s"
-msgstr "Тема Envo Storefront %s"
-
-#. translators: %1$s: replaced with number (counter)
-#: lib/dashboard.php:118
-msgid "%1$s action required"
-msgid_plural "%1$s actions required"
-msgstr[0] "Требуется %1$s действие"
-msgstr[1] "Требуется %1$s действия"
-msgstr[2] "Требуется %1$s действий"
-
 #: comments.php:46
 msgid "Comments are closed."
 msgstr "Обсуждение закрыто."
-
-#. translators: 1: number of comments, 2: post title
-#: comments.php:22
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s отзыв для &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s отзыва для &ldquo;%2$s&rdquo;"
-msgstr[2] "%1$s отзывов для &ldquo;%2$s&rdquo;"
 
 #. translators: %s: post title
 #: comments.php:19
@@ -245,94 +215,89 @@ msgstr "Ой! Страница не найдена."
 msgid "Search Results for: %s"
 msgstr "Результаты поиска: %s"
 
-#: functions.php:561
+#: functions.php:559
 msgid "Skip to the content"
 msgstr "Перейти к содержимому"
 
-#: functions.php:529
+#: functions.php:527
 msgid "By"
 msgstr "Автор:"
 
-#: functions.php:514
+#: functions.php:512
 msgid "Next"
 msgstr "Следующая"
 
-#: functions.php:514
+#: functions.php:512
 msgid "Next Post"
 msgstr "Следующая запись"
 
-#: functions.php:513
+#: functions.php:511
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: functions.php:513
+#: functions.php:511
 msgid "Previous Post"
 msgstr "Предыдущая запись"
 
-#: functions.php:443
+#: functions.php:441
 msgid "Comment on "
 msgstr "Комментировать"
 
-#: functions.php:440
+#: functions.php:438
 msgid "Off"
 msgstr "Откл"
 
 #. translators: %1$s: Envo Storefront theme name (do not translate) with
 #. envothemes.com URL
-#: functions.php:406
+#: functions.php:404
 msgctxt "Theme name, do not translate"
 msgid "Envo Storefront"
 msgstr "Envo Storefront"
 
 #. translators: %1$s: Envo Storefront theme name (do not translate) with
 #. envothemes.com URL
-#: functions.php:406
+#: functions.php:404
 msgid "Theme: %1$s"
 msgstr "Тема: %1$s"
 
 #. translators: %s: WordPress name with wordpress.org URL
-#: functions.php:401
+#: functions.php:399
 msgid "WordPress"
 msgstr "WordPress"
 
 #. translators: %s: WordPress name with wordpress.org URL
-#: functions.php:401
+#: functions.php:399
 msgid "https://wordpress.org/"
 msgstr "https://ru.wordpress.org/"
 
 #. translators: %s: WordPress name with wordpress.org URL
-#: functions.php:401
+#: functions.php:399
 msgid "Proudly powered by %s"
 msgstr "Сайт работает на %s"
 
-#: functions.php:377
+#: functions.php:375
 msgid "Tags"
 msgstr "Метки"
 
-#: functions.php:373
+#: functions.php:371
 msgid "Category"
 msgstr "Рубрика"
 
-#: functions.php:329
+#: functions.php:327
 msgid "Footer Section"
 msgstr "Подвал"
 
-#: functions.php:319
+#: functions.php:317
 msgid "Header Section"
 msgstr "Шапка сайта (Header)"
 
-#: functions.php:309
+#: functions.php:307
 msgid "Top Bar Section"
 msgstr "Раздел верхней панели"
 
-#: functions.php:299
+#: functions.php:297
 msgid "Sidebar"
 msgstr "Боковая колонка"
-
-#: functions.php:196
-msgctxt "Open Sans Condensed font: on or off"
-msgid "on"
-msgstr "off"
 
 #. translators: %s plugin name string
 #: functions.php:95
@@ -351,6 +316,41 @@ msgstr "Сэкономьте время с помощью импорта наш�
 #: functions.php:25
 msgid "Main Menu"
 msgstr "Главное меню"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:22
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s отзыв для &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s отзыва для &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s отзывов для &ldquo;%2$s&rdquo;"
+
+#. translators: %1$s: replaced with number (counter)
+#: lib/dashboard.php:118
+msgid "%1$s action required"
+msgid_plural "%1$s actions required"
+msgstr[0] "Требуется %1$s действие"
+msgstr[1] "Требуется %1$s действия"
+msgstr[2] "Требуется %1$s действий"
+
+#. translators: %s: replaced with number (counter)
+#: lib/dashboard.php:121
+msgid "Envo Storefront theme %s"
+msgstr "Тема Envo Storefront %s"
+
+#: lib/dashboard.php:123
+msgid "Envo Storefront theme"
+msgstr "Тема Envo Storefront"
+
+#: lib/dashboard.php:126
+msgid "Envo Storefront dashboard"
+msgstr "Панель управления Envo Storefront"
+
+#: functions.php:194
+msgctxt "Open Sans Condensed font: on or off"
+msgid "on"
+msgstr "on"
 
 #. Author URI of the theme
 msgid "https://envothemes.com/"

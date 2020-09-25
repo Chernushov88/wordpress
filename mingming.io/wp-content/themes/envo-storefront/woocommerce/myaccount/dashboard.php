@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
-
+<div class="dashbourd-page">
 <p>
 	<?php
 	printf(
@@ -31,6 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		esc_url( wc_logout_url() )
 	);
 	?>
+
 </p>
 
 
@@ -62,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <p>將視頻和網站連結發佈到您的社交平台，或以其他任何方式通知您的粉絲訂閱。</p>
     <p>當有客戶訂閱您的視頻時，您會收到一封電子郵件通知。您將有7天的時間錄製視頻，並將視頻上傳至平台。有關視頻的製作要求及您客戶的姓名，您可以在個人資料中“命令”部分中找到。您可以在此部分錄影及上載視頻。當我們的員工審核視頻後，您將收到付款。</p>
     <p>如果您有任何疑問或建議，請隨時通過hello@mingming.io與我們聯繫。感謝您使用mingming.io！</p>
-</div>';
+</div><img src="/wp-content/themes/envo-storefront/img/banerMyAccount.png" alt="">';
 
   }
   else
@@ -92,6 +93,7 @@ When a buyer orders your video, you will receive an email notification. You will
   <br/>
 如果您有任何疑問或建議，請隨時通過hello@mingming.io與我們聯繫。感謝您使用mingming.io！
 </p>
+<img src="/wp-content/themes/envo-storefront/img/banerMyAccount.png" alt="">
 </div> ', 'woocommerce' ),
 		esc_url( wc_get_endpoint_url( 'orders' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
@@ -111,7 +113,10 @@ When a buyer orders your video, you will receive an email notification. You will
 </div>
 <div class="text-chine">
     <p>歡迎使用MingMing平台！在這裡，您可以找到自己喜歡的名人，並為自己、您的朋友或家人推廣。如果您希望在未使用此平台者中訂閱視頻，請隨時邀請他們。</p>
-</div> ', 'woocommerce' ),
+</div>
+  <div class="dashbourd-baner"><img src="/wp-content/themes/envo-storefront/img/banerMyAccount.png" alt="" ></div>
+
+', 'woocommerce' ),
 		esc_url( wc_get_endpoint_url( 'orders' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
@@ -125,7 +130,7 @@ When a buyer orders your video, you will receive an email notification. You will
 
 	?>
 </p>
-
+</div>
 <?php
 	/**
 	 * My Account dashboard.

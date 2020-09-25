@@ -258,11 +258,11 @@ $cher=get_user_meta( $user->ID, 'charity', true);
 <?
 /*
 
-UPDATE wp_options SET option_value = REPLACE (option_value, 'https://mingming.local', 'https://ming2.beget.tech') WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_options SET option_value = REPLACE (option_value, 'https://mingming.io', 'https://ming2.beget.tech') WHERE option_name = 'home' OR option_name = 'siteurl';
 
-UPDATE wp_posts SET guid = REPLACE (guid, 'https://mingming.local', 'https://ming2.beget.tech');
+UPDATE wp_posts SET guid = REPLACE (guid, 'https://mingming.io', 'https://ming2.beget.tech');
 
-UPDATE wp_posts SET post_content = REPLACE (post_content, 'https://mingming.local','https://ming2.beget.tech');
+UPDATE wp_posts SET post_content = REPLACE (post_content, 'https://mingming.io','https://ming2.beget.tech');
 
 */
 ?>

@@ -97,11 +97,11 @@ function wc_get_account_menu_items() {
 
 	$items = array(
 		'dashboard'       => __( 'Dashboard', 'woocommerce' ),
-		'orders'          => __( 'Orders', 'woocommerce' ),
+		'orders'          => __( '我的订单', 'woocommerce' ),
 		'downloads'       => __( 'Downloads', 'woocommerce' ),
 		'edit-address'    => __( 'Addresses', 'woocommerce' ),
 		'payment-methods' => __( 'Payment methods', 'woocommerce' ),
-		'edit-account'    => __( 'Account details', 'woocommerce' ),
+		'edit-account'    => __( '帐户资料', 'woocommerce' ),
 		'customer-logout' => __( 'Logout', 'woocommerce' ),
 	);
 
@@ -193,11 +193,11 @@ function wc_get_account_orders_columns() {
 	$columns = apply_filters(
 		'woocommerce_account_orders_columns',
 		array(
+		  'order-date'    => __( '日期', 'woocommerce' ),
 			'order-number'  => __( 'Order', 'woocommerce' ),
-			'order-date'    => __( 'Date', 'woocommerce' ),
 			'order-status'  => __( 'Status', 'woocommerce' ),
 			'order-total'   => __( 'Total', 'woocommerce' ),
-			'order-actions' => __( 'Actions', 'woocommerce' ),
+			'order-actions' => __( '狀态', 'woocommerce' ),
 		)
 	);
 

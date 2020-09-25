@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Noto Sans TC';
-  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Thin.otf") format("opentype");
+  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Thin.otf") format("opentype"),
+  url('/wp-content/themes/envo-storefront/fonts/NotoSansCJKtc-Thin.ttf') format('truetype');
   font-style: normal;
   font-weight: 100;
   font-style: normal;
@@ -8,35 +9,40 @@
 }
 @font-face {
   font-family: 'Noto Sans TC';
-  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Light.otf") format("opentype");
+  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Light.otf") format("opentype"),
+  url('/wp-content/themes/envo-storefront/fonts/NotoSansCJKtc-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Noto Sans TC';
-  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Regular.otf") format("opentype");
+  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Regular.otf") format("opentype"),
+  url('/wp-content/themes/envo-storefront/fonts/NotoSansCJKtc-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Noto Sans TC';
-  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Medium.otf") format("opentype");
+  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Medium.otf") format("opentype"),
+  url('/wp-content/themes/envo-storefront/fonts/NotoSansCJKtc-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Noto Sans TC';
-  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Bold.otf") format("opentype");
+  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Bold.otf") format("opentype"),
+  url('/wp-content/themes/envo-storefront/fonts/NotoSansCJKtc-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Noto Sans TC';
-  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Black.otf") format("opentype");
+  src: url("/wp-content/themes/envo-storefront/fonts/NotoSansCJKsc/NotoSansCJKsc-Black.otf") format("opentype"),
+  url('/wp-content/themes/envo-storefront/fonts/NotoSansCJKtc-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -52,6 +58,7 @@
 /*       url('../fonts/JosefinSans-Thin.woff') format('woff'),*/
 /*       url('../fonts/JosefinSans-Thin.woff2') format('woff2');*/
 /*}*/
+/*.ttf, .eot, .woff, .woff2, .svg*/
 /*@font-face {*/
 /*  font-family: 'Josefin Sans';*/
 /*  font-style: normal;*/

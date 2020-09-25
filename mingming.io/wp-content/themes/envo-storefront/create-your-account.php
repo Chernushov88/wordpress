@@ -9,14 +9,6 @@
   .page-wrap{
     padding-bottom: 0;
   }
-  .page_modal {
-    //margin: 0px auto 0px;
-  }
-  ul{
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
   #sidebar {
     display: none;
   }
@@ -24,77 +16,17 @@
     width: 100%;
     padding: 0;
   }
-  .page_modal-left form .h2 {
-    margin: 0 0 15px 0;
-  }
+
   .single-head {
     display: none;
   }
-  .page_modal-left{
-    padding: 100px 0;
+  .page_modal-left {
+       padding-top: 100px;
+       padding-bottom: 100px;
+      background-color: #fff;
   }
   .page_modal-left form button.btn{
     margin: 30px auto 10px;
-  }
-  .list-autorization{
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: -15px;
-  }
-  .list-autorization li{
-
-  }
-  .list-autorization li img{
-    margin-right: 10px;
-  }
-  .list-autorization li a{
-    font-size: 14px;
-    color: #e40073;
-  }
-  .registration-now{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    font-size: 14px;
-  }
-  .registration-now span{
-    color: #e40073;
-  }
-  .registration-now a{
-    color: #bf56fb;
-    margin-left: 20px;
-  }
-  .social{
-    justify-content: center;
-  }
-  .social li{
-    margin: 5px;
-  }
-  .login-partner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-  .login-partner span{
-    width: 46px;
-    height: 2px;
-    background: #231815;
-  }
-  .login-partner a{
-    margin: 0 10px;
-    color: #231815;
-  }
-  .registration-pholitika{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #231815;
-  }
-  .registration-pholitika a{
-    margin: 0 5px;
-    color: #bf56fb;
   }
 </style>
 

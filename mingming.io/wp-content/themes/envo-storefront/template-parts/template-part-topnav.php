@@ -96,8 +96,8 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
     </div>
     <div class="ms_top_right">
       <span>Languages</span>
-      <a class="glink">CN</a>
-        <?php  do_shortcode('[gtranslate]'); ?>
+      <?/*<a class="glink">CN</a>*/?>
+        <?php   do_shortcode('[gtranslate]'); ?>
                 <div class="ms_top_btn">
 <a href="#"
    class="visible-xs-inline-block visible-search"

@@ -635,14 +635,16 @@
 
           if ( ! empty( $actions ) ) {
             foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
-              echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button btn btn-login ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+              /*'<a href="' . esc_url( $action['url'] ) . '" class="btn ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';*/
+              echo '<a href="' . esc_url( $action['url'] ) . '" class="btn ' . sanitize_html_class( $key ) . '"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>';
             }
           }
           if ($link)
           {
           ?>
-        <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
-        <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link;?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+
+        <a href="javascript:void(0);" class="btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/share.png" alt=""></a>
+        <a href="javascript:void(0);" class="btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link;?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
         <?php
           }
 

@@ -46,59 +46,7 @@ $i = 1;
 </div>
 </div>
 <style>
-.grid-wrapp{
 
-padding: 0 10px;
-}
-  .grid{
-  margin: 145px 0;
-  }
-  .grid-item {
-  position: relative;
-  /*padding: 1px;*/
-  overflow: hidden;
-  box-sizing: border-box;
-  background-size: cover !important;
-  background-position: center !important;
-  -webkit-transition-duration: var(--image-transition-duration);
-    -o-transition-duration: var(--image-transition-duration);
-    transition-duration: var(--image-transition-duration);
-    -webkit-transition-property: -webkit-filter,-webkit-transform;
-    transition-property: -webkit-filter,-webkit-transform;
-    -o-transition-property: filter,transform;
-    transition-property: filter,transform;
-    transition-property: filter,transform,-webkit-filter,-webkit-transform;
-    opacity: 0;
-    -webkit-transition: 1s ease-in-out all;
-    -moz-transition: 1s ease-in-out all;
-    -o-transition: 1s ease-in-out all;
-    transition: 1s ease-in-out all;
-    background: #000;
-    border-radius: 5px;
-  }
-  .loader .grid-item {
-    opacity: 1;
-  }
-  .grid-item a{
-  display: block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  }
-  .grid-item img{
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: 1s ease all;
-  }
-  .grid-item:hover{
-  padding: 0;
-  outline: 0;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.30) !important;
-  }
-  .grid-item a:hover img{
-  transform: scale(1.1);
-  }
 </style>
 <script type="text/javascript" src="/wp-content/themes/envo-storefront/js/jquery.responsivegrid.js"></script>
 <script type="text/javascript">
