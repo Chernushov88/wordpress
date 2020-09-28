@@ -1,3 +1,5 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')*/
+@import url('./css/fonts.css');
 .h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
     font-family: inherit;
@@ -56,7 +58,7 @@ html[lang=auto] .ms_top_right .notranslate:nth-child(2), html[lang=auto] .text-c
 }
 
 #site-content {
-    min-height: 65vh;
+    min-height: calc(100vh - 85px);
     margin-top: 85px;
     padding: 0 40px;
     background: url(img/page-bg.jpg) 0 0/cover no-repeat
@@ -303,7 +305,7 @@ a:active {
 
 #elementor-element-left {
     width: 40%;
-    margin-bottom: 50px
+    margin-bottom: 80px
 }
 
 #elementor-element-left .elementor-widget-wrap {
@@ -312,7 +314,7 @@ a:active {
 
 #elementor-element-right {
     width: 60%;
-    margin-bottom: 50px
+    margin-bottom: 80px
 }
 
 #elementor-element-right img {
@@ -328,11 +330,12 @@ div.elementor-container {
 }
 
 .elementor-widget-container .flex {
-    align-items: flex-end
+    align-items: flex-start
 }
 
 .elementor-widget-container .flex .right {
-    margin-left: 85px
+    margin-top: 25px;
+    margin-left: 10%
 }
 
 .ourAps {
@@ -348,7 +351,8 @@ div.elementor-container {
     position: relative;
     width: 100%;
     max-width: 1400px;
-    margin: 90px auto 70px
+    margin: 90px auto 70px;
+    color: #000;
 }
 
 .page_modal-in {
@@ -397,7 +401,8 @@ div.elementor-container {
     line-height: 1.5;
     font-size: 20px;
     font-weight: 100;
-    color: #231815
+    color: #231815;
+    margin: 20px 0;
 }
 
 .page_modal-left form .input-group {
@@ -1606,11 +1611,11 @@ span.comments-meta i {
     list-style-type: none;
     padding: 5px 0
 }
-
+.navigation-bottom{
+    margin-top: auto;
+}
 .woocommerce-MyAccount-navigation ul.usel-lest-roles {
-
     display: flex;
-
     align-items: center;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -1619,19 +1624,33 @@ span.comments-meta i {
     justify-content: space-between;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .woocommerce-MyAccount-navigation ul.usel-lest-roles li {
     width: 100%;
-    padding: 5px
+    padding: 5px;
+    font-weight: 900;
+    color:#000;
+    border-bottom: 2px solid #ccc;
 }
-
+.woocommerce-MyAccount-navigation ul.usel-lest-roles li:first-child,
+.woocommerce-MyAccount-navigation ul.usel-lest-roles li:last-child{
+    border: 0;
+}
+.woocommerce-MyAccount-navigation ul.usel-lest-roles li .name-price> div{
+    font-weight: 100;
+}
+.woocommerce-MyAccount-navigation ul.usel-lest-roles li .name-price b{
+    display: inline-block;
+}
 #privacy-policy-link {
     display: inline-block;
     cursor: pointer
 }
-
+.name-price{
+    color:#000;
+}
 .woocommerce-MyAccount-navigation ul.usel-lest-roles .btn {
     max-width: 150px;
     display: block;
@@ -1962,8 +1981,8 @@ button.btn.btn-danger {
     padding: 0 30px;
     line-height: 30px;
     font-size: 15px;
-    color: #fff;
-    border: 1px solid #fff;
+    color: #bf56fb;
+    border: 2px solid #bf56fb;
     background: 0 0;
     border-radius: 20px;
     cursor: pointer;
@@ -1972,6 +1991,17 @@ button.btn.btn-danger {
     -webkit-transition: .3s ease-in-out;
     -moz-transition: .3s ease-in-out;
     -ms-transition: all .3s ease-in-out
+}
+.btn-pink{
+    margin: 20px 0 0;
+    font-size: 20px;
+    color: #fff;
+    background: #fc78f2;
+    border-radius: 20px;
+}
+.btn-block .btn-pink{
+    width: 100%;
+    letter-spacing: 2px;
 }
 
 #text-4 .fab {
@@ -2694,7 +2724,7 @@ p.comment-form-author input:focus, p.comment-form-author textarea:focus {
 }
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
-    background-color: #7b73ad;
+    background-color: #bf56fb;
     color: #fff;
     font-weight: 500;
     border-radius: 5px;
@@ -3209,7 +3239,7 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     padding: 0 15px;
     background-color: #fff
 }
-
+.woocommerce-MyAccount-navigation .btn_money,
 .woocommerce-MyAccount-navigation .writing_btn, .woocommerce-MyAccount-navigation ul li a {
     display: flex;
     align-items: center;
@@ -3222,31 +3252,44 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     border: 2px solid #000;
     background: #fffffe
 }
+.woocommerce-MyAccount-navigation .btn{
+    margin: 5px 0;
+}
 
-.woocommerce-MyAccount-navigation .writing_btn img, .woocommerce-MyAccount-navigation ul li a img {
+.woocommerce-MyAccount-navigation .writing_btn img,
+.woocommerce-MyAccount-navigation .btn_money img,
+.woocommerce-MyAccount-navigation ul li a img {
     display: inline-block;
     margin-right: 30px
 }
 
-.woocommerce-MyAccount-navigation .writing_btn .img-active {
+.woocommerce-MyAccount-navigation .writing_btn .img-active,
+.woocommerce-MyAccount-navigation .btn_money .img-active
+{
     display: none
 }
 
-.woocommerce-MyAccount-navigation .writing_btn {
-    margin: auto 15px 45px
+.woocommerce-MyAccount-navigation .writing_btn,
+.woocommerce-MyAccount-navigation .btn_money {
+    margin: 10px 0px 5px
 }
 
-.woocommerce-MyAccount-navigation .writing_btn:hover, .woocommerce-MyAccount-navigation ul li a:hover, .woocommerce-MyAccount-navigation ul li.is-active a {
+.woocommerce-MyAccount-navigation .writing_btn:hover,
+.woocommerce-MyAccount-navigation .btn_money:hover,
+.woocommerce-MyAccount-navigation ul li a:hover, .woocommerce-MyAccount-navigation ul li.is-active a {
     background: #bf56fb;
     color: #fff;
     border-color: #bf56fb
 }
 
-.woocommerce-MyAccount-navigation .writing_btn:hover .img {
+.woocommerce-MyAccount-navigation .writing_btn:hover .img,
+.woocommerce-MyAccount-navigation .btn_money:hover .img
+{
     display: none
 }
 
-.woocommerce-MyAccount-navigation .writing_btn:hover .img-active {
+.woocommerce-MyAccount-navigation .writing_btn:hover .img-active,
+.woocommerce-MyAccount-navigation .btn_money:hover .img-active {
     display: block
 }
 
@@ -3390,8 +3433,11 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     padding: 0 20px;
     border: 1px solid transparent
 }
-
-.elementor-tabs .elementor-tabs-wrapper .elementor-tab-title a img {
+.elementor-element .elementor-tabs-content-wrapper .elementor-tab-title >img{
+    max-width: 30px;
+    margin-right: 5px
+}
+.elementor-tabs .elementor-tabs-wrapper .elementor-tab-title img {
     max-height: 30px;
     margin-right: 5px
 }
@@ -3421,7 +3467,7 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     width: 100%;
     height: 100%;
     z-index: 1000000;
-    background-color: #fdf0ff;
+    background: url(img/page-bg.jpg) 0 0/cover no-repeat;
     transition: .3s ease-in-out;
 }
 
@@ -3433,7 +3479,59 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: #7b73ad;
+}
+
+.wp_loader .wrap .fa
+{
+    position:absolute;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -moz-animation-name: loading;
+    -moz-animation-duration: 1s;
+    -webkit-animation-name: loading;
+    -webkit-animation-duration: 1s;
+
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+@-webkit-keyframes loading {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes loading {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 .wp_loader img {
@@ -3614,21 +3712,36 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
 .purple_backg {
     background: #fdf0ff
 }
-
+.page-id-47 .main-content-page.single-content .single-entry-summary .woocommerce{
+    flex-wrap: nowrap;
+}
+.woocommerce-lost-password .main-content-page.single-content .single-entry-summary .woocommerce,
 .main-content-page.single-content .single-entry-summary .woocommerce {
     display: flex;
+    flex-wrap: wrap;
 }
 
+
+
 body.woocommerce-account .woocommerce-MyAccount-navigation {
-    display: flex;
-    flex-direction: column;
     width: 20%;
     min-width: 300px;
     padding: 0 30px;
-    min-height: calc(100vh - 85px);
+
     background: #fff
 }
-
+body.woocommerce-account .woocommerce-MyAccount-navigation-in{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+}
+body.woocommerce-account .woocommerce-MyAccount-navigation>ul{
+    display: flex;
+    flex-direction: column;
+}
+body.woocommerce-account .woocommerce-MyAccount-navigation>ul .woocommerce-MyAccount-navigation-link--customer-logout{
+    order: 1;
+}
 body.woocommerce-account .woocommerce-MyAccount-navigation .h3 {
     margin: 25px 0;
     font-weight: 900;
@@ -4730,6 +4843,137 @@ div.swiper-slide {
     margin-top: auto;
     margin-top: 100px;
 }
+/*********************** .enroll-celebrity-sm ************/
+.enroll-celebrity-sm .baner img {
+    display: block;
+    width: 100%;
+}
+
+.enroll-celebrity-sm-in {
+    padding: 0 10px;
+}
+
+.enroll-celebrity-sm-in .h3 {
+    margin-bottom: 20px;
+    padding-bottom: 21px;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000;
+    border-bottom: 1px solid #7b73ad;
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion {
+    position: relative;
+    margin-bottom: 10px;
+    padding-top: 45px;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: -45px;
+    border-radius: 45px;
+    color: #fff;
+    background: #7b73ad;
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-title span {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-title .fa {
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: auto;
+    color: #7b73ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: 1s ease-in-out all;
+    -moz-transition: 1s ease-in-out all;
+    -o-transition: 1s ease-in-out all;
+    transition: 1s ease-in-out all;
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-body {
+    -webkit-transition: 1s ease-in-out all;
+    -moz-transition: 1s ease-in-out all;
+    -o-transition: 1s ease-in-out all;
+    transition: 1s ease-in-out all;
+    margin-top: -20px;
+    padding: 0px 15px 0px;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    padding: 0;
+    color: #000;
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion.active .celebrity-accordion-title {
+    background: #fc78f2;
+    color: #fff;
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion.active .celebrity-accordion-title .fa {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion.active .celebrity-accordion-body {
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+    padding: 60px 15px 40px;
+    background: #fdf0ff;
+}
+
+.enroll-celebrity-sm-button {
+    position: relative;
+    z-index: 9999999999;
+    margin-top: 10px;
+    padding: 25px 10px;
+    border-top: 1px solid #7b73ad;
+    background: #fdf0ff;
+}
+
+.enroll-celebrity-sm-button .list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.enroll-celebrity-sm-button .list li {
+    text-align: center;
+}
+
+.enroll-celebrity-sm-button .list li:hover .text {
+    color: #7b73ad;
+}
+
+.enroll-celebrity-sm-button .list li a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.enroll-celebrity-sm-button .list li .text {
+    font-size: 12px;
+    color: #000;
+}
 
 
 
@@ -5392,7 +5636,18 @@ div.swiper-slide {
         white-space: nowrap;
         width: 35%
     }
+    .page_modal {
+        margin: 30px auto 30px;
+    }
+    .page_modal-left {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+    .page_modal-left form .input-group input{
+        height: 60px;}
 }
+
+
 
 @media (max-width: 1410px) {
     #elementor-element-left {
@@ -5712,7 +5967,7 @@ div.swiper-slide {
     }
 
     .home .main-container .page-area {
-        padding-top: 0
+        //padding-top: 0
     }
 
     .home #site-navigation {
@@ -5740,8 +5995,16 @@ div.swiper-slide {
         line-height: 1;
     }
 }
-
+.sm-visible{
+    display: none !important;
+}
 @media (max-width: 767px) {
+    .sm-hide{
+        display: none !important;
+    }
+    .sm-visible{
+        display: block !important;
+    }
     .home #site-navigation {
         min-height: 0
     }
@@ -5777,7 +6040,8 @@ div.swiper-slide {
     }
 
     .ms_top_search {
-        display: none
+        max-width: 170px;
+        margin-left: 10px;
     }
 
     .ms_top_right {

@@ -77,7 +77,7 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
 ?>
 <div class="ms_header ">
     <div class="ms_top_left">
-    <a href="/" class="visible-xs-inline-block  logo"><img src="/wp-content/themes/envo-storefront/img/logo-3.png" alt=""></a>
+  <?/*  <a href="/" class="visible-xs-inline-block  logo"><img src="/wp-content/themes/envo-storefront/img/logo-3.png" alt=""></a>*/?>
             <div class="ms_top_search">
             <?= do_shortcode('[smart_search id="1"]'); ?>
              <?/*<form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
@@ -95,23 +95,24 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
         </div>
     </div>
     <div class="ms_top_right">
-      <span>Languages</span>
+      <span style="display: none;">Languages</span>
       <?/*<a class="glink">CN</a>*/?>
-        <?php   do_shortcode('[gtranslate]'); ?>
+      <div style="display: none;"><?=   do_shortcode('[gtranslate]'); ?></div>
+
                 <div class="ms_top_btn">
-<a href="#"
-   class="visible-xs-inline-block visible-search"
+<?/*
+<a href="#" class="visible-xs-inline-block visible-search"
    onclick="document.querySelector('#mob_search').classList.toggle('active');">
    <img src="/wp-content/themes/envo-storefront/img/icons-v2/search.png" alt="">
-   </a>
+   </a>*/?>
 <a href="/create-your-account/" class="ms_btn reg_btn">
     <!--<span>Sign up</span>-->
-    <span>加入我們</span>
+    <span>用户注册</span>
     <img src="/wp-content/themes/envo-storefront/img/icons-v2/Signup.png" alt="">
     <!--<i style="color: transparent; width: 1px;">SignUp</i>-->
 </a>
 <a href="/mingming.io/enroll-as-celebrity-new/" class="ms_btn reg_btn">
-    <span>注冊</span>
+    <span>明星注册</span>
     <img src="/wp-content/themes/envo-storefront/img/icons-v2/Enroll.png" alt="">
 </a>
 <?php
@@ -122,12 +123,12 @@ $login = $current_user->user_login;
     $login;
     $login = 'Logged as '.$login;
 }else{
-    $login = '登入';
+    $login = '登录';
 }
 
  ?>
 <?/*<a href="/my-account-2/" class="ms_btn login_btn"><span>=$login;</span>*/?>
-<a href="/my-account-2/" class="ms_btn login_btn"><span>登入</span>
+<a href="/my-account-2/" class="ms_btn login_btn"><span>登录</span>
 <img src="/wp-content/themes/envo-storefront/img/icons-v2/Login.png" alt="">
 <!--<i>login</i>-->
 </a>

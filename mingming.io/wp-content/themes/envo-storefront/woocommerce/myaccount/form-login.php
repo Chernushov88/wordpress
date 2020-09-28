@@ -53,15 +53,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
     width: 100%;
     padding: 0;
   }
-  .page_modal-left form .h2 {
-    margin: 0 0 15px 0;
-  }
   .single-head {
     display: none;
   }
-  .page_modal-left{
-      padding: 100px 0;
-    }
   .page_modal-left form button.btn{
     margin: 45px auto;
   }
@@ -174,7 +168,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 
 <div class="page_modal">
-  <a href="#" class="close"><img src="/wp-content/themes/envo-storefront/img/close.png"></a>
+  <a href="/" class="close"><img src="/wp-content/themes/envo-storefront/img/close.png"></a>
   <div class="page page_modal-in">
     <div class="page_modal-left">
       <form class=" " method="post">
@@ -321,7 +315,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
     <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/app-store.png" alt=""></a></li>
   </ul>
   <div class="grcode">
-    <a href="#"><img src="/wp-content/themes/envo-storefront/img/grcode.jpg" alt=""></a>
+    <a href="http://qrcoder.ru" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fmingming.io%2Fwp-content%2Fuploads%2F2020%2F05%2FMingMing-v1.apk&4&0" width="164" height="164" border="0" title="QR код"></a>
   </div>
 </div>
 </div>

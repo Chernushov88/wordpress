@@ -17,11 +17,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-wc_print_notice( esc_html__( 'Password reset email has been sent.', 'woocommerce' ) );
+wc_print_notice( esc_html__( '已发送密码重置电子邮件。', 'woocommerce' ) );
 ?>
 
 <?php do_action( 'woocommerce_before_lost_password_confirmation_message' ); ?>
 
-<p><?php echo esc_html( apply_filters( 'woocommerce_lost_password_confirmation_message', esc_html__( 'A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset.', 'woocommerce' ) ) ); ?></p>
+<p><?php echo esc_html( apply_filters( 'woocommerce_lost_password_confirmation_message', esc_html__( '密码重置电子邮件已发送到您帐户的电子邮箱，但可能需要几分钟才能显示在您的收件箱。请至少等待10分钟，然后再尝试另一次重置。', 'woocommerce' ) ) ); ?></p>
 
 <?php do_action( 'woocommerce_after_lost_password_confirmation_message' ); ?>

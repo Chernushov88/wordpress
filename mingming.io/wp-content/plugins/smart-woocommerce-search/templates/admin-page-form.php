@@ -32,8 +32,8 @@ $tabs = array(
 		$w_title = !empty($w_id) ? $widgets[$w_id]['name'] : '';
 		?>
 		<div class="ysm-widget-edit-title-wrap">
-
-			<input type="text" name="name" size="30" value="<?php echo esc_html($w_title) ?>" placeholder="<?php _e('Enter name', 'smart_search') ?>" autocomplete="off">
+<!--<input type="text" name="name" size="30" value="<?php echo esc_html($w_title) ?>" placeholder="<?php _e('Enter name', 'smart_search') ?>" autocomplete="off">-->
+			<input type="text" name="name" size="30" value="<?php echo esc_html($w_title) ?>" placeholder="搜索" autocomplete="off">
 
 		</div>
 		<?php

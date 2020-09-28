@@ -34,7 +34,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="wp_loader">
       <div class="wrap">
-        <img src="/wp-content/themes/envo-storefront/img/loader.gif" alt="site loader">
+        <!--<img src="/wp-content/themes/envo-storefront/img/loader.gif" alt="site loader">-->
       </div>
     </div>
     <div class="hide" id="mob_search">

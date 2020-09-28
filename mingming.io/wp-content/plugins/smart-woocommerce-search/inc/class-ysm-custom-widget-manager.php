@@ -320,7 +320,8 @@ class Ysm_Custom_Widget_Manager
 		<form data-id="<?php echo $w_id ?>" role="search" id="fom" method="get" class="search-form" action="<?php //echo esc_url( home_url( '/' ) ); ?>">
 			<label>
 				<span class="screen-reader-text"><?php _e( esc_attr( $settings['placeholder'], 'smart_search' ) ) ?></span>
-				<input type="search" onblur="jQuery('#ssi').val(jQuery(this).val())" class="search-field" placeholder="<?php _e( esc_attr( $settings['placeholder'], 'smart_search' ) ) ?>" value="<?php echo get_search_query(); ?>" name="s" />
+				<?/*<input type="search" onblur="jQuery('#ssi').val(jQuery(this).val())" class="search-field" placeholder="<?php _e( esc_attr( $settings['placeholder'], 'smart_search' ) ) ?>" value="<?php echo get_search_query(); ?>" name="s" />*/?>
+				<input type="search" onblur="jQuery('#ssi').val(jQuery(this).val())" class="search-field" placeholder="搜索" value="<?php echo get_search_query(); ?>" name="s" />
 				<input type="hidden" id="ssi" name="post_type" size="30" value="product">
 				<button type="button" onclick="fat();" class="search-submit"><span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'smart_search' ); ?></span></button>
 			</label>
@@ -332,7 +333,7 @@ class Ysm_Custom_Widget_Manager
 		setTimeout(function () {
 		var ss=jQuery('#ssi').val();
 		
-		
+
 		window.location.href='/?s='+ss+'&search_id=1&post_type=product';
 			
 		}, 1000);	

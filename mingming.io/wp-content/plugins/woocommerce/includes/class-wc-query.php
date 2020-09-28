@@ -130,7 +130,7 @@ class WC_Query {
 				$title = __( 'Add payment method', 'woocommerce' );
 				break;
 			case 'lost-password':
-				$title = __( 'Lost password', 'woocommerce' );
+				$title = __( '忘记密码', 'woocommerce' );
 				break;
 			default:
 				$title = '';

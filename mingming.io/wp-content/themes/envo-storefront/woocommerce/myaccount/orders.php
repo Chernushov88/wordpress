@@ -113,17 +113,7 @@
   width: 100%;
   margin-top: 10px;
   }
-  .table {
-  font-size: 12px;
-  }
-  .table thead th{
-  background: rgba(0, 0, 0, 0.1);;
-  }
-  .table td, .table th {
-  padding: .75rem;
-  vertical-align: top;
-  border: 1px solid #dee2e6;
-  }
+
   .table td.buttons-block{
   padding: 0.15em 0.35em 0.5em;
   vertical-align: middle;
@@ -138,15 +128,6 @@
   max-width: 100px;
   padding: 0 !important;
   font-size: 14px;
-  }
-  .table td .buttons-block-in{
-  //order: -1;
-  /*width: 100%;
-  margin-top: 10px;
-  clear: both;*/
-  /*display: flex;
-  justify-content: space-between;
-  justify-content: space-evenly;*/
   }
   .table td .buttons-block-in>div{
   display: none;
@@ -307,19 +288,15 @@
    ?>
 <div class="woocommerce-notices-flex">
   <div class="woocommerce-notices-table">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Type</th>
-          <th scope="col">From</th>
-          <th scope="col">To</th>
-          <th scope="col">Instruction</th>
-          <th scope="col">Link</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
+   
+   
+<?
+if( wp_is_mobile() ) 
+{
+	?>
+	 <div id="perv" class="table">
+
+   
         <?
           $order_statuses = array('wc-payed');
           $customer_user_id = get_current_user_id(); // current user ID here for example
@@ -368,6 +345,9 @@
 
                   //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
               ?>
+<div  class="ter">
+	<a onclick="jQuery(this).parent().find('table').slideToggle()" href="javascript:void(0)"><?=$datu?> | <?=$type?> | <?=$to?></a>	   
+	<table style="display:none">
         <tr>
           <td scope="row" class="data-td"><?=$datu?></td>
           <td><?=$type?></td>
@@ -406,7 +386,7 @@
             <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -487,7 +467,588 @@
             <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"fd166e9665fbf5161b1b022a9279b02f", eid:"nd8piv", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+
+
+
+              }
+
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
+
+
+
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+
+
+
+
+
+
+
+
+
+
+              }
+
+
+              });
+            </script>
+            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <?
+              }
+
+
+
+                  ?>
+          </td>
+        </tr>
+		</table>
+		</div>
+        <?
+          }
+
+
+
+          }
+
+          ?>
+     
+    </div>
+	
+	
+	
+	
+	
+	
+	  <div id="vtor" style="display:none" class="table">
+     
+        <?
+          $order_statuses = array('wc-payed');
+          $customer_user_id = get_current_user_id(); // current user ID here for example
+          $customer_orders5 = wc_get_orders( array(
+              'post_status' => $order_statuses,
+              'numberposts' => -1
+          ) );
+
+
+          // Loop through each customer WC_Order objects
+          foreach($customer_orders5 as $order ){
+
+              // Order ID (added WooCommerce 3+ compatibility)
+            $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+
+
+          $p=0;
+              // Iterating through current orders items
+              foreach($order->get_items() as $item_id => $item)
+            {
+				
+		
+		
+          $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
+              if ($product_id==$idu)
+              {
+          $p=1;
+              }
+              }
+
+            if ($p>0)
+            {
+            $order99 = wc_get_order( $order_id );
+          $order_meta = get_post_meta( $order_id);
+		
+          $type=$order_meta['billing_occasion'][0];
+          $from=$order_meta['billing_from'][0];
+          $to=$order_meta['billing_who'][0];
+          $int=$order_meta['billing_instructions'][0];
+          $link=$order_meta['billing_link'][0];
+
+		  
+		  if ($link)
+              {
+		  
+			  }
+		  else
+		  {
+		  
+		  
+		  
+          $int1=str_replace("'","\'",$int);
+
+          $object = (array)$order->data['date_created'];
+          $dat=$object['date'];
+          $pu=explode(' ',$dat);
+          $pu1=explode('-',$pu[0]);
+          $datu=$pu1[2].'.'.$pu1[1].'.'.$pu1[0];
+
+                  //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
+              ?>
+
+		<div class="ter">
+	<a onclick="jQuery(this).parent().find('table').slideToggle()" href="javascript:void(0)"><?=$datu?> | <?=$type?> | <?=$to?></a>	  
+       <table style="display:none">
+	   <tr>
+		
+          <td scope="row" class="data-td"><?=$datu?></td>
+          <td><?=$type?></td>
+          <td><?=$from?></td>
+          <td><?=$to?></td>
+          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td>
+            <?
+              if ($link)
+              {
+              ?>
+            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+            <?
+              }
+              ?>
+          </td>
+          <td class="buttons-block">
+            <?php
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+              if ($osa=='Safari') {
+
+              }else{?>
+            <!---->
+            <? } ?>
+            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+            <?
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+                if ($osa=='Safari')
+                {
+                  ?>
+            <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
+              -->
+            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
+            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+              jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+              }
+              });
+
+              }
+
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
+
+
+                jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+              }
+              });
+
+
+
+
+
+
+
+
+              }
+
+
+              });
+            </script>
+            <?
+              }
+              else
+              {
+                ?>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+
+
+
+              }
+
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
+
+
+
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+
+
+
+
+
+
+
+
+
+
+              }
+
+
+              });
+            </script>
+            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <?
+              }
+
+
+
+                  ?>
+          </td>
+        </tr>
+		</table>
+		</div>
+		
+        <?
+		
+		
+			}
+          }
+
+
+
+          }
+
+          ?>
+     
+    </div>
+	<?
+}
+else
+{
+?>   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   <table id="perv" class="table shop_table ">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Instruction</th>
+          <th scope="col">Link</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?
+          $order_statuses = array('wc-payed');
+          $customer_user_id = get_current_user_id(); // current user ID here for example
+          $customer_orders5 = wc_get_orders( array(
+              'post_status' => $order_statuses,
+              'numberposts' => -1
+          ) );
+
+
+          // Loop through each customer WC_Order objects
+          foreach($customer_orders5 as $order ){
+
+              // Order ID (added WooCommerce 3+ compatibility)
+            $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+
+
+          $p=0;
+              // Iterating through current orders items
+              foreach($order->get_items() as $item_id => $item)
+            {
+          $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
+              if ($product_id==$idu)
+              {
+          $p=1;
+              }
+              }
+
+            if ($p>0)
+            {
+            $order99 = wc_get_order( $order_id );
+          $order_meta = get_post_meta( $order_id);
+		
+          $type=$order_meta['billing_occasion'][0];
+          $from=$order_meta['billing_from'][0];
+          $to=$order_meta['billing_who'][0];
+          $int=$order_meta['billing_instructions'][0];
+          $link=$order_meta['billing_link'][0];
+
+          $int1=str_replace("'","\'",$int);
+
+          $object = (array)$order->data['date_created'];
+          $dat=$object['date'];
+          $pu=explode(' ',$dat);
+          $pu1=explode('-',$pu[0]);
+          $datu=$pu1[2].'.'.$pu1[1].'.'.$pu1[0];
+
+                  //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
+              ?>
+		<tr style="cursor:pointer" onclick="jQuery(this).parent().find('.re-<?=$order_id?>').slideToggle()">
+		<td><?=$datu?></td>
+		<td><?=$type?> | <?=$to?></td>
+		<td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+		</tr>
+        <tr style="display:none" class="re-<?=$order_id?>">
+          <td scope="row" class="data-td"><?=$datu?></td>
+          <td><?=$type?></td>
+          <td><?=$from?></td>
+          <td><?=$to?></td>
+          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td>
+            <?
+              if ($link)
+              {
+              ?>
+            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+            <?
+              }
+              ?>
+          </td>
+          <td class="buttons-block">
+            <?php
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+              if ($osa=='Safari') {
+
+              }else{?>
+            <!---->
+            <? } ?>
+            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+            <?
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+                if ($osa=='Safari')
+                {
+                  ?>
+            <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
+              -->
+            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
+            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+              jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+              }
+              });
+
+              }
+
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
+
+
+                jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+              }
+              });
+
+
+
+
+
+
+
+
+              }
+
+
+              });
+            </script>
+            <?
+              }
+              else
+              {
+                ?>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -576,6 +1137,312 @@
           ?>
       </tbody>
     </table>
+	
+	
+	
+	
+	
+	
+	  <table id="vtor" style="display:none" class="table">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Instruction</th>
+          <th scope="col">Link</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?
+          $order_statuses = array('wc-payed');
+          $customer_user_id = get_current_user_id(); // current user ID here for example
+          $customer_orders5 = wc_get_orders( array(
+              'post_status' => $order_statuses,
+              'numberposts' => -1
+          ) );
+
+
+          // Loop through each customer WC_Order objects
+          foreach($customer_orders5 as $order ){
+
+              // Order ID (added WooCommerce 3+ compatibility)
+            $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+
+
+          $p=0;
+              // Iterating through current orders items
+              foreach($order->get_items() as $item_id => $item)
+            {
+				
+		
+		
+          $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
+              if ($product_id==$idu)
+              {
+          $p=1;
+              }
+              }
+
+            if ($p>0)
+            {
+            $order99 = wc_get_order( $order_id );
+          $order_meta = get_post_meta( $order_id);
+		
+          $type=$order_meta['billing_occasion'][0];
+          $from=$order_meta['billing_from'][0];
+          $to=$order_meta['billing_who'][0];
+          $int=$order_meta['billing_instructions'][0];
+          $link=$order_meta['billing_link'][0];
+
+		  
+		  if ($link)
+              {
+		  
+			  }
+		  else
+		  {
+		  
+		  
+		  
+          $int1=str_replace("'","\'",$int);
+
+          $object = (array)$order->data['date_created'];
+          $dat=$object['date'];
+          $pu=explode(' ',$dat);
+          $pu1=explode('-',$pu[0]);
+          $datu=$pu1[2].'.'.$pu1[1].'.'.$pu1[0];
+
+                  //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
+              ?>
+     <tr style="cursor:pointer" onclick="jQuery(this).parent().find('.re-<?=$order_id?>').slideToggle()"><td><?=$datu?></td><td><?=$type?> | <?=$to?></td></tr>
+        <tr style="display:none" class="re">
+		
+          <td scope="row" class="data-td"><?=$datu?></td>
+          <td><?=$type?></td>
+          <td><?=$from?></td>
+          <td><?=$to?></td>
+          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td>
+            <?
+              if ($link)
+              {
+              ?>
+            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+            <?
+              }
+              ?>
+          </td>
+          <td class="buttons-block">
+            <?php
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+              if ($osa=='Safari') {
+
+              }else{?>
+            <!---->
+            <? } ?>
+            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
+            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+            <?
+              $osa=get_os($_SERVER['HTTP_USER_AGENT']);
+                if ($osa=='Safari')
+                {
+                  ?>
+            <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
+              -->
+            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
+            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+              jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+              }
+              });
+
+              }
+
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
+
+
+                jQuery('.pipeFileInput').each(function(){
+              var yy=jQuery(this).parent().parent().attr('Class');
+              if (yy!='intip buttons-block-in pipeMobileRecorder')
+              {
+                var idi=yy.split(' ');
+                var idi1=idi[0].split('-');
+                var zak=idi1[1];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+              }
+              });
+
+
+
+
+
+
+
+
+              }
+
+
+              });
+            </script>
+            <?
+              }
+              else
+              {
+                ?>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
+            <script type="text/javascript">
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
+              PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
+
+                recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onVideoUploadSuccess("+args.join(', ')+")");
+                var filename;
+
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:filename
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+
+
+
+              }
+
+              recorderObject.onSaveOk = function(recorderId, streamName, streamDuration, cameraName, micName, audioCodec, videoCodec, fileType, videoId, audioOnly, location){
+                var args = Array.prototype.slice.call(arguments);
+                console.log("onSaveOk("+args.join(', ')+")");
+                var streamName;
+
+
+
+              var yy=jQuery('#eta').find('.intip').attr('rel');
+
+
+
+                var zak=yy;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/linkos.php",
+                    data: {
+                    zak:zak,
+                          link:streamName
+                    },
+                    success: function(data)
+              {
+              window.location.reload();
+              }
+              });
+
+
+
+
+
+
+
+
+
+
+
+              }
+
+
+              });
+            </script>
+            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <?
+              }
+
+
+
+                  ?>
+          </td>
+        </tr>
+		
+		
+		
+        <?
+		
+		
+			}
+          }
+
+
+
+          }
+
+          ?>
+      </tbody>
+    </table>
+	
+	
+	<?
+}
+	?>
+	
+	
+	
+	
+	
   </div>
 </div>
 <?

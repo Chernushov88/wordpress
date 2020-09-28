@@ -1,4 +1,4 @@
-<div class="grid-wrapp">
+<div style="display:none" class="grid-wrapp">
   <div class="grid">
 <?php
   /*$loop = new WP_Query( array(

@@ -54,9 +54,10 @@ do_action( 'woocommerce_before_account_navigation' );
   article{
     margin: 0;
   }
-</style>
+  </style>
 
 <nav class="woocommerce-MyAccount-navigation">
+<div class="woocommerce-MyAccount-navigation-in">
   <div class="h3">我的帐户</div>
   <ul>
     <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
@@ -67,8 +68,26 @@ do_action( 'woocommerce_before_account_navigation' );
       </a>
     </li>
     <?php endforeach; ?>
+<?
+$url = $_SERVER['REQUEST_URI'];
+$ppp=explode('?',$url);
+if ($ppp[0]=='/my-account-2/orders/')
+{
+?>
+<li>
+  <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);">处理中</a> <? /*  – В обработке */?>
+</li>
+<li>
+  <a  onclick="jQuery('#perv').show();jQuery('#vtor').hide();" href="javascript:void(0);">全部订单</a> <? /*  – Все заказы */?>
+</li>
 
 
+
+<?
+}
+?>
+</ul>
+<div class="navigation-bottom">
     <?
 $sum=0;
 $user = wp_get_current_user();
@@ -99,23 +118,25 @@ $cher=get_user_meta( $user->ID, 'charity', true);
 
 
     echo '<ul class="usel-lest-roles">
-    <li><div class="name-price">Total (USD): '.$sum.'</div></li>
-    <li><div class="name-price">Charity (USD): '.$cherSum.'</div></li>
-    <li><div class="name-price">Available (USD): '.$result.'</div></li>
-    <li><a href="javascript:void(0);" onclick="showPopup(\'#popupUserRole\');" class="btn btn-login">Get money</a></li>
+    <li><div class="h3">结余</div></li>
+    <li><div class="name-price"><div>总计</div> <b>USD:</b> '.$sum.'</div></li>
+    <li><div class="name-price"><div>慈善机构</div> <b>USD:</b> '.$cherSum.'</div></li>
+    <li><div class="name-price"><div>可用的</div> <b>USD:</b> '.$result.'</div></li>
   </ul>';
     };
     ?>
 
-  </ul>
 
+
+<a href="javascript:void(0);" onclick="showPopup(\'#popupUserRole\');" class="btn_money ">
+      <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/money-active.png" alt="">
+      <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/money.png" alt="">结余</a>
   <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">
     <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/writing-active.png" alt="">
     <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/writing.png" alt="">联络我们</a>
 
-
-
-
+</div>
+</div>
 </nav>
 <script>
   function showPopup(target){
