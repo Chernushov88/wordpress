@@ -351,7 +351,7 @@ div.elementor-container {
     position: relative;
     width: 100%;
     max-width: 1400px;
-    margin: 90px auto 70px;
+    margin: 40px auto 20px;
     color: #000;
 }
 
@@ -3713,7 +3713,7 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     background: #fdf0ff
 }
 .page-id-47 .main-content-page.single-content .single-entry-summary .woocommerce{
-    flex-wrap: nowrap;
+    //flex-wrap: nowrap;
 }
 .woocommerce-lost-password .main-content-page.single-content .single-entry-summary .woocommerce,
 .main-content-page.single-content .single-entry-summary .woocommerce {
@@ -4641,7 +4641,7 @@ div.swiper-slide {
 }
 
 * {
-    outline: solid 0
+    outline: solid 0px;
 }
 
 .container-enroll .form-signin-wrapp {
@@ -5656,6 +5656,34 @@ div.swiper-slide {
 
     .grid-wrapp .grid {
         margin: 75px 0
+    }
+    .page_modal {
+        margin: 20px auto;
+    }
+    .page_modal-left {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .page_modal-left form .input-group{
+        margin-bottom: 20px;
+    }
+    .page_modal-left form .input-group input{
+        height: 50px;}
+
+    .page_modal-right .h1 {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+    .list-autorization{
+        margin-top: 0;}
+    .page_modal-left form button.btn{
+        margin-top: 20px;}
+    .page_modal .h2 {
+        font-size: 36px;}
+    .page_modal-left form .h3 {
+        font-size: 16px;}
+    .page_modal-right .flex img{
+        width: 100px;
     }
 }
 

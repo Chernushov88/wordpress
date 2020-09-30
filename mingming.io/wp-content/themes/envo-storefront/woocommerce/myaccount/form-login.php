@@ -38,9 +38,6 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
   .page-wrap{
     padding-bottom: 0;
   }
-  .page_modal {
-      margin: 50px auto 30px;
-  }
   ul{
     padding: 0;
     margin: 0;
@@ -192,11 +189,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
           <li>
             <a href="#">
               <img src="/wp-content/themes/envo-storefront/img/icon-remember-me.png" alt="">
-              <span>記住我</span>
+              <span>记住我</span>
             </a>
           </li>
-          <li><a href="/my-account-2/lost-password/"><span>忘記密碼？</span></a></li>
-          <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/icon-phone.png" alt=""><span>手機登入</span></a>
+          <li><a href="/my-account-2/lost-password/"><span>忘记密码‘</span></a></li>
+          <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/icon-phone.png" alt=""><span>手机登录</span></a>
           </li>
         </ul>
         <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
@@ -225,8 +222,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
         </ul>
         <div class="registration-now">
-          <span>還未有帳戶？ </span>
-          <a href="/create-your-account/">立即注冊</a>
+          <span>还未有帐户？</span>
+          <a href="/create-your-account/">立刻注册</a>
         </div>
         <div class="login-partner">
           <span></span>

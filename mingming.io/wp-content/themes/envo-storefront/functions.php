@@ -852,6 +852,46 @@ else
 
 update_user_meta( $idus, 'balance', $otog);
 
+
+
+
+//////////////////////////////////////////////
+
+          $order_statuses7 = array('wc-payed');
+          $customer_orders5 = wc_get_orders( array(
+              'post_status' => $order_statuses7,
+              'numberposts' => -1
+          ) );
+
+     $p=0;
+          foreach($customer_orders5 as $order )
+		  {
+   $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+              foreach($order->get_items() as $item_id => $item)
+            {
+          $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
+              if ($product_id==$idus)
+              {
+              $p++;
+              }
+            }
+			  
+		  }	
+		  
+if ($p==1)
+{
+$otog1=$otog+20;
+update_user_meta( $idus, 'balance', $otog1);
+}
+
+///////////////////////////////////////////////
+
+
+
+
+
+
+
 }
 
 
