@@ -128,7 +128,8 @@ $cher=get_user_meta( $user->ID, 'charity', true);
 
 
 
-<a href="javascript:void(0);" onclick="showPopup(\'#popupUserRole\');" class="btn_money ">
+
+<a href="javascript:void(0);" onclick="showPopup('#popupUserRole');" class="btn_money ">
       <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/money-active.png" alt="">
       <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/money.png" alt="">结余</a>
   <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">
@@ -279,11 +280,11 @@ $cher=get_user_meta( $user->ID, 'charity', true);
 <?
 /*
 
-UPDATE wp_options SET option_value = REPLACE (option_value, 'https://mingming.io', 'https://ming2.beget.tech') WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_options SET option_value = REPLACE (option_value, 'https://mingming.io', 'https://mingming.local') WHERE option_name = 'home' OR option_name = 'siteurl';
 
-UPDATE wp_posts SET guid = REPLACE (guid, 'https://mingming.io', 'https://ming2.beget.tech');
+UPDATE wp_posts SET guid = REPLACE (guid, 'https://mingming.io', 'https://mingming.local');
 
-UPDATE wp_posts SET post_content = REPLACE (post_content, 'https://mingming.io','https://ming2.beget.tech');
+UPDATE wp_posts SET post_content = REPLACE (post_content, 'https://mingming.io','https://mingming.local');
 
 */
 ?>

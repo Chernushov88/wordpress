@@ -664,7 +664,7 @@ if( wp_is_mobile() )
                 if ($osa=='Safari')
                 {
                   ?>
-            <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
+            <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>指令:<br/><?=$int1?></p>
               -->
             <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
             <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
@@ -821,7 +821,7 @@ if( wp_is_mobile() )
 
               });
             </script>
-            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>指令:<br/><?=$int1?>');">videoRecord</a>-->
             <?
               }
 
@@ -863,13 +863,13 @@ else
    <table id="perv" class="table shop_table ">
       <thead>
         <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Type</th>
-          <th scope="col">From</th>
-          <th scope="col">To</th>
-          <th scope="col">Instruction</th>
-          <th scope="col">Link</th>
-          <th scope="col"></th>
+          <th scope="col">日期	</th>
+          <th scope="col">时间</th>
+          <th scope="col">从</th>
+          <th scope="col">至</th>
+          <th scope="col">说明</th>
+          <th scope="col">链接</th>
+          <th scope="col">狀态</th>
         </tr>
       </thead>
       <tbody>
@@ -925,6 +925,7 @@ else
 		<td><?=$datu?></td>
 		<td><?=$type?> | <?=$to?></td>
 		<td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>

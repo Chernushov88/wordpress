@@ -17,7 +17,7 @@
   <div class="close" onclick="HidePopup('#popupWriting');"><img width="30px" height="30px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
   <div class="modal-content " role="document">
     <div class="modal-header">
-      <h2 class="modal-title">Write us a message</h2>
+      <h2 class="modal-title">联系我们</h2>
     </div>
     <div class="modal-body -scroll">
       <?= do_shortcode('[contact-form-7 id="569" title="Contact form 1"]'); ?>
