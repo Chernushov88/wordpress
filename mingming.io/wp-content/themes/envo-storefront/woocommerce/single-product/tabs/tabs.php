@@ -183,7 +183,7 @@
 <div class="woocommerce-tabs wc-tabs-wrapper">
   <ul class="tabs wc-tabs" role="tablist">
     <li class="video_tab active" id="tab-title-video" role="tab" aria-controls="tab-video">
-      <a href="#tab-video">Video</a>
+      <a href="#tab-video">视频</a>
     </li>
     <?php foreach ( $product_tabs as $key => $product_tab ) : ?>
     <li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">

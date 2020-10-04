@@ -77,7 +77,7 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
 ?>
 <div class="ms_header ">
     <div class="ms_top_left">
-  <?/*  <a href="/" class="visible-xs-inline-block  logo"><img src="/wp-content/themes/envo-storefront/img/logo-3.png" alt=""></a>*/?>
+    <a href="/" class="visible-xs-inline-block  logo"><img src="/wp-content/themes/envo-storefront/img/logo-3.png" alt=""></a>
             <div class="ms_top_search">
             <?= do_shortcode('[smart_search id="1"]'); ?>
              <?/*<form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">

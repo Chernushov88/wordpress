@@ -194,9 +194,9 @@ function wc_get_account_orders_columns() {
 		'woocommerce_account_orders_columns',
 		array(
 		  'order-date'    => __( '日期', 'woocommerce' ),
-			'order-number'  => __( 'Order', 'woocommerce' ),
-			'order-status'  => __( 'Status', 'woocommerce' ),
-			'order-total'   => __( 'Total', 'woocommerce' ),
+			'order-number'  => __( '订购', 'woocommerce' ),
+			'order-status'  => __( '状况', 'woocommerce' ),
+			'order-total'   => __( '总数', 'woocommerce' ),
 			'order-actions' => __( '狀态', 'woocommerce' ),
 		)
 	);

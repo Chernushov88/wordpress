@@ -28,7 +28,7 @@ class WC_Widget_Price_Filter extends WC_Widget {
 		$this->settings           = array(
 			'title' => array(
 				'type'  => 'text',
-				'std'   => __( 'Filter by price', 'woocommerce' ),
+				'std'   => __( '按价格过滤', 'woocommerce' ),
 				'label' => __( 'Title', 'woocommerce' ),
 			),
 		);

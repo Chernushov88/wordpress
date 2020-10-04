@@ -74,6 +74,9 @@ $ppp=explode('?',$url);
 if ($ppp[0]=='/my-account-2/orders/')
 {
 ?>
+<?
+}
+?>
 <li>
   <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);">处理中</a> <? /*  – В обработке */?>
 </li>
@@ -83,9 +86,7 @@ if ($ppp[0]=='/my-account-2/orders/')
 
 
 
-<?
-}
-?>
+
 </ul>
 <div class="navigation-bottom">
     <?
@@ -151,18 +152,18 @@ $cher=get_user_meta( $user->ID, 'charity', true);
   <div class="modal-content" role="document">
     <div class="modal-header">
       <div class="form-group" style=" margin: 0 0 10px;">
-        <h3 class="modal-title"><label >Get money</label></h3>
+        <h3 class="modal-title"><label >收钱</label></h3>
       </div>
 
     </div>
     <div class="modal-body">
       <form id="spi" enctype="multipart/form-data"  class="form-horizontal col-md-12-"  method="post" maxlength="12">
         <div class="form-group" style=" margin: 0 0 5px;">
-          <b>You have (USD): <?=$result?></b>
+          <b>你的余额 （美金）: <?=$result?></b>
         </div>
         <div class="form-group" style=" margin: 0 0 5px;">
           <ul>
-            <li style="margin-right: auto;"><h4  style="margin: 0;">Send at:</h4></li>
+            <li style="margin-right: auto;"><h4  style="margin: 0;">发到:</h4></li>
             <li></li>
 
           </ul>
@@ -173,36 +174,35 @@ $cher=get_user_meta( $user->ID, 'charity', true);
           <ul>
             <li>
               <label for="">
-                <input type="radio" name="radio" value="Striples"><span> Striples</span>
+                <input type="radio" name="radio" value="Striples"><span> Stripe</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="radio" name="radio" value="Paypal"><span> Paypal</span>
+                <input type="radio" name="radio" value="Paypal"><span> 贝宝</span>
               </label>
             </li>
           </ul>
         </div>
         <div class="form-group">
-          <input type="number" id="man" onkeyup="return proverka(this);" onchange="return proverka(this);" value="<?=$result?>" placeholder="how many you will get:">
+          <input type="number" id="man" onkeyup="return proverka(this);" onchange="return proverka(this);" value="<?=$result?>" placeholder="你会得到多少。">
         </div>
         <div class="form-group form-control">
           <div tabindex="-1" class="CardNumberField ">
-            <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" aria-invalid="false" value="" placeholder="Input payment requirement here">
+            <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" aria-invalid="false" value="" placeholder="在此输入付款要求">
             <!-- <input id="ra2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
             <input id="ra3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value=""> -->
           </div>
         </div>
 
         <!-- <div class="form-group">
-          <input type="number" placeholder="how many you will get:">
+          <input type="number" placeholder="你会得到多少。">
         </div> -->
         <div class="form-group">
-          <button type="button" onclick="send()" class="btn ms_btn btn" name="Submit">Submit</button>
+          <button type="button" onclick="send()" class="btn ms_btn btn" name="Submit">提交</button>
           <div class="text-danger" id="response2"></div>
         </div>
-        <div class="small">You can use Stripe or Paypal to withdraw money. Withdrawal requests are processed within 1 to 5 days. The minimum withdrawal amount is 100 USD.
-          (we will add more withdrawal options in the near future, including wechat pay and alipay) </div>
+        <div class="small">你可以使用 Stripe 或者贝宝提现。提现要求需要1-5天进行。最小提现金额是100美金 （将来我们会加更多提现选项，如微信与支付宝。</div>
       </form>
     </div>
     <div class="modal-footer"></div>

@@ -94,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <?php do_action('envo_storefront_menu'); ?>
         </nav>
         <?php do_action('envo_storefront_after_menu'); ?>
-        <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">Write to us</a>
+        <a href="javascript:void(0);" class="btn-pink writing_btn" onclick="ShowPopup('#popupWriting')"> 联系我们</a>
       </div>
     </div>
     <?php wp_body_open(); ?>

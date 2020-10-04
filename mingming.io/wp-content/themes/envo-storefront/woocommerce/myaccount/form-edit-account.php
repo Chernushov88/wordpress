@@ -141,7 +141,7 @@
    $vip=get_user_meta( $current_user->ID, 'vip', true);
    ?>
 <div class="account-details">
-   <h2>Details:</h2>
+   <h2>详情:</h2>
    <?
       if( current_user_can('actor') )
       {
@@ -156,29 +156,29 @@
          </div>
       </div>
       <div class="form-group">
-         <label for="email">Email</label>
+         <label for="email">电邮地址</label>
          <div class="input-group">
             <input name="email" type="email" placeholder="your@example.com" id="email" class="form-control" value="<?=$ema?>" required>
          </div>
       </div>
       <div class="form-group">
-         <label for="phone">Phone number (never shared)</label>
+         <label for="phone">电话号码</label>
          <div class="input-group">
             <input type="text" name="phone" value="<?=$phon?>" placeholder="+86 999 9999 999" id="phone" class="form-control -phone-js" >
          </div>
       </div>
       <div class="form-group">
-         <label for="handle">Your handle</label>
+         <label for="handle">昵称</label>
          <div class="input-group">
             <input type="text" name="handle" value="<?=$han?>" placeholder="@jimmybuffet" id="handle" class="form-control">
          </div>
       </div>
       <div class="form-group">
-         <label for="followerCount">How many followers do you have?</label>
+         <label for="followerCount">你的粉丝数量</label>
          <div class="input-group" style="width:100%"><input type="text" name="followerCount" value="<?=$fow?>" placeholder="400k" id="followerCount" class="form-control"></div>
       </div>
       <div>
-         <button class="btn btn-login" onclick="send1()" type="button">SUBMIT</button>
+         <button class="btn btn-login" onclick="send1()" type="button">提交</button>
       </div>
    </form>
    <!--   ------------------------------------------------------------------------ про товар -->
@@ -242,33 +242,33 @@
             </div>
          </div>
          <br/>
-         <label for="addPhoto">Add your photo</label>
+         <label for="addPhoto">附上图片</label>
          <div class="input-group input-addFile">
             <input type="file" name="file" onchange="seno()" id="addPhoto" class="inputfile">
             <label for="addPhoto" class="form-control"><span></span><a class="btn btn-primary btn-addFile">Add file</a></label>
          </div>
       </div>
       <div class="form-group">
-         <label for="name">Your name</label>
+         <label for="name">你的名字</label>
          <div class="input-group">
             <input name="name" type="text" placeholder="Michael Jordan" id="name000" class="form-control" value="<?=$nam?>" required>
          </div>
       </div>
       <div class="form-group">
-         <label for="selfPrasentation">Self-presentation</label>
+         <label for="selfPrasentation">自我介绍</label>
          <div class="input-group">
             <textarea name="selfPrasentation" type="text" value='<?=$excerpt?>' placeholder="Actor Chicago fire" id="selfPrasentation" class="form-control " ></textarea>
          </div>
       </div>
       <div class="form-group chooseTabs" style="display:none;">
-         <label for="">Choose tags</label>
+         <label for="">先择类别</label>
          <div class="input-group">
             <a href="javascript:void(0)"  onclick="jQuery(this).toggleClass('active');" class="button <?
                if (in_array("Actors", $tag))
                {
                echo " active ";
                }
-               ?>">Actors</a>
+               ?>">演员</a>
             <a href="javascript:void(0)"  onclick="jQuery(this).toggleClass('active');" href="#" class="button<?
                if (in_array("Comic-Con", $tag))
                {
@@ -291,7 +291,7 @@
       </div>
       <br/>
       <div class="input-group chooseCategory">
-         <label for="">Choose category</label>
+         <label for="">先择类别</label>
          <div class="input-group">
             <?
                $cat1=array();
@@ -332,13 +332,13 @@
          </div>
       </div>
       <div class="form-group">
-         <label for="descripOrder">Description</label>
+         <label for="descripOrder">说明</label>
          <div class="input-group">
             <textarea name="descripOrder" id="descripOrder" cols="30" rows="10" class="form-control "><?=$des?></textarea>
          </div>
       </div>
       <div class="form-group">
-         <label for="pricePerOrder">Price per order(S)</label>
+         <label for="pricePerOrder">订单价格(S)</label>
          <div class="input-group">
             <input name="pricePerOrder" type="text" placeholder="40" value="<?=$price?>" id="pricePerOrder" class="form-control " required>
          </div>
@@ -351,7 +351,7 @@
          </div>-->
       <div class="-charity chooseCategory">
          <!-- <h3>Charity</h3> -->
-         <label for="">Charity</label>
+         <label for="">慈善捐赠</label>
          <div class="input-group">
             <div><input
                <?
@@ -362,7 +362,7 @@
                <?
                   }
                   ?>
-               type="radio" name="radioCharity" value="0" class="che"><label>0% on charity</label></div>
+               type="radio" name="radioCharity" value="0" class="che"><label>0% 慈善捐赠</label></div>
             <div><input
                <?
                   if ($cher==10)
@@ -372,7 +372,7 @@
                <?
                   }
                   ?>
-               type="radio" name="radioCharity" value="10" class="che1"><label>10% on charity</label></div>
+               type="radio" name="radioCharity" value="10" class="che1"><label>10% 慈善捐赠</label></div>
             <div><input
                <?
                   if ($cher==50)
@@ -382,7 +382,7 @@
                <?
                   }
                   ?>
-               type="radio" name="radioCharity" value="50" class="che1"><label>50% on charity</label></div>
+               type="radio" name="radioCharity" value="50" class="che1"><label>50% 慈善捐赠</label></div>
             <div><input
                <?
                   if ($cher==100)
@@ -392,11 +392,11 @@
                <?
                   }
                   ?>
-               type="radio" name="radioCharity" value="100" class="che1"><label>100% on charity</label></div>
+               type="radio" name="radioCharity" value="100" class="che1"><label>100% 慈善捐赠</label></div>
          </div>
       </div>
       <div>
-         <button class="btn btn-login" onclick="send2()" type="button">SUBMIT</button>
+         <button class="btn btn-login" onclick="send2()" type="button">提交</button>
       </div>
       <!-- <div id="su2" style="display:none">Success</div> -->
    </form>
@@ -410,31 +410,31 @@
    <form id="buyer"  method="post">
       <!--   <div id="su3" style="display:none">Success</div> -->
       <div class="form-group">
-         <label for="name">Your name</label>
+         <label for="name">你的名字</label>
          <div class="input-group">
             <input name="name" type="text" placeholder="Michael Jordan" id="name" class="form-control" value="<?=$fio?>" required>
          </div>
       </div>
       <div class="form-group">
-         <label for="email">Email</label>
+         <label for="email">电邮地址</label>
          <div class="input-group">
             <input name="email" type="email" placeholder="your@example.com" id="email" class="form-control" value="<?=$ema?>" required>
          </div>
       </div>
       <div class="form-group">
-         <label for="birthday">Birthday</label>
+         <label for="birthday">生日日期</label>
          <div class="input-group">
             <input type="text" name="birthday" value="<?=$bir?>" placeholder="99/99/9999" id="birthday" class="form-control">
          </div>
       </div>
       <div class="form-group">
-         <label for="inviteCode">Invite code (optional)</label>
+         <label for="inviteCode">邀请码</label>
          <div class="input-group" style="width:100%">
             <input type="text" name="inviteCode" value="<?=$inv?>" placeholder="Invite code" id="inviteCode" class="form-control">
          </div>
       </div>
       <div>
-         <button class="btn btn-login btn-block" onclick="send3()" type="button">SUBMIT</button>
+         <button class="btn btn-login btn-block" onclick="send3()" type="button">提交</button>
       </div>
    </form>
    <?
@@ -463,17 +463,17 @@
       <input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" />
    </p>
    <fieldset>
-      <legend><?php esc_html_e( 'Password change', 'woocommerce' ); ?></legend>
+      <legend><?php esc_html_e( '修改密码', 'woocommerce' ); ?></legend>
       <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-         <label for="password_current"><?php esc_html_e( 'Current password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
+         <label for="password_current"><?php esc_html_e( '现在的密码', 'woocommerce' ); ?></label>
          <input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="off" />
       </p>
       <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-         <label for="password_1"><?php esc_html_e( 'New password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
+         <label for="password_1"><?php esc_html_e( '新的密码', 'woocommerce' ); ?></label>
          <input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" />
       </p>
       <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-         <label for="password_2"><?php esc_html_e( 'Confirm new password', 'woocommerce' ); ?></label>
+         <label for="password_2"><?php esc_html_e( '确认新密码', 'woocommerce' ); ?></label>
          <input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />
       </p>
    </fieldset>
@@ -481,7 +481,7 @@
    <?php do_action( 'woocommerce_edit_account_form' ); ?>
    <p>
       <?php wp_nonce_field( 'save_account_details', 'save-account-details-nonce' ); ?>
-      <button type="submit" class="btn btn-login" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button>
+      <button type="submit" class="btn btn-login" name="save_account_details" value="<?php esc_attr_e( '保存更改', 'woocommerce' ); ?>"><?php esc_html_e( '保存更改', 'woocommerce' ); ?></button>
       <input type="hidden" name="action" value="save_account_details" />
    </p>
    <?php do_action( 'woocommerce_edit_account_form_end' ); ?>

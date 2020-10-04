@@ -53,7 +53,7 @@ form .required {
     padding: 10px 5% 50px ;
     border-radius: 10px;
     border-radius: 10px;
-    background: #1b2039;
+    background: #bf56fb;
     -moz-transform: scale(0.7);
     -ms-transform: scale(0.7);
     -webkit-transition: all 0.3s;

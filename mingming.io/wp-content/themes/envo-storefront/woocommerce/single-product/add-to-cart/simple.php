@@ -47,7 +47,7 @@ if ( $product->is_in_stock() ) : ?>
 		*/?>
 
 <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button btn button ">
-	Book now for <?php echo $product->get_price_html(); ?>
+	立刻预订只 <?php echo $product->get_price_html(); ?>
 	<?/*php echo esc_html( $product->single_add_to_cart_text() ); */?>
 
 	</button>
