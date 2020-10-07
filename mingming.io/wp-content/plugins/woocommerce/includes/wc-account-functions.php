@@ -102,7 +102,7 @@ function wc_get_account_menu_items() {
 		'edit-address'    => __( 'Addresses', 'woocommerce' ),
 		'payment-methods' => __( 'Payment methods', 'woocommerce' ),
 		'edit-account'    => __( '帐户资料', 'woocommerce' ),
-		'customer-logout' => __( 'Logout', 'woocommerce' ),
+		'customer-logout' => __( '注销', 'woocommerce' ),
 	);
 
 	// Remove missing endpoints.

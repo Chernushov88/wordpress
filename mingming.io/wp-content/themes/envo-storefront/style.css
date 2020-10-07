@@ -368,7 +368,15 @@ div.elementor-container {
     position: absolute;
     top: -15px;
     right: -15px;
-    z-index: 9
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border: 4px solid #bf56fb;
+    border-radius: 50%;
 }
 
 .page_modal .h1 {
@@ -423,8 +431,8 @@ div.elementor-container {
     background-repeat: no-repeat !important
 }
 
-.page_modal-left form .input-group input#username {
-    background: url(img/user.png)
+.page_modal-left form .input-group input#username{
+    background: #fff url(img/user.png)
 }
 
 .page_modal-left form .input-group input#email {
@@ -3286,8 +3294,7 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
 }
 
 .woocommerce-MyAccount-navigation .writing_btn:hover .img,
-.woocommerce-MyAccount-navigation .btn_money:hover .img
-{
+.woocommerce-MyAccount-navigation .btn_money:hover .img {
     display: none
 }
 
@@ -3298,6 +3305,9 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
 
 .woocommerce-MyAccount-navigation ul li {
     padding: 5px 0
+}
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout{
+    /*display: none;*/
 }
 
 .woocommerce-MyAccount-navigation ul li a .icon {
@@ -3417,9 +3427,6 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     font-weight: 900;
     border-bottom: 1px solid #7b73ad !important;
 }
-.home .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title {
-    border-width: 0
-}
 
 .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title:after, .elementor-40 .elementor-element.elementor-element-0a63794 .elementor-tab-title:before {
     display: none
@@ -3442,7 +3449,7 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     z-index: 0;
     border-radius: 10px 10px 0 0;
     margin: 0;
-    padding: 0 20px;
+    margin: 0 20px;
     border: 1px solid transparent
 }
 .elementor-element .elementor-tabs-content-wrapper .elementor-tab-title >img{
@@ -3841,7 +3848,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
     right: 15px;
     bottom: 21px;
     z-index: 9999;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 60px;
@@ -3855,7 +3862,9 @@ body.woocommerce-account .woocommerce-MyAccount-content {
     box-shadow: 11px 16px 58px 9px #bf56fb;
     cursor: pointer
 }
-
+#scroll.fixed{
+    display: flex;
+}
 .body_safari #scroll {
     line-height: 1.5
 }
@@ -4932,6 +4941,7 @@ div.swiper-slide {
 }
 
 .enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-body {
+    position: relative;
     -webkit-transition: 1s ease-in-out all;
     -moz-transition: 1s ease-in-out all;
     -o-transition: 1s ease-in-out all;
@@ -4942,9 +4952,21 @@ div.swiper-slide {
     overflow: hidden;
     visibility: hidden;
     padding: 0;
+    font-size: 13px;
     color: #000;
 }
-
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-footer{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: flex;
+}
+.enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-footer a{
+    display: inline-block;
+    margin: 0 3px;
+    font-size: 11px;
+    color: #000;
+}
 .enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion.active .celebrity-accordion-title {
     background: #fc78f2;
     color: #fff;
@@ -4962,17 +4984,17 @@ div.swiper-slide {
     height: auto;
     overflow: visible;
     visibility: visible;
-    padding: 60px 15px 40px;
+    padding: 30px 15px 20px;
     background: #fdf0ff;
 }
 
 .enroll-celebrity-sm-button {
     position: relative;
     z-index: 9999999999;
-    margin-top: 10px;
+    margin-top: 100px;
     padding: 25px 10px;
-    border-top: 1px solid #7b73ad;
-    background: #fdf0ff;
+    border-top: 2px solid #d1cfce;
+    background: #fff;
 }
 
 .enroll-celebrity-sm-button .list {
@@ -4990,15 +5012,34 @@ div.swiper-slide {
 
 .enroll-celebrity-sm-button .list li a {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    font-size: 8px;
+    color: #000;
 }
 
 .enroll-celebrity-sm-button .list li .text {
     font-size: 12px;
     color: #000;
 }
-
-
+.enroll-celebrity-sm-button .list li a img{
+    height: 20px;
+}
+.enroll-celebrity-sm-button_myorder{
+    padding: 5px 10px;
+}
+.enroll-celebrity-sm-button_myorder li{
+    line-height: 2;
+}
+.enroll-celebrity-sm-button_myorder .arrow{
+    display: block;
+    width: 2px;
+    height: 80%;
+    background: #d1cfce;
+    margin-top: 3px;
+}
+.enroll-celebrity-sm-button_myorder .list li .text{
+    font-size: 8px;
+}
 
 
 
@@ -5862,7 +5903,7 @@ div.swiper-slide {
     div#my-menu {
         z-index: 99999;
         overflow: hidden;
-        background: #16192e
+        background: #bf56fb
     }
 
     .mm {
@@ -6086,7 +6127,11 @@ div.swiper-slide {
 .sm-visible{
     display: none !important;
 }
+#phone_popular{
+    display: none;
+}
 @media (max-width: 767px) {
+
     .h1, h1 {
         font-size: 27px;
     }
@@ -6104,16 +6149,28 @@ div.swiper-slide {
     .home .elementor-tabs .elementor-tabs-wrapper {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: scroll !important;
         margin-bottom: 20px;
     }
     .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title{
         margin-bottom: 10px;
     }
     .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title a {
-        font-size: 12px;
-
+        //font-size: 12px;
     }
-    .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title {padding: 0 2px 10px;}
+    .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title {padding: 0 20px 10px 0; border-bottom: 1px solid #d07ef3 !important;}
+    .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title:last-child{padding-right: 0;}
+    .elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active {
+        border-bottom: 3px solid #d07ef3 !important;
+        margin-bottom: 9px !important;
+    }
+    .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title a {
+        color: #606060 !important;
+    }
+    .elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active a{
+        color: #d07ef3 !important;
+    }
     .elementor-widget-tabs .elementor-tab-title {
         display: none;
     }
@@ -6498,16 +6555,125 @@ div.swiper-slide {
         margin: 0 0 0 3px
     }
 
+    .intercom-lightweight-app{
+        display: none;
+    }
+
+    .page_modal {
+        margin: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+    }
+    .page_modal .close {
+        top: 15px;
+        right: auto;
+        left: 25px;
+        position: static;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin: 15px 0 0 25px;
+        border: 0;
+    }
+
     .page_modal-in{
         flex-wrap: wrap;
     }
     .page_modal-left{
         width: 100%;
-        padding: 30px 10px !important;
+        padding: 20px 20px 0 !important;
     }
     .page_modal-right{
         width: 100%;
-        padding-bottom: 20px;
+        flex-direction: row;
+        padding: 0 5px 20px;
+        background: #fff;
+    }
+    .page_modal-right .grcode{
+        display: none;
+    }
+    .page_modal-right .h1 {
+        font-size: 22px;
+        margin: 0;
+        color: #000;
+    }
+    .page_modal-right .h1 br{
+        display: none;
+    }
+    .page_modal-right .flex {
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
+    .page_modal-right .flex li {
+        margin: 0px 0 0 10px;
+    }
+    .page_modal-right .flex img {
+        width: 78px;
+    }
+    .page_modal .logo{
+        display: inline-block;
+        margin-bottom: 20px;
+        max-width: 100px;
+    }
+
+    .page_modal-left form {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 100px);
+        justify-content: space-between;
+    }
+    .page_modal-left form .h2 {
+        margin: 0 0 0;
+    }
+    .page_modal .h2 {
+        font-size: 26px;
+    }
+    .page_modal-left form .h3 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .page_modal-left form .input-group {
+        margin-bottom: 0;
+    }
+    .page_modal-left form .input-group input {
+        padding: 0 10px 0 50px;
+        border-radius: 0px;
+        border: 0;
+        border-bottom: 1px solid #000;
+    }
+    .page_modal-left form .input-group input#username,
+    .page_modal-left form .input-group input#email {
+        background: #fff url(img/sm/email.png);
+    }
+    .page_modal-left form .step .input-group input#username{
+        background: #fff url(img/sm/user.png);
+    }
+    .page_modal-left form .input-group input#password {
+        background: url(img/sm/password.png);
+    }
+    .page_modal-left form .input-group .eye{
+        opacity: 0;
+    }
+    .list-autorization.sm-visible.flex {
+        display: flex !important;
+        margin: 0 0 0px !important;
+    }
+    .page_modal-left form button.btn {
+        margin: 20px 0 !important;
+        width: 100%;
+        background: #bf56fb;
+    }
+    .page_modal-left form .step{
+        height: 64vh;
+    }
+    .registration-pholitika{
+        display: none;
     }
 
     .main-content-page.single-content .single-entry-summary .woocommerce {
@@ -6551,11 +6717,216 @@ div.swiper-slide {
         width: 100%;
         height: 100%;
         background: url(./img/product-bg.png) left bottom;
+        background-size: cover;
     }
     .woocommerce ul.products li.product > a > .price span.woocommerce-Price-amount.amount img {
         width: 15px;
         margin: 5px 0 0;
     }
+
+    /************************************************/
+    .site-content-sm-p-0{
+        margin: 0 -20px;
+        background: #fff;
+    }
+    .user-head{
+        display: flex;
+        align-items: center;
+        margin: 20px 15px 0;
+    }
+    .user-head-img{
+        margin-right: 15px;
+    }
+    .user-head-img img{
+
+    }
+    .user-head-name{
+
+    }
+    .user-head-name .h3{
+        margin: 0 0 0px;
+        font-size: 22px;
+        font-weight: 900;
+        color: #7b73ac;
+    }
+    .user-head-name p{
+        margin: 5px 0;
+        font-size: 11px;
+        color: #7b73ac;
+    }
+    .user-head-name .icons{
+        display: flex;
+    }
+    .user-head-name .icons li{
+        margin: 0 5px 0;
+    }
+    .user-head-name .icons li:last-child{
+        margin-right: 0;
+    }
+    .user-head-name .icons li div{
+        width: 21px;
+        height: 21px;
+        margin: 0;
+    }
+    .user-head-name .icons li .icon-number{
+        width: 15px;
+        height: 19px;
+        text-align: center;
+        line-height: 2;
+        font-weight: 900;
+        font-size: 8px;
+        background: url("./img/sm/icon-number.png") no-repeat;
+        background-size: contain;
+    }
+
+    .user-desc{
+        margin: 10px 15px;
+    }
+    .user-desc p{
+        line-height: 2;
+        font-size: 16px;
+        color: #000;
+    }
+    .user-navigation{
+
+    }
+    .user-navigation .nav li{
+        border-top: 1px solid #000;
+    }
+    .user-navigation .nav li a{
+        display: flex;
+        align-items: center;
+        height: 55px;
+        margin: 0 20px;
+        padding: 0;
+    }
+    .user-navigation .nav li a img{
+
+    }
+    .user-navigation .nav li a span{
+        margin-left: 20px;
+        font-size: 16px;
+        color: #000;
+    }
+    .user-navigation .nav li a .fa{
+        margin-left: auto;
+        font-size: 16px;
+        color: #43426a;
+    }
+    .user-navigation .nav-ranking{
+        margin-top: 20px;
+    }
+    .user-navigation .nav-ranking li{
+        display: flex;
+        align-items: center;
+        height: auto;
+        margin: 0 15px 20px;
+        padding: 0;
+        border: 0;
+    }
+    .user-navigation .nav-ranking li .icon-number{
+        width: 25px;
+        height: 33px;
+        margin-right: 15px;
+        text-align: center;
+        line-height: 2;
+        font-weight: 900;
+        font-size: 12px;
+        background: url("./img/sm/icon-number.png") no-repeat;
+        background-size: contain;
+    }
+    .user-navigation .nav-ranking li p{
+        width: 65%;
+        line-height: 20px;
+        font-weight: 500;
+        color: #595757;
+    }
+    .user-navigation .nav-ranking li p b{
+        display: block;
+        color: #000;
+    }
+    .user-navigation .nav-ranking li .btn{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 30px;
+        width: 60px;
+        height: 30px;
+        margin: 0 0 0 auto;
+        font-weight: 500;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .btn_grey{
+        background: #9fa0a0;
+    }
+    .btn_blue{
+        background: #b3afce;
+    }
+    /*********************** #phone_popular ***********************/
+    #phone_popular{
+        display: block;
+        margin: 0 -10px;
+        width: calc(100% + 20px);
+    }
+    #phone_popular .elementor-tabs .elementor-tabs-wrapper{
+        position: relative;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    #phone_popular .elementor-tabs .elementor-tabs-wrapper:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        width: 100%;
+        border-bottom: 1px solid #d07ef3 !important;
+    }
+    #phone_popular .elementor-tabs-wrapper .elementor-tab-title{
+        padding-right: 0;
+        margin: 0 10px 2px;
+        padding-bottom: 3px;
+        border-bottom: 0 !important;
+    }
+
+    #phone_popular .elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active {
+        margin-bottom: 0px !important;
+        border-bottom: 3px solid #d07ef3 !important;
+    }
+    #phone_popular .woocommerce ul.products{
+        flex-wrap: wrap;
+        overflow-x: inherit;
+    }
+    #phone_popular .woocommerce ul.products li{
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 33.33% !important;
+    }
+
+    #phone_popular .woocommerce ul.products li .woocommerce-loop-product__link{
+        min-width: 130px;
+        max-width: 100% ;
+    }
+    #phone_popular .woocommerce ul.products li .woocommerce-loop-product__link:before{
+        background: none;
+        -webkit-box-shadow: inset 0px -200px 50px -132px rgba(0,0,0,0.49);
+        -moz-box-shadow: inset 0px -200px 50px -132px rgba(0,0,0,0.49);
+        box-shadow: inset 0px -200px 50px -132px rgba(0,0,0,0.49);
+    }
+    #phone_popular .woocommerce ul.products li .thumbnail-product{
+        margin: 0;
+        border-radius: 0px !important;
+    }
+    #phone_popular .woocommerce ul.products li .thumbnail-product img{
+        margin: 0;
+        border-radius: 0px !important;
+    }
+    #phone_popular .charity-ico, #phone_popular .vip-ico {
+        width: 20px;
+        height: 25px;
+        margin-left: 0;}
+
 
 }
 
@@ -6708,6 +7079,22 @@ div.swiper-slide {
     .ms_btn {
         font-size: 13px
     }
+    .page_modal .close{
+
+    }
+    .page_modal-left {
+        padding: 0px 20px 0 !important;
+    }
+    .page_modal-left form .h3 {
+        margin-bottom: 10px;
+    }
+    .registration-now{
+        margin-bottom: 10px !important;}
+    .login-partner{
+        margin-bottom: 5px !important;}
+    .page_modal-right .h1 {
+        font-size: 16px;}
+
 }
 
 @media (min-width: 600px) and (max-width: 782px) {

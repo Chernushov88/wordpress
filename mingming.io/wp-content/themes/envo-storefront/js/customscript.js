@@ -51,10 +51,10 @@
   });
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('#scroll').fadeIn(500);
+    if ($(this).scrollTop() > 300) {
+      $('#scroll').addClass('fixed');
     } else {
-      $('#scroll').fadeOut(500);
+      $('#scroll').removeClass('fixed')
     }
   });
 

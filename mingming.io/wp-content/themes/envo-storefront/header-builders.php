@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> style="margin: 0 !important">
+<?/* <html language_attributes();  lang="zh-CN" xml:lang="zh-CN"  style="margin: 0 !important">*/?>
+<html <? language_attributes(); ?> lang="zh-CN" xml:lang="zh-CN"  style="margin: 0 !important">
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -169,6 +169,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
   <div class="page page_modal-in">
     <div class="page_modal-left">
       <form class=" " method="post">
+        <div class="sm-visible">
+          <a href="/" class="logo"><img src="/wp-content/themes/envo-storefront/img/logo-3.png" alt=""></a>
+        </div>
         <div class="h2">你好</div>
         <div class="h3">登入到你的帳戶</div>
         <div class="input-group">
@@ -185,21 +188,34 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	                      <img src="/wp-content/themes/envo-storefront/img/eye.png" alt="">
 	                   </span>
         </div>
-        <ul class="flex list-autorization">
+        <ul class="flex list-autorization sm-hide">
           <li>
             <a href="#">
               <img src="/wp-content/themes/envo-storefront/img/icon-remember-me.png" alt="">
               <span>记住我</span>
             </a>
           </li>
-          <li><a href="/my-account-2/lost-password/"><span>忘记密码‘</span></a></li>
+          <li><a href="/my-account-2/lost-password/"><span>忘記密碼？</span></a></li>
           <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/icon-phone.png" alt=""><span>手机登录</span></a>
           </li>
         </ul>
+
         <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
         <button type="submit" class="btn gradient-horizontal" name="login"
                 value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">登入
         </button>
+         <ul class="flex list-autorization sm-visible">
+          <li><a href="/my-account-2/lost-password/"><span>忘記密碼？</span></a></li>
+                  <li>
+                    <a href="#">
+                      <img src="/wp-content/themes/envo-storefront/img/sm/icon-remember-me.png" alt="">
+                      <span>记住我</span>
+                    </a>
+                  </li>
+
+                  <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/sm/icon-phone.png" alt=""><span>手机登录</span></a>
+                  </li>
+                </ul>
         <ul class="social" style="display:none;">
           <!-- <li><a href="javascript:void(0);"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
           <li><a href="javascript:void(0);"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
@@ -231,7 +247,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
           <span></span>
         </div>
 
-        <ul class="flex social">
+        <ul class="flex social hidden">
           <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/social/1.png" alt=""></a></li>
           <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/social/2.png" alt=""></a></li>
         </ul>

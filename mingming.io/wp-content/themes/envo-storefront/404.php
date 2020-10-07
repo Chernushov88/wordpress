@@ -5,9 +5,10 @@
     <div class="col-md-<?php envo_storefront_main_content_width_columns(); ?>">
         <div class="main-content-page">
             <div class="error-template text-center">
-                <h1><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'envo-storefront'); ?></h1>
+                <?/*<h1><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'envo-storefront'); ?></h1>*/?>
+                <h1><?php esc_html_e('很抱歉，您要访问的页面不存在!', 'envo-storefront'); ?></h1>
                 <p class="error-details">
-                    <?php esc_html_e('It looks like nothing was found at this location. Maybe try a search?', 'envo-storefront'); ?>
+                    <?/*php esc_html_e('It looks like nothing was found at this location. Maybe try a search?', 'envo-storefront'); */?>
                 </p>
                 <div class="error-actions">
                     <?php get_search_form(); ?>    

@@ -36,6 +36,9 @@
   <div class="page page_modal-in">
     <div class="page_modal-left">
       <form class=" " method="post">
+      <div class="sm-visible">
+                <a href="/" class="logo"><img src="/wp-content/themes/envo-storefront/img/logo-3.png" alt=""></a>
+              </div>
         <div class="h2">歡迎！</div>
         <div class="h3">创建你的帐户</div>
         <div class="input-group">
@@ -48,7 +51,7 @@
 	                      <img src="/wp-content/themes/envo-storefront/img/eye.png" alt="">
 	                   </span>
         </div>
-        <ul class="flex list-autorization">
+        <ul class="flex list-autorization sm-hide">
           <li>
             <a href="#">
               <img src="/wp-content/themes/envo-storefront/img/icon-remember-me.png" alt="">
@@ -61,12 +64,23 @@
         </ul>
         <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="22574a019d"><input type="hidden" name="_wp_http_referer" value="/create-your-account/">
         <button class="btn gradient-horizontal" name="submit" onclick="sub()" type="button">注册</button>
+                 <ul class="flex list-autorization sm-visible">
+                          <li>
+                            <a href="#">
+                              <img src="/wp-content/themes/envo-storefront/img/sm/icon-remember-me.png" alt="">
+                              <span>記住我</span>
+                            </a>
+                          </li>
+
+                          <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/sm/icon-phone.png" alt=""><span>手機登入</span></a>
+                          </li>
+                        </ul>
         <div class="registration-pholitika">
           注册即表示您同意 MingMing
           <a href="javascript:void(0);" onclick="ShowPopup('#popupTerms');">服务条款</a> 和
           <a href="javascript:void(0);" onclick="ShowPopup('#popupPolicy');">隐私政策</a>
         </div>
-        <div class="registration-now">
+        <div class="registration-now sm-hide">
           <span>還未有帳戶？ </span>
           <a href="/create-your-account/">立即注冊</a>
         </div>
@@ -76,7 +90,7 @@
           <span></span>
         </div>
 
-        <ul class="flex social">
+        <ul class="flex social hidden">
           <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/social/1.png" alt=""></a></li>
           <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/social/2.png" alt=""></a></li>
         </ul>

@@ -27,11 +27,14 @@
   <div class="darkenVideo" onclick="HidePopup5('#eta');nextStep('.step-5',4);"></div>
 </div>
 
-<div class="page_modal sm-hide">
+<div class="page_modal">
   <a href="/" class="close"><img src="/wp-content/themes/envo-storefront/img/close.png"/></a>
   <div class="page page_modal-in">
     <div class="page_modal-left">
       <form id="tova" class="form-signin">
+        <div class="sm-visible">
+          <a href="/" class="logo"><img src="/wp-content/themes/envo-storefront/img/logo-3.png" alt=""></a>
+        </div>
         <div class="step step-1">
           <div class="h2">申请加入名人</div>
           <div class="h3">如果您拥有粉丝并想加入 Ming 作为名人，
@@ -51,7 +54,23 @@
             	                   </span>
           </div>
           <button type="button" onclick="nextStep('.step-2',1)" class="btn gradient-horizontal">注冊</button>
-          <p>注册即表示您同意 MingMing <a href="#">服务条款</a> 和 <a href="#">隐私政策</a></p>
+          <ul class="flex list-autorization sm-visible">
+                                    <li>
+                                      <a href="#">
+                                        <img src="/wp-content/themes/envo-storefront/img/sm/icon-remember-me.png" alt="">
+                                        <span>記住我</span>
+                                      </a>
+                                    </li>
+
+                                    <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/sm/icon-phone.png" alt=""><span>手機登入</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="login-partner sm-visible">
+                                            <span></span>
+                                            <a href="#">用合作網站帳號登入</a>
+                                            <span></span>
+                                          </div>
+          <p class="sm-hide">注册即表示您同意 MingMing <a href="#">服务条款</a> 和 <a href="#">隐私政策</a></p>
         </div>
         <div class="step step-2 hidden">
           <div style="display:none" id="idu"></div>
@@ -445,193 +464,15 @@
         <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/app-store.png" alt=""></a></li>
       </ul>
       <div class="grcode">
-        <a href="http://qrcoder.ru" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fmingming.io%2Fwp-content%2Fuploads%2F2020%2F05%2FMingMing-v1.apk&4&0" width="164" height="164" border="0" title="QR код"></a>
+        <a href="http://qrcoder.ru" target="_blank"><img
+            src="http://qrcoder.ru/code/?https%3A%2F%2Fmingming.io%2Fwp-content%2Fuploads%2F2020%2F05%2FMingMing-v1.apk&4&0"
+            width="164" height="164" border="0" title="QR код"></a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="sm-visible enroll-celebrity-sm">
-  <div class="baner">
-    <img src="/wp-content/themes/envo-storefront/img/sm-baner.png" alt="">
-  </div>
-  <div class="enroll-celebrity-sm-in">
-    <div class="h3">待完成订单</div>
 
-    <div class="accordion-wrapper">
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">15.08.2020</div>
-          <span>｜</span>
-          <div class="processing">激励</div>
-          <span>｜</span>
-          <div class="name">从軒少至東哥</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">15.08.2020</div>
-          <span>｜</span>
-          <div class="processing">生日</div>
-          <span>｜</span>
-          <div class="name">从MARY至JOHN</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">12.08.2020</div>
-          <span>｜</span>
-          <div class="processing">从龙仔至雄哥</div>
-          <span>｜</span>
-          <div class="name">激励</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">11.08.2020</div>
-          <span>｜</span>
-          <div class="processing">祝贺</div>
-          <span>｜</span>
-          <div class="name">从爸爸至嘉俊</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">11.08.2020</div>
-          <span>｜</span>
-          <div class="processing">道歉</div>
-          <span>｜</span>
-          <div class="name">从小明至心心</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">10.08.2020</div>
-          <span>｜</span>
-          <div class="processing">祝贺</div>
-          <span>｜</span>
-          <div class="name">从PETER至KARY</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">10.08.2020</div>
-          <span>｜</span>
-          <div class="processing">祝贺</div>
-          <span>｜</span>
-          <div class="name">从PETER至KARY</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">09.08.2020</div>
-          <span>｜</span>
-          <div class="processing">生日</div>
-          <span>｜</span>
-          <div class="name">从大根至琳琳</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-      <div class="celebrity-accordion">
-        <div class="celebrity-accordion-title">
-          <div class="date">04.08.2020</div>
-          <span>｜</span>
-          <div class="processing">生日</div>
-          <span>｜</span>
-          <div class="name">从梁生至梁太</div>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
-        <div class="celebrity-accordion-body">
-          <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
-            弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
-            福及支持。
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="enroll-celebrity-sm-button">
-    <ul class="list">
-      <li>
-        <a href=""><img src="/wp-content/themes/envo-storefront/img/enroll-celebrity/1.png" alt=""></a>
-        <div class="text">处理中</div>
-      </li>
-      <li>
-        <a href=""><img src="/wp-content/themes/envo-storefront/img/enroll-celebrity/2.png" alt=""></a>
-        <div class="text">全部订单</div>
-      </li>
-      <li>
-        <a href=""><img src="/wp-content/themes/envo-storefront/img/enroll-celebrity/3.png" alt=""></a>
-        <div class="text">帐户</div>
-      </li>
-      <li>
-        <a href=""><img src="/wp-content/themes/envo-storefront/img/enroll-celebrity/4.png" alt=""></a>
-        <div class="text">提款</div>
-      </li>
-      <li>
-        <a href=""><img src="/wp-content/themes/envo-storefront/img/enroll-celebrity/5.png" alt=""></a>
-        <div class="text">联络我们</div>
-      </li>
-    </ul>
-  </div>
-
-
-</div>
 
 </div>
 
