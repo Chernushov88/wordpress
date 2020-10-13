@@ -108,7 +108,8 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
 <a href="/create-your-account/" class="ms_btn reg_btn">
     <!--<span>Sign up</span>-->
     <span>用户注册</span>
-    <img src="/wp-content/themes/envo-storefront/img/icons-v2/Signup.png" alt="">
+
+    <img src="/wp-content/themes/envo-storefront/img/icons-v2/Login.png" alt="">
     <!--<i style="color: transparent; width: 1px;">SignUp</i>-->
 </a>
 <a href="/mingming.io/enroll-as-celebrity-new/" class="ms_btn reg_btn">
@@ -129,7 +130,7 @@ $login = $current_user->user_login;
  ?>
 <?/*<a href="/my-account-2/" class="ms_btn login_btn"><span>=$login;</span>*/?>
 <a href="/my-account-2/" class="ms_btn login_btn"><span>登录</span>
-<img src="/wp-content/themes/envo-storefront/img/icons-v2/Login.png" alt="">
+<img src="/wp-content/themes/envo-storefront/img/icons-v2/Signup.png" alt="">
 <!--<i>login</i>-->
 </a>
                     </div>

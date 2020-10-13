@@ -16,7 +16,8 @@
 
       <div class="accordion-wrapper">
         <div class="celebrity-accordion">
-          <div class="celebrity-accordion-title">
+          <div class="celebrity-accordion-title" id="progressbar">
+            <div class="progress-label"></div>
             <div class="date">15.08.2020</div>
             <span>｜</span>
             <div class="processing">激励</div>
@@ -24,6 +25,16 @@
             <div class="name">从軒少至東哥</div>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
           </div>
+          <div class="examples-progressbar">
+            <div class="cssProgress">
+              <div class="progress1">
+                <div class="cssProgress-bar" data-percent="100" style="width: 0%;">
+                  <span class="cssProgress-label">0%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="celebrity-accordion-body">
             <p>你好Haba Sir， 我們一家人都十分喜歡你， 特別是我的
               弟弟John， 他今年剛滿18岁生日并希望能收到你的祝
@@ -500,9 +511,80 @@
 </div>
 
 </div>
+<!--<div class="examples-progressbar">-->
+<!--  <div class="cssProgress">-->
+<!--    <div class="progress1">-->
+<!--      <div class="cssProgress-bar" data-percent="100" style="width: 100%;">-->
+<!--        <span class="cssProgress-label">100%</span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <span class="btn btn-primary progressStart">Start</span> &nbsp;&nbsp; <span class="btn btn-primary progressReset">Reset</span>-->
+<!--</div>-->
+
+<link rel="stylesheet" href="/wp-content/themes/envo-storefront/css/cssprogress.css">
+<script >
+  jQuery(document).ready(function($) {
+
+    setTimeout(function(){
+      $('.examples-progressbar').progress_fnc();
+
+      $('.progressStart').on('click', function() {
+        var perent = $(this).closest("div").attr("id");
+        $('#' + perent).progress_fnc({ type: 'start' });
+      });
+
+      $('.progressReset').on('click', function() {
+        var perent = $(this).closest("div").attr("id");
+        $('#' + perent).progress_fnc({ type: 'reset' });
+      });
+    }, 2000)
+
+  });
 
 
+  (function($) {
+
+    $.fn.progress_fnc = function(options) {
+      var settings = $.extend({
+        type: 'start'
+      }, options);
+
+      var div = $(this);
+      var progress = div.find('.cssProgress');
+
+      progress.each(function() {
+        var self = $(this);
+        var progress_bar = self.find('.cssProgress-bar');
+        var progress_label = self.find('.cssProgress-label, .cssProgress-label2');
+        var progress_value = progress_bar.data('percent');
+        var percentage = parseInt(progress_value, 10) + '%';
+
+        progress_bar.css({'width': '0%', 'transition': 'none', '-webkit-transition': 'none', '-moz-transition': 'none'});
+
+        if(settings.type == 'start') {
+
+          progress_bar.animate({
+            width: percentage
+          }, {
+            duration: 1000,
+            step: function(x) {
+              progress_label.text(Math.round(x) + '%');
+            }
+          });
+
+        } else if(settings.type == 'reset') {
+          progress_bar.css('width', '0%');
+          progress_label.text('0%');
+        }
+
+      });
+    }
+
+  }(jQuery));
+</script>
 <?php get_footer(); ?>
+
 
 
 

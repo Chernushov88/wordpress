@@ -294,8 +294,10 @@
 if( wp_is_mobile() ) 
 {
 	?>
-	 <div id="perv" class="table">
-
+	
+  <div id="perv" class="sm-visible enroll-celebrity-sm">
+    <div class="enroll-celebrity-sm-in">
+      <div class="accordion-wrapper">
    
         <?
           $order_statuses = array('wc-payed');
@@ -345,7 +347,29 @@ if( wp_is_mobile() )
 
                   //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
               ?>
-<div  class="ter">
+			  
+			  
+	<div class="celebrity-accordion">
+          <div class="celebrity-accordion-title">
+            <div class="date"><?=$datu?></div>
+            <span>｜</span>
+            <div class="processing"><?=$type?></div>
+            <span>｜</span>
+            <div class="name"><?=$to?></div>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <div class="celebrity-accordion-body">
+            <p><?=$int1?>
+            </p>
+          </div>
+        </div>
+			  
+			  
+			  
+			  
+			  
+			  
+<div style="display:none"  class="ter">
 	<a onclick="jQuery(this).parent().find('table').slideToggle()" href="javascript:void(0)"><?=$datu?> | <?=$type?> | <?=$to?></a>	   
 	<table style="display:none">
         <tr>
@@ -353,14 +377,14 @@ if( wp_is_mobile() )
           <td><?=$type?></td>
           <td><?=$from?></td>
           <td><?=$to?></td>
-          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td id="inti-<?=$order_id?>" class='table-td-text'><?=$int?></td>
           <td>
             <?
               if ($link)
               {
               ?>
-            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+            <!-- <a target="_blank" href="<?=$link?>"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a> -->
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <?
               }
               ?>
@@ -373,8 +397,8 @@ if( wp_is_mobile() )
               }else{?>
             <!---->
             <? } ?>
-            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/share.png" alt=""></a>
             <?
               $osa=get_os($_SERVER['HTTP_USER_AGENT']);
                 if ($osa=='Safari')
@@ -382,8 +406,8 @@ if( wp_is_mobile() )
                   ?>
             <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
               -->
-            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
-            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <!-- <a href="javascript:void(0);" class="btn" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a> -->
+            <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -464,7 +488,7 @@ if( wp_is_mobile() )
               else
               {
                 ?>
-            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -537,7 +561,7 @@ if( wp_is_mobile() )
 
               });
             </script>
-            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <!--<a href="javascript:void(0);" class="btn" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>-->
             <?
               }
 
@@ -557,14 +581,24 @@ if( wp_is_mobile() )
 
           ?>
      
+    <div class="enroll-celebrity-sm-button enroll-celebrity-sm-button_myorder">
+      <ul class="list">
+        <li>
+          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
+          <div class="text">上传影片</div>
+        </li>
+        <li>
+          <span class="arrow"></span>
+        </li>
+        <li>
+          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
+          <div class="text">手机拍摄</div>
+        </li>
+      </ul>
     </div>
+  </div>
 	
-	
-	
-	
-	
-	
-	  <div id="vtor" style="display:none" class="table">
+	  <div id="vtor" style="display:none" class="table shop_table ">
      
         <?
           $order_statuses = array('wc-payed');
@@ -637,14 +671,14 @@ if( wp_is_mobile() )
           <td><?=$type?></td>
           <td><?=$from?></td>
           <td><?=$to?></td>
-          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td id="inti-<?=$order_id?>" class='table-td-text'><?=$int?></td>
           <td>
             <?
               if ($link)
               {
               ?>
-            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+            <!-- <a target="_blank" href="<?=$link?>"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a> -->
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <?
               }
               ?>
@@ -657,8 +691,8 @@ if( wp_is_mobile() )
               }else{?>
             <!---->
             <? } ?>
-            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/share.png" alt=""></a>
             <?
               $osa=get_os($_SERVER['HTTP_USER_AGENT']);
                 if ($osa=='Safari')
@@ -666,8 +700,8 @@ if( wp_is_mobile() )
                   ?>
             <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>指令:<br/><?=$int1?></p>
               -->
-            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
-            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <!-- <a href="javascript:void(0);" class="btn" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
+            <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -748,7 +782,7 @@ if( wp_is_mobile() )
               else
               {
                 ?>
-            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -821,7 +855,7 @@ if( wp_is_mobile() )
 
               });
             </script>
-            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>指令:<br/><?=$int1?>');">videoRecord</a>-->
+            <!--<a href="javascript:void(0);" class="btn" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>指令:<br/><?=$int1?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>-->
             <?
               }
 
@@ -935,14 +969,14 @@ else
           <td><?=$type?></td>
           <td><?=$from?></td>
           <td><?=$to?></td>
-          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td id="inti-<?=$order_id?>" class='table-td-text'><?=$int?></td>
           <td>
             <?
               if ($link)
               {
               ?>
-            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+            <!-- <a target="_blank" href="<?=$link?>"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a> -->
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <?
               }
               ?>
@@ -955,8 +989,8 @@ else
               }else{?>
             <!---->
             <? } ?>
-            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/share.png" alt=""></a>
             <?
               $osa=get_os($_SERVER['HTTP_USER_AGENT']);
                 if ($osa=='Safari')
@@ -964,8 +998,8 @@ else
                   ?>
             <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
               -->
-            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
-            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <!-- <a href="javascript:void(0);" class="btn" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
+            <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -1046,7 +1080,7 @@ else
               else
               {
                 ?>
-            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -1119,7 +1153,7 @@ else
 
               });
             </script>
-            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <!--<a href="javascript:void(0);" class="btn" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>-->
             <?
               }
 
@@ -1144,7 +1178,7 @@ else
 	
 	
 	
-	  <table id="vtor" style="display:none" class="table">
+	  <table id="vtor" style="display:none" class="table shop_table">
       <thead>
         <tr>
           <th scope="col">Date</th>
@@ -1218,21 +1252,29 @@ else
 
                   //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
               ?>
-     <tr style="cursor:pointer" onclick="jQuery(this).parent().find('.re-<?=$order_id?>').slideToggle()"><td><?=$datu?></td><td><?=$type?> | <?=$to?></td></tr>
+     <tr style="cursor:pointer" onclick="jQuery(this).parent().find('.re-<?=$order_id?>').slideToggle()">
+      <td><?=$datu?></td>
+      <td><?=$type?> | <?=$to?></td>
+      		<td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
         <tr style="display:none" class="re">
 		
           <td scope="row" class="data-td"><?=$datu?></td>
           <td><?=$type?></td>
           <td><?=$from?></td>
           <td><?=$to?></td>
-          <td id="inti-<?=$order_id?>"><?=$int?></td>
+          <td id="inti-<?=$order_id?>" class='table-td-text'><?=$int?></td>
           <td>
             <?
               if ($link)
               {
               ?>
-            <!-- <a target="_blank" href="<?=$link?>">This video</a> -->
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')">This video</a>
+            <!-- <a target="_blank" href="<?=$link?>"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a> -->
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupVideo(`#popupShareVideo`, `<video controls='' autoplay=''  name='media' class='videoLink'><source src='<?=$link?>' type='video/mp4' ></video>`);jQuery('#popupShareVideo').find('.ms_btn').attr('onclick','sha(\'<?=$link;?>\')')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <?
               }
               ?>
@@ -1245,8 +1287,8 @@ else
               }else{?>
             <!---->
             <? } ?>
-            <a href="javascript:void(0);" class="btn btn-login" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');">Respond</a>
-            <a href="javascript:void(0);" class="ms_btn share_btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')">Share</a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopup5('#popupLoadFile','<?=$order_id?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
+            <a href="javascript:void(0);" class="btn" onclick="ShowPopupShare('#popupShare','<?=$link;?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/share.png" alt=""></a>
             <?
               $osa=get_os($_SERVER['HTTP_USER_AGENT']);
                 if ($osa=='Safari')
@@ -1254,8 +1296,8 @@ else
                   ?>
             <!--<p id="intip-<?=$order_id?>" style="display:none;z-index:9999999999;position:relative;top: 110px;color: #fff;">777To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?></p>
               -->
-            <!-- <a href="javascript:void(0);" class="btn btn-login" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')">videoRecord</a> -->
-            <a href="javascript:void(0);" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <!-- <a href="javascript:void(0);" class="btn" onclick="jQuery(this).hide();jQuery('.intip-<?=$order_id?>').show();moving(this,'moving-<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a> -->
+            <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -1336,7 +1378,7 @@ else
               else
               {
                 ?>
-            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn btn-login videoRecord" onclick="moving(this,'<?=$order_id?>')">videoRecord</a>
+            <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
               var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
@@ -1409,7 +1451,7 @@ else
 
               });
             </script>
-            <!--<a href="javascript:void(0);" class="btn btn-login" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');">videoRecord</a>-->
+            <!--<a href="javascript:void(0);" class="btn" onclick="jQuery('#fram').attr('src','http://pozdr.beget.tech-local/2020/05/11/video/?id=<?=$order_id?>');ShowPopup('#popupVideoRecord');jQuery('#texa').html('');jQuery('#texa').append('To:<?=$to.'<br/>From:'.$from?><br/>Instruction:<br/><?=$int1?>');"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>-->
             <?
               }
 
@@ -1495,7 +1537,7 @@ else
         <?php elseif ( 'order-total' === $column_id ) : ?>
         <?php
           /* translators: 1: formatted order total 2: total order items */
-          echo wp_kses_post( sprintf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'woocommerce' ), $order->get_formatted_order_total(), $item_count ) );
+          echo wp_kses_post( sprintf( _n( '%1$s %2$s 项', '%1$s %2$s 项', $item_count, 'woocommerce' ), $order->get_formatted_order_total(), $item_count ) );
           ?>
         <?php elseif ( 'order-actions' === $column_id ) : ?>
         <?php
@@ -1904,5 +1946,66 @@ else
         jQuery('#response').text('fill in the field');
       }
     }
+</script>
+<link rel="stylesheet" href="/wp-content/themes/envo-storefront/css/cssprogress.css">
+<script >
+  jQuery(document).ready(function($) {
+
+    setTimeout(function(){
+      $('.examples-progressbar').progress_fnc();
+
+      $('.progressStart').on('click', function() {
+        var perent = $(this).closest("div").attr("id");
+        $('#' + perent).progress_fnc({ type: 'start' });
+      });
+
+      $('.progressReset').on('click', function() {
+        var perent = $(this).closest("div").attr("id");
+        $('#' + perent).progress_fnc({ type: 'reset' });
+      });
+    }, 2000)
+
+  });
+
+
+  (function($) {
+
+    $.fn.progress_fnc = function(options) {
+      var settings = $.extend({
+        type: 'start'
+      }, options);
+
+      var div = $(this);
+      var progress = div.find('.cssProgress');
+
+      progress.each(function() {
+        var self = $(this);
+        var progress_bar = self.find('.cssProgress-bar');
+        var progress_label = self.find('.cssProgress-label, .cssProgress-label2');
+        var progress_value = progress_bar.data('percent');
+        var percentage = parseInt(progress_value, 10) + '%';
+
+        progress_bar.css({'width': '0%', 'transition': 'none', '-webkit-transition': 'none', '-moz-transition': 'none'});
+
+        if(settings.type == 'start') {
+
+          progress_bar.animate({
+            width: percentage
+          }, {
+            duration: 1000,
+            step: function(x) {
+              progress_label.text(Math.round(x) + '%');
+            }
+          });
+
+        } else if(settings.type == 'reset') {
+          progress_bar.css('width', '0%');
+          progress_label.text('0%');
+        }
+
+      });
+    }
+
+  }(jQuery));
 </script>
 <!-- single-product  -->

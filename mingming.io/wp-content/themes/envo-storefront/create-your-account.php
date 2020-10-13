@@ -21,8 +21,8 @@
     display: none;
   }
   .page_modal-left {
-       padding-top: 100px;
-       padding-bottom: 100px;
+       padding-top: 70px;
+       padding-bottom: 70px;
       background-color: #fff;
   }
   .page_modal-left form button.btn{

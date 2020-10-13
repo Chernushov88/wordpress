@@ -627,13 +627,19 @@ function my_user_contactmethods($user_contactmethods){
 		  $user_contactmethods['uservideo1'] = 'Represent yourself';
 		   $user_contactmethods['uservideo2'] = 'Specially for MingMing';
 		    $user_contactmethods['vip'] = 'Vip status';
+			$user_contactmethods['rank0'] = 'Rank0';
+			$user_contactmethods['rank1'] = 'Rank1';
+			$user_contactmethods['rank2'] = 'Rank2';
+			$user_contactmethods['rank3'] = 'Rank3';
+			$user_contactmethods['rank4'] = 'Rank4';
+			$user_contactmethods['rank5'] = 'Rank5';
   return $user_contactmethods;
 }
 
 
 function register_my_new_order_statuses() {
 	register_post_status( 'wc-payed', array(
-		'label'                     => _x( 'Payed', 'Order status', 'payed' ),
+		'label'                     => _x( '已支付', 'Order status', 'payed' ),
 		'public'                    => true,
 		'exclude_from_search'       => false,
 		'show_in_admin_all_list'    => true,
@@ -646,7 +652,7 @@ add_action( 'init', 'register_my_new_order_statuses' );
 
 // Register in wc_order_statuses.
 function my_new_wc_order_statuses( $order_statuses ) {
-	$order_statuses['wc-payed'] = _x( 'Payed', 'Order status', 'payed' );
+	$order_statuses['wc-payed'] = _x( '已支付', 'Order status', 'payed' );
 
 	return $order_statuses;
 }

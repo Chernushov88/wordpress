@@ -2010,6 +2010,15 @@ button.btn.btn-danger {
     background: #fc78f2;
     border-radius: 20px;
 }
+.ms_sidemenu_wrapper .btn-pink{
+    display: none;
+}
+.ms_sidemenu_wrapper.open_menu .btn-pink{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    background: #fc78f2;
+}
 .btn-block .btn-pink{
     width: 100%;
     letter-spacing: 2px;
@@ -3331,10 +3340,25 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     background: url(img/navigation/edit-account.png) no-repeat
 }
 
-.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:hover .icon, .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account.is-active a .icon {
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:hover .icon,
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account.is-active a .icon {
     background: url(img/navigation/edit-account-active.png) #bf56fb
 }
 
+.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--customer-logout .icon {
+    background: url(img/navigation/logout_icon.svg) no-repeat
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:hover .icon,
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout.is-active a .icon {
+    background: url(img/navigation/logout_icon.svg) no-repeat;
+}
+.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--processing .icon {
+    background: url(img/navigation/1.png) no-repeat
+}
+.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--all-order .icon {
+    background: url(img/navigation/2.png) no-repeat
+}
 .woocommerce-MyAccount-content .woocommerce-Address {
     width: 100% !important
 }
@@ -3813,8 +3837,15 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 .woocommerce table.shop_table td {
     border-top: 2px solid #988c93;
     font-weight: 100;
-    font-size: 19px;
+    font-size: 16px;
     color: #000
+}
+.woocommerce-notices-table .table tr td.buttons-block{
+    display: flex;
+}
+.woocommerce table.shop_table td.table-td-text{
+    max-width: 300px;
+    font-size: 14px;
 }
 
 .woocommerce table.shop_table th {
@@ -6104,7 +6135,7 @@ div.swiper-slide {
     }
 
     .main-container .page-area {
-        padding-top: 50px
+        padding-top: 25px
     }
 
     body.woocommerce-account .woocommerce-MyAccount-content, body.woocommerce-account .woocommerce-MyAccount-navigation {
@@ -6404,6 +6435,8 @@ div.swiper-slide {
         color: #777;
         background: 0 0
     }
+    .main-container .page-area{
+        padding: 0;}
 
     .page-wrap {
         padding-bottom: 0
@@ -6506,7 +6539,6 @@ div.swiper-slide {
         padding: 5px 0 0;
         align-items: center;
         display: flex;
-        flex-direction: row-reverse
     }
     .ms_top_search button.search-submit,
     .ms_top_search .form-control, .ysm-search-widget .search-field[type=search] {
@@ -6735,7 +6767,9 @@ div.swiper-slide {
         margin: 20px 15px 0;
     }
     .user-head-img{
+        overflow: hidden;
         margin-right: 15px;
+        border-radius: 50%;
     }
     .user-head-img img{
 
@@ -6926,9 +6960,11 @@ div.swiper-slide {
         width: 20px;
         height: 25px;
         margin-left: 0;}
+    .enroll-celebrity-sm-in .accordion-wrapper .celebrity-accordion-title span {
+        margin: 0px;}
 
 
-}
+    }
 
 
 
@@ -6968,7 +7004,7 @@ div.swiper-slide {
     }
 
     #site-navigation {
-        min-height: 0
+        //min-height: 0
     }
 
     .col-product {

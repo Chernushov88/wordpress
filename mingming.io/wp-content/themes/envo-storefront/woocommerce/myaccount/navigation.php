@@ -54,92 +54,244 @@ do_action( 'woocommerce_before_account_navigation' );
   article{
     margin: 0;
   }
-  </style>
+</style>
 
-<nav class="woocommerce-MyAccount-navigation">
-<div class="woocommerce-MyAccount-navigation-in">
-  <div class="h3">我的帐户</div>
-  <ul>
-    <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
-    <li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
-      <a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>">
-        <span class="icon"></span>
-        <?php echo esc_html( $label ); ?>
-      </a>
-    </li>
-    <?php endforeach; ?>
 <?
-$url = $_SERVER['REQUEST_URI'];
-$ppp=explode('?',$url);
-if ($ppp[0]=='/my-account-2/orders/')
-{
+ $current_user = wp_get_current_user();
+ $idu=get_user_meta( $current_user->ID, 'idtov', true);
+$fio=get_user_meta( $current_user->ID, 'nickname', true);
+$rank=array();
+$ra0=get_user_meta( $current_user->ID, 'rank0', true);
+$ra1=get_user_meta( $current_user->ID, 'rank1', true);
+$ra2=get_user_meta( $current_user->ID, 'rank2', true);
+$ra3=get_user_meta( $current_user->ID, 'rank3', true);
+$ra4=get_user_meta( $current_user->ID, 'rank4', true);
+$ra5=get_user_meta( $current_user->ID, 'rank5', true);
+
+$rank[]=$ra0;
+$rank[]=$ra1;
+$rank[]=$ra2;
+$rank[]=$ra3;
+$rank[]=$ra4;
+$rank[]=$ra5;
+$new_array = array_diff($rank, array(''));
+$ran=count($new_array)-1;
+$cher=get_user_meta( $current_user->ID, 'charity', true);
+$vip=get_user_meta( $current_user->ID, 'vip', true);
+
+$post_id_7 = get_post($idu);
+$excerpt = strip_tags($post_id_7->post_excerpt);
+$des = strip_tags($post_id_7->post_content);
 ?>
-<?
-}
-?>
-<li>
-  <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);">处理中</a> <? /*  – В обработке */?>
-</li>
-<li>
-  <a  onclick="jQuery('#perv').show();jQuery('#vtor').hide();" href="javascript:void(0);">全部订单</a> <? /*  – Все заказы */?>
-</li>
+<div class="sm-visible">
+  <div class="user-head">
+    <div class="user-head-img"><? echo $thumb = get_the_post_thumbnail( $idu, 'thumbnail' );?></div>
+    <div class="user-head-name">
+      <div class="h3"><?=$fio?></div>
+      <p><?=$excerpt?></p>
+      <ul class="icons">
+        <li>
+          <?
+		  if ($vip>0) { ?>
+          <? if ($vip==1){ ?>
+          <div class="vip-ico vip-copper"></div>
+
+          <? }
+                 elseif ($vip==2) { ?>
+          <div class="vip-ico vip-sliver"></div>
+          <? }
+                 elseif ($vip==3) { ?>
+          <div class="vip-ico vip-gold"></div>
+          <? } ?>
+          <? } ?>
+
+
+
+        </li>
+        <li>
+          <?
+		 if ($cher>0){
+
+          if ($cher==10){?>
+          <!-- <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Copper.png" alt=""> -->
+          <div class="charity-ico charity-copper"></div>
+          <?}
+              elseif ($cher==50){ ?>
+          <!-- <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Sliver.png" alt=""> -->
+          <div class="charity-ico charity-sliver"></div>
+          <? }
+              elseif ($cher==100) { ?>
+          <!-- <img class="fiy-status" src="/wp-content/themes/envo-storefront/img/Gold.png" alt=""> -->
+          <div class="charity-ico charity-gold"></div>
+          <? } ?>
+          <? }
+
+			?>
 
 
 
 
-</ul>
-<div class="navigation-bottom">
-    <?
-$sum=0;
-$user = wp_get_current_user();
-$cher=get_user_meta( $user->ID, 'charity', true);
-
-
-    if (is_user_role('actor', $user->ID)) {
-
-    $baln=get_user_meta( $user->ID, 'balance', true);
-    $baln = $baln * 1;
-    if($baln < 0){
-    $baln2 = 0;
-    echo '<div class="hide"> baln2 -'.$baln2.'</div>';
-    }
-    if($baln > 0){
-    $baln2 = $baln;
-    echo '<div class="hide"> baln - '.$baln.'</div>';
-    }
-
-
-    if (empty($baln2)){
-    $sum=0;
-    } else{
-    $sum = $baln2;
-    $cherSum = $sum * $cher / 100;
-    $result = $sum - $cherSum;
-    }
-
-
-    echo '<ul class="usel-lest-roles">
-    <li><div class="h3">结余</div></li>
-    <li><div class="name-price"><div>总计</div> <b>USD:</b> '.$sum.'</div></li>
-    <li><div class="name-price"><div>慈善机构</div> <b>USD:</b> '.$cherSum.'</div></li>
-    <li><div class="name-price"><div>可用的</div> <b>USD:</b> '.$result.'</div></li>
-  </ul>';
-    };
-    ?>
-
-
-
-
-<a href="javascript:void(0);" onclick="showPopup('#popupUserRole');" class="btn_money ">
-      <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/money-active.png" alt="">
-      <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/money.png" alt="">结余</a>
-  <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">
-    <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/writing-active.png" alt="">
-    <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/writing.png" alt="">联络我们</a>
-
+        </li>
+        <li>
+          <div class="icon-number"><?=$ran?></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="user-desc">
+    <p><?=$des?></p>
+  </div>
+  <div class="user-navigation">
+    <ul class="nav">
+      <li>
+        <a href="/my-account-2/orders/">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/1.png" alt="">
+          <span>我的订单</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="/my-account-2/edit-account/">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/2.png" alt="">
+          <span>帐户资料</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="/my-account-2/ranking/">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/3.png" alt="">
+          <span>我的排行</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/4.png" alt="">
+          <span>我的通知</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/5.png" alt="">
+          <span>帐户结余</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/6.png" alt="">
+          <span>分享推荐人编号</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/7.png" alt="">
+          <span>帐户安全</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/8.png" alt="">
+          <span>联络我们</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
-</div>
-</nav>
+  <nav class="woocommerce-MyAccount-navigation sm-hide">
+    <div class="woocommerce-MyAccount-navigation-in">
+
+
+
+      <div class="h3">我的帐户</div>
+
+      <ul>
+        <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
+        <li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
+          <a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>">
+            <span class="icon"></span>
+            <?php echo esc_html( $label ); ?>
+          </a>
+        </li>
+        <?php endforeach; ?>
+        <?
+      $url = $_SERVER['REQUEST_URI'];
+      $ppp=explode('?',$url);
+      if ($ppp[0]=='/my-account-2/orders/')
+      {
+      ?>
+        <li class="woocommerce-MyAccount-navigation-link--processing">
+          <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);"><span class="icon"></span> 处理中</a> <? /*  – В обработке */?>
+        </li>
+        <li class="woocommerce-MyAccount-navigation-link--all-order">
+          <a  onclick="jQuery('#perv').show();jQuery('#vtor').hide();" href="javascript:void(0);"><span class="icon"></span> 全部订单</a> <? /*  – Все заказы */?>
+        </li>
+        <?
+      }
+      ?>
+
+
+
+
+
+      </ul>
+      <div class="navigation-bottom">
+        <?
+      $sum=0;
+      $user = wp_get_current_user();
+      $cher=get_user_meta( $user->ID, 'charity', true);
+
+
+        if (is_user_role('actor', $user->ID)) {
+
+        $baln=get_user_meta( $user->ID, 'balance', true);
+        $baln = $baln * 1;
+        if($baln < 0){
+        $baln2 = 0;
+        echo '<div class="hide"> baln2 -'.$baln2.'</div>';
+        }
+        if($baln > 0){
+        $baln2 = $baln;
+        echo '<div class="hide"> baln - '.$baln.'</div>';
+        }
+
+
+        if (empty($baln2)){
+        $sum=0;
+        } else{
+        $sum = $baln2;
+        $cherSum = $sum * $cher / 100;
+        $result = $sum - $cherSum;
+        }
+
+
+        echo '<ul class="usel-lest-roles">
+        <li><div class="h3">结余</div></li>
+        <li><div class="name-price"><div>总计</div> <b>USD:</b> '.$sum.'</div></li>
+        <li><div class="name-price"><div>慈善机构</div> <b>USD:</b> '.$cherSum.'</div></li>
+        <li><div class="name-price"><div>可用的</div> <b>USD:</b> '.$result.'</div></li>
+      </ul>';
+        };
+        ?>
+
+
+
+
+        <a href="javascript:void(0);" onclick="showPopup('#popupUserRole');" class="btn_money ">
+          <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/money-active.png" alt="">
+          <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/money.png" alt="">结余</a>
+        <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">
+          <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/writing-active.png" alt="">
+          <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/writing.png" alt="">联络我们</a>
+
+      </div>
+    </div>
+  </nav>
+
 <script>
   function showPopup(target){
     jQuery(".darken").fadeIn();
