@@ -102,7 +102,7 @@ function wc_get_account_menu_items() {
 		'edit-address'    => __( 'Addresses', 'woocommerce' ),
 		'payment-methods' => __( 'Payment methods', 'woocommerce' ),
 		'edit-account'    => __( '帐户资料', 'woocommerce' ),
-		'customer-logout' => __( '注销', 'woocommerce' ),
+		'customer-logout' => __( '退出', 'woocommerce' ),
 	);
 
 	// Remove missing endpoints.
@@ -215,7 +215,7 @@ function wc_get_account_downloads_columns() {
 	$columns = apply_filters(
 		'woocommerce_account_downloads_columns',
 		array(
-			'download-product'   => __( 'Product', 'woocommerce' ),
+			'download-product'   => __( '产品介绍', 'woocommerce' ),
 			'download-remaining' => __( 'Downloads remaining', 'woocommerce' ),
 			'download-expires'   => __( 'Expires', 'woocommerce' ),
 			'download-file'      => __( 'Download', 'woocommerce' ),

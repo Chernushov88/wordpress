@@ -1043,7 +1043,7 @@ if ( ! function_exists( 'woocommerce_page_title' ) ) {
 
 		if ( is_search() ) {
 			/* translators: %s: search query */
-			$page_title = sprintf( __( 'Search results: &ldquo;%s&rdquo;', 'woocommerce' ), get_search_query() );
+			$page_title = sprintf( __( '搜索结果: &ldquo;%s&rdquo;', 'woocommerce' ), get_search_query() );
 
 			if ( get_query_var( 'paged' ) ) {
 				/* translators: %s: page number */
