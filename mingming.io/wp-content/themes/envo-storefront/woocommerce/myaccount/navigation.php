@@ -83,7 +83,7 @@ $post_id_7 = get_post($idu);
 $excerpt = strip_tags($post_id_7->post_excerpt);
 $des = strip_tags($post_id_7->post_content);
 ?>
-<div class="sm-visible">
+<div class="md-visible">
   <div class="user-head">
     <div class="user-head-img"><? echo $thumb = get_the_post_thumbnail( $idu, 'thumbnail' );?></div>
     <div class="user-head-name">
@@ -202,7 +202,7 @@ $des = strip_tags($post_id_7->post_content);
     </ul>
   </div>
 </div>
-  <nav class="woocommerce-MyAccount-navigation sm-hide">
+  <nav class="woocommerce-MyAccount-navigation md-hide">
     <div class="woocommerce-MyAccount-navigation-in">
 
 
@@ -233,6 +233,27 @@ $des = strip_tags($post_id_7->post_content);
         <?
       }
       ?>
+
+      <li class="woocommerce-MyAccount-navigation-link--my-rating">
+        <a href="javascript:void(0);">
+        <span class="icon"></span>我的排行
+        </a> <? /*  Мой рейтинг. –  */?>
+      </li>
+      <li class="woocommerce-MyAccount-navigation-link--my-notice">
+        <a href="javascript:void(0);">
+        <span class="icon"></span>我的通知
+        </a> <? /*  Мое уведомление.–  */?>
+      </li>
+      <li class="woocommerce-MyAccount-navigation-link--number-actions">
+        <a href="javascript:void(0);">
+        <span class="icon"></span>分享推荐人编号
+        </a> <? /*  Номер референта акции–  */?>
+      </li>
+
+
+
+
+
 
 
 
