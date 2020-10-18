@@ -72,10 +72,18 @@
     var ua = navigator.userAgent;
     // с помощью регулярок проверяем наличие текста,
     // соответствующие тому или иному браузеру
-    if (ua.search(/Safari/) > 0) $('body').addClass('body_safari');
-    if (ua.search(/Firefox/) > 0) $('body').addClass('body_firefox');
-    if (ua.search(/Opera/) > 0) $('body').addClass('body_opera');
-    if (ua.search(/MSIE/) > 0) $('body').addClass('body_ie');
+    if (ua.search(/Safari/) > 0) $('body').addClass('body_safari')//, $('#testDivise').text('Safari');
+    if (ua.search(/Firefox/) > 0) $('body').addClass('body_firefox')//, $('#testDivise').text('Firefox');
+    if (ua.search(/Opera/) > 0) $('body').addClass('body_opera')//, $('#testDivise').text('Opera');
+    if (ua.search(/MSIE/) > 0) $('body').addClass('body_ie')//, $('#testDivise').text('MSIE');
+    if (ua.search(/Android/) > 0) $('body').addClass('body_Android')//, $('#testDivise').text('Android');
+    if (ua.search(/webOS/) > 0) $('body').addClass('body_webOS')//, $('#testDivise').text('webOS');
+    if (ua.search(/iPhone/) > 0) $('body').addClass('body_iPhone')//, $('#testDivise').text('iPhone');
+    if (ua.search(/iPod/) > 0) $('body').addClass('body_iPod')//, $('#testDivise').text('iPod');
+    if (ua.search(/iPad/) > 0) $('body').addClass('body_iPad')//, $('#testDivise').text('iPad');
+    if (ua.search(/Blackberry/) > 0) $('body').addClass('body_Blackberry')//, $('#testDivise').text('Blackberry');
+
+
     setTimeout(function () {
       if (ua.search(/Chrome/) > 0) $('body').removeClass('body_safari').addClass('body_chrome');
     }, 10)

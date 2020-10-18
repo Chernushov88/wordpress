@@ -5223,15 +5223,34 @@ div.swiper-slide {
 }
 
 
-
-
+/* правки для АПК */
+.body_Blackberry .ourAps,
+.body_iPad .ourAps,
+.body_iPod .ourAps,
+.body_iPhone .ourAps,
+.body_webOS .ourAps,
+.body_Android .ourAps,
+.body_Blackberry .grcode,
+.body_iPad .grcode,
+.body_iPod .grcode,
+.body_iPhone .grcode,
+.body_webOS .grcode,
+.body_Android .grcode,
+.body_Blackberry .page_modal-right.gradient-vertical .flex,
+.body_iPad .page_modal-right.gradient-vertical .flex,
+.body_iPod .page_modal-right.gradient-vertical .flex,
+.body_iPhone .page_modal-right.gradient-vertical .flex,
+.body_webOS .page_modal-right.gradient-vertical .flex,
+.body_Android .page_modal-right.gradient-vertical .flex
+{
+    display: none !important;
+}
 
 @media (min-width: 600px) {
     .admin-bar #site-navigation.shrink {
         top: 32px
     }
 }
-
 @media (min-width: 768px) {
     li.menu-item-has-children > a:before {
         font-family: FontAwesome;
@@ -5390,7 +5409,6 @@ div.swiper-slide {
         margin-right: 10px
     }
 }
-
 @media only screen and (min-width: 992px) {
     .modal-darken-menu {
         position: fixed;
@@ -5852,13 +5870,11 @@ div.swiper-slide {
         float: none
     }
 }
-
 @media (max-width: 1825px) {
     .ms_top_trend {
         padding-left: 20px
     }
 }
-
 @media (max-width: 1700px) {
     .ms_top_search {
         max-width: 20%
@@ -5868,7 +5884,6 @@ div.swiper-slide {
         padding-left: 35px
     }
 }
-
 @media (max-width: 1600px) {
     .ms_header {
         padding: 20px 30px
@@ -5890,9 +5905,6 @@ div.swiper-slide {
     .page_modal-left form .input-group input{
         height: 60px;}
 }
-
-
-
 @media (max-width: 1410px) {
     #elementor-element-left {
         width: 60%
@@ -5933,7 +5945,6 @@ div.swiper-slide {
         width: 100px;
     }
 }
-
 @media (max-width: 1200px) {
     #site-content {
         padding: 0 20px
@@ -6031,8 +6042,6 @@ div.swiper-slide {
         background-size: contain !important;
     }
 }
-
-
 @media (max-width: 992px) {
     .ms_top_trend {
         display: none
@@ -6464,6 +6473,9 @@ div.swiper-slide {
         background: #b3afce;
         background: #bf56fb;
     }
+    .menu-image-title-after.menu-image-title {
+        color: #fff;
+    }
 }
 .sm-visible{
     display: none !important;
@@ -6488,6 +6500,7 @@ div.swiper-slide {
     .sm-visible{
         display: block !important;
     }
+    .home #site-content {padding-top: 50px;}
     .home .elementor-tabs .elementor-tabs-wrapper {
         display: flex;
         justify-content: flex-start;
@@ -6598,7 +6611,12 @@ div.swiper-slide {
     #mob_search.active .smart-search-results {
         width: 100% !important
     }
-
+    .elementor-widget-container .h1 {
+        font-size: 26px;
+    }
+    .elementor-widget-container .h1 br{
+        display: none;
+    }
     .elementor-widget-container .flex .left .ourAps{
         max-width: 100px;
         margin: 25px 0 20px;
@@ -7133,9 +7151,6 @@ div.swiper-slide {
 
 
     }
-
-
-
 @media (max-width: 540px) {
 
     .woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li {
@@ -7229,7 +7244,6 @@ div.swiper-slide {
         margin: 5px 5px 0 !important
     }
 }
-
 @media (max-width: 420px) {
     .elementor-section {
         position: relative;
@@ -7258,7 +7272,6 @@ div.swiper-slide {
         display: block !important
     }
 }
-
 @media (max-width: 360px) {
     .open-panel {
         width: 25px;
@@ -7300,9 +7313,24 @@ div.swiper-slide {
         font-size: 16px;}
 
 }
-
 @media (min-width: 600px) and (max-width: 782px) {
     .admin-bar #my-menu {
         top: 0
     }
+}
+
+
+#testDivise{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
 }

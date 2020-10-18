@@ -13,20 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TH34B82');</script>
 <!-- End Google Tag Manager -->
-<style>
-p {
-    margin: 0;
-}
-#elementor-tab-content-2634{
-  display: none !important;
-}
-.elementor-widget:not(:last-child) {
-    margin-bottom: 0;
-}
-.elementor-element-76f5231 ul.products li.product {
-    margin-bottom: 2rem !important;
-}
-</style>
+
   </head>
   <body id="blog" <?php body_class(); ?> >
 <!-- Google Tag Manager (noscript) -->
@@ -98,6 +85,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="javascript:void(0);" class="btn-pink writing_btn" onclick="ShowPopup('#popupWriting')"> 联系我们</a>
       </div>
     </div>
+
     <?php wp_body_open(); ?>
     <div class="page-wrap">
     <?php get_template_part('template-parts/template-part', 'topnav'); ?>

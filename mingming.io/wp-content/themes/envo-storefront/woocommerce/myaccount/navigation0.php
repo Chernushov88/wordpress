@@ -150,35 +150,6 @@ $des = strip_tags($post_id_7->post_content);
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
-	  
-	      <?
-      $url = $_SERVER['REQUEST_URI'];
-      $ppp=explode('?',$url);
-      if ($ppp[0]=='/my-account-2/orders/')
-      {
-      ?>
-        <li>
-          <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);">
-		  <img src="/wp-content/themes/envo-storefront/img/sm/nav/1.png" alt="">
-		  <span>处理中</span> 
-		  <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-		  <? /*  – В обработке */?>
-        </li>
-        <li>
-          <a onclick="jQuery('#perv').show();jQuery('#vtor').hide();" href="javascript:void(0);"><img src="/wp-content/themes/envo-storefront/img/sm/nav/1.png" alt="">
-		  <span>全部订单</span> 
-		  <i class="fa fa-caret-right" aria-hidden="true"></i>
-		  </a> 
-		  <? /*  – Все заказы */?>
-        </li>
-        <?
-      }
-	  
-	  ?>
-	  
-	  
-	  
-	  
       <li>
         <a href="/my-account-2/edit-account/">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/2.png" alt="">
@@ -186,29 +157,20 @@ $des = strip_tags($post_id_7->post_content);
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
-	  <?
-	    if (is_user_role('actor', $user->ID)) 
-	   
-	   {
-	  ?>
       <li>
         <a href="/my-account-2/ranking/">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/3.png" alt="">
           <span>我的排行</span>
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
-      </li> 
-	  <li>
-        <a href="/my-account-2/message/">
+      </li>
+      <li>
+        <a href="#">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/4.png" alt="">
           <span>我的通知</span>
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
-	  <?
-	   }
-	  ?>
-     
       <li>
         <a href="#">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/5.png" alt="">
@@ -270,28 +232,18 @@ $des = strip_tags($post_id_7->post_content);
         </li>
         <?
       }
-	        $user = wp_get_current_user();
-	   if (is_user_role('actor', $user->ID)) 
-	   
-	   {
-
-	  
-	  
       ?>
 
       <li class="woocommerce-MyAccount-navigation-link--my-rating">
-        <a href="/my-account-2/ranking/">
+        <a href="javascript:void(0);">
         <span class="icon"></span>我的排行
         </a> <? /*  Мой рейтинг. –  */?>
-      </li><li class="woocommerce-MyAccount-navigation-link--my-notice">
-        <a href="/my-account-2/message/">
+      </li>
+      <li class="woocommerce-MyAccount-navigation-link--my-notice">
+        <a href="javascript:void(0);">
         <span class="icon"></span>我的通知
         </a> <? /*  Мое уведомление.–  */?>
       </li>
-	  <?
-	   }
-	  ?>
-      
       <li class="woocommerce-MyAccount-navigation-link--number-actions">
         <a href="javascript:void(0);">
         <span class="icon"></span>分享推荐人编号

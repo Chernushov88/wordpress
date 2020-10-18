@@ -295,7 +295,7 @@ if( wp_is_mobile() )
 {
 	?>
 	
-  <div id="perv" class="enroll-celebrity-sm">
+  <div id="perv" class="sm-visible enroll-celebrity-sm">
     <div class="enroll-celebrity-sm-in">
       <div class="accordion-wrapper">
    
@@ -336,13 +336,7 @@ if( wp_is_mobile() )
           $to=$order_meta['billing_who'][0];
           $int=$order_meta['billing_instructions'][0];
           $link=$order_meta['billing_link'][0];
- if ($link)
- {
-	 
- }
- else
- {
-		  
+
           $int1=str_replace("'","\'",$int);
 
           $object = (array)$order->data['date_created'];
@@ -578,33 +572,16 @@ if( wp_is_mobile() )
         </tr>
 		</table>
 		</div>
-		
-		<?
-			}
-		?>
-		
-		
-		
-		
-		
-		
-		
-		
-		
         <?
           }
 
 
 
           }
-		  
-		  
-		  
 
           ?>
      
-  
-	  <div class="enroll-celebrity-sm-button enroll-celebrity-sm-button_myorder">
+    <div class="enroll-celebrity-sm-button enroll-celebrity-sm-button_myorder">
       <ul class="list">
         <li>
           <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
@@ -621,95 +598,16 @@ if( wp_is_mobile() )
     </div>
   </div>
 	
-	
-	
-	</div>
-		</div>
-	
-	 <div id="vtor" style="display:none" class="enroll-celebrity-sm">
-    <div class="enroll-celebrity-sm-in">
-      <div class="accordion-wrapper">
-   
+	  <div id="vtor" style="display:none" class="table shop_table ">
+     
         <?
-           $order_statuses = array('wc-payed');
+          $order_statuses = array('wc-payed');
           $customer_user_id = get_current_user_id(); // current user ID here for example
           $customer_orders5 = wc_get_orders( array(
               'post_status' => $order_statuses,
               'numberposts' => -1
           ) );
 
-
-
-          // Loop through each customer WC_Order objects
-          foreach($customer_orders5 as $order ){
-
-              // Order ID (added WooCommerce 3+ compatibility)
-            $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
-
-
-          $p=0;
-              // Iterating through current orders items
-              foreach($order->get_items() as $item_id => $item)
-            {
-          $product_id = method_exists( $item, 'get_product_id' ) ? $item->get_product_id() : $item['product_id'];
-              if ($product_id==$idu)
-              {
-          $p=1;
-              }
-              }
-
-            if ($p>0)
-            {
-            $order99 = wc_get_order( $order_id );
-          $order_meta = get_post_meta( $order_id);
-		
-          $type=$order_meta['billing_occasion'][0];
-          $from=$order_meta['billing_from'][0];
-          $to=$order_meta['billing_who'][0];
-          $int=$order_meta['billing_instructions'][0];
-          $link=$order_meta['billing_link'][0];
-
-          $int1=str_replace("'","\'",$int);
-
-          $object = (array)$order->data['date_created'];
-          $dat=$object['date'];
-          $pu=explode(' ',$dat);
-          $pu1=explode('-',$pu[0]);
-          $datu=$pu1[2].'.'.$pu1[1].'.'.$pu1[0];
-
-                  //$subtotal = wc_get_order_item_meta( $item_id, '_line_subtotal', true );
-              ?>
-			  
-			  
-	<div class="celebrity-accordion">
-          <div class="celebrity-accordion-title">
-            <div class="date"><?=$datu?></div>
-            <span>｜</span>
-            <div class="processing"><?=$type?></div>
-            <span>｜</span>
-            <div class="name"><?=$to?></div>
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-          </div>
-          <div class="celebrity-accordion-body">
-            <p><?=$int1?>
-            </p>
-          </div>
-        </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	  <div  style="display:none" class="table shop_table ">
-     
-        <?
-        
 
           // Loop through each customer WC_Order objects
           foreach($customer_orders5 as $order ){
@@ -974,48 +872,14 @@ if( wp_is_mobile() )
 		
 			}
           }
-?>
-  
-	
-	<?
+
+
 
           }
 
           ?>
      
     </div>
-	
-        <?
-          }
-
-
-
-          }
-		  
-		  
-		  
-
-          ?>
-     
-	<div class="enroll-celebrity-sm-button enroll-celebrity-sm-button_myorder">
-      <ul class="list">
-        <li>
-          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
-          <div class="text">上传影片</div>
-        </li>
-        <li>
-          <span class="arrow"></span>
-        </li>
-        <li>
-          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
-          <div class="text">手机拍摄</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-	
-	</div>
-		</div>
 	<?
 }
 else
@@ -1028,13 +892,20 @@ else
    
    
    
-   <div class="woocommerce-MyAccount-content__message_title md-hidet">
    
-   <table id="perv" class="shop_table">
-      <thead class="tr">
-      <th>日期</th>
-      <th>標題</th>
-    </thead>
+   
+   <table id="perv" class="table shop_table ">
+      <thead>
+        <tr>
+          <th scope="col">日期	</th>
+          <th scope="col">时间</th>
+          <th scope="col">从</th>
+          <th scope="col">至</th>
+          <th scope="col">说明</th>
+          <th scope="col">链接</th>
+          <th scope="col">狀态</th>
+        </tr>
+      </thead>
       <tbody>
         <?
           $order_statuses = array('wc-payed');
@@ -1303,15 +1174,22 @@ else
     </table>
 	
 	
-	</div>
 	
 	
-	<div class="woocommerce-MyAccount-content__message_title md-hidet">
-	  <table id="vtor" style="display:none" class="shop_table">
-      <thead class="tr">
-      <th>日期</th>
-      <th>標題</th>
-    </thead>
+	
+	
+	  <table id="vtor" style="display:none" class="table shop_table">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Instruction</th>
+          <th scope="col">Link</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
       <tbody>
         <?
           $order_statuses = array('wc-payed');
@@ -1597,7 +1475,7 @@ else
           ?>
       </tbody>
     </table>
-	</div>
+	
 	
 	<?
 }

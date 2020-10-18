@@ -888,6 +888,7 @@ if ($p==1)
 {
 $otog1=$otog+20;
 update_user_meta( $idus, 'balance', $otog1);
+update_user_meta( $idus, 'rank4', '1');
 }
 
 ///////////////////////////////////////////////
