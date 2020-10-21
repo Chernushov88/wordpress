@@ -73,7 +73,7 @@ if (!function_exists('envo_storefront_setup')) :
          * This theme styles the visual editor to resemble the theme style,
          * specifically font, colors, icons, and column width.
          */
-        add_editor_style(array('css/bootstrap.css', envo_storefront_fonts_url(), 'css/editor-style.css'));
+        add_editor_style(array('css/bootstrap.css', 'css/editor-style.css'));
 
         // Recommend plugins.
         add_theme_support('recommend-plugins', array(
@@ -232,7 +232,7 @@ add_filter('wp_resource_hints', 'envo_storefront_resource_hints', 10, 2);
  */
 function envo_storefront_theme_stylesheets() {
     // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style('envo-storefront-fonts', envo_storefront_fonts_url(), array(), null);
+    wp_enqueue_style('envo-storefront-fonts', array(), null);
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.7');
     wp_enqueue_style('mmenu-light', get_template_directory_uri() . '/css/mmenu-light.min.css', array(), ENVO_STOREFRONT_VERSION);
     // Theme stylesheet.

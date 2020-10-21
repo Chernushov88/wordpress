@@ -95,10 +95,11 @@ require_once ABSPATH . 'wp-admin/includes/user.php';
         </div>
     </div>
     <div class="ms_top_right">
-      <span style="display: none;">Languages</span>
-      <?/*<a class="glink">CN</a>*/?>
-      <div style="display: none;"><?=   do_shortcode('[gtranslate]'); ?></div>
-
+<?/*
+<span style="display: none;">Languages</span>
+<a class="glink">CN</a>
+<div style="display: none;"><?=   do_shortcode('[gtranslate]'); ?></div>
+*/?>
                 <div class="ms_top_btn">
 <?/*
 <a href="#" class="visible-xs-inline-block visible-search"

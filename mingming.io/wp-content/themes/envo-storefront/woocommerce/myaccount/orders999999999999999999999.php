@@ -355,7 +355,7 @@ if( wp_is_mobile() )
               ?>
 			  
 			  
-	<div id="pe1-<?=$order_id?>" class="celebrity-accordion">
+	<div class="celebrity-accordion">
           <div class="celebrity-accordion-title">
             <div class="date"><?=$datu?></div>
             <span>｜</span>
@@ -416,7 +416,7 @@ if( wp_is_mobile() )
             <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -497,7 +497,7 @@ if( wp_is_mobile() )
             <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -607,14 +607,14 @@ if( wp_is_mobile() )
 	  <div class="enroll-celebrity-sm-button enroll-celebrity-sm-button_myorder">
       <ul class="list">
         <li>
-          <a onclick="shar(1)" href="javascript:void(0)"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
+          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
           <div class="text">上传影片</div>
         </li>
         <li>
           <span class="arrow"></span>
         </li>
         <li>
-          <a onclick="vidr(1)" href="javascript:void(0)"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
+          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
           <div class="text">手机拍摄</div>
         </li>
       </ul>
@@ -628,7 +628,7 @@ if( wp_is_mobile() )
 	
 	 <div id="vtor" style="display:none" class="enroll-celebrity-sm">
     <div class="enroll-celebrity-sm-in">
-      <div  class="accordion-wrapper">
+      <div class="accordion-wrapper">
    
         <?
            $order_statuses = array('wc-payed');
@@ -681,7 +681,7 @@ if( wp_is_mobile() )
               ?>
 			  
 			  
-	<div id="pe2-<?=$order_id?>" class="celebrity-accordion">
+	<div class="celebrity-accordion">
           <div class="celebrity-accordion-title">
             <div class="date"><?=$datu?></div>
             <span>｜</span>
@@ -806,7 +806,7 @@ if( wp_is_mobile() )
             <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -887,7 +887,7 @@ if( wp_is_mobile() )
             <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -1000,14 +1000,14 @@ if( wp_is_mobile() )
 	<div class="enroll-celebrity-sm-button enroll-celebrity-sm-button_myorder">
       <ul class="list">
         <li>
-          <a onclick="shar(2)" href="javascript:void(0)"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
+          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/view.png" alt=""></a>
           <div class="text">上传影片</div>
         </li>
         <li>
           <span class="arrow"></span>
         </li>
         <li>
-          <a onclick="vidr(2)" href="javascript:void(0)"><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
+          <a href=""><img class="img" src="/wp-content/themes/envo-storefront/img/orders/thisVideo.png" alt=""></a>
           <div class="text">手机拍摄</div>
         </li>
       </ul>
@@ -1016,77 +1016,6 @@ if( wp_is_mobile() )
 	
 	</div>
 		</div>
-		
-		
-		
-		
-<script>
-function shar(p)
-{
-var p;	
-if (p=='1')
-{
-jQuery('#perv').find(".celebrity-accordion").each(function(indx, element)
-{
-if ( jQuery(this).hasClass("active") ) 
-{
-var tup=jQuery(this).attr('id').split('-');
-var idd=tup[1];
-ShowPopup5('#popupLoadFile',idd);
-}
-});
-}
-else
-{
-jQuery('#vtor').find(".celebrity-accordion").each(function(indx, element)
-{
-if ( jQuery(this).hasClass("active") ) 
-{
-var tup=jQuery(this).attr('id').split('-');
-var idd=tup[1];
-ShowPopup5('#popupLoadFile',idd);
-}
-});		
-}
-
-
-}
-function vidr(p)
-{
-
-var p;	
-if (p=='1')
-{	
-jQuery('#perv').find(".celebrity-accordion").each(function(indx, element)
-{
-if ( jQuery(this).hasClass("active") ) 
-{
-var tup=jQuery(this).attr('id').split('-');
-var idd=tup[1];
-moving(this,idd);
-}
-});
-}
-else
-{	
-jQuery('#vtor').find(".celebrity-accordion").each(function(indx, element)
-{
-if (jQuery(this).hasClass("active") ) 
-{
-var tup=jQuery(this).attr('id').split('-');
-var idd=tup[1];
-moving(this,idd);
-}
-});		
-}
-
-
-	
-}
-</script>	
-		
-		
-		
 	<?
 }
 else
@@ -1202,7 +1131,7 @@ else
             <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -1283,7 +1212,7 @@ else
             <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -1492,7 +1421,7 @@ else
             <a href="javascript:void(0);" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in  popupVideoRecrd popup" style="display:none" id="custom-id"></div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){
@@ -1573,7 +1502,7 @@ else
             <a href="javascript:void(0);" id="na-<?=$order_id?>" class="btn" onclick="moving(this,'<?=$order_id?>')">记录视频</a>
             <div class="intip-<?=$order_id?> buttons-block-in popupVideoRecrd popup" style="display:none" id="custom-id"> </div>
             <script type="text/javascript">
-              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"c2c8fa0019adf90f15c6c78a74db62c4", eid:"YObYKQ", mrt:300};
+              var pipeParams = {size:{width:640,height:510}, qualityurl:"avq/480p.xml", accountHash:"9f4e12e1abeef24dcd82ff8cedcb9cd6", eid:"YObYKQ", mrt:300};
               PipeSDK.insert("custom-id",pipeParams,function(recorderObject){
 
                 recorderObject.onVideoUploadSuccess = function(recorderId, filename,filetype,videoId,audioOnly,location){

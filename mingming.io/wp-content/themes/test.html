@@ -83,17 +83,16 @@ $post_id_7 = get_post($idu);
 $excerpt = strip_tags($post_id_7->post_excerpt);
 $des = strip_tags($post_id_7->post_content);
 ?>
-<div class="sm-visible">
+<div class="md-visible">
   <div class="user-head">
     <div class="user-head-img"><? echo $thumb = get_the_post_thumbnail( $idu, 'thumbnail' );?></div>
     <div class="user-head-name">
       <div class="h3"><?=$fio?></div>
       <p><?=$excerpt?></p>
       <ul class="icons">
-
+        <li>
           <?
 		  if ($vip>0) { ?>
-        <li>
           <? if ($vip==1){ ?>
           <div class="vip-ico vip-copper"></div>
 
@@ -104,12 +103,11 @@ $des = strip_tags($post_id_7->post_content);
                  elseif ($vip==3) { ?>
           <div class="vip-ico vip-gold"></div>
           <? } ?>
-        </li>
           <? } ?>
 
 
 
-
+        </li>
         <li>
           <?
 		 if ($cher>0){
@@ -152,6 +150,35 @@ $des = strip_tags($post_id_7->post_content);
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
+
+      <?
+      $url = $_SERVER['REQUEST_URI'];
+      $ppp=explode('?',$url);
+      if ($ppp[0]=='/my-account-2/orders/')
+      {
+      ?>
+      <li>
+        <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);">
+          <img src="/wp-content/themes/envo-storefront/img/sm/nav/1.png" alt="">
+          <span>处理中</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+        <? /*  – В обработке */?>
+      </li>
+      <li>
+        <a onclick="jQuery('#perv').show();jQuery('#vtor').hide();" href="javascript:void(0);"><img src="/wp-content/themes/envo-storefront/img/sm/nav/1.png" alt="">
+          <span>全部订单</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </a>
+        <? /*  – Все заказы */?>
+      </li>
+      <?
+      }
+
+	  ?>
+
+
+
+
       <li>
         <a href="/my-account-2/edit-account/">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/2.png" alt="">
@@ -159,6 +186,11 @@ $des = strip_tags($post_id_7->post_content);
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
+      <?
+	    if (is_user_role('actor', $user->ID))
+
+      {
+      ?>
       <li>
         <a href="/my-account-2/ranking/">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/3.png" alt="">
@@ -167,20 +199,24 @@ $des = strip_tags($post_id_7->post_content);
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/my-account-2/message/">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/4.png" alt="">
           <span>我的通知</span>
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
+      <?
+	   }
+	  ?>
+
       <li>
-        <a href="#">
+        <a  href="javascript:void(0);" onclick="ShowPopup('#balancesAccount')" >
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/5.png" alt="">
           <span>帐户结余</span>
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
-      <li>
+      <li class="hidden">
         <a href="#">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/6.png" alt="">
           <span>分享推荐人编号</span>
@@ -188,14 +224,14 @@ $des = strip_tags($post_id_7->post_content);
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="javascript:void(0);" onclick="ShowPopup('#popupUserRole')" );>
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/7.png" alt="">
           <span>帐户安全</span>
           <i class="fa fa-caret-right" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="javascript:void(0);" onclick="ShowPopup('#popupWriting')">
           <img src="/wp-content/themes/envo-storefront/img/sm/nav/8.png" alt="">
           <span>联络我们</span>
           <i class="fa fa-caret-right" aria-hidden="true"></i>
@@ -204,43 +240,143 @@ $des = strip_tags($post_id_7->post_content);
     </ul>
   </div>
 </div>
-  <nav class="woocommerce-MyAccount-navigation sm-hide">
-    <div class="woocommerce-MyAccount-navigation-in">
+<nav class="woocommerce-MyAccount-navigation md-hide">
+  <div class="woocommerce-MyAccount-navigation-in">
 
 
 
-      <div class="h3">我的帐户</div>
+    <div class="h3">我的帐户</div>
 
-      <ul>
-        <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
-        <li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
-          <a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>">
-            <span class="icon"></span>
-            <?php echo esc_html( $label ); ?>
-          </a>
-        </li>
-        <?php endforeach; ?>
-        <?
+    <ul>
+      <?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
+      <li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
+        <a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>">
+          <span class="icon"></span>
+          <?php echo esc_html( $label ); ?>
+        </a>
+      </li>
+      <?php endforeach; ?>
+      <?
       $url = $_SERVER['REQUEST_URI'];
       $ppp=explode('?',$url);
       if ($ppp[0]=='/my-account-2/orders/')
       {
       ?>
-        <li class="woocommerce-MyAccount-navigation-link--processing">
-          <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);"><span class="icon"></span> 处理中</a> <? /*  – В обработке */?>
-        </li>
-        <li class="woocommerce-MyAccount-navigation-link--all-order">
-          <a  onclick="jQuery('#perv').show();jQuery('#vtor').hide();" href="javascript:void(0);"><span class="icon"></span> 全部订单</a> <? /*  – Все заказы */?>
-        </li>
-        <?
+<!--      <li class="woocommerce-MyAccount-navigation-link&#45;&#45;processing">-->
+<!--        <a onclick="jQuery('#perv').hide();jQuery('#vtor').show();"href="javascript:void(0);"><span class="icon"></span> 处理中</a> <? /*  – В обработке */?>-->
+<!--      </li>-->
+<!--      <li class="woocommerce-MyAccount-navigation-link&#45;&#45;all-order">-->
+<!--        <a  onclick="jQuery('#perv').show();jQuery('#vtor').hide();" href="javascript:void(0);"><span class="icon"></span> 全部订单</a> <? /*  – Все заказы */?>-->
+<!--      </li>-->
+      <?
       }
+	        $user = wp_get_current_user();
+	   if (is_user_role('actor', $user->ID))
+
+      {
+
+
+
+      ?>
+
+      <li class="woocommerce-MyAccount-navigation-link--my-rating">
+        <a href="/my-account-2/ranking/">
+          <span class="icon"></span>我的排行
+        </a> <? /*  Мой рейтинг. –  */?>
+      </li><li class="woocommerce-MyAccount-navigation-link--my-notice">
+      <a href="/my-account-2/message/">
+        <span class="icon"></span>我的通知
+      </a> <? /*  Мое уведомление.–  */?>
+    </li>
+      <?
+	   }
+	  ?>
+
+      <li class="woocommerce-MyAccount-navigation-link--number-actions">
+        <a href="javascript:void(0);">
+          <span class="icon"></span>分享推荐人编号
+        </a> <? /*  Номер референта акции–  */?>
+      </li>
+
+
+
+
+
+
+
+
+
+
+    </ul>
+    <div class="navigation-bottom">
+      <?
+      $sum=0;
+      $user = wp_get_current_user();
+      $cher=get_user_meta( $user->ID, 'charity', true);
+
+
+      if (is_user_role('actor', $user->ID)) {
+
+      $baln=get_user_meta( $user->ID, 'balance', true);
+      $baln = $baln * 1;
+      if($baln < 0){
+      $baln2 = 0;
+      echo '<div class="hide"> baln2 -'.$baln2.'</div>';
+      }
+      if($baln > 0){
+      $baln2 = $baln;
+      echo '<div class="hide"> baln - '.$baln.'</div>';
+      }
+
+
+      if (empty($baln2)){
+      $sum=0;
+      } else{
+      $sum = $baln2;
+      $cherSum = $sum * $cher / 100;
+      $result = $sum - $cherSum;
+      }
+
+
+      echo '<ul class="usel-lest-roles">
+      <li><div class="h3">结余</div></li>
+      <li><div class="name-price"><div>总计</div> <b>USD:</b> '.$sum.'</div></li>
+      <li><div class="name-price"><div>慈善机构</div> <b>USD:</b> '.$cherSum.'</div></li>
+      <li><div class="name-price"><div>可用的</div> <b>USD:</b> '.$result.'</div></li>
+    </ul>';
+      };
       ?>
 
 
 
 
+      <a href="javascript:void(0);" onclick="showPopup('#popupUserRole');" class="btn_money ">
+        <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/money-active.png" alt="">
+        <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/money.png" alt="">结余</a>
+      <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">
+        <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/writing-active.png" alt="">
+        <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/writing.png" alt="">联络我们</a>
 
-      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function showPopup(target){
+    jQuery(".darken").fadeIn();
+    jQuery(target).addClass('open');
+  }
+</script>
+<?php do_action( 'woocommerce_after_account_navigation' ); ?>
+<div id="balancesAccount" class="popup">
+  <div class="close" onclick="HidePopup('#balancesAccount');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
+  <div class="modal-content" role="document">
+    <div class="modal-header">
+      <div class="form-group" style=" margin: 0 0 10px;">
+        <h3 class="modal-title"><label >帐户结余</label></h3>
+      </div>
+    </div>
+    <div class="modal-body">
       <div class="navigation-bottom">
         <?
       $sum=0;
@@ -279,28 +415,10 @@ $des = strip_tags($post_id_7->post_content);
       </ul>';
         };
         ?>
-
-
-
-
-        <a href="javascript:void(0);" onclick="showPopup('#popupUserRole');" class="btn_money ">
-          <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/money-active.png" alt="">
-          <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/money.png" alt="">结余</a>
-        <a href="javascript:void(0);" class="ms_btn writing_btn" onclick="ShowPopup('#popupWriting')">
-          <img class="img-active" src="/wp-content/themes/envo-storefront/img/navigation/writing-active.png" alt="">
-          <img class="img" src="/wp-content/themes/envo-storefront/img/navigation/writing.png" alt="">联络我们</a>
-
       </div>
     </div>
-  </nav>
-
-<script>
-  function showPopup(target){
-    jQuery(".darken").fadeIn();
-    jQuery(target).addClass('open');
-  }
-</script>
-<?php do_action( 'woocommerce_after_account_navigation' ); ?>
+  </div>
+</div>
 <div id="popupUserRole" class="popup">
   <div class="close" onclick="HidePopup('#popupUserRole');"><img width="20px" height="20px" src="/wp-content/themes/envo-storefront/img/close-white.svg" alt="Close"></div>
   <div class="modal-content" role="document">
@@ -319,10 +437,7 @@ $des = strip_tags($post_id_7->post_content);
           <ul>
             <li style="margin-right: auto;"><h4  style="margin: 0;">发到:</h4></li>
             <li></li>
-
           </ul>
-
-
         </div>
         <div class="form-group">
           <ul>
@@ -344,14 +459,8 @@ $des = strip_tags($post_id_7->post_content);
         <div class="form-group form-control">
           <div tabindex="-1" class="CardNumberField ">
             <input id="ra1" class="InputElement" autocomplete="cc-number" autocorrect="off" spellcheck="false" name="cardnumber" inputmode="numeric" aria-label="Credit or debit card number" aria-invalid="false" value="" placeholder="在此输入付款要求">
-            <!-- <input id="ra2" class="InputElement is-empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" name="exp-date" inputmode="numeric" aria-label="Credit or debit card expiration date" placeholder="mm / cc" aria-invalid="false" value="">
-            <input id="ra3" class="InputElement is-empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" name="cvc" inputmode="numeric" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value=""> -->
           </div>
         </div>
-
-        <!-- <div class="form-group">
-          <input type="number" placeholder="你会得到多少。">
-        </div> -->
         <div class="form-group">
           <button type="button" onclick="send()" class="btn ms_btn btn" name="Submit">提交</button>
           <div class="text-danger" id="response2"></div>

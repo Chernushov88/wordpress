@@ -2,7 +2,7 @@
 //@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 */
 
-@import url('./css/fonts.css');
+@import url('/wp-content/themes/envo-storefront/css/fonts.css');
 
 .h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
@@ -65,7 +65,7 @@ html[lang=auto] .ms_top_right .notranslate:nth-child(2), html[lang=auto] .text-c
     min-height: calc(100vh - 85px);
     margin-top: 85px;
     padding: 0 40px;
-    background: url(img/page-bg.jpg) 0 0/cover no-repeat
+    background: url(/wp-content/themes/envo-storefront/img/page-bg.jpg) 0 0/cover no-repeat
 }
 
 #site-content .page-builders {
@@ -436,15 +436,15 @@ div.elementor-container {
 }
 
 .page_modal-left form .input-group input#username{
-    background: #fff url(img/user.png)
+    background: #fff url(/wp-content/themes/envo-storefront/img/user.png)
 }
 
 .page_modal-left form .input-group input#email {
-    background: url(img/email.png)
+    background: url(/wp-content/themes/envo-storefront/img/email.png)
 }
 
 .page_modal-left form .input-group input#password {
-    background: url(img/password.png)
+    background: url(/wp-content/themes/envo-storefront/img/password.png)
 }
 
 .page_modal-left form .input-group .eye {
@@ -3333,35 +3333,35 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
 }
 
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--orders .icon {
-    background: url(img/navigation/orders.png)
+    background: url(/wp-content/themes/envo-storefront/img/navigation/orders.png)
 }
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a:hover .icon, .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders.is-active a .icon {
-    background: url(img/navigation/orders-active.png) #bf56fb
+    background: url(/wp-content/themes/envo-storefront/img/navigation/orders-active.png) #bf56fb
 }
 
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--edit-account .icon {
-    background: url(img/navigation/edit-account.png) no-repeat
+    background: url(/wp-content/themes/envo-storefront/img/navigation/edit-account.png) no-repeat
 }
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:hover .icon,
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account.is-active a .icon {
-    background: url(img/navigation/edit-account-active.png) #bf56fb
+    background: url(/wp-content/themes/envo-storefront/img/navigation/edit-account-active.png) #bf56fb
 }
 
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--customer-logout .icon {
-    background: url(img/navigation/logout_icon.svg) no-repeat
+    background: url(/wp-content/themes/envo-storefront/img/navigation/logout_icon.svg) no-repeat
 }
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:hover .icon,
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout.is-active a .icon {
-    background: url(img/navigation/logout_icon.svg) no-repeat;
+    background: url(/wp-content/themes/envo-storefront/img/navigation/logout_icon.svg) no-repeat;
 }
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--my-rating .icon {
-    background: url(img/navigation/1.png) no-repeat
+    background: url(/wp-content/themes/envo-storefront/img/navigation/1.png) no-repeat
 }
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--my-rating:hover .icon {
-    background: url(img/navigation/1-active.png) no-repeat
+    background: url(/wp-content/themes/envo-storefront/img/navigation/1-active.png) no-repeat
 }
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--my-notice{
     position: relative;
@@ -3375,21 +3375,21 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     display: block;
     width: 25px;
     height: 25px;
-    background: url(img/navigation/my-notice.png) no-repeat;
+    background: url(/wp-content/themes/envo-storefront/img/navigation/my-notice.png) no-repeat;
 }
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--my-notice .icon {
-    background: url(img/navigation/2.png) no-repeat;
+    background: url(/wp-content/themes/envo-storefront/img/navigation/2.png) no-repeat;
     background-size: contain !important;
 }
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--my-notice:hover .icon {
-    background: url(img/navigation/2-active.png) no-repeat;
+    background: url(/wp-content/themes/envo-storefront/img/navigation/2-active.png) no-repeat;
     background-size: contain !important;
 }
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--number-actions .icon {
-    background: url(img/navigation/3.png) no-repeat
+    background: url(/wp-content/themes/envo-storefront/img/navigation/3.png) no-repeat
 }
 .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--number-actions:hover .icon {
-    background: url(img/navigation/3-active.png) no-repeat
+    background: url(/wp-content/themes/envo-storefront/img/navigation/3-active.png) no-repeat
 }
 
 .woocommerce-MyAccount-content .woocommerce-Address {
@@ -3543,7 +3543,7 @@ form.woocommerce-form.woocommerce-form-login input.woocommerce-Input {
     width: 100%;
     height: 100%;
     z-index: 1000000;
-    background: url(img/page-bg.jpg) 0 0/cover no-repeat;
+    background: url(/wp-content/themes/envo-storefront/img/page-bg.jpg) 0 0/cover no-repeat;
     transition: .3s ease-in-out;
 }
 
@@ -4198,7 +4198,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 }
 #balancesAccount .h3{
     margin-top: 5px;
-    //color: #fff;
+//color: #fff;
 }
 #balancesAccount .usel-lest-roles{
     display: flex;
@@ -5081,7 +5081,7 @@ div.swiper-slide {
     margin-top: 100px;
     padding: 25px 10px;
     border-top: 2px solid #d1cfce;
-    //background: #fff;
+//background: #fff;
 }
 
 .enroll-celebrity-sm-button .list {
@@ -5185,7 +5185,7 @@ div.swiper-slide {
 }
 .user-navigation .nav-ranking li{
     display: flex;
-    //align-items: center;
+//align-items: center;
     height: auto;
     margin: 0 0px 20px;
     padding: 0;
@@ -5200,7 +5200,7 @@ div.swiper-slide {
     font-weight: 900;
     font-size: 19px;
     color: #fff;
-    background: url("./img/sm/icon-number.png") no-repeat;
+    background: url("/wp-content/themes/envo-storefront/img/sm/icon-number.png") no-repeat;
     background-size: contain;
 }
 .user-navigation .nav-ranking li p{
@@ -6321,7 +6321,7 @@ div.swiper-slide {
     }
 
     .home .main-container .page-area {
-        //padding-top: 0
+    //padding-top: 0
     }
 
     .home #site-navigation {
@@ -6404,7 +6404,7 @@ div.swiper-slide {
         line-height: 2;
         font-weight: 900;
         font-size: 8px;
-        background: url("./img/sm/icon-number.png") no-repeat;
+        background: url("/wp-content/themes/envo-storefront/img/sm/icon-number.png") no-repeat;
         background-size: contain;
     }
 
@@ -6461,7 +6461,7 @@ div.swiper-slide {
         line-height: 2;
         font-weight: 900;
         font-size: 12px;
-        background: url("./img/sm/icon-number.png") no-repeat;
+        background: url("/wp-content/themes/envo-storefront/img/sm/icon-number.png") no-repeat;
         background-size: contain;
     }
     .user-navigation .nav-ranking li p{
@@ -6518,7 +6518,7 @@ div.swiper-slide {
         font-size: 27px;
     }
     #site-content {
-        //padding: 0 10px;
+    //padding: 0 10px;
     }
     #elementor-element-left, #elementor-element-right{
         margin: 0;}
@@ -6540,7 +6540,7 @@ div.swiper-slide {
         margin-bottom: 10px;
     }
     .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title a {
-        //font-size: 12px;
+    //font-size: 12px;
     }
     .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title {padding: 0 20px 10px 0; border-bottom: 1px solid #d07ef3 !important;}
     .home .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title:last-child{padding-right: 0;}
@@ -6965,11 +6965,11 @@ div.swiper-slide {
         top: 15px;
         right: auto;
         left: 25px;
-        //position: static;
+    //position: static;
         display: inline-block;
         width: auto;
         height: auto;
-        //margin: 15px 0 0 25px;
+    //margin: 15px 0 0 25px;
         border: 0;
     }
 
@@ -7043,13 +7043,13 @@ div.swiper-slide {
     }
     .page_modal-left form .input-group input#username,
     .page_modal-left form .input-group input#email {
-        background: #fff url(img/sm/email.png);
+        background: #fff url(/wp-content/themes/envo-storefront/img/sm/email.png);
     }
     .page_modal-left form .step .input-group input#username{
-        background: #fff url(img/sm/user.png);
+        background: #fff url(/wp-content/themes/envo-storefront/img/sm/user.png);
     }
     .page_modal-left form .input-group input#password {
-        background: url(img/sm/password.png);
+        background: url(/wp-content/themes/envo-storefront/img/sm/password.png);
     }
     .page_modal-left form .input-group .eye{
         opacity: 0;
@@ -7110,7 +7110,7 @@ div.swiper-slide {
         display: block;
         width: 100%;
         height: 100%;
-        background: url(./img/product-bg.png) left bottom;
+        background: url(/wp-content/themes/envo-storefront/img/product-bg.png) left bottom;
         background-size: cover;
     }
     .woocommerce ul.products li.product > a > .price span.woocommerce-Price-amount.amount img {
@@ -7183,7 +7183,7 @@ div.swiper-slide {
         margin: 0px;}
 
 
-    }
+}
 @media (max-width: 540px) {
 
     .woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li {
@@ -7220,7 +7220,7 @@ div.swiper-slide {
     }
 
     #site-navigation {
-        //min-height: 0
+    //min-height: 0
     }
 
     .col-product {
