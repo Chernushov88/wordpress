@@ -42,6 +42,22 @@ $new_array = array_diff($rank, array(''));
 	
   
   ?>
+<style>
+
+    .single-head.page-head.no-thumbnail {
+        clear: both;
+        margin-bottom: 10px;
+        padding: 10px 0%;
+        margin: 0 0%;
+    }
+    .main-content-page.single-content{
+        padding: 0;
+    }
+    .woocommerce-MyAccount-navigation-link--dashboard,
+    .woocommerce-MyAccount-navigation-link--downloads,
+    .woocommerce-MyAccount-navigation-link--payment-methods,
+    .woocommerce-MyAccount-navigation-link--edit-address{display: none;}
+</style>
 
 <div class="site-content-sm-p-0">
 
@@ -258,6 +274,27 @@ $new_array = array_diff($rank, array(''));
 
 	
 ?>
+
+<style>
+
+    .single-head.page-head.no-thumbnail {
+        clear: both;
+        margin-bottom: 10px;
+        padding: 10px 0%;
+        margin: 0 0%;
+    }
+    .main-content-page.single-content{
+        padding: 0;
+    }
+    .woocommerce-MyAccount-navigation-link--dashboard,
+    .woocommerce-MyAccount-navigation-link--downloads,
+    .woocommerce-MyAccount-navigation-link--payment-methods,
+    .woocommerce-MyAccount-navigation-link--edit-address{display: none;}
+</style>
+
+
+
+
 <div class="woocommerce-MyAccount-content__ranking md-hide">
 
   <div class="h1 h1-top-new">我的排行 (1)</div>

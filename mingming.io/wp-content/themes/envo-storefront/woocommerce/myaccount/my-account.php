@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
 </style>
 <div class="woocommerce-MyAccount-content purple_backg">
 
-
+  <?/* get_template_part('mes'); */?>
 
 
 	<?php

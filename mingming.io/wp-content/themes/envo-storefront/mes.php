@@ -48,6 +48,7 @@ $new_array = array_diff($rank, array(''));
 do_action( 'woocommerce_account_navigation' ); 
 ?>
 
+
 <div class="woocommerce-MyAccount-content__message_conten md-hidet">
 
   <div class="h1 h1-top-new">请录制一个简短的视频，并告诉您您支持TRUE和MingMing！</div>
@@ -71,7 +72,20 @@ else
 		
 	if( current_user_can('actor') )
     {
+	?>
+	<style>
+	.woocommerce-MyAccount-navigation-link--my-notice a
+	{
+		background: #bf56fb!important;
+    color: #fff!important;
+    border-color: #bf56fb!important;
+		
+	}
 	
+	
+	
+	</style>
+	<?
 	$current_user = wp_get_current_user();
  $idu=get_user_meta( $current_user->ID, 'idtov', true);
   $fio=get_user_meta( $current_user->ID, 'nickname', true);
@@ -110,6 +124,86 @@ $new_array = array_diff($rank, array(''));
 <?
 do_action( 'woocommerce_account_navigation' ); 
 ?>
+<style>
+
+    .single-head.page-head.no-thumbnail {
+        clear: both;
+        margin-bottom: 10px;
+        padding: 10px 0%;
+        margin: 0 0%;
+    }
+    .main-content-page.single-content{
+        padding: 0;
+    }
+    .woocommerce-MyAccount-navigation-link--dashboard,
+    .woocommerce-MyAccount-navigation-link--downloads,
+    .woocommerce-MyAccount-navigation-link--payment-methods,
+    .woocommerce-MyAccount-navigation-link--edit-address{display: none;}
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 20%;
+    min-width: 300px;
+    padding: 0 30px 15px;
+    background: #fff;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+    width: 80%;
+    margin-left: auto;
+    padding: 50px 25px 30px;
+    font-weight: 100;
+    color: #0
+}
+.woocommerce-account .woocommerce-MyAccount-navigation-in{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+}
+.woocommerce-account .woocommerce-MyAccount-navigation>ul{
+    display: flex;
+    flex-direction: column;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation>ul .woocommerce-MyAccount-navigation-link--customer-logout{
+    order: 1;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation .h3 {
+    margin: 25px 0;
+    font-weight: 900;
+    font-size: 22px;
+    color: #231815
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+    width: 80%;
+    margin-left: auto;
+    padding: 50px 25px 30px;
+    font-weight: 100;
+    color: #000
+}
+
+.woocommerce-account .woocommerce-MyAccount-content a {
+    height: 30px;
+    margin: 5px 2px;
+    padding: 0 15px;
+    line-height: 30px
+}
+@media (max-width: 991px){
+.woocommerce-account .woocommerce-MyAccount-content{
+width: 100%;
+}
+  .woocommerce-MyAccount-content__ranking.md-hide{
+    //display: block !important;
+    width: 100%;
+  }
+  .purple_backg {
+      background: transparent;
+  }
+}
+
+
+</style>
+
+
+
+<div class="woocommerce-MyAccount-content purple_backg">
 <div class="woocommerce-MyAccount-content__ranking md-hide">
   <div class="h1 h1-top-new">请录制一个简短的视频，并告诉您您支持TRUE和MingMing！</div>
   <div class="message_content-in">
@@ -125,4 +219,5 @@ do_action( 'woocommerce_account_navigation' );
 	}
 }
 ?>
+</div>
 <?php get_footer(); ?>
