@@ -328,7 +328,7 @@
               <option value="">1000k+</option>
             </select>
           </div>
-          <button type="button" onclick="nextStep('.step-3',2)" class="btn btn-block btn-login">Submit</button>
+          <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" onclick="nextStep('.step-3',2)" class="btn btn-block btn-login">Submit</button>
         </div>
         <div class="step step-3 hidden">
           <div class="form-group">
@@ -403,7 +403,7 @@
               <textarea name="descripOrder" id="descripOrder" cols="30" rows="10" class="form-control " placeholder="subtitle"></textarea>
             </div>
           </div>-->
-          <button type="button" onclick="cheketCheckbox();" class="btn btn-block btn-login">Submit</button>
+          <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" onclick="cheketCheckbox();" class="btn btn-block btn-login">Submit</button>
         </div>
         <div class="step step-4 hidden">
           <h4>And the final step - record presentation video for Mingming!</h4>
@@ -422,7 +422,7 @@
           <div class="text-chine">
             請錄製自我簡介的視頻，分享並加入明名MINGMING的新聞，以及告訴您的粉絲，您很樂意為他們製作視頻。例如：祝賀粉絲們的生日，向他們的家人和朋友打招呼或滿足他們的其他要求。發揮您的創意，以製作包含您個人風格的視頻。
           </div>
-          <button type="button" class="btn btn-block btn-login" onclick="moving(this,'111')">Record</button>
+          <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" class="btn btn-block btn-login" onclick="moving(this,'111')">Record</button>
         </div>
         <div class="step step-5 hidden">
           <h4>And the final step - record presentation video for Mingming!</h4>
@@ -450,8 +450,8 @@
             請錄製自我簡介的視頻，分享並加入明名MINGMING的新聞，以及告訴您的粉絲，您很樂意為他們製作視頻。例如：祝賀粉絲們的生日，向他們的家人和朋友打招呼或滿足他們的其他要求。發揮您的創意，以製作包含您個人風格的視頻。
           </div>
           <div class="button-wrapp">
-            <button type="button" class="btn btn-block btn-login" onclick="moving(this,'111')">Re Record</button>
-            <button type="button" onclick="subfinish()" class="btn btn-block btn-login">Submit</button>
+            <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" class="btn btn-block btn-login" onclick="moving(this,'111')">Re Record</button>
+            <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" onclick="subfinish()" class="btn btn-block btn-login">Submit</button>
           </div>
         </div>
       </form>
@@ -951,7 +951,7 @@
   var pipeParams = {
     size: {width: 640, height: 510},
     qualityurl: "avq/480p.xml",
-    accountHash: "fd166e9665fbf5161b1b022a9279b02f",
+    accountHash: "c2c8fa0019adf90f15c6c78a74db62c4",
     eid: "nd8piv",
     mrt: 300
   };

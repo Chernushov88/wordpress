@@ -69,11 +69,11 @@ if (!function_exists('envo_storefront_setup')) :
         add_theme_support('wc-product-gallery-lightbox');
         add_theme_support('wc-product-gallery-slider');
         add_theme_support('html5', array('search-form'));
-        /*
+        /* 
          * This theme styles the visual editor to resemble the theme style,
          * specifically font, colors, icons, and column width.
          */
-        add_editor_style(array('css/bootstrap.css', 'css/editor-style.css'));
+        add_editor_style(array('css/bootstrap.css', envo_storefront_fonts_url(), 'css/editor-style.css'));
 
         // Recommend plugins.
         add_theme_support('recommend-plugins', array(
@@ -232,7 +232,7 @@ add_filter('wp_resource_hints', 'envo_storefront_resource_hints', 10, 2);
  */
 function envo_storefront_theme_stylesheets() {
     // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style('envo-storefront-fonts', array(), null);
+    wp_enqueue_style('envo-storefront-fonts', envo_storefront_fonts_url(), array(), null);
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.7');
     wp_enqueue_style('mmenu-light', get_template_directory_uri() . '/css/mmenu-light.min.css', array(), ENVO_STOREFRONT_VERSION);
     // Theme stylesheet.
@@ -620,7 +620,7 @@ function my_user_contactmethods($user_contactmethods){
 		 $user_contactmethods['balance'] = 'Balance';
 		 $user_contactmethods['proc'] = 'Procent';
 		  $user_contactmethods['charity'] = 'Charity';
-		  
+
 		  $user_contactmethods['self'] = 'Self-presentation';
 		  $user_contactmethods['who'] = 'Who are you';
 		$user_contactmethods['userimg'] = 'Link foto';
@@ -832,18 +832,18 @@ if ($cher==10)
 	$priceuser1=$priceuser-$nablog1;
 	$otog=$baln+$priceuser1;
 	}
-    elseif ($cher==50)	
+    elseif ($cher==50)
 	{
 	$nablog=($priceuser*50)/100;
 	$nablog1=round($nablog,1);
 	$priceuser1=$priceuser-$nablog1;
 	$otog=$baln+$priceuser1;
 	}
-	elseif ($cher==100)	
+	elseif ($cher==100)
 	{
 	$otog=$baln;
 	}
-	
+
 
 
 }
@@ -881,9 +881,9 @@ update_user_meta( $idus, 'balance', $otog);
               $p++;
               }
             }
-			  
-		  }	
-		  
+
+		  }
+
 if ($p==1)
 {
 $otog1=$otog+20;
@@ -997,14 +997,11 @@ function woo_custom_add_to_cart( $cart_item_data ) {
 /*
 add_action( 'template_redirect', 'checkout_redirect_non_logged_to_login_access');
 function checkout_redirect_non_logged_to_login_access() {
-
     // Here the conditions (woocommerce checkout page and unlogged user)
     if( is_checkout() && !is_user_logged_in()){
-
         // Redirecting to your custom login area
         // wp_redirect( 'https://mingming.io/create-your-account/' );
         wp_redirect( get_permalink( get_option('woocommerce_myaccount_page_id') ) );
-
         // always use exit after wp_redirect() function.
         exit;
     }
@@ -1015,9 +1012,7 @@ function customer_redirected_displaying_message() {
         // HERE Type your displayed message and text button
         $message = __('To access checkout, you need first to be logged in', 'woocommerce');
         $button_text = __('Login area', 'woocommerce');
-
         $cart_link = get_permalink( get_option('woocommerce_myaccount_page_id') );
-
         wc_add_notice(  $message . '<a href="' . $cart_link . '" class="button wc-forward">' . $button_text . '</a>', 'notice' );
     }
 }
@@ -1027,11 +1022,11 @@ function add_user_to_mailchimp($order_id) {
 
 $order_meta = get_post_meta( $order_id);
 $emop=$order_meta['_billing_email'][0];
-if ( is_user_logged_in() ) 
+if ( is_user_logged_in() )
 {
 
 }
-else 
+else
 {
 //////////////////////////////////////
 $em11=array();
@@ -1040,16 +1035,16 @@ foreach( $users11 as $user )
 {
 $em11[]=$user->user_email;
 }
-if (in_array($emop, $em11)) 
+if (in_array($emop, $em11))
 {
-echo '0';   
+echo '0';
 }
 else
 {
 $userdata1 = array(
-	'ID'              => 0,  
-	'user_pass'       => $emop, 
-	'user_login'      => $emop, 
+	'ID'              => 0,
+	'user_pass'       => $emop,
+	'user_login'      => $emop,
 	'user_nicename'   => $emop,
 	'user_url'        => '',
 	'user_email'      => $emop,
@@ -1059,7 +1054,7 @@ $userdata1 = array(
 	'last_name'       => '',
 	'description'     => '',
 	'rich_editing'    => 'true', // false - выключить визуальный редактор
-	'user_registered' => date('Y-m-d H:i:s'), 
+	'user_registered' => date('Y-m-d H:i:s'),
 	'role'            => 'buyer'
 );
 $id=wp_insert_user( $userdata1 );
@@ -1070,11 +1065,10 @@ $args = array(
 $order1=wc_create_order($args);
 
 }
-	
-}	
+
+}
 	////////////////////////////////////////
 
 
 }
 add_action( 'woocommerce_checkout_update_order_meta', 'add_user_to_mailchimp', 1, 1 );
-

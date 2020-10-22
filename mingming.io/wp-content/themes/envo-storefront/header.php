@@ -20,8 +20,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="wp_loader">
-      <div class="wrap">
-        <!--<img src="/wp-content/themes/envo-storefront/img/loader.gif" alt="site loader">-->
+      <div class="cssload-loader">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
       </div>
     </div>
     <div class="hide" id="mob_search">

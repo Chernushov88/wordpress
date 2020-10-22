@@ -204,7 +204,7 @@ width: 100%;
 
 
 <div class="woocommerce-MyAccount-content purple_backg">
-<div class="woocommerce-MyAccount-content__ranking md-hide">
+<div class="woocommerce-MyAccount-content__ranking -md-hide">
   <div class="h1 h1-top-new">请录制一个简短的视频，并告诉您您支持TRUE和MingMing！</div>
   <div class="message_content-in">
     <p>現在點擊“帐户资料”，並在字段中填寫有關您的信息，包括照片，說明和每筆訂單的價格。我們的建議價格是每100.000粉絲USD 25。如果您有100.000個活躍關注者，則即使1％的轉化為100000 * 1％* 25 USD
