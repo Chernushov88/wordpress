@@ -80,6 +80,7 @@ $cher=get_user_meta( $current_user->ID, 'charity', true);
 $vip=get_user_meta( $current_user->ID, 'vip', true);
 
 $post_id_7 = get_post($idu);
+
 $excerpt = strip_tags($post_id_7->post_excerpt);
 $des = strip_tags($post_id_7->post_content);
 ?>
@@ -139,7 +140,14 @@ $des = strip_tags($post_id_7->post_content);
     </div>
   </div>
   <div class="user-desc">
+  <?
+   if (is_user_role('actor', $user->ID))
+      {
+		?>
     <p><?=$des?></p>
+	<?
+	  }
+	?>
   </div>
   <div class="user-navigation">
     <ul class="nav">

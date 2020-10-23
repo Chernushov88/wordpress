@@ -315,8 +315,7 @@
           </div>
           <div class="form-group">
             <label for="handle">Your account</label>
-            <div class="input-group" style="width:100%"><input type="text" name="handle" value=""
-                                                               placeholder="@jimmybuffet" id="handle"
+            <div class="input-group" style="width:100%"><input type="text" name="handle" value="" id="handle"
                                                                class="form-control"></div>
           </div>
           <div class="form-group">
@@ -328,7 +327,7 @@
               <option value="">1000k+</option>
             </select>
           </div>
-          <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" onclick="nextStep('.step-3',2)" class="btn btn-block btn-login">Submit</button>
+          <button type="button" onclick="nextStep('.step-3',2)" class="btn btn-block btn-login">Submit</button>
         </div>
         <div class="step step-3 hidden">
           <div class="form-group">
@@ -346,7 +345,7 @@
           <div class="form-group">
             <label for="selfPrasentation">Self-presentation</label>
             <div class="input-group">
-            <textarea name="selfPrasentation" type="text" value="Cool one!" placeholder="Actor Chicago fire"
+            <textarea name="selfPrasentation" type="text" value="Cool one!"
                       id="selfPrasentation" class="form-control "></textarea>
             </div>
           </div>
@@ -400,10 +399,10 @@
           <!--<div class="form-group">
             <label for="descripOrder">Description</label>
             <div class="input-group">
-              <textarea name="descripOrder" id="descripOrder" cols="30" rows="10" class="form-control " placeholder="subtitle"></textarea>
+              <textarea name="descripOrder" id="descripOrder" cols="30" rows="10" class="form-control " ></textarea>
             </div>
           </div>-->
-          <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" onclick="cheketCheckbox();" class="btn btn-block btn-login">Submit</button>
+          <button type="button" onclick="cheketCheckbox();" class="btn gradient-horizontal">Submit</button>
         </div>
         <div class="step step-4 hidden">
           <h4>And the final step - record presentation video for Mingming!</h4>
@@ -422,7 +421,7 @@
           <div class="text-chine">
             請錄製自我簡介的視頻，分享並加入明名MINGMING的新聞，以及告訴您的粉絲，您很樂意為他們製作視頻。例如：祝賀粉絲們的生日，向他們的家人和朋友打招呼或滿足他們的其他要求。發揮您的創意，以製作包含您個人風格的視頻。
           </div>
-          <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" class="btn btn-block btn-login" onclick="moving(this,'111')">Record</button>
+          <button type="button" class="btn btn-block btn-login" onclick="moving(this,'111')">Record</button>
         </div>
         <div class="step step-5 hidden">
           <h4>And the final step - record presentation video for Mingming!</h4>
@@ -450,8 +449,8 @@
             請錄製自我簡介的視頻，分享並加入明名MINGMING的新聞，以及告訴您的粉絲，您很樂意為他們製作視頻。例如：祝賀粉絲們的生日，向他們的家人和朋友打招呼或滿足他們的其他要求。發揮您的創意，以製作包含您個人風格的視頻。
           </div>
           <div class="button-wrapp">
-            <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" class="btn btn-block btn-login" onclick="moving(this,'111')">Re Record</button>
-            <button type="button" style="color: #bf56fb;border: 2px solid #bf56fb;" onclick="subfinish()" class="btn btn-block btn-login">Submit</button>
+            <button type="button" class="btn btn-block btn-login" onclick="moving(this,'111')">Re Record</button>
+            <button type="button" onclick="subfinish()" class="btn btn-block btn-login">Submit</button>
           </div>
         </div>
       </form>
@@ -464,10 +463,8 @@
         <li><a href="#"><img src="/wp-content/themes/envo-storefront/img/app-store.png" alt=""></a></li>
       </ul>
       <div class="grcode">
-        <a href="http://qrcoder.ru" target="_blank"><img
-            src="http://qrcoder.ru/code/?https%3A%2F%2Fmingming.io%2Fwp-content%2Fuploads%2F2020%2F05%2FMingMing-v1.apk&4&0"
-            width="164" height="164" border="0" title="QR код"></a>
-      </div>
+        <a href="http://qrcoder.ru" target="_blank"><img src="/wp-content/themes/envo-storefront/img/qr-code.gif" border="0" title="QR code" class="hidden"></a>
+        </div>
     </div>
   </div>
 </div>
@@ -1016,7 +1013,7 @@
     </div>
     <div class="modal-body">
       <div class="error">Error</div>
-      <div style="color:#fff; font-weight: 400;">Select "Choose category"</div>
+      <div style="font-weight: 400;">Select "Choose category"</div>
     </div>
   </div>
 </div>
@@ -1030,7 +1027,7 @@
     </div>
     <div class="modal-body">
       <div class="error">Error</div>
-      <div style="color:#fff; font-weight: 400;">Such user or e-mail is already exists. Please choose another one.</div>
+      <div style="font-weight: 400;">Such user or e-mail is already exists. Please choose another one.</div>
     </div>
   </div>
 </div>
@@ -1046,7 +1043,7 @@
     </div>
     <div class="modal-body">
       <div class="error">Error</div>
-      <div style="color:#fff; font-weight: 400;">Please, select one and type in your account</div>
+      <div style="font-weight: 400;">Please, select one and type in your account</div>
     </div>
   </div>
 </div>

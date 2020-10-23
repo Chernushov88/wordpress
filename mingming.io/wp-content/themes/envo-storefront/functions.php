@@ -561,7 +561,7 @@ function envo_storefront_skip_link() {
 }
 
 add_action( 'wp_body_open', 'envo_storefront_skip_link', 5 );
-add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
+add_filter ('woocommerce_add_to_cart_redirect', 'redirect_to_checkout');
 
 function redirect_to_checkout() {
     global $woocommerce;
